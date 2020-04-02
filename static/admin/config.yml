@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: rubenRP/rubenr.dev
 
 media_folder: static/assets
 public_folder: assets
