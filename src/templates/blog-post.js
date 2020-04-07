@@ -2,10 +2,9 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Bio from "../components/bio"
-import Layout from "../components/layout"
-import SEO from "../components/seo"
-import { rhythm, scale } from "../utils/typography"
+import Bio from "../components/Bio/Bio"
+import Layout from "../components/Layout/Layout"
+import SEO from "../components/Seo/Seo"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -19,49 +18,47 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
-        <h1>{post.frontmatter.title}</h1>
-        <p
-          style={{
-            ...scale(-1 / 5),
-            display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
-          }}
-        >
-          {post.frontmatter.date}
-        </p>
-        <MDXRenderer>{post.body}</MDXRenderer>
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
-        <Bio />
-
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={`blog${previous.fields.slug}`} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={`blog${next.fields.slug}`} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul>
+        <section id="start">
+          <section id="body-wrapper" className="section blog-listing">
+            <section className="container grid-lg">
+              <div className="columns">
+                <div id="item" className="column col-12 extra-spacing">
+                  <div className="content-item h-entry">
+                    <div className="e-content">
+                      <h1>{post.frontmatter.title}</h1>
+                      {post.frontmatter.subtitle ? (
+                        <h2>{post.frontmatter.subtitle}</h2>
+                      ) : (
+                        ""
+                      )}
+                      <p>{post.frontmatter.date}</p>
+                      <MDXRenderer>{post.body}</MDXRenderer>
+                    </div>
+                  </div>
+                  <div className="prev-next text-center">
+                    <Bio />
+                    <ul>
+                      <li>
+                        {previous && (
+                          <Link to={`blog${previous.fields.slug}`} rel="prev">
+                            ← {previous.frontmatter.title}
+                          </Link>
+                        )}
+                      </li>
+                      <li>
+                        {next && (
+                          <Link to={`blog${next.fields.slug}`} rel="next">
+                            {next.frontmatter.title} →
+                          </Link>
+                        )}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </section>
+        </section>
       </Layout>
     )
   }
