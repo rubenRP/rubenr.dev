@@ -1,12 +1,13 @@
+const config = require("./data/SiteConfig")
+
 module.exports = {
   siteMetadata: {
-    // edit below
-    title: `Gatsby Starter Personal Blog`,
-    author: `Kyle Matthews`,
-    description: `A starter personal blog with styled components, dark mode, and Netlify CMS.`,
-    siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,
+    title: config.siteTitle,
+    author: config.userName,
+    description: config.siteDescription,
+    siteUrl: config.siteUrl,
     social: {
-      twitter: `kylemathews`,
+      twitter: config.userTwitter,
     },
   },
   plugins: [
@@ -22,6 +23,13 @@ module.exports = {
       options: {
         path: `${__dirname}/content/blog`,
         name: `blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/content/pages`,
+        name: `pages`,
       },
     },
     {
@@ -50,6 +58,11 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-vscode`,
+            options: {
+              theme: "Dark+ (default dark)", // Read on for list of included themes. Also accepts object and function forms.
+              injectStyles: true, // Injects (minimal) additional CSS for layout and scrolling
+              logLevel: "warn", // Set to 'info' to debug if something looks wrong
+            },
           },
           {
             resolve: `gatsby-remark-copy-linked-files`,
@@ -63,27 +76,35 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        // edit below
-        // trackingId: `ADD YOUR TRACKING ID HERE`,
+        trackingId: config.googleAnalyticsID,
       },
     },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: config.siteTitle,
+        short_name: config.author,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#333333`,
         display: `minimal-ui`,
-        // edit below
-        icon: `content/assets/gatsby-icon.png`,
+        icon: `content/assets/favicon.png`,
       },
     },
+    // {
+    // resolve: `gatsby-plugin-typography`,
+    // options: {
+    // pathToConfigModule: `src/utils/typography`,
+    // },
+    // },
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: "gatsby-plugin-robots-txt",
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        sitemap: null,
+        host: null,
+        policy: [{ userAgent: "robots", disallow: ["/"] }],
       },
     },
   ],

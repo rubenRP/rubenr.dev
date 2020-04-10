@@ -1,27 +1,15 @@
 ---
-title: Hello World
-date: "2015-05-01T22:12:03.284Z"
+title: "Hello World"
+published: true
+date: "2015-11-26T15:15:00.000Z"
 ---
 
-This is my first post on my new fake blog! How exciting!
+Es lo típico que se escribe cuando se crea un programa de prueba en un lenguaje que quieres aprender, ¿no?. Pues he aquí en mi enésima intentona de escribir un blog en el que hablar de desarrollo web, programación, diseño, Magento, e-commerce...
 
-I'm sure I'll write a lot more interesting things in the future.
+En los anteriores intentos siempre me he quedado en el principio del camino, siempre en temas que no tenían que ver con el contenido.
 
-Oh, and here's a great quote from this Wikipedia on
-[salted duck eggs](http://en.wikipedia.org/wiki/Salted_duck_egg).
+Diseñar y desarrollar cosas para mí me resulta imposible: nunca estoy conforme; así que he decidido empezar a escribir en Medium, que no hay templating, ni maquetación ni despliegue ni nada…sólo el contenido.
 
-> A salted duck egg is a Chinese preserved food product made by soaking duck
-> eggs in brine, or packing each egg in damp, salted charcoal. In Asian
-> supermarkets, these eggs are sometimes sold covered in a thick layer of salted
-> charcoal paste. The eggs may also be sold with the salted paste removed,
-> wrapped in plastic, and vacuum packed. From the salt curing process, the
-> salted duck eggs have a briny aroma, a gelatin-like egg white and a
-> firm-textured, round yolk that is bright orange-red in color.
+Esperemos que las ganas sigan…
 
-![Chinese Salty Egg](./salty_egg.jpg)
-
-```js
-function helloWorld() {
-  console.log("Hello World!")
-}
-```
+¡Allá vamos!
