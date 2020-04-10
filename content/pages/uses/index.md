@@ -1,5 +1,6 @@
 ---
 title: Uses
+date: "2015-12-27T15:17:00.000Z"
 hero_classes: "parallax text-light hero-tiny title-h1h2 overlay-dark-gradient"
 hero_image: anas-alshanti-feXpdV001o4-unsplash.jpg
 heading: "<h1>Things I use</h1><p><br>Here a small list of software and hardware that I use.</p>"

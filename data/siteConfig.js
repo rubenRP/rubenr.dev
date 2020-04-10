@@ -3,7 +3,7 @@ const config = {
   siteTitleShort: "Rubén Rodríguez", // Short site title for homescreen (PWA). Preferably should be under 12 characters to prevent truncation.
   siteTitleAlt: "Front-End Developer", // Alternative site title for SEO.
   siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
-  siteUrl: "https://gatsby-advanced-starter-demo.netlify.com", // Domain of your website without pathPrefix.
+  siteUrl: "https://rubenr.dev", // Domain of your website without pathPrefix.
   pathPrefix: "/", // Prefixes all links. For cases when deployed to example.github.io/gatsby-advanced-starter/.
   siteDescription:
     "Hello world! Soy Rubén Rodríguez. I''m a Madrid based developer. Front-End developer @interactiv4. SASS, Bootstrap lover & Javascript enthusiast. Magento certified. Specialized in custom theme development and new UX patterns.", // Website description used for RSS feeds/meta description tag.

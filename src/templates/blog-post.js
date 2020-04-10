@@ -33,7 +33,7 @@ class BlogPostTemplate extends React.Component {
         <Layout location={this.props.location} title={siteTitle}>
           <SEO
             title={post.frontmatter.title}
-            description={post.frontmatter.description || post.excerpt}
+            description={post.excerpt}
           />
           {post.frontmatter.hero_image ? (
             <Hero
@@ -133,7 +133,6 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        description
         hero_image {
           childImageSharp {
             fluid(maxWidth: 1400) {

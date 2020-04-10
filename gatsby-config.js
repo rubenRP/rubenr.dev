@@ -58,6 +58,11 @@ module.exports = {
           },
           {
             resolve: `gatsby-remark-vscode`,
+            options: {
+              theme: "Dark+ (default dark)", // Read on for list of included themes. Also accepts object and function forms.
+              injectStyles: true, // Injects (minimal) additional CSS for layout and scrolling
+              logLevel: "warn", // Set to 'info' to debug if something looks wrong
+            },
           },
           {
             resolve: `gatsby-remark-copy-linked-files`,
@@ -77,11 +82,11 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
+        name: config.siteTitle,
+        short_name: config.author,
         start_url: `/`,
         background_color: `#ffffff`,
-        theme_color: `#663399`,
+        theme_color: `#333333`,
         display: `minimal-ui`,
         icon: `content/assets/favicon.png`,
       },
@@ -93,5 +98,14 @@ module.exports = {
     // },
     // },
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
+    {
+      resolve: "gatsby-plugin-robots-txt",
+      options: {
+        sitemap: null,
+        host: null,
+        policy: [{ userAgent: "robots", disallow: ["/"] }],
+      },
+    },
   ],
 }

@@ -1,15 +1,18 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
-exports.createPages = ({ graphql, actions }) => {
+exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const defaultPage = path.resolve(`./src/templates/page.js`)
-  return graphql(
+  const blogPage = path.resolve(`./src/templates/blog-list.js`)
+  const tabPage = path.resolve(`./src/templates/tags.js`)
+
+  const result = await graphql(
     `
       {
-        allMdx(
+        pagesGroup: allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
         ) {
@@ -25,46 +28,81 @@ exports.createPages = ({ graphql, actions }) => {
             }
           }
         }
+        tagsGroup: allMdx(limit: 2000) {
+          group(field: frontmatter___taxonomy___tag) {
+            fieldValue
+          }
+        }
+        categoriesGroup: allMdx(limit: 2000) {
+          group(field: frontmatter___taxonomy___category) {
+            fieldValue
+          }
+        }
       }
     `
-  ).then(result => {
-    if (result.errors) {
-      throw result.errors
-    }
+  )
 
-    // Create blog posts pages.
-    const posts = result.data.allMdx.edges
+  if (result.errors) {
+    reporter.panicOnBuild(result.errors)
+    return
+  }
 
-    posts.forEach((post, index) => {
-      const previous = index === posts.length - 1 ? null : posts[index + 1].node
-      const next = index === 0 ? null : posts[index - 1].node
-      const path = post.node.fileAbsolutePath
-      const regex = "/blog/"
+  // Create pages and blog posts.
+  const posts = result.data.pagesGroup.edges
+  const postsPerPage = 10
+  const numPages = Math.ceil(posts.length / postsPerPage)
 
-      if (path.match(regex)) {
-        createPage({
-          path: `blog${post.node.fields.slug}`,
-          component: blogPost,
-          context: {
-            slug: post.node.fields.slug,
-            previous,
-            next,
-          },
-        })
-      }
-      else {
-        createPage({
-          path: `${post.node.fields.slug}`,
-          component: defaultPage,
-          context: {
-            slug: post.node.fields.slug,
-          },
-        })
-      }
-      
+  Array.from({ length: numPages }).forEach((_, i) => {
+    createPage({
+      path: i === 0 ? `/blog` : `/blog/page:${i + 1}`,
+      component: blogPage,
+      context: {
+        limit: postsPerPage,
+        skip: i * postsPerPage,
+        numPages,
+        currentPage: i + 1,
+      },
     })
+  })
 
-    return null
+  posts.forEach((post, index) => {
+    const previous = index === posts.length - 1 ? null : posts[index + 1].node
+    const next = index === 0 ? null : posts[index - 1].node
+    const path = post.node.fileAbsolutePath
+    const regex = "/blog/"
+
+    if (path.match(regex)) {
+      createPage({
+        path: `blog${post.node.fields.slug}`,
+        component: blogPost,
+        context: {
+          slug: post.node.fields.slug,
+          previous,
+          next,
+        },
+      })
+    } else {
+      createPage({
+        path: `${post.node.fields.slug}`,
+        component: defaultPage,
+        context: {
+          slug: post.node.fields.slug,
+        },
+      })
+    }
+    // return null
+  })
+
+  const tags = result.data.tagsGroup.group
+
+  tags.forEach(tag => {
+    createPage({
+      path: `/tag:${tag.fieldValue.toLowerCase()}`,
+      component: tabPage,
+      context: {
+        tag: tag.fieldValue,
+      },
+    })
   })
 }
 

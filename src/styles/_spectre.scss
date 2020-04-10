@@ -42,7 +42,7 @@ b, strong { font-weight: inherit; }
 b, strong { font-weight: bolder; }
 
 /** 1. Correct the inheritance and scaling of font size in all browsers. 2. Correct the odd `em` font sizing in all browsers. */
-code, kbd, pre, samp { font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace; /* 1 (changed) */ font-size: 1em; /* 2 */ }
+kbd, pre, samp { font-family: "SF Mono", "Segoe UI Mono", "Roboto Mono", Menlo, Courier, monospace; /* 1 (changed) */ font-size: 1em; /* 2 */ }
 
 /** Add the correct font style in Android 4.3-. */
 dfn { font-style: italic; }
@@ -481,13 +481,36 @@ input:disabled + .form-icon, input.disabled + .form-icon { background: #f0f1f4; 
 
 .label.label-error { background: #e85600; color: #fff; }
 
-code { border-radius: 0.1rem; line-height: 1.25; padding: .1rem .2rem; background: #fcf2f2; color: #d73e48; font-size: 85%; }
+code { 
+  // border-radius: 0.1rem;
+  // line-height: 1.25; 
+  // padding: .1rem .2rem; 
+  // background: #fcf2f2; 
+  // color: #d73e48; 
+  font-size: 14px;
+}
 
-.code { border-radius: 0.1rem; color: #50596c; position: relative; }
+.code { 
+  // border-radius: 0.1rem;
+  // color: #50596c;
+  position: relative; 
+}
 
-.code::before { color: #acb3c2; content: attr(data-lang); font-size: 0.7rem; position: absolute; right: 0.4rem; top: 0.1rem; }
+.code::before {
+  color: #acb3c2;
+  content: attr(data-lang);
+  font-size: 0.7rem;
+  position: absolute; right: 0.4rem; top: 0.1rem; }
 
-.code code { background: #f8f9fa; color: inherit; display: block; line-height: 1.5; overflow-x: auto; padding: 1rem; width: 100%; }
+.code code {
+  // background: #f8f9fa;
+  color: inherit;
+  display: block;
+  line-height: 1.5;
+  overflow-x: auto;
+  padding: 1rem;
+  width: 100%;
+}
 
 .img-responsive { display: block; height: auto; max-width: 100%; }
 

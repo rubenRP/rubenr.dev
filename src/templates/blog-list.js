@@ -1,4 +1,4 @@
-import React from "react"
+import React, { Component } from "react"
 import { Link, graphql } from "gatsby"
 import BodyClassName from "react-body-classname"
 
@@ -7,11 +7,17 @@ import SEO from "../components/Seo"
 
 import Hero from "../components/Hero"
 
-class Blog extends React.Component {
+export default class BlogList extends Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMdx.edges
+    const { currentPage, numPages } = this.props.pageContext
+    const isFirst = currentPage === 1
+    const isLast = currentPage === numPages
+    const prevPage =
+      currentPage - 1 === 1 ? "/blog" : `/blog/page:${currentPage - 1}`
+    const nextPage = `/blog/page:${currentPage + 1}`
     const heroConfig = {
       parallax: true,
       arrow: false,
@@ -83,9 +89,7 @@ class Blog extends React.Component {
                               <div className="card-body">
                                 <p
                                   dangerouslySetInnerHTML={{
-                                    __html:
-                                      node.frontmatter.description ||
-                                      node.excerpt,
+                                    __html: node.excerpt,
                                   }}
                                 />
                               </div>
@@ -94,9 +98,13 @@ class Blog extends React.Component {
                                   {node.frontmatter.taxonomy
                                     ? node.frontmatter.taxonomy.tag.map(tag => {
                                         return (
-                                          <span className="label label-rounded label-secondary p-category">
+                                          <Link
+                                            to={`/tag:${tag.toLowerCase()}`}
+                                            key={tag}
+                                            className="label label-rounded label-secondary p-category"
+                                          >
                                             {tag}
-                                          </span>
+                                          </Link>
                                         )
                                       })
                                     : ""}
@@ -106,6 +114,42 @@ class Blog extends React.Component {
                           </div>
                         )
                       })}
+                    </div>
+                    <div id="listing-footer">
+                      <div className="pagination">
+                        <div className="btn-group">
+                          <li>
+                            {!isFirst && (
+                              <Link to={prevPage} rel="prev" className="btn">
+                                «
+                              </Link>
+                            )}
+                          </li>
+                          {Array.from({ length: numPages }, (_, i) => (
+                            <li key={`pagination-number${i + 1}`}>
+                              <Link
+                                to={`/${
+                                  i === 0
+                                    ? "/blog"
+                                    : "/blog/page:" + (i + 1).toString()
+                                }`}
+                                className={`btn ${
+                                  currentPage === i + 1 ? "active" : ""
+                                }`}
+                              >
+                                {i + 1}
+                              </Link>
+                            </li>
+                          ))}
+                          {!isLast && (
+                            <li>
+                              <Link to={nextPage} rel="next" className="btn">
+                                »
+                              </Link>
+                            </li>
+                          )}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -118,10 +162,8 @@ class Blog extends React.Component {
   }
 }
 
-export default Blog
-
-export const pageQuery = graphql`
-  query {
+export const blogListQuery = graphql`
+  query blogListQuery($skip: Int!, $limit: Int!) {
     fileName: file(
       absolutePath: { regex: "/anas-alshanti-feXpdV001o4-unsplash.jpg/" }
     ) {
@@ -139,6 +181,8 @@ export const pageQuery = graphql`
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { parent: { id: {} }, fileAbsolutePath: { regex: "\\\\/blog/" } }
+      limit: $limit
+      skip: $skip
     ) {
       edges {
         node {
@@ -149,7 +193,6 @@ export const pageQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            description
             taxonomy {
               tag
             }

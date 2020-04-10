@@ -1,9 +1,7 @@
 ---
 title: "GatsbyJS y Leaflet: Cómo crear una aplicación para mostrar estadísticas sobre COVID-19"
-media_order: "covid-map-thumbnail.jpg,video-post.gif,gatsby-home-example.jpg,covid-map-file-structure.jpg,covid-map-app.jpg,covid-map-coronavirus-app.jpg"
 published: true
-date: "2020-03-30T08:30Z"
-publish_date: "2020-03-30T08:30Z"
+date: "2020-03-30T08:30:00.000Z"
 taxonomy:
   category:
     - Articles
@@ -13,8 +11,7 @@ taxonomy:
     - GatsbyJS
 hero_classes: "hero-tiny text-light title-h1h2 parallax overlay-dark-gradient"
 hero_image: covid-map-coronavirus-app.jpg
-feed:
-  limit: 10
+thumbnail: covid-map-thumbnail.jpg
 ---
 
 Que estamos saturados de información no es ningún secreto, pero esta saturación se pone más en relieve estos últimos días debido a la crisis del Coronavirus. Uno de los problemas de esta crisis es visualizar los datos de un modo que sea comprensible para la gente ya que estamos bombardeados de información de diferentes fuentes. Esto hace difícil tener una visión global de lo que supone el problema.
@@ -102,7 +99,7 @@ Una vez instaladas todas las dependencias será necesario añadir estas dependen
 
 ## Estructura de ficheros
 
-![COVID-19 App File Structure Example](covid-map-file-structure.jpg?w=120)
+![COVID-19 App File Structure Example](covid-map-file-structure.jpg)
 
 En la imagen previa se puede ver la distribución de fichero que hemos utilizado para este proyecto. En Gatsby, la gestión de creación de páginas se realiza de la manera más sencilla: Añadiendo un componente de React dentro de la carpeta pages. Su URL corresponderá con su nombre. A su vez se ha añadido tanto una página 404 (viene por defecto en el template _Gatsby Starter_) y una llamada detailed-report (muestra la tabla completa con la información de todos los países que informan sobre casos del COVID-19, pero no incidiremos en este post).
 
