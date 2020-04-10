@@ -2,10 +2,10 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import BodyClassName from "react-body-classname"
 
-import Layout from "../components/Layout/Layout"
-import SEO from "../components/Seo/Seo"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
 
-import Hero from "../components/Hero/Hero"
+import Hero from "../components/Hero"
 
 class Blog extends React.Component {
   render() {
@@ -38,50 +38,75 @@ class Blog extends React.Component {
               <section className="container grid-lg">
                 <div className="columns">
                   <div id="item" className="column col-12 extra-spacing">
-                    {posts.map(({ node }) => {
-                      const title = node.frontmatter.title || node.fields.slug
-                      return (
-                        <div key={node.fields.slug} className="card">
-                          <div className="card-header">
-                            <div className="card-subtitle text-gray">
-                              <span className="blog-date">
-                                <i className="fa fa-calendar"></i>{" "}
-                                {node.frontmatter.date}
-                              </span>
+                    <div className="columns">
+                      {posts.map(({ node }) => {
+                        const title = node.frontmatter.title || node.fields.slug
+                        return (
+                          <div
+                            className="column col-6 col-sm-12"
+                            key={node.fields.slug}
+                          >
+                            <div className="card">
+                              {node.frontmatter.thumbnail ? (
+                                <div className="card-image">
+                                  <Link to={`blog${node.fields.slug}`}>
+                                    <img
+                                      alt=""
+                                      src={
+                                        node.frontmatter.thumbnail
+                                          .childImageSharp.fluid.src
+                                      }
+                                    />
+                                  </Link>
+                                </div>
+                              ) : (
+                                ""
+                              )}
+                              <div className="card-header">
+                                <div className="card-subtitle text-gray">
+                                  <span className="blog-date">
+                                    <i className="fa fa-calendar"></i>{" "}
+                                    {node.frontmatter.date}
+                                  </span>
+                                </div>
+                                <div className="card-title">
+                                  <h5 className="p-name mt-1">
+                                    <Link
+                                      to={`blog${node.fields.slug}`}
+                                      className="u-url"
+                                    >
+                                      {title}
+                                    </Link>
+                                  </h5>
+                                </div>
+                              </div>
+                              <div className="card-body">
+                                <p
+                                  dangerouslySetInnerHTML={{
+                                    __html:
+                                      node.frontmatter.description ||
+                                      node.excerpt,
+                                  }}
+                                />
+                              </div>
+                              <div className="card-footer">
+                                <span className="tags">
+                                  {node.frontmatter.taxonomy
+                                    ? node.frontmatter.taxonomy.tag.map(tag => {
+                                        return (
+                                          <span className="label label-rounded label-secondary p-category">
+                                            {tag}
+                                          </span>
+                                        )
+                                      })
+                                    : ""}
+                                </span>
+                              </div>
                             </div>
-                            <div className="card-title">
-                              <h5 className="p-name mt-1">
-                                <Link
-                                  style={{ boxShadow: `none` }}
-                                  to={`blog${node.fields.slug}`}
-                                  className="u-url"
-                                >
-                                  {title}
-                                </Link>
-                              </h5>
-                            </div>
                           </div>
-                          <div className="card-body">
-                            <p
-                              dangerouslySetInnerHTML={{
-                                __html:
-                                  node.frontmatter.description || node.excerpt,
-                              }}
-                            />
-                          </div>
-                          <div className="card-footer">
-                            <span className="tags">
-                              <a
-                                className="label label-rounded label-secondary p-category"
-                                href="/blog/tag:JavaScript#body-wrapper"
-                              >
-                                JavaScript
-                              </a>
-                            </span>
-                          </div>
-                        </div>
-                      )
-                    })}
+                        )
+                      })}
+                    </div>
                   </div>
                 </div>
               </section>
@@ -125,6 +150,17 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            taxonomy {
+              tag
+            }
+            published
+            thumbnail {
+              childImageSharp {
+                fluid(maxWidth: 600) {
+                  src
+                }
+              }
+            }
           }
         }
       }

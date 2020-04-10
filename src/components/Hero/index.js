@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Image from "gatsby-image"
+import SocialLinks from "../SocialLinks"
 
 class Hero extends Component {
   state = {
@@ -16,8 +16,15 @@ class Hero extends Component {
   parallax = () => {
     this.setState({ position: window.scrollY * 0.3 })
   }
+
+  toStart = () => {
+    const start = document.getElementById("start").offsetTop
+    const offset = 45
+    window.scroll({ top: start - offset, left: 0, behavior: "smooth" })
+  }
+
   render() {
-    const { config, content, image } = this.props
+    const { config, content, image, social } = this.props
     return (
       <>
         <section
@@ -35,8 +42,13 @@ class Hero extends Component {
             dangerouslySetInnerHTML={{ __html: content }}
             style={{ textAlign: config.textAlign }}
           ></section>
+          {social ? <SocialLinks /> : ""}
           {config.arrow ? (
-            <i id="to-start" className="pulse fa fa-angle-down"></i>
+            <i
+              id="to-start"
+              className="pulse fa fa-angle-down"
+              onClick={this.toStart}
+            ></i>
           ) : (
             ""
           )}

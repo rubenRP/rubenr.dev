@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import BodyClassName from "react-body-classname"
 
@@ -7,11 +7,10 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import Hero from "../components/Hero"
 
-class BlogPostTemplate extends React.Component {
+class PageTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
     const siteTitle = this.props.data.site.siteMetadata.title
-    const { previous, next } = this.props.pageContext
 
     const heroConfig = {
       parallax: true,
@@ -23,9 +22,6 @@ class BlogPostTemplate extends React.Component {
 
     const heroContent = `
       <h1>${post.frontmatter.title}</h1>
-      <span class="blog-date">
-        <time class="dt-published"><i class="fa fa-calendar"></i> ${post.frontmatter.date}</time>
-      </span>
       `
 
     return (
@@ -79,32 +75,6 @@ class BlogPostTemplate extends React.Component {
                         <MDXRenderer>{post.body}</MDXRenderer>
                       </div>
                     </div>
-
-                    <div className="prev-next text-center">
-                      <div className="btn-group">
-                        {previous && (
-                          <Link
-                            to={`blog${previous.fields.slug}`}
-                            rel="prev"
-                            className="btn"
-                          >
-                            <i className="fa fa-angle-left"></i>{" "}
-                            {previous.frontmatter.title}
-                          </Link>
-                        )}
-
-                        {next && (
-                          <Link
-                            to={`blog${next.fields.slug}`}
-                            rel="next"
-                            className="btn"
-                          >
-                            {next.frontmatter.title}{" "}
-                            <i className="fa fa-angle-right"></i>
-                          </Link>
-                        )}
-                      </div>
-                    </div>
                   </div>
                 </div>
               </section>
@@ -116,10 +86,10 @@ class BlogPostTemplate extends React.Component {
   }
 }
 
-export default BlogPostTemplate
+export default PageTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query PageBySlug($slug: String!) {
     site {
       siteMetadata {
         title

@@ -26,15 +26,15 @@ class About extends Component {
                   />
                 </div>
               </div>
-            </div>
-            <div className="column col-4 col-md-12">
-              <div className="image">
-                <StaticQuery
-                  query={aboutQuery}
-                  render={data => {
-                    return <Image fixed={data.avatar.childImageSharp.fixed} />
-                  }}
-                />
+              <div className="column col-4 col-md-12">
+                <div className="image">
+                  <StaticQuery
+                    query={aboutQuery}
+                    render={data => {
+                      return <Image fixed={data.avatar.childImageSharp.fixed} />
+                    }}
+                  />
+                </div>
               </div>
             </div>
           </section>

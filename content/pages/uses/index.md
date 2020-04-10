@@ -1,12 +1,12 @@
 ---
 title: Uses
-media_order: anas-alshanti-feXpdV001o4-unsplash.jpg
-hero_classes: 'parallax text-light hero-tiny title-h1h2 overlay-dark-gradient'
+hero_classes: "parallax text-light hero-tiny title-h1h2 overlay-dark-gradient"
 hero_image: anas-alshanti-feXpdV001o4-unsplash.jpg
-heading: '<h1>Things I use</h1><p><br>Here a small list of software and hardware that I use.</p>'
+heading: "<h1>Things I use</h1><p><br>Here a small list of software and hardware that I use.</p>"
 ---
 
 ## 💻 Hardware
+
 - **Computer **: 2017 13-inch MacBook Pro, Two Thunderbolt 3 ports
 - **External Display**: Dell U2414H
 - **Keyboard**: Apple Magic Keyboard
@@ -14,6 +14,7 @@ heading: '<h1>Things I use</h1><p><br>Here a small list of software and hardware
 - **Headphones**: Sennheiser Hd-25
 
 ## 📀 Software
+
 - **Editor**: [PhpStorm](https://www.jetbrains.com/es-es/phpstorm/) and [VS Code](https://code.visualstudio.com) with One Dark Theme
 - **Terminal**: [iTerm](http://iterm2.com/) with [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
 - **Font**: [Fira Code Retina](https://www.google.com/search?client=safari&rls=en&q=Fira+Code+Retina&ie=UTF-8&oe=UTF-8)
@@ -22,4 +23,5 @@ heading: '<h1>Things I use</h1><p><br>Here a small list of software and hardware
 - **Notes**: [Simplenote](https://simplenote.com), [Evernote](https://evernote.com) and [Sublime Text](https://www.sublimetext.com)
 
 ## 🛠 Configs
+
 You can take a look to my configs [here](https://github.com/rubenRP/dotfiles).

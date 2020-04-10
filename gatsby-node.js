@@ -5,19 +5,20 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
+  const defaultPage = path.resolve(`./src/templates/page.js`)
   return graphql(
     `
       {
         allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
-          filter: { fileAbsolutePath: { regex: "\\\\/blog/" } }
         ) {
           edges {
             node {
               fields {
                 slug
               }
+              fileAbsolutePath
               frontmatter {
                 title
               }
@@ -37,16 +38,30 @@ exports.createPages = ({ graphql, actions }) => {
     posts.forEach((post, index) => {
       const previous = index === posts.length - 1 ? null : posts[index + 1].node
       const next = index === 0 ? null : posts[index - 1].node
+      const path = post.node.fileAbsolutePath
+      const regex = "/blog/"
 
-      createPage({
-        path: `blog${post.node.fields.slug}`,
-        component: blogPost,
-        context: {
-          slug: post.node.fields.slug,
-          previous,
-          next,
-        },
-      })
+      if (path.match(regex)) {
+        createPage({
+          path: `blog${post.node.fields.slug}`,
+          component: blogPost,
+          context: {
+            slug: post.node.fields.slug,
+            previous,
+            next,
+          },
+        })
+      }
+      else {
+        createPage({
+          path: `${post.node.fields.slug}`,
+          component: defaultPage,
+          context: {
+            slug: post.node.fields.slug,
+          },
+        })
+      }
+      
     })
 
     return null

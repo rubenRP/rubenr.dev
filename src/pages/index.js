@@ -2,12 +2,13 @@ import React from "react"
 import { graphql } from "gatsby"
 import BodyClassName from "react-body-classname"
 
-import Layout from "../components/Layout/Layout"
-import SEO from "../components/Seo/Seo"
+import Layout from "../components/Layout"
+import SEO from "../components/Seo"
 
-import Hero from "../components/Hero/Hero"
-import About from "../components/About/About"
-import Resume from "../components/Resume/Resume"
+import Hero from "../components/Hero"
+import About from "../components/About"
+import Resume from "../components/Resume"
+import Currently from "../components/Currently"
 
 import home from "../../data/home"
 import about from "../../data/about"
@@ -19,7 +20,6 @@ class IndexPage extends React.Component {
     const heroConfig = {
       parallax: true,
       arrow: true,
-      image: "",
       gridSize: "grid-lg",
       classes: "text-light title-h1h2 hero-fullscreen overlay-dark-gradient",
       textAlign: "center",
@@ -37,9 +37,11 @@ class IndexPage extends React.Component {
             config={heroConfig}
             content={home.hero}
             image={data.fileName.childImageSharp.fluid.src}
+            social={true}
           />
           <About info={about} />
           <Resume info={resume} />
+          <Currently />
         </Layout>
       </BodyClassName>
     )
