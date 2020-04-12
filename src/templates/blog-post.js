@@ -6,6 +6,7 @@ import BodyClassName from "react-body-classname"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import Hero from "../components/Hero"
+import Share from "../components/Share"
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -31,10 +32,7 @@ class BlogPostTemplate extends React.Component {
     return (
       <BodyClassName className="header-fixed header-animated">
         <Layout location={this.props.location} title={siteTitle}>
-          <SEO
-            title={post.frontmatter.title}
-            description={post.excerpt}
-          />
+          <SEO title={post.frontmatter.title} description={post.excerpt} />
           {post.frontmatter.hero_image ? (
             <Hero
               config={heroConfig}
@@ -110,6 +108,7 @@ class BlogPostTemplate extends React.Component {
               </section>
             </section>
           </section>
+          <Share url={`blog${post.fields.slug}`} title={`${post.frontmatter.title} ${this.props.data.site.siteMetadata.siteUrl}/blog${post.fields.slug}`}/>
         </Layout>
       </BodyClassName>
     )
@@ -124,6 +123,7 @@ export const pageQuery = graphql`
       siteMetadata {
         title
         author
+        siteUrl
       }
     }
     mdx(fields: { slug: { eq: $slug } }) {
@@ -141,6 +141,9 @@ export const pageQuery = graphql`
           }
         }
         hero_classes
+      }
+      fields {
+        slug
       }
     }
   }

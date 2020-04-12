@@ -1192,6 +1192,15 @@ ul.copyright li + li:before {
   border-color: transparent;
   background-color: transparent;
 }
+.sharer-buttons-toolbar.floating {
+  display: flex;
+  flex-direction: column;
+  left: 10px;
+}
+
+.sharer-buttons-toolbar.floating button {
+  margin: 5px 0;
+}
 
 .pagination {
   justify-content: center;
@@ -1234,9 +1243,13 @@ ul.copyright li + li:before {
     border-top: 1px solid #e7e9ed;
     margin: 0;
     z-index: 1;
+    flex-direction: row;
   }
   .sharer-buttons-toolbar.floating .sharer-label {
     display: none;
+  }
+  .sharer-buttons-toolbar.floating button {
+    margin: 5px 5px 0;
   }
 }
 

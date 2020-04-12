@@ -23,6 +23,13 @@ class Hero extends Component {
     window.scroll({ top: start - offset, left: 0, behavior: "smooth" })
   }
 
+  handleKeyDown = ev => {
+    // M key
+    if (ev.keyCode === 67) {
+      this.toStart()
+    }
+  }
+
   render() {
     const { config, content, image, social } = this.props
     return (
@@ -48,6 +55,8 @@ class Hero extends Component {
               id="to-start"
               className="pulse fa fa-angle-down"
               onClick={this.toStart}
+              onKeyDown={this.handleKeyDown}
+              role="button"
             ></i>
           ) : (
             ""

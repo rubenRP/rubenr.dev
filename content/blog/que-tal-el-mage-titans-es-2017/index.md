@@ -12,8 +12,6 @@ thumbnail: 1_13i5ON3WRD1yyly4Ntu17g.jpg
 
 Tras unos días de descanso tras el evento me he decidido a escribir unas pequeñas lineas para comentar lo acontecido en Mage Titans, o más bien las sensaciones que he tenido en este evento.
 
-===
-
 ### Somos pocos pero hacemos ruido
 
 Sin ser de las mayores comunidades de Magento es cierto que el compromiso de la comunidad es muy grande, y que se están haciendo proyectos de gran nivel en nuestro país.

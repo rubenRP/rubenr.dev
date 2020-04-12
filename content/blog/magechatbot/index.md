@@ -19,13 +19,21 @@ Quería hablar un poco de MageChatbot, un proyecto que me ha tenido entretenido 
 ## ¿Qué es MageChatbot?
 
 <div style="display: flex; align-items: center;">
-    <div style="width: 100%;">
-MageChatbot es un chatbot que permite interactuar con una tienda de comercio electrónico. Este chatbot permite, mediante una conversación, simplificar la navegación del usuario por el abanico de páginas y acciones, listar productos y permitir su compra. Para ello, utiliza la API del Magento2 para interactuar con el ecommerce como si las acciones fueran realizadas desde el storefront del ecommerce.
-    </div>
-    <div style="width: 20%;">
-        <img src="/user/pages/05.blog/magechatbot/magechatbot_screenshot.png" />
-    </div>
+  <div style="width: 100%;">
+    MageChatbot es un chatbot que permite interactuar con una tienda de comercio
+    electrónico. Este chatbot permite, mediante una conversación, simplificar la
+    navegación del usuario por el abanico de páginas y acciones, listar
+    productos y permitir su compra. Para ello, utiliza la API del Magento2 para
+    interactuar con el ecommerce como si las acciones fueran realizadas desde el
+    storefront del ecommerce.
+  </div>
+  <div style="width: 20%;">
+
+![](magechatbot_screenshot.png)
+
+  </div>
 </div>
+
 Es el resultado del mi TFM _[Desarrollo de nuevos modelos de interacción usuario-ecommerce](http://hdl.handle.net/10609/106526)_.
 
 ## ¿En qué consiste el proyecto?
@@ -42,8 +50,11 @@ El proyecto pretende generar un MVP que cumpla con los siguientes objetivos:
 ## Tecnologías
 
 <div style="margin: 0 auto; width: 400px;">
-    <img src="/user/pages/05.blog/magechatbot/magechatbot_technologies.png" />
+
+![](magechatbot_technologies.png)
+
 </div>
+
 Magechatbot está construido en JavaScript sobre Microsoft Bot Framework, una plataforma para el desarrollo de experiencias conversacionales con IA. Su gran potencia permite crear implementaciones de tipo empresarial. Este framework se puede integrar en aplicaciones con NodeJS de un modo sencillo para construir aplicaciones que cuenten con sistemas de conversación o IA. Esta plataforma permite exportar y desplegar de manera sencilla en los entornos en la nube de Microsoft Azure. A su vez, la exportación del chatbot a clientes de mensajería se realiza mediante el asistente de Microsoft Azure.
 
 (Esta parte es obviable para los desarrolladores de Magento 2)

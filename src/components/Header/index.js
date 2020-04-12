@@ -30,6 +30,13 @@ class Header extends Component {
     document.body.classList.toggle("mobile-nav-open")
   }
 
+  handleKeyDown = ev => {
+    // M key
+    if (ev.keyCode === 77) {
+      this.mobileNavOnClick()
+    }
+  }
+
   render() {
     const { scrolled } = this.state
     const { headerLinks } = config
@@ -97,6 +104,8 @@ class Header extends Component {
             className="button_container"
             id="toggle"
             onClick={this.mobileNavOnClick}
+            onKeyDown={this.handleKeyDown}
+            role="button"
           >
             <span className="top"></span>
             <span className="middle"></span>

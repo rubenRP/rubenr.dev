@@ -93,7 +93,7 @@ export default class BlogList extends Component {
                                     ? node.frontmatter.taxonomy.tag.map(tag => {
                                         return (
                                           <Link
-                                            to={`/tag:${tag.toLowerCase()}`}
+                                            to={`/blog/tag:${tag.toLowerCase()}`}
                                             key={tag}
                                             className="label label-rounded label-secondary p-category"
                                           >

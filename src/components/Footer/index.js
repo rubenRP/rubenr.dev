@@ -41,17 +41,3 @@ class Footer extends Component {
 }
 
 export default Footer
-
-export const certificationsQuery = graphql`
-  query {
-    fileName: file(
-      absolutePath: { regex: "/ferdinand-stohr-NFs6dRTBgaM-unsplash.jpg/" }
-    ) {
-      childImageSharp {
-        fluid(maxWidth: 1400) {
-          ...GatsbyImageSharpFluid
-        }
-      }
-    }
-  }
-`

@@ -15,6 +15,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         pagesGroup: allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
+          filter: { frontmatter: { published: { ne: false } } }
         ) {
           edges {
             node {
@@ -97,7 +98,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   tags.forEach(tag => {
     createPage({
-      path: `/tag:${tag.fieldValue.toLowerCase()}`,
+      path: `/blog/tag:${tag.fieldValue.toLowerCase()}`,
       component: tabPage,
       context: {
         tag: tag.fieldValue,
