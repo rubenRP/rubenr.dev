@@ -22,7 +22,47 @@ En Magento 2 se utiliza Knockout para renderizar los mensajes mediante un observ
 
 Dado que vamos a hacer una sobreescritura copiamos el fichero _vendor/magento/module-theme/view/frontend/templates/messages.phtml_ en _app/design/frontend/vendor/theme/Magento_Theme/templates/messages.phtml_
 
-<iframe src="https://medium.com/media/88c4e20bdcc226ecc029a531631888a3" frameborder="0"></iframe>
+```html
+<div data-bind="scope: 'messages'">
+  <div data-bind="visible: isVisible(), click: removeAll">
+    <!-- ko if: cookieMessages && cookieMessages.length > 0 -->
+    <div
+      role="alert"
+      data-bind="foreach: { data: cookieMessages, as: 'message' }"
+      class="messages"
+    >
+      <div
+        data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }"
+      >
+        <div data-bind="html: message.text"></div>
+      </div>
+    </div>
+    <!-- /ko -->
+    <!-- ko if: messages().messages && messages().messages.length > 0 -->
+    <div
+      role="alert"
+      data-bind="foreach: { data: messages().messages, as: 'message' }"
+      class="messages"
+    >
+      <div
+        data-bind="attr: {
+            class: 'message-' + message.type + ' ' + message.type + ' message',
+            'data-ui-id': 'message-' + message.type
+        }"
+      >
+        <div data-bind="html: message.text"></div>
+      </div>
+    </div>
+    <!-- /ko -->
+  </div>
+</div>
+<script type="text/x-magento-init">
+  { "*": { "Magento_Ui/js/core/app": { "components": { "messages": { "component": "Magento_Theme/js/view/messages" } } } } }
+</script>
+```
 
 La diferencia respecto al fichero base es la siguiente línea
 
@@ -36,7 +76,75 @@ Al igual que con el phtml copiamos el fichero *vendor/magento/module-theme/view/
 
 El código resultante es el siguiente:
 
-<iframe src="https://medium.com/media/11c905550e0048f2ec15bcb8f4936ded" frameborder="0"></iframe>
+```javascript
+define([
+  "jquery",
+  "uiComponent",
+  "Magento_Customer/js/customer-data",
+  "underscore",
+  "jquery/jquery-storageapi",
+], function($, Component, customerData, _) {
+  "use strict"
+
+  return Component.extend({
+    defaults: {
+      cookieMessages: [],
+      messages: [],
+      isHidden: false,
+      selector: ".page.messages .messages",
+      listens: {
+        isHidden: "onHiddenChange",
+      },
+    },
+
+    /**
+     * Extends Component object by storage observable messages.
+     */
+    initialize: function() {
+      this._super()
+
+      this.cookieMessages = $.cookieStorage.get("mage-messages")
+      this.messages = customerData.get("messages").extend({
+        disposableCustomerData: "messages",
+      })
+
+      // Force to clean obsolete messages
+      if (!_.isEmpty(this.messages().messages)) {
+        customerData.set("messages", {})
+      }
+
+      $.cookieStorage.set("mage-messages", "")
+    },
+
+    initObservable: function() {
+      this._super().observe("isHidden")
+
+      return this
+    },
+
+    isVisible: function() {
+      return this.isHidden(
+        !_.isEmpty(this.messages().messages) || !_.isEmpty(this.cookieMessages)
+      )
+    },
+
+    removeAll: function() {
+      $(self.selector).hide()
+    },
+
+    onHiddenChange: function(isHidden) {
+      var self = this
+
+      // Hide message block if needed
+      if (isHidden) {
+        setTimeout(function() {
+          $(self.selector).hide()
+        }, 5000)
+      }
+    },
+  })
+})
+```
 
 Se ha modificado tanto los atributos del componente (añadiendo 2) como las funciones _initObservable_, _isVisible_, _removeAll_ y _onHiddenChange_.
 
