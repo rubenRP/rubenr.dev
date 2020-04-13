@@ -34,7 +34,7 @@ const currentlyQuery = graphql`
   query CurrentlyQuery {
     currently: file(absolutePath: { regex: "/interactiv4.png/" }) {
       childImageSharp {
-        fixed(width: 400) {
+        fixed(width: 300) {
           ...GatsbyImageSharpFixed
         }
       }

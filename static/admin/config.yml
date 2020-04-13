@@ -11,8 +11,24 @@ collections:
     folder: content/blog
     create: true
     fields:
+      - { name: title, label: Title }
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
-      - { name: title, label: Title }
+      - { name: published, label: Published, widget: "boolean", default: false }
       - { name: description, label: Description }
+      - { name: hero_classes, label: Hero Classes }
+      - { name: hero_image, label: Hero Image, widget: "image" }
+      - { name: thumbnail, label: thumbnail, widget: "image" }
+      - { name: body, label: Body, widget: markdown }
+  - name: pages
+    label: Pages
+    folder: content/pages
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - { name: path, label: Path }
+      - { name: date, label: Date, widget: date }
+      - { name: hero_classes, label: Hero Classes }
+      - { name: hero_image, label: Hero Image, widget: "image" }
+      - { name: heading, label: Heading }
       - { name: body, label: Body, widget: markdown }

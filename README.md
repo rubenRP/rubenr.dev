@@ -4,11 +4,15 @@
 
 Personal website made with Gatsby, React and NodeJS
 
+## Features
+
+- Posts and pages in Markdown
+- Tags and categories
+- Sass Integration
+
 ## Contributing
 
 If you see any typos or formatting errors in a post, or any other issue that needs to be addressed, please dot't hesitate to open a pull request and fix it!
-
-## Acknowledgements
 
 ## Author
 
@@ -16,4 +20,4 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 
 ## License
 
-This project is open source and available under the [MIT License](LICENSE).)
+This project is open source and available under the [MIT License](LICENSE).
