@@ -21,16 +21,13 @@ class PageTemplate extends React.Component {
     }
 
     const heroContent = `
-      <h1>${post.frontmatter.title}</h1>
+      <h1>${post.frontmatter.heading}</h1>
       `
 
     return (
       <BodyClassName className="header-fixed header-animated">
         <Layout location={this.props.location} title={siteTitle}>
-          <SEO
-            title={post.frontmatter.title}
-            description={post.excerpt}
-          />
+          <SEO title={post.frontmatter.title} description={post.excerpt} />
           {post.frontmatter.hero_image ? (
             <Hero
               config={heroConfig}
@@ -103,6 +100,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+        heading
         hero_image {
           childImageSharp {
             fluid(maxWidth: 1400) {

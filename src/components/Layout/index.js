@@ -5,7 +5,8 @@ import Footer from "../Footer"
 import MobileNav from "../MobileNav"
 
 import "font-awesome/css/font-awesome.min.css"
-import "../../styles/index.scss"
+import "../../styles/spectre.scss"
+import "../../styles/theme.scss"
 
 class Layout extends React.Component {
   render() {

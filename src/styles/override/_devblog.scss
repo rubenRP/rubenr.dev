@@ -1,0 +1,65 @@
+.sharer-buttons-toolbar.floating {
+  display: flex;
+  flex-direction: column;
+  left: 10px;
+  button.sharer-floating {
+    &--facebook,
+    &--twitter,
+    &--whatsapp,
+    &--linkedin,
+    &--telegram,
+    &--email {
+      border-color: transparent;
+      background-color: transparent;
+    }
+  }
+}
+.pagination {
+  justify-content: center;
+  margin-top: 25px;
+}
+
+.blog-listing,
+.modular-hero {
+  .reading {
+    font-size: 13px;
+    &:before {
+      content: "-";
+      margin: 0 10px;
+    }
+  }
+  .taxonomy {
+    margin-top: 5px;
+  }
+}
+
+.modular-hero .reading {
+  font-size: 16px;
+}
+
+@media (max-width: 840px) {
+  .blog-listing .bricklayer-column {
+    padding-right: 0;
+  }
+  .sharer-buttons-toolbar.floating {
+    width: auto;
+    top: initial;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    background-color: $light-color;
+    border-top: 1px solid $border-color;
+    margin: 0;
+    z-index: 1;
+    flex-direction: row;
+    .sharer-label {
+      display: none;
+    }
+    button {
+      margin: 5px 5px 0;
+    }
+  }
+}

@@ -42,22 +42,16 @@ export default class BlogList extends Component {
                       {posts.map(({ node }) => {
                         const title = node.frontmatter.title || node.fields.slug
                         return (
-                          <div
-                            className="column col-6 col-sm-12"
-                            key={node.fields.slug}
-                          >
+                          <div className="column col-12" key={node.fields.slug}>
                             <div className="card">
                               {node.frontmatter.thumbnail ? (
                                 <div className="card-image">
-                                  <Link to={`blog${node.fields.slug}`}>
-                                    <img
-                                      alt=""
-                                      src={
-                                        node.frontmatter.thumbnail
-                                          .childImageSharp.fluid.src
-                                      }
-                                    />
-                                  </Link>
+                                  <Link
+                                    to={`blog${node.fields.slug}`}
+                                    style={{
+                                      backgroundImage: `url(${node.frontmatter.thumbnail.childImageSharp.fluid.src})`,
+                                    }}
+                                  ></Link>
                                 </div>
                               ) : (
                                 ""

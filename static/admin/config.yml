@@ -12,13 +12,22 @@ collections:
     create: true
     fields:
       - { name: title, label: Title }
-      - { name: path, label: Path }
+      - { name: path, label: Path, required: false }
       - { name: date, label: Date, widget: date }
       - { name: published, label: Published, widget: "boolean", default: false }
-      - { name: description, label: Description }
-      - { name: hero_classes, label: Hero Classes }
-      - { name: hero_image, label: Hero Image, widget: "image" }
-      - { name: thumbnail, label: thumbnail, widget: "image" }
+      - { name: description, label: Description, required: false }
+      - {
+          name: hero_classes,
+          label: Hero Classes,
+          default: "hero-tiny text-light title-h1h2 parallax overlay-dark-gradient",
+        }
+      - {
+          name: hero_image,
+          label: Hero Image,
+          widget: "image",
+          required: false,
+        }
+      - { name: thumbnail, label: thumbnail, widget: "image", required: false }
       - { name: body, label: Body, widget: markdown }
   - name: pages
     label: Pages
@@ -26,9 +35,18 @@ collections:
     create: true
     fields:
       - { name: title, label: Title }
-      - { name: path, label: Path }
+      - { name: path, label: Path, required: false }
       - { name: date, label: Date, widget: date }
-      - { name: hero_classes, label: Hero Classes }
-      - { name: hero_image, label: Hero Image, widget: "image" }
+      - {
+          name: hero_classes,
+          label: Hero Classes,
+          default: "hero-tiny text-light title-h1h2 parallax overlay-dark-gradient",
+        }
+      - {
+          name: hero_image,
+          label: Hero Image,
+          widget: "image",
+          required: false,
+        }
       - { name: heading, label: Heading }
       - { name: body, label: Body, widget: markdown }

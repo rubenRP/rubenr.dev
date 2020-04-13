@@ -1,0 +1,111 @@
+/** Breadcrumbs styling **/
+#breadcrumbs {
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  margin-top: -1rem;
+  margin-bottom: 1rem;
+
+  i {
+    display: none;
+  }
+
+  span,
+  a {
+    padding: 0 0.5rem;
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  span,
+  a {
+    &:not(:first-child)::before {
+      color: #e7e9ed;
+      content: "/";
+      padding-right: 1rem;
+    }
+  }
+}
+
+/** Blog Listing **/
+.blog-listing {
+  .card {
+    margin-bottom: 25px;
+    border: 0;
+    box-shadow: 0 10px 45px -9px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-areas:
+      "image header"
+      "image body"
+      "image footer";
+    @include breakpoint(md) {
+      grid-template-areas:
+        "image"
+        "header"
+        "body"
+        "footer";
+    }
+  }
+
+  .card-image {
+    grid-area: image;
+    width: 300px;
+    overflow: hidden;
+    @include breakpoint(md) {
+      width: 100%;
+      height: 120px;
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      background-size: cover;
+      background-position: center;
+    }
+  }
+
+  .card-header {
+    grid-area: header;
+  }
+
+  .card-body {
+    grid-area: body;
+  }
+
+  .card-footer {
+    grid-area: footer;
+    text-align: right;
+  }
+
+  .blog-date {
+    font-size: 13px;
+  }
+
+  .label {
+    margin: 0 2px;
+  }
+}
+
+/** Blog Item **/
+.content-title {
+  margin-bottom: 2rem;
+
+  h2 {
+    margin-bottom: 0.5rem;
+  }
+}
+
+.label {
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+/** Pagination **/
+ul.pagination {
+  justify-content: center;
+}
+
+.prev-next {
+  margin-top: 4rem;
+}

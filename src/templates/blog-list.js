@@ -20,7 +20,7 @@ export default class BlogList extends Component {
     const nextPage = `/blog/page:${currentPage + 1}`
     const heroConfig = {
       parallax: true,
-      arrow: false,
+      arrow: true,
       gridSize: "grid-lg",
       classes: "text-light title-h1h2 hero-tiny overlay-dark-gradient",
       textAlign: "center",
@@ -48,22 +48,16 @@ export default class BlogList extends Component {
                       {posts.map(({ node }) => {
                         const title = node.frontmatter.title || node.fields.slug
                         return (
-                          <div
-                            className="column col-6 col-sm-12"
-                            key={node.fields.slug}
-                          >
+                          <div className="column col-12" key={node.fields.slug}>
                             <div className="card">
                               {node.frontmatter.thumbnail ? (
                                 <div className="card-image">
-                                  <Link to={`blog${node.fields.slug}`}>
-                                    <img
-                                      alt=""
-                                      src={
-                                        node.frontmatter.thumbnail
-                                          .childImageSharp.fluid.src
-                                      }
-                                    />
-                                  </Link>
+                                  <Link
+                                    to={`blog${node.fields.slug}`}
+                                    style={{
+                                      backgroundImage: `url(${node.frontmatter.thumbnail.childImageSharp.fluid.src})`,
+                                    }}
+                                  ></Link>
                                 </div>
                               ) : (
                                 ""

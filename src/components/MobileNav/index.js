@@ -5,6 +5,19 @@ import { Link } from "gatsby"
 import config from "../../../data/siteConfig"
 
 class MobileNav extends Component {
+  mobileNavOnClick = () => {
+    document.getElementById("toggle").classList.toggle("active")
+    document.getElementById("overlay").classList.toggle("open")
+    document.body.classList.toggle("mobile-nav-open")
+  }
+
+  handleKeyDown = ev => {
+    // M key
+    if (ev.keyCode === 77) {
+      this.mobileNavOnClick()
+    }
+  }
+
   render() {
     const { headerLinks } = config
     return (
@@ -30,24 +43,48 @@ class MobileNav extends Component {
           <nav className="overlay-menu">
             <ul className="tree treemenu treemenu-root">
               <li className="tree-empty">
-                <Link to={`/`} className="">
+                <Link
+                  to={`/`}
+                  className=""
+                  onClick={this.mobileNavOnClick}
+                  onKeyDown={this.handleKeyDown}
+                  role="button"
+                >
                   Home
                 </Link>
               </li>
               <li className="tree-empty">
-                <Link to={`/#about`} className="">
+                <Link
+                  to={`/#about`}
+                  className=""
+                  onClick={this.mobileNavOnClick}
+                  onKeyDown={this.handleKeyDown}
+                  role="button"
+                >
                   About
                 </Link>
               </li>
               <li className="tree-empty">
-                <Link to={`/#resume`} className="">
+                <Link
+                  to={`/#resume`}
+                  className=""
+                  onClick={this.mobileNavOnClick}
+                  onKeyDown={this.handleKeyDown}
+                  role="button"
+                >
                   Resume
                 </Link>
               </li>
               {headerLinks.map(link => {
                 return (
                   <li className="tree-empty" key={link.url}>
-                    <Link to={link.url} className="external">
+                    <Link
+                      to={link.url}
+                      className="external"
+                      onClick={this.mobileNavOnClick}
+                      onKeyDown={this.handleKeyDown}
+                      role="button"
+                    >
                       {link.title}
                     </Link>
                   </li>
