@@ -9,12 +9,17 @@ collections:
   - name: blog
     label: Blog
     folder: content/blog
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
     create: true
     fields:
       - { name: title, label: Title }
       - { name: path, label: Path, required: false }
       - { name: date, label: Date, widget: date }
       - { name: published, label: Published, widget: "boolean", default: false }
+      - { name: hero_title, label: Hero Title, required: false }
+      - { name: hero_subtitle, label: Hero Subtitle, required: false }
       - { name: description, label: Description, required: false }
       - {
           name: hero_classes,
@@ -32,6 +37,9 @@ collections:
   - name: pages
     label: Pages
     folder: content/pages
+    path: "{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
     create: true
     fields:
       - { name: title, label: Title }
