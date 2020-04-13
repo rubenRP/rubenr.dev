@@ -14,7 +14,7 @@ export default class BlogList extends Component {
     const posts = data.allMdx.edges
     const heroConfig = {
       parallax: true,
-      arrow: false,
+      arrow: true,
       gridSize: "grid-lg",
       classes: "text-light title-h1h2 hero-tiny overlay-dark-gradient",
       textAlign: "center",
@@ -33,79 +33,78 @@ export default class BlogList extends Component {
             image={data.fileName.childImageSharp.fluid.src}
           />
 
-          <section id="start">
-            <section id="body-wrapper" className="section blog-listing">
-              <section className="container grid-lg">
-                <div className="columns">
-                  <div id="item" className="column col-12 extra-spacing">
-                    <div className="columns">
-                      {posts.map(({ node }) => {
-                        const title = node.frontmatter.title || node.fields.slug
-                        return (
-                          <div className="column col-12" key={node.fields.slug}>
-                            <div className="card">
-                              {node.frontmatter.thumbnail ? (
-                                <div className="card-image">
-                                  <Link
-                                    to={`blog${node.fields.slug}`}
-                                    style={{
-                                      backgroundImage: `url(${node.frontmatter.thumbnail.childImageSharp.fluid.src})`,
-                                    }}
-                                  ></Link>
-                                </div>
-                              ) : (
-                                ""
-                              )}
-                              <div className="card-header">
-                                <div className="card-subtitle text-gray">
-                                  <span className="blog-date">
-                                    <i className="fa fa-calendar"></i>{" "}
-                                    {node.frontmatter.date}
-                                  </span>
-                                </div>
-                                <div className="card-title">
-                                  <h5 className="p-name mt-1">
-                                    <Link
-                                      to={`blog${node.fields.slug}`}
-                                      className="u-url"
-                                    >
-                                      {title}
-                                    </Link>
-                                  </h5>
-                                </div>
-                              </div>
-                              <div className="card-body">
-                                <p
-                                  dangerouslySetInnerHTML={{
-                                    __html: node.excerpt,
+          <section id="start"></section>
+          <section id="body-wrapper" className="section blog-listing">
+            <section className="container grid-lg">
+              <div className="columns">
+                <div id="item" className="column col-12 extra-spacing">
+                  <div className="columns">
+                    {posts.map(({ node }) => {
+                      const title = node.frontmatter.title || node.fields.slug
+                      return (
+                        <div className="column col-12" key={node.fields.slug}>
+                          <div className="card">
+                            {node.frontmatter.thumbnail ? (
+                              <div className="card-image">
+                                <Link
+                                  to={`blog${node.fields.slug}`}
+                                  style={{
+                                    backgroundImage: `url(${node.frontmatter.thumbnail.childImageSharp.fluid.src})`,
                                   }}
-                                />
+                                ></Link>
                               </div>
-                              <div className="card-footer">
-                                <span className="tags">
-                                  {node.frontmatter.taxonomy
-                                    ? node.frontmatter.taxonomy.tag.map(tag => {
-                                        return (
-                                          <Link
-                                            to={`/blog/tag:${tag.toLowerCase()}`}
-                                            key={tag}
-                                            className="label label-rounded label-secondary p-category"
-                                          >
-                                            {tag}
-                                          </Link>
-                                        )
-                                      })
-                                    : ""}
+                            ) : (
+                              ""
+                            )}
+                            <div className="card-header">
+                              <div className="card-subtitle text-gray">
+                                <span className="blog-date">
+                                  <i className="fa fa-calendar"></i>{" "}
+                                  {node.frontmatter.date}
                                 </span>
                               </div>
+                              <div className="card-title">
+                                <h5 className="p-name mt-1">
+                                  <Link
+                                    to={`blog${node.fields.slug}`}
+                                    className="u-url"
+                                  >
+                                    {title}
+                                  </Link>
+                                </h5>
+                              </div>
+                            </div>
+                            <div className="card-body">
+                              <p
+                                dangerouslySetInnerHTML={{
+                                  __html: node.excerpt,
+                                }}
+                              />
+                            </div>
+                            <div className="card-footer">
+                              <span className="tags">
+                                {node.frontmatter.taxonomy
+                                  ? node.frontmatter.taxonomy.tag.map(tag => {
+                                      return (
+                                        <Link
+                                          to={`/blog/tag:${tag.toLowerCase()}`}
+                                          key={tag}
+                                          className="label label-rounded label-secondary p-category"
+                                        >
+                                          {tag}
+                                        </Link>
+                                      )
+                                    })
+                                  : ""}
+                              </span>
                             </div>
                           </div>
-                        )
-                      })}
-                    </div>
+                        </div>
+                      )
+                    })}
                   </div>
                 </div>
-              </section>
+              </div>
             </section>
           </section>
         </Layout>

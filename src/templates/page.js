@@ -38,43 +38,42 @@ class PageTemplate extends React.Component {
           ) : (
             ""
           )}
-          <section id="start">
-            <section id="body-wrapper" className="section blog-listing">
-              <section className="container grid-lg">
-                <div className="columns">
-                  <div id="item" className="column col-12 extra-spacing">
-                    <div className="content-item h-entry">
-                      {!post.frontmatter.hero_image ? (
-                        <div className="content-title text-center">
-                          <h2 className="p-name mt-1">
-                            {post.frontmatter.title}
-                          </h2>
-                          {post.frontmatter.subtitle ? (
-                            <h3>{post.frontmatter.subtitle}</h3>
-                          ) : (
-                            ""
-                          )}
-                          <span class="blog-date">
-                            <time
-                              class="dt-published"
-                              datetime={post.frontmatter.date}
-                            >
-                              <i class="fa fa-calendar"></i>{" "}
-                              {post.frontmatter.date}
-                            </time>
-                          </span>
-                        </div>
-                      ) : (
-                        ""
-                      )}
-
-                      <div className="e-content">
-                        <MDXRenderer>{post.body}</MDXRenderer>
+          <section id="start"></section>
+          <section id="body-wrapper" className="section blog-listing">
+            <section className="container grid-lg">
+              <div className="columns">
+                <div id="item" className="column col-12 extra-spacing">
+                  <div className="content-item h-entry">
+                    {!post.frontmatter.hero_image ? (
+                      <div className="content-title text-center">
+                        <h2 className="p-name mt-1">
+                          {post.frontmatter.title}
+                        </h2>
+                        {post.frontmatter.subtitle ? (
+                          <h3>{post.frontmatter.subtitle}</h3>
+                        ) : (
+                          ""
+                        )}
+                        <span class="blog-date">
+                          <time
+                            class="dt-published"
+                            datetime={post.frontmatter.date}
+                          >
+                            <i class="fa fa-calendar"></i>{" "}
+                            {post.frontmatter.date}
+                          </time>
+                        </span>
                       </div>
+                    ) : (
+                      ""
+                    )}
+
+                    <div className="e-content">
+                      <MDXRenderer>{post.body}</MDXRenderer>
                     </div>
                   </div>
                 </div>
-              </section>
+              </div>
             </section>
           </section>
         </Layout>

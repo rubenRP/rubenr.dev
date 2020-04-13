@@ -10,7 +10,7 @@ const resume = [
         info: "Lead Magento Front-End Architect",
         date: "2018 - Current",
         description:
-          'More details in my <a href="https://www.linkedin.com/in/rubenrodriguezpaz/" target="_blank">LinkedIn</a> profile.',
+          'More details in my <a href="https://www.linkedin.com/in/rubenrodriguezpaz/" target="_blank" rel="noopener">LinkedIn</a> profile.',
       },
     ],
   },

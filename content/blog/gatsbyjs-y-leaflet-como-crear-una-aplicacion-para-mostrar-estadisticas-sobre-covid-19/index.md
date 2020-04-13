@@ -1,6 +1,7 @@
 ---
 title: "GatsbyJS y Leaflet: Cómo crear una aplicación para mostrar estadísticas sobre COVID-19"
-subtitle: "Cómo crear una aplicación para mostrar estadísticas sobre COVID-19"
+hero_title: "GatsbyJS y Leaflet"
+hero_subtitle: "Cómo crear una aplicación para mostrar estadísticas sobre COVID-19"
 published: true
 date: "2020-03-30T08:30:00.000Z"
 taxonomy:
@@ -10,7 +11,6 @@ taxonomy:
     - JavaScript
     - React
     - GatsbyJS
-hero_classes: "hero-tiny text-light title-h1h2 parallax overlay-dark-gradient"
 hero_image: covid-map-coronavirus-app.jpg
 thumbnail: covid-map-thumbnail.jpg
 ---

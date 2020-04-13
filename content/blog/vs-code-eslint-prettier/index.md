@@ -1,5 +1,7 @@
 ---
 title: "Básicos para comenzar un proyecto en React - VS Code + ESLint + Prettier"
+hero_title: "Básicos para comenzar un proyecto en React"
+hero_subtitle: "VS Code + ESLint + Prettier"
 published: true
 date: "2020-02-16T18:46:00.000Z"
 taxonomy:
@@ -11,11 +13,10 @@ taxonomy:
 hero_classes: "hero-tiny text-light title-h1h2 parallax overlay-dark-gradient"
 hero_image: post-big.jpg
 thumbnail: "post-small.jpg"
+description: "Con la explosión de JavaScript como lenguaje de desarrollo web han surgido nuevas herramientas para mejorar la calidad del código de nuestros proyectos utilizando los principios de los primeros linters de C y tomando el relevo de los mess detectors y los code sniffers. Estoy hablando de los linters de JS, herramientas de programación para detectar código sospechoso en tiempo real."
 ---
 
 Con la explosión de JavaScript como lenguaje de desarrollo web han surgido nuevas herramientas para mejorar la calidad del código de nuestros proyectos utilizando los principios de los primeros linters de C y tomando el relevo de los _mess detectors_ y los _code sniffers_. Estoy hablando de los _linters_ de JS, herramientas de programación para detectar código sospechoso en tiempo real.
-
-===
 
 Estas herramientas son una gran ayuda para crear un código más sólido y reusable. Un código con más calidad se traduce en menos tiempo depurando código y eso siempre es un plus.
 

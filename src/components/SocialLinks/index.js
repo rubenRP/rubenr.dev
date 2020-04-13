@@ -12,6 +12,7 @@ class SocialLinks extends Component {
             <li key={link.label}>
               <a href={link.url} target="_blank" rel="noopener noreferrer">
                 <i className={link.iconClassName}></i>
+                <span className="d-none">{link.label}</span>
               </a>
             </li>
           )

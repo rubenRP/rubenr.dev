@@ -1,5 +1,7 @@
 ---
 title: "MageChatbot - Chatbot para operar con Magento 2 vía API"
+hero_title: "MageChatbot"
+hero_subtitle: "Chatbot para operar con Magento 2 vía API"
 published: true
 date: "2020-01-22T16:27:00.000Z"
 taxonomy:
