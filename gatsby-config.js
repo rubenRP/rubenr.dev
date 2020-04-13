@@ -101,15 +101,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        exclude: [`/blog/page:*`, `blog/tag:*`],
-      },
-    },
-    {
-      resolve: "gatsby-plugin-robots-txt",
-      options: {
-        sitemap: null,
-        host: null,
-        policy: [{ userAgent: "robots", disallow: ["/"] }],
+        exclude: [`/blog/page:*`, `/blog/tag:*`],
       },
     },
   ],
