@@ -12,7 +12,7 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 
 ## Author
 
-- [Rubén Rodríguez](https://www.rubenr.dev
+[Rubén Rodríguez](https://www.rubenr.dev)
 
 ## License
 

@@ -39,6 +39,7 @@ class IndexPage extends React.Component {
             image={data.fileName.childImageSharp.fluid.src}
             social={true}
           />
+          <div id="start"></div>
           <About info={about} />
           <Resume info={resume} />
           <Currently />
