@@ -10,6 +10,7 @@ import Hero from "../components/Hero"
 export default class BlogList extends Component {
   render() {
     const { data } = this.props
+    const { tag } = this.props.pageContext
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMdx.edges
     const heroConfig = {
@@ -19,8 +20,7 @@ export default class BlogList extends Component {
       classes: "text-light title-h1h2 hero-tiny overlay-dark-gradient",
       textAlign: "center",
     }
-    const content = `<h1>Blog - Dev Blog - Tech Blog</h1>
-    <p><br>Articles and opinions of a frontend developer. Mostly in spanish.</p>`
+    const content = `<h1>Tag: ${tag}</h1>`
 
     return (
       <BodyClassName className="header-fixed header-animated">
