@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import { Link } from "gatsby"
 import SocialLinks from "../SocialLinks"
 
 class Hero extends Component {
@@ -31,7 +32,7 @@ class Hero extends Component {
   }
 
   render() {
-    const { config, content, image, social } = this.props
+    const { config, content, image, social, date, tags } = this.props
     return (
       <>
         <section
@@ -46,9 +47,36 @@ class Hero extends Component {
           <div className="image-overlay"></div>
           <section
             className={`container ${config.gridSize}`}
-            dangerouslySetInnerHTML={{ __html: content }}
             style={{ textAlign: config.textAlign }}
-          ></section>
+          >
+            <div dangerouslySetInnerHTML={{ __html: content }}></div>
+            {date ? (
+              <span className="blog-date">
+                <time className="dt-published">
+                  <i className="fa fa-calendar"></i> {date}
+                </time>
+              </span>
+            ) : (
+              ""
+            )}
+            {tags ? (
+              <div className="taxonomy">
+                <span className="tags">
+                  {tags.map(tag => (
+                    <Link
+                      to={`/blog/tag:${tag.toLowerCase()}`}
+                      className="label label-rounded label-secondary p-category"
+                      key={tag}
+                    >
+                      {tag}
+                    </Link>
+                  ))}
+                </span>
+              </div>
+            ) : (
+              ""
+            )}
+          </section>
           {social ? <SocialLinks /> : ""}
           {config.arrow ? (
             <i
@@ -57,7 +85,9 @@ class Hero extends Component {
               onClick={this.toStart}
               onKeyDown={this.handleKeyDown}
               role="button"
-            ></i>
+            >
+              <span className="d-none">Go to content</span>
+            </i>
           ) : (
             ""
           )}

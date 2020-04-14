@@ -7,7 +7,7 @@ import SEO from "../components/Seo"
 
 import Hero from "../components/Hero"
 
-export default class BlogList extends Component {
+export default class TagList extends Component {
   render() {
     const { data } = this.props
     const { tag } = this.props.pageContext

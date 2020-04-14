@@ -13,6 +13,7 @@ class BlogPostTemplate extends React.Component {
     const post = this.props.data.mdx
     const siteTitle = this.props.data.site.siteMetadata.title
     const { previous, next } = this.props.pageContext
+    const tags = post.frontmatter.taxonomy ? post.frontmatter.taxonomy.tag : ""
 
     const heroConfig = {
       parallax: true,
@@ -24,25 +25,11 @@ class BlogPostTemplate extends React.Component {
       textAlign: "center",
     }
 
-    const tags = `<div class="taxonomy">
-    <span className="tags">
-    </span>
-    </div>`
-
-    const heroContent = `
-      ${
-        post.frontmatter.hero_subtitle
-          ? `<h1>${post.frontmatter.hero_title}</h1>
-          <h2>${post.frontmatter.hero_subtitle}</h2>`
-          : `<h1>${post.frontmatter.title}</h1>`
-      }
-      <span class="blog-date">
-        <time class="dt-published"><i class="fa fa-calendar"></i> ${
-          post.frontmatter.date
-        }</time>
-        ${tags}
-      </span>
-      `
+    const heroContent = `${
+      post.frontmatter.hero_subtitle
+        ? `<h1>${post.frontmatter.hero_title}</h1><h2>${post.frontmatter.hero_subtitle}</h2>`
+        : `<h1>${post.frontmatter.title}</h1>`
+    }`
 
     return (
       <BodyClassName className="header-fixed header-animated">
@@ -54,6 +41,8 @@ class BlogPostTemplate extends React.Component {
               content={heroContent}
               social={false}
               image={post.frontmatter.hero_image.childImageSharp.fluid.src}
+              date={post.frontmatter.date}
+              tags={tags}
             />
           ) : (
             ""

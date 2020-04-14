@@ -84,7 +84,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: config.siteTitle,
-        short_name: config.author,
+        short_name: 'RR',
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#333333`,
@@ -102,7 +102,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        exclude: [`/blog/page:*`, `/blog/tag:*`],
+        exclude: [`/blog/page:*`, `/blog/tag:*`, `/blog/category:*`],
       },
     },
   ],

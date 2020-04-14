@@ -6,19 +6,13 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 
 import Hero from "../components/Hero"
-import Tags from "../components/Tags"
 
-export default class BlogList extends Component {
+export default class CategoryList extends Component {
   render() {
     const { data } = this.props
+    const { category } = this.props.pageContext
     const siteTitle = data.site.siteMetadata.title
     const posts = data.allMdx.edges
-    const { currentPage, numPages } = this.props.pageContext
-    const isFirst = currentPage === 1
-    const isLast = currentPage === numPages
-    const prevPage =
-      currentPage - 1 === 1 ? "/blog" : `/blog/page:${currentPage - 1}`
-    const nextPage = `/blog/page:${currentPage + 1}`
     const heroConfig = {
       parallax: true,
       arrow: true,
@@ -26,13 +20,12 @@ export default class BlogList extends Component {
       classes: "text-light title-h1h2 hero-tiny overlay-dark-gradient",
       textAlign: "center",
     }
-    const content = `<h1>Blog - Dev Blog - Tech Blog</h1>
-    <p><br>Articles and opinions of a frontend developer. Mostly in spanish.</p>`
+    const content = `<h1>Category: ${category}</h1>`
 
     return (
       <BodyClassName className="header-fixed header-animated">
         <Layout location={this.props.location} title={siteTitle}>
-          <SEO title="Blog" />
+          <SEO title="All posts" />
 
           <Hero
             config={heroConfig}
@@ -84,59 +77,31 @@ export default class BlogList extends Component {
                             <div className="card-body">
                               <p
                                 dangerouslySetInnerHTML={{
-                                  __html:
-                                    node.frontmatter.description ||
-                                    node.excerpt,
+                                  __html: node.excerpt,
                                 }}
                               />
                             </div>
                             <div className="card-footer">
-                              {node.frontmatter.taxonomy ? (
-                                <Tags items={node.frontmatter.taxonomy.tag} />
-                              ) : (
-                                ""
-                              )}
+                              <span className="tags">
+                                {node.frontmatter.taxonomy
+                                  ? node.frontmatter.taxonomy.tag.map(tag => {
+                                      return (
+                                        <Link
+                                          to={`/blog/tag:${tag.toLowerCase()}`}
+                                          key={tag}
+                                          className="label label-rounded label-secondary p-category"
+                                        >
+                                          {tag}
+                                        </Link>
+                                      )
+                                    })
+                                  : ""}
+                              </span>
                             </div>
                           </div>
                         </div>
                       )
                     })}
-                  </div>
-                  <div id="listing-footer">
-                    <div className="pagination">
-                      <div className="btn-group">
-                        <li>
-                          {!isFirst && (
-                            <Link to={prevPage} rel="prev" className="btn">
-                              «
-                            </Link>
-                          )}
-                        </li>
-                        {Array.from({ length: numPages }, (_, i) => (
-                          <li key={`pagination-number${i + 1}`}>
-                            <Link
-                              to={`/${
-                                i === 0
-                                  ? "/blog"
-                                  : "/blog/page:" + (i + 1).toString()
-                              }`}
-                              className={`btn ${
-                                currentPage === i + 1 ? "active" : ""
-                              }`}
-                            >
-                              {i + 1}
-                            </Link>
-                          </li>
-                        ))}
-                        {!isLast && (
-                          <li>
-                            <Link to={nextPage} rel="next" className="btn">
-                              »
-                            </Link>
-                          </li>
-                        )}
-                      </div>
-                    </div>
                   </div>
                 </div>
               </div>
@@ -148,8 +113,8 @@ export default class BlogList extends Component {
   }
 }
 
-export const blogListQuery = graphql`
-  query blogListQuery($skip: Int!, $limit: Int!) {
+export const categoryQuery = graphql`
+  query categoryQuery($category: String) {
     fileName: file(
       absolutePath: { regex: "/anas-alshanti-feXpdV001o4-unsplash.jpg/" }
     ) {
@@ -166,23 +131,25 @@ export const blogListQuery = graphql`
     }
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { parent: { id: {} }, fileAbsolutePath: { regex: "\\\\/blog/" } }
-      limit: $limit
-      skip: $skip
+      filter: {
+        parent: { id: {} }
+        fileAbsolutePath: { regex: "\\\\/blog/" }
+        frontmatter: { taxonomy: { category: { in: [$category] } } }
+      }
     ) {
       edges {
         node {
-          excerpt(pruneLength: 400)
+          excerpt
           fields {
             slug
           }
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
-            description
             taxonomy {
               tag
             }
+            published
             thumbnail {
               childImageSharp {
                 fluid(maxWidth: 600) {
