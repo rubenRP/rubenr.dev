@@ -185,7 +185,7 @@ export const blogListQuery = graphql`
             }
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 600) {
+                fluid(maxHeight: 400) {
                   src
                 }
               }

@@ -106,6 +106,7 @@ class Header extends Component {
             onClick={this.mobileNavOnClick}
             onKeyDown={this.handleKeyDown}
             role="button"
+            tabIndex={0}
           >
             <span className="top"></span>
             <span className="middle"></span>

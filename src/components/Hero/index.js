@@ -85,6 +85,7 @@ class Hero extends Component {
               onClick={this.toStart}
               onKeyDown={this.handleKeyDown}
               role="button"
+              tabIndex={0}
             >
               <span className="d-none">Go to content</span>
             </i>

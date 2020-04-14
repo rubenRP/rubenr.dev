@@ -36,13 +36,13 @@ Por defecto ESLint trae unas configuraciones básicas con reglas para formatear 
 
 Si tu proyecto todavía no tiene instalado ESLint será necesario instalarlo
 
-```console
+```bash
 npm install --save-dev eslint babel-eslint
 ```
 
 También es necesario instalar tanto el paquete de configuraciones de AirBnb como el de configuraciones de ESLint con Prettier
 
-```console
+```bash
 npx install-peerdeps --dev eslint-config-airbnb
 npm install --save-dev --save-exact prettier-eslint eslint-config-prettier
 ```

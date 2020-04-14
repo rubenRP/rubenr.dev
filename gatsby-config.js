@@ -59,9 +59,9 @@ module.exports = {
           {
             resolve: `gatsby-remark-vscode`,
             options: {
-              theme: "Dark+ (default dark)", // Read on for list of included themes. Also accepts object and function forms.
-              injectStyles: true, // Injects (minimal) additional CSS for layout and scrolling
-              logLevel: "warn", // Set to 'info' to debug if something looks wrong
+              theme: "Dark+ (default dark)",
+              injectStyles: true,
+              logLevel: "warn",
             },
           },
           {
