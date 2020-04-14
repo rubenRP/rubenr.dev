@@ -29,15 +29,13 @@ collections:
           required: false,
         }
       - { name: thumbnail, label: Thumbnail, widget: "image", required: false }
-      - {
-          name: taxonomy,
-          label: Taxonomy,
-          widget: "list",
-          required: false,
-          fields:
-            - {name: category, label: Category, required: false}
-            - {name: tag, label: Tags, widget: "list", required: false}
-        }
+      - name: taxonomy
+        label: Taxonomy
+        widget: "list"
+        required: false
+        fields:
+          - { name: category, label: Category, required: false }
+          - { name: tag, label: Tags, widget: "list", required: false }
       - { name: body, label: Body, widget: markdown }
   - name: pages
     label: Pages
