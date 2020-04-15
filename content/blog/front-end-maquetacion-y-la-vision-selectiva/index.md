@@ -1,7 +1,11 @@
 ---
-title: "Front-end, maquetación y la “Visión selectiva”"
+title: 'Front-end, maquetación y la “Visión selectiva”'
+date: '2016-05-03T17:54:00.000Z'
 published: true
-date: "2016-05-03T17:54:00.000Z"
+category: testcat
+tag:
+  - tag1
+  - tag2
 taxonomy:
   category:
     - Articles
