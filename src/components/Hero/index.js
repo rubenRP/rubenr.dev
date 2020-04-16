@@ -3,9 +3,11 @@ import { Link } from "gatsby"
 import SocialLinks from "../SocialLinks"
 
 class Hero extends Component {
-  state = {
-    position: 0,
+  constructor(props) {
+    super(props)
+    this.state = { position: 0 }
   }
+
   componentDidMount() {
     window.addEventListener("scroll", this.parallax)
   }

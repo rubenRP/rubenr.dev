@@ -84,7 +84,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: config.siteTitle,
-        short_name: 'RR',
+        short_name: 'rubenr.dev',
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#333333`,

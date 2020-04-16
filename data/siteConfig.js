@@ -2,7 +2,7 @@ const config = {
   siteTitle: "Rubén Rodríguez - Front-End Developer",
   siteTitleShort: "Rubén Rodríguez",
   siteTitleAlt: "Front-End Developer",
-  siteLogo: "/logos/logo-1024.png", // Logo used for SEO and manifest.
+  siteLogo: "/assets/logo-rr-svg",
   siteUrl: "https://rubenr.dev",
   pathPrefix: "/",
   siteDescription:
@@ -19,7 +19,7 @@ const config = {
   userLocation: "Madrid, Spain",
   userAvatar: "profile-pic.png",
   userDescription:
-    "Yeah, I like animals better than people sometimes... Especially dogs. Dogs are the best. Every time you come home, they act like they haven't seen you in a year. And the good thing about dogs... is they got different dogs for different people.",
+    "Madrid based developer. Front-End developer @interactiv4. SASS, Bootstrap lover & Javascript enthusiast.",
   headerLinks: [
     {
       title: "Uses",

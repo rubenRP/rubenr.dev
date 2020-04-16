@@ -31,8 +31,7 @@ collections:
       - { name: thumbnail, label: Thumbnail, widget: "image", required: false }
       - name: taxonomy
         label: Taxonomy
-        widget: "list"
-        required: false
+        widget: "object"
         fields:
           - { name: category, label: Category, required: false }
           - { name: tag, label: Tags, widget: "list", required: false }

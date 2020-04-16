@@ -1,4 +1,6 @@
-import React, { Component } from "react"
+import React from "react"
+import PropTypes from "prop-types"
+
 import {
   LinkedinShareButton,
   LinkedinIcon,
@@ -8,23 +10,30 @@ import {
   WhatsappIcon,
 } from "react-share"
 
-class Share extends Component {
-  render() {
-    const { url, title } = this.props
-    return (
-      <div className="sharer-buttons-toolbar clearfix floating">
-        <TwitterShareButton url={url} title={title}>
-          <TwitterIcon size={32} round={true} />
-        </TwitterShareButton>
-        <LinkedinShareButton source={url} title={title}>
-          <LinkedinIcon size={32} round={true} />
-        </LinkedinShareButton>
-        <WhatsappShareButton url={url} title={title}>
-          <WhatsappIcon size={32} round={true} /> 
-        </WhatsappShareButton>
-      </div>
-    )
-  }
+const Share = ({ url, title }) => {
+  return (
+    <div className="sharer-buttons-toolbar clearfix floating">
+      <TwitterShareButton url={url} title={title}>
+        <TwitterIcon size={32} round />
+      </TwitterShareButton>
+      <LinkedinShareButton source={url} title={title}>
+        <LinkedinIcon size={32} round />
+      </LinkedinShareButton>
+      <WhatsappShareButton url={url} title={title}>
+        <WhatsappIcon size={32} round />
+      </WhatsappShareButton>
+    </div>
+  )
 }
 
 export default Share
+
+Share.defaultProps = {
+  url: null,
+  title: null,
+}
+
+Share.propTypes = {
+  url: PropTypes.string,
+  title: PropTypes.string,
+}

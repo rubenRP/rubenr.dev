@@ -70,6 +70,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
+    // eslint-disable-next-line no-shadow
     const path = post.node.fileAbsolutePath
     const regex = "/blog/"
 

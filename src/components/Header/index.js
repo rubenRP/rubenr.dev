@@ -4,8 +4,9 @@ import { Link } from "gatsby"
 import config from "../../../data/siteConfig"
 
 class Header extends Component {
-  state = {
-    scrolled: false,
+  constructor(props) {
+    super(props)
+    this.state = { scrolled: false }
   }
 
   componentDidMount() {

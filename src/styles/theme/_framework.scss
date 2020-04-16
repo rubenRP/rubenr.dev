@@ -18,7 +18,8 @@ body {
 
   // Fixed Header solution
   .header-fixed & {
-    padding-top: $header-height-large;
+    // padding-top: $header-height-large;
+    padding-top: 2rem;
   }
 }
 
