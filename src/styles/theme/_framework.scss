@@ -18,13 +18,12 @@ body {
 
   // Fixed Header solution
   .header-fixed & {
-    // padding-top: $header-height-large;
-    padding-top: 2rem;
+    padding-top: $header-height-large;
   }
 }
 
 .header-fixed {
-  .hero + #start > #body-wrapper {
+  .hero + #start + #body-wrapper {
     padding-top: 0;
   }
 }

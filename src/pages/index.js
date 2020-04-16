@@ -14,39 +14,36 @@ import home from "../../data/home"
 import about from "../../data/about"
 import resume from "../../data/resume"
 
-class IndexPage extends React.Component {
-  render() {
-    const siteTitle = "Gatsby Starter Personal Website"
-    const heroConfig = {
-      parallax: true,
-      arrow: true,
-      gridSize: "grid-lg",
-      classes: "text-light title-h1h2 hero-fullscreen overlay-dark-gradient",
-      textAlign: "center",
-    }
-    const { data } = this.props
-
-    return (
-      <BodyClassName className="header-dark header-transparent header-fixed header-animated">
-        <Layout location={this.props.location} title={siteTitle}>
-          <SEO
-            title="Home"
-            keywords={[`blog`, `gatsby`, `javascript`, `react`]}
-          />
-          <Hero
-            config={heroConfig}
-            content={home.hero}
-            image={data.fileName.childImageSharp.fluid.src}
-            social={true}
-          />
-          <div id="start"></div>
-          <About info={about} />
-          <Resume info={resume} />
-          <Currently />
-        </Layout>
-      </BodyClassName>
-    )
+const IndexPage = ({ data }) => {
+  const siteTitle = "Gatsby Starter Personal Website"
+  const heroConfig = {
+    parallax: true,
+    arrow: true,
+    gridSize: "grid-lg",
+    classes: "text-light title-h1h2 hero-fullscreen overlay-dark-gradient",
+    textAlign: "center",
   }
+
+  return (
+    <BodyClassName className="header-dark header-transparent header-fixed header-animated">
+      <Layout location={data.location} title={siteTitle}>
+        <SEO
+          title="Home"
+          keywords={[`blog`, `gatsby`, `javascript`, `react`]}
+        />
+        <Hero
+          config={heroConfig}
+          content={home.hero}
+          image={data.fileName.childImageSharp.fluid.src}
+          social
+        />
+        <div id="start" />
+        <About info={about} />
+        <Resume info={resume} />
+        <Currently />
+      </Layout>
+    </BodyClassName>
+  )
 }
 
 export default IndexPage
