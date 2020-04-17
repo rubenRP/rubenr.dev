@@ -13,9 +13,10 @@ import Currently from "../components/Currently"
 import home from "../../data/home"
 import about from "../../data/about"
 import resume from "../../data/resume"
+import config from "../../data/siteConfig"
 
 const IndexPage = ({ data }) => {
-  const siteTitle = "Gatsby Starter Personal Website"
+  const { siteTitle } = config
   const heroConfig = {
     parallax: true,
     arrow: true,

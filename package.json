@@ -1,11 +1,11 @@
 {
-  "name": "gatsby-personal-starter-blog",
+  "name": "rubenr.dec",
   "private": true,
-  "description": "A personal blog starter for a blog powered by Netlify CMS, based on the default blog starter",
+  "description": "Personal website made with Gatsby, React and NodeJS",
   "version": "1.0.0",
-  "author": "Thomas Wang <thomas@wang.sh>",
+  "author": "Rubén Rodríguez <hola@rubenr.dev>",
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/rubenRP/rubenr.dev/issues"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.5.1",
@@ -63,7 +63,7 @@
     "prettier": "^1.19.1",
     "prettier-eslint": "^9.0.1"
   },
-  "homepage": "https://github.com/gatsbyjs/gatsby-starter-blog#readme",
+  "homepage": "https://github.com/rubenRP/rubenr.dev#readme",
   "keywords": [
     "gatsby"
   ],
@@ -71,7 +71,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gatsbyjs/gatsby-starter-blog.git"
+    "url": "git+https://github.com/rubenRP/rubenr.dev.git"
   },
   "scripts": {
     "build": "gatsby build",
