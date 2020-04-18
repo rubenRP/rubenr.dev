@@ -1,4 +1,5 @@
 import React from "react"
+import propTypes from "prop-types"
 import { graphql } from "gatsby"
 import BodyClassName from "react-body-classname"
 
@@ -15,7 +16,7 @@ import about from "../../data/about"
 import resume from "../../data/resume"
 import config from "../../data/siteConfig"
 
-const IndexPage = ({ data }) => {
+const IndexPage = ({ data, location }) => {
   const { siteTitle } = config
   const heroConfig = {
     parallax: true,
@@ -27,7 +28,7 @@ const IndexPage = ({ data }) => {
 
   return (
     <BodyClassName className="header-dark header-transparent header-fixed header-animated">
-      <Layout location={data.location} title={siteTitle}>
+      <Layout location={location} title={siteTitle}>
         <SEO
           title="Home"
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
@@ -62,3 +63,18 @@ export const pageQuery = graphql`
     }
   }
 `
+
+IndexPage.defaultProps = {
+  data: {
+    fileName: null,
+  },
+  location: null,
+}
+
+IndexPage.propTypes = {
+  data: propTypes.shape({
+    fileName: propTypes.any,
+  }),
+  // eslint-disable-next-line react/forbid-prop-types
+  location: propTypes.any,
+}

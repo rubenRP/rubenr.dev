@@ -1,4 +1,5 @@
 import React from "react"
+import propTypes from "prop-types"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import BodyClassName from "react-body-classname"
@@ -7,79 +8,75 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import Hero from "../components/Hero"
 
-class PageTemplate extends React.Component {
-  render() {
-    const post = this.props.data.mdx
-    const siteTitle = this.props.data.site.siteMetadata.title
+const PageTemplate = ({ data, location }) => {
+  const post = data.mdx
+  const siteTitle = data.site.siteMetadata.title
 
-    const heroConfig = {
-      parallax: true,
-      arrow: true,
-      gridSize: "grid-lg",
-      classes: post.frontmatter.hero_classes,
-      textAlign: "center",
-    }
+  const heroConfig = {
+    parallax: true,
+    arrow: true,
+    gridSize: "grid-lg",
+    classes: post.frontmatter.hero_classes,
+    textAlign: "center",
+  }
 
-    const heroContent = `
+  const heroContent = `
       <h1>${post.frontmatter.heading}</h1>
       `
 
-    return (
-      <BodyClassName className="header-fixed header-animated">
-        <Layout location={this.props.location} title={siteTitle}>
-          <SEO title={post.frontmatter.title} description={post.excerpt} />
-          {post.frontmatter.hero_image ? (
-            <Hero
-              config={heroConfig}
-              content={heroContent}
-              social={false}
-              image={post.frontmatter.hero_image.childImageSharp.fluid.src}
-            />
-          ) : (
-            ""
-          )}
-          <section id="start"></section>
-          <section id="body-wrapper" className="section blog-listing">
-            <section className="container grid-lg">
-              <div className="columns">
-                <div id="item" className="column col-12 extra-spacing">
-                  <div className="content-item h-entry">
-                    {!post.frontmatter.hero_image ? (
-                      <div className="content-title text-center">
-                        <h2 className="p-name mt-1">
-                          {post.frontmatter.title}
-                        </h2>
-                        {post.frontmatter.subtitle ? (
-                          <h3>{post.frontmatter.subtitle}</h3>
-                        ) : (
-                          ""
-                        )}
-                        <span class="blog-date">
-                          <time
-                            class="dt-published"
-                            datetime={post.frontmatter.date}
-                          >
-                            <i class="fa fa-calendar"></i>{" "}
-                            {post.frontmatter.date}
-                          </time>
-                        </span>
-                      </div>
-                    ) : (
-                      ""
-                    )}
-
-                    <div className="e-content">
-                      <MDXRenderer>{post.body}</MDXRenderer>
+  return (
+    <BodyClassName className="header-fixed header-animated">
+      <Layout location={location} title={siteTitle}>
+        <SEO title={post.frontmatter.title} description={post.excerpt} />
+        {post.frontmatter.hero_image ? (
+          <Hero
+            config={heroConfig}
+            content={heroContent}
+            social={false}
+            image={post.frontmatter.hero_image.childImageSharp.fluid.src}
+          />
+        ) : (
+          ""
+        )}
+        <section id="start" />
+        <section id="body-wrapper" className="section blog-listing">
+          <section className="container grid-lg">
+            <div className="columns">
+              <div id="item" className="column col-12 extra-spacing">
+                <div className="content-item h-entry">
+                  {!post.frontmatter.hero_image ? (
+                    <div className="content-title text-center">
+                      <h2 className="p-name mt-1">{post.frontmatter.title}</h2>
+                      {post.frontmatter.subtitle ? (
+                        <h3>{post.frontmatter.subtitle}</h3>
+                      ) : (
+                        ""
+                      )}
+                      <span className="blog-date">
+                        <time
+                          className="dt-published"
+                          dateTime={post.frontmatter.date}
+                        >
+                          <i className="fa fa-calendar" />{" "}
+                          {post.frontmatter.date}
+                        </time>
+                      </span>
                     </div>
+                  ) : (
+                    ""
+                  )}
+
+                  <div className="e-content">
+                    <MDXRenderer>{post.body}</MDXRenderer>
                   </div>
                 </div>
               </div>
-            </section>
+            </div>
           </section>
-        </Layout>
-      </BodyClassName>
-    )
-  }
+        </section>
+      </Layout>
+    </BodyClassName>
+  )
 }
 
 export default PageTemplate
@@ -112,3 +109,19 @@ export const pageQuery = graphql`
     }
   }
 `
+
+PageTemplate.defaultProps = {
+  data: {
+    mdx: null,
+    site: null,
+  },
+  location: null,
+}
+
+PageTemplate.propTypes = {
+  data: propTypes.shape({
+    mdx: propTypes.any,
+    site: propTypes.any,
+  }),
+  location: propTypes.any,
+}

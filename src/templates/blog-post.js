@@ -1,4 +1,5 @@
 import React from "react"
+import propTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import BodyClassName from "react-body-classname"
@@ -160,6 +161,22 @@ export const pageQuery = graphql`
 
 BlogPostTemplate.defaultProps = {
   data: {
-    mdx: {},
+    mdx: null,
+    site: null,
   },
+  pageContext: null,
+  location: null,
+}
+
+BlogPostTemplate.propTypes = {
+  data: propTypes.shape({
+    mdx: propTypes.any,
+    site: propTypes.any,
+  }),
+  pageContext: propTypes.shape({
+    previous: propTypes.any,
+    next: propTypes.any,
+  }),
+  // eslint-disable-next-line react/forbid-prop-types
+  location: propTypes.any,
 }
