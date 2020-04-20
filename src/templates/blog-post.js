@@ -15,6 +15,9 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
   const tags = post.frontmatter.taxonomy ? post.frontmatter.taxonomy.tag : ""
+  const thumbnail =
+    post.frontmatter.thumbnail &&
+    post.frontmatter.thumbnail.childImageSharp.fixed.src
 
   const heroConfig = {
     parallax: true,
@@ -35,7 +38,11 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
   return (
     <BodyClassName className="header-fixed header-animated">
       <Layout location={location} title={siteTitle}>
-        <SEO title={post.frontmatter.title} description={post.excerpt} />
+        <SEO
+          title={post.frontmatter.title}
+          description={post.excerpt}
+          thumbnail={thumbnail}
+        />
         {post.frontmatter.hero_image ? (
           <Hero
             config={heroConfig}
@@ -143,6 +150,13 @@ export const pageQuery = graphql`
         hero_image {
           childImageSharp {
             fluid(maxWidth: 1400) {
+              src
+            }
+          }
+        }
+        thumbnail {
+          childImageSharp {
+            fixed(width: 600) {
               src
             }
           }
