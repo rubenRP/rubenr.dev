@@ -8,6 +8,7 @@ import SEO from "../components/Seo"
 
 import Hero from "../components/Hero"
 import About from "../components/About"
+import Recent from "../components/Recent"
 import Resume from "../components/Resume"
 import Currently from "../components/Currently"
 
@@ -41,6 +42,7 @@ const IndexPage = ({ data, location }) => {
         />
         <div id="start" />
         <About info={about} />
+        <Recent />
         <Resume info={resume} />
         <Currently />
       </Layout>

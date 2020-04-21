@@ -3,7 +3,7 @@ const home = {
   <h2>Soy Rubén Rodríguez.</h2>
   <p>I'm a Madrid based developer. <strong>Front-End developer</strong> @interactiv4.<br/>
   <strong>Javascript enthusiast</strong> & <strong>Magento certified</strong>.<br/>
-  Specialized in custom theme development and new UX patterns.</p>`,
+  Specialized in tailored theme development and new UX patterns.</p>`,
 }
 
 module.exports = home
