@@ -18,8 +18,8 @@ const Currently = () => {
   return (
     <>
       <div id="working" />
-      <section className="section modular-features modular-working offset-box">
-        <section className="container grid-lg">
+      <section className="section modular-features offset-box">
+        <div className="container grid-lg">
           <div className="frame-box bg-gray">
             <h3>Currently working at</h3>
             <div>
@@ -32,7 +32,7 @@ const Currently = () => {
             </div>
             <div className="columns" />
           </div>
-        </section>
+        </div>
       </section>
     </>
   )

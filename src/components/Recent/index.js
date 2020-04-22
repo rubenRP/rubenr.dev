@@ -28,8 +28,8 @@ const Recent = () => {
   return (
     <>
       <div id="recent" />
-      <section className="section modular-text modular-resume">
-        <section className="container grid-lg">
+      <section className="section modular-resume">
+        <div className="container grid-lg">
           <div className="columns">
             <div className="column col-3 col-md-12 header-col">
               <h4>
@@ -67,7 +67,7 @@ const Recent = () => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </section>
     </>
   )

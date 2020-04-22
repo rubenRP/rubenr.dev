@@ -34,9 +34,9 @@ const TagList = ({ data, pageContext, location }) => {
 
         <section id="start" />
         <section id="body-wrapper" className="section blog-listing">
-          <section className="container grid-lg">
+          <div className="container grid-lg">
             <div className="columns">
-              <div id="item" className="column col-12 extra-spacing">
+              <div id="item" className="column col-12">
                 <div className="columns">
                   {posts.map(({ node }) => {
                     const title = node.frontmatter.title || node.fields.slug
@@ -89,7 +89,7 @@ const TagList = ({ data, pageContext, location }) => {
                                       <Link
                                         to={`/blog/tag:${tag.toLowerCase()}`}
                                         key={tag}
-                                        className="label label-rounded label-secondary p-category"
+                                        className="label label-rounded label-secondary"
                                       >
                                         {tag}
                                       </Link>
@@ -105,7 +105,7 @@ const TagList = ({ data, pageContext, location }) => {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </section>
       </Layout>
     </BodyClassName>

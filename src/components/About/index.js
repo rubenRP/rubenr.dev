@@ -20,8 +20,8 @@ const About = ({ info }) => {
   return (
     <>
       <div id="about" />
-      <section className="section modular-text modular-about">
-        <section className="container grid-lg">
+      <section className="section modular-about">
+        <div className="container grid-lg">
           <div className="columns left">
             <div className="column col-8 col-md-12">
               <h2>{info.title}</h2>
@@ -49,7 +49,7 @@ const About = ({ info }) => {
               </div>
             </div>
           </div>
-        </section>
+        </div>
       </section>
     </>
   )

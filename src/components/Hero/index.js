@@ -46,16 +46,16 @@ class Hero extends Component {
             backgroundImage: `url(${image})`,
           }}
         >
-          <div className="image-overlay"></div>
-          <section
+          <div className="image-overlay" />
+          <div
             className={`container ${config.gridSize}`}
             style={{ textAlign: config.textAlign }}
           >
-            <div dangerouslySetInnerHTML={{ __html: content }}></div>
+            <div dangerouslySetInnerHTML={{ __html: content }} />
             {date ? (
               <span className="blog-date">
                 <time className="dt-published">
-                  <i className="fa fa-calendar"></i> {date}
+                  <i className="fa fa-calendar" /> {date}
                 </time>
               </span>
             ) : (
@@ -67,7 +67,7 @@ class Hero extends Component {
                   {tags.map(tag => (
                     <Link
                       to={`/blog/tag:${tag.toLowerCase()}`}
-                      className="label label-rounded label-secondary p-category"
+                      className="label label-rounded label-secondary"
                       key={tag}
                     >
                       {tag}
@@ -78,7 +78,7 @@ class Hero extends Component {
             ) : (
               ""
             )}
-          </section>
+          </div>
           {social ? <SocialLinks /> : ""}
           {config.arrow ? (
             <i

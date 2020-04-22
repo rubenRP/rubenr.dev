@@ -6,7 +6,7 @@ const Resume = ({ info }) => {
   return (
     <>
       <div id="resume" />
-      <section className="section modular-text modular-resume bg-gray">
+      <section className="section modular-resume bg-gray">
         <section className="container grid-lg">
           {info.map(section => (
             <div className={`columns ${section.css_class}`} key={section.id}>

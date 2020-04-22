@@ -1,0 +1,63 @@
+.overlay {
+  position: fixed;
+  background: #000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+
+  &.open {
+    opacity: 0.95;
+    visibility: visible;
+    height: 100%;
+  }
+  nav {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+
+.overlay-light,
+.overlay-dark,
+.overlay-light-gradient,
+.overlay-dark-gradient {
+  z-index: 0;
+}
+
+.overlay-menu {
+  height: calc(100% - 90px);
+  overflow-y: scroll;
+
+  & > .tree {
+    text-align: left;
+  }
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: -1;
+
+  .overlay-light & {
+    background: rgba(#fff, 0.4);
+  }
+
+  .overlay-light-gradient & {
+    background: linear-gradient(to bottom, rgba(#fff, 0.5), rgba(#fff, 0.2));
+  }
+
+  .overlay-dark & {
+    background: rgba(#000, 0.4);
+  }
+
+  .overlay-dark-gradient & {
+    background: linear-gradient(to bottom, rgba(#000, 0.5), rgba(#000, 0.2));
+  }
+}

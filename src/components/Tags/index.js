@@ -9,7 +9,7 @@ const Tags = ({ items }) => {
         <Link
           to={`/blog/tag:${tag.toLowerCase()}`}
           key={tag}
-          className="label label-rounded label-secondary p-category"
+          className="label label-rounded label-secondary"
         >
           {tag}
         </Link>

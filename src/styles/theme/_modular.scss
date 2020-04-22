@@ -1,4 +1,13 @@
 .modular-hero {
+  .social-links {
+    width: 75%;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 5px;
+    a {
+      color: $light-color;
+    }
+  }
   #to-start {
     bottom: 3.5rem;
   }
@@ -17,7 +26,6 @@
   }
 
   &.small {
-
     .columns {
       margin-top: -1rem;
     }
@@ -32,7 +40,6 @@
       display: block;
       justify-content: left;
 
-
       i {
         position: relative;
         display: inherit;
@@ -43,7 +50,6 @@
         top: auto;
         color: $gray-color;
         @extend .default-animation;
-
       }
       h6 {
         text-transform: none;
@@ -118,5 +124,84 @@
 
   .columns.left {
     flex-direction: row-reverse;
+  }
+}
+
+.modular-about {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+
+  .columns.left {
+    flex-direction: row-reverse;
+  }
+  img {
+    border-radius: 50%;
+    max-width: 170px;
+  }
+  @media (max-width: 840px) {
+    .btn {
+      margin-top: 15px;
+    }
+    .image {
+      display: none;
+    }
+  }
+}
+
+.modular-resume {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+  .education,
+  .work,
+  .other {
+    //margin-bottom: 48px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid $gray-color;
+  }
+  .header-col {
+    h4 {
+      text-transform: uppercase;
+      font-weight: 300;
+      span {
+        border-bottom: 3px solid $primary-color;
+        padding-bottom: 6px;
+      }
+    }
+  }
+  .main-col {
+    .item {
+      width: 100%;
+    }
+  }
+  .bars {
+    .skills {
+      margin-top: 75px;
+      margin-left: 0;
+      list-style: none;
+    }
+    li {
+      position: relative;
+      margin-bottom: 60px;
+      background: #ccc;
+      height: 42px;
+      border-radius: 3px;
+      .bar-expand {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 0;
+        padding-right: 24px;
+        background: #313131;
+        display: inline-block;
+        height: 42px;
+        line-height: 42px;
+        border-radius: 3px 0 0 3px;
+      }
+      em {
+        position: relative;
+        top: -36px;
+        font-style: initial;
+      }
+    }
   }
 }

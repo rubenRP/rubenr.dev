@@ -40,9 +40,9 @@ const PageTemplate = ({ data, location }) => {
         )}
         <section id="start" />
         <section id="body-wrapper" className="section blog-listing">
-          <section className="container grid-lg">
+          <div className="container grid-lg">
             <div className="columns">
-              <div id="item" className="column col-12 extra-spacing">
+              <div id="item" className="column col-12">
                 <div className="content-item h-entry">
                   {!post.frontmatter.hero_image ? (
                     <div className="content-title text-center">
@@ -72,7 +72,7 @@ const PageTemplate = ({ data, location }) => {
                 </div>
               </div>
             </div>
-          </section>
+          </div>
         </section>
       </Layout>
     </BodyClassName>

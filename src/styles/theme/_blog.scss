@@ -101,11 +101,23 @@
   text-transform: uppercase;
 }
 
-/** Pagination **/
-ul.pagination {
-  justify-content: center;
+.blog-listing,
+.modular-hero {
+  .reading {
+    font-size: 13px;
+    &:before {
+      content: "-";
+      margin: 0 10px;
+    }
+  }
+  .taxonomy {
+    margin-top: 5px;
+    .label {
+      margin: 0 5px;
+    }
+  }
 }
 
-.prev-next {
-  margin-top: -1rem;
+.modular-hero .reading {
+  font-size: 16px;
 }
