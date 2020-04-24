@@ -10,8 +10,8 @@ const Feedback = () => {
     <section className="section modular-features offset-box">
       <section className="container grid-sm">
         <div className="frame-box bg-light">
-          <h5>If you want to send me your feedback</h5>
-          <div className="m-2">
+          <h3>If you want to send me your feedback</h3>
+          <div>
             <br />
             <a
               href={twitter.url}
