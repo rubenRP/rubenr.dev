@@ -13,7 +13,7 @@ taxonomy:
 hero_classes: "hero-tiny text-light title-h1h2 parallax overlay-dark-gradient"
 hero_image: post-big.jpg
 thumbnail: "post-small.jpg"
-description: "Con la explosión de JavaScript como lenguaje de desarrollo web han surgido nuevas herramientas para mejorar la calidad del código de nuestros proyectos utilizando los principios de los primeros linters de C y tomando el relevo de los mess detectors y los code sniffers. Estoy hablando de los linters de JS, herramientas de programación para detectar código sospechoso en tiempo real."
+description: "Con la explosión de JavaScript como lenguaje han surgido nuevas herramientas para mejorar la calidad del código de nuestros proyectos."
 ---
 
 Con la explosión de JavaScript como lenguaje de desarrollo web han surgido nuevas herramientas para mejorar la calidad del código de nuestros proyectos utilizando los principios de los primeros linters de C y tomando el relevo de los _mess detectors_ y los _code sniffers_. Estoy hablando de los _linters_ de JS, herramientas de programación para detectar código sospechoso en tiempo real.

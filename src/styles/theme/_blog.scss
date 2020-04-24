@@ -1,60 +1,37 @@
-/** Breadcrumbs styling **/
-#breadcrumbs {
-  padding-left: 0;
-  display: flex;
-  align-items: center;
-  margin-top: -1rem;
-  margin-bottom: 1rem;
-
-  i {
-    display: none;
-  }
-
-  span,
-  a {
-    padding: 0 0.5rem;
-    &:first-child {
-      padding-left: 0;
-    }
-  }
-
-  span,
-  a {
-    &:not(:first-child)::before {
-      color: #e7e9ed;
-      content: "/";
-      padding-right: 1rem;
-    }
-  }
-}
-
 /** Blog Listing **/
 .blog-listing {
   .card {
-    margin-bottom: 25px;
+    margin-bottom: 50px;
     border: 0;
-    box-shadow: 0 10px 45px -9px rgba(0, 0, 0, 0.1);
     display: grid;
     grid-template-areas:
       "image header"
       "image body"
       "image footer";
+    background: transparent;
     @include breakpoint(md) {
       grid-template-areas:
         "image"
         "header"
         "body"
         "footer";
+      box-shadow: 0 10px 45px -9px rgba(0, 0, 0, 0.1);
+      background: $light-color;
+      margin-bottom: 25px;
     }
   }
 
   .card-image {
     grid-area: image;
-    width: 300px;
+    width: 400px;
+    margin-right: 40px;
     overflow: hidden;
+    box-shadow: 0 10px 45px -9px rgba(0, 0, 0, 0.1);
     @include breakpoint(md) {
       width: 100%;
       height: 120px;
+      margin-right: 0;
+      box-shadow: none;
     }
     a {
       display: block;
@@ -67,15 +44,31 @@
 
   .card-header {
     grid-area: header;
+    padding-top: 0;
+    @include breakpoint(md) {
+      padding-top: 0.8rem;
+    }
   }
 
   .card-body {
     grid-area: body;
+    padding-top: 0;
   }
 
   .card-footer {
     grid-area: footer;
     text-align: right;
+    padding-top: 0;
+    padding-bottom: 0;
+    &:last-child {
+      padding-bottom: 0;
+    }
+    @include breakpoint(md) {
+      padding-bottom: 0.8rem;
+      &:last-child {
+        padding-bottom: 0.8rem;
+      }
+    }
   }
 
   .blog-date {

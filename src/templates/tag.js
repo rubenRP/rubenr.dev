@@ -130,7 +130,7 @@ export const tagsQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 140)
           fields {
             slug
           }

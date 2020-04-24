@@ -130,7 +130,7 @@ export const categoryQuery = graphql`
     ) {
       edges {
         node {
-          excerpt
+          excerpt(pruneLength: 140)
           fields {
             slug
           }
