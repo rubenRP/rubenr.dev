@@ -34,18 +34,23 @@ section.section {
   position: relative;
 }
 
-
 a {
   color: $link-color;
   &:focus,
   &:hover,
   &:active,
   &.active {
-    color: $link-color-dark;
+    @extend .default-animation;
+    color: $detail-color;
   }
-
+  &:hover {
+    text-decoration: none;
+  }
   &:visited {
     color: $link-color;
+  }
+  &.text-dark:hover {
+    color: $detail-color !important;
   }
 }
 
@@ -86,4 +91,8 @@ ul {
   li + li {
     margin-left: 25px !important;
   }
+}
+
+.bg-white {
+  background-color: $light-color;
 }

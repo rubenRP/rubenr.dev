@@ -68,7 +68,7 @@ const BlogList = ({ data, pageContext, location }) => {
                               <h5 className="p-name mt-1">
                                 <Link
                                   to={`blog${node.fields.slug}`}
-                                  className="u-url"
+                                  className="u-url text-dark"
                                 >
                                   {title}
                                 </Link>

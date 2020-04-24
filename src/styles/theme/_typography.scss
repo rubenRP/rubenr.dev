@@ -64,6 +64,9 @@ h6,
   h1 + h2 {
     margin-bottom: 50px;
     font-weight: 700;
+    @include breakpoint(sm) {
+      margin-bottom: 25;
+    }
   }
 }
 

@@ -86,7 +86,7 @@ class Hero extends Component {
                   {tags.map(tag => (
                     <Link
                       to={`/blog/tag:${tag.toLowerCase()}`}
-                      className="label label-rounded label-secondary"
+                      className="label label-rounded"
                       key={tag}
                     >
                       {tag}

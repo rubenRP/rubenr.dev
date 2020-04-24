@@ -19,8 +19,8 @@ const Currently = () => {
     <>
       <div id="working" />
       <section className="section modular-features offset-box">
-        <div className="container grid-lg">
-          <div className="frame-box bg-gray">
+        <div className="container grid-sm">
+          <div className="frame-box">
             <h3>Currently working at</h3>
             <div>
               <StaticQuery

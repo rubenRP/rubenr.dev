@@ -7,10 +7,15 @@
   padding-bottom: 7rem;
   background-size: cover;
   background-position: center;
+  @include breakpoint(sm) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
 
   h1 {
     color: $header-text-dark;
     font-size: 4rem;
+    font-weight: 100;
   }
 
   h2 {
@@ -78,12 +83,24 @@
     font-weight: 300;
   }
 
+  .social-links {
+    width: 75%;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 5px;
+    a {
+      color: $light-color;
+    }
+  }
+
   #to-start {
     display: inline-block;
     position: absolute;
-    bottom: 10px;
+    bottom: 3.5rem;
     font-size: 2rem;
     cursor: pointer;
+    @include breakpoint(sm) {
+      bottom: 1rem;
+    }
   }
 }
-

@@ -58,7 +58,7 @@ const CategoryList = ({ data, pageContext, location }) => {
                               <h5 className="p-name mt-1">
                                 <Link
                                   to={`blog${node.fields.slug}`}
-                                  className="u-url"
+                                  className="u-url text-dark"
                                 >
                                   {title}
                                 </Link>
@@ -81,7 +81,7 @@ const CategoryList = ({ data, pageContext, location }) => {
                                       <Link
                                         to={`/blog/tag:${tag.toLowerCase()}`}
                                         key={tag}
-                                        className="label label-rounded label-secondary"
+                                        className="label label-rounded"
                                       >
                                         {tag}
                                       </Link>

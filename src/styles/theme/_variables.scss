@@ -1,12 +1,41 @@
-// Spectre Overrides
-$primary-color: #f06000;
-$dark-color: #454d5d;
+// Core colors
+$primary-color: #303742;
+$primary-color-dark: darken($primary-color, 3%);
+$primary-color-light: lighten($primary-color, 3%);
+$secondary-color: lighten($primary-color, 37.5%);
+$secondary-color-dark: darken($secondary-color, 3%) !default;
+$secondary-color-light: lighten($secondary-color, 3%) !default;
+
+$detail-color: #6166dc;
+$background-color: #f7f8f9;
+
+// Gray colors
+$dark-color: #303742 !default;
 $light-color: #fff !default;
-$gray-color: lighten($dark-color, 40%);
-$gray-color-dark: darken($gray-color, 25%);
-$border-color: lighten($dark-color, 60%);
-$bg-color: lighten($dark-color, 66%);
-$body-font-color: lighten($dark-color, 5%);
+$gray-color: lighten($dark-color, 55%) !default;
+$gray-color-dark: darken($gray-color, 30%) !default;
+$gray-color-light: lighten($gray-color, 20%) !default;
+
+$border-color: lighten($dark-color, 65%) !default;
+$border-color-dark: darken($border-color, 10%) !default;
+$border-color-light: lighten($border-color, 8%) !default;
+$bg-color: lighten($dark-color, 75%) !default;
+$bg-color-dark: darken($bg-color, 3%) !default;
+$bg-color-light: $light-color !default;
+
+// Control colors
+$success-color: #32b643 !default;
+$warning-color: #ffb700 !default;
+$error-color: #e85600 !default;
+
+// Other colors
+$code-color: #d73e48 !default;
+$highlight-color: #ffe9b3 !default;
+$body-bg: $background-color;
+$body-font-color: lighten($dark-color, 5%) !default;
+$link-color: $detail-color;
+$link-color-dark: darken($link-color, 10%) !default;
+$link-color-light: lighten($link-color, 10%) !default;
 
 // Layout
 $horiz-padding: 1rem;
@@ -32,11 +61,7 @@ $dropmenu-shadow: 0 3px 5px rgba(0, 0, 0, 0.1);
 
 // Mobile Menu
 $mobile-color-main: $primary-color;
-$mobile-color-active: #fff;
-$mobile-color-link: #fff;
+$mobile-color-active: $light-color;
+$mobile-color-link: $light-color;
 $mobile-button-height: 24px;
 $mobile-button-width: 28px;
-
-$link-color: $primary-color !default;
-$link-color-dark: darken($link-color, 10%) !default;
-$link-color-light: lighten($link-color, 10%) !default;

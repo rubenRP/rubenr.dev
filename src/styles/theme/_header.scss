@@ -7,7 +7,7 @@
   font-size: 0.7rem;
   font-weight: 700;
 
-  background: $light-color;
+  background: $background-color;
   color: $dark-color;
 
   a {
@@ -66,6 +66,10 @@
       height: 42px;
       display: inherit;
       @extend .default-animation;
+      @include breakpoint(md) {
+        height: 35px;
+        margin-left: 8px;
+      }
     }
   }
 
@@ -89,7 +93,7 @@ body.header-fixed.header-animated {
     .logo {
       svg,
       img {
-        height: 28px;
+        height: 25px;
       }
     }
 

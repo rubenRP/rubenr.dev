@@ -11,7 +11,8 @@ body.sticky-footer {
 }
 
 #footer {
-  color: #acb3c2;
+  // color: #acb3c2;
   padding: 1rem $horiz-padding 0;
   text-align: center;
+  background: linear-gradient(180deg, rgba(247, 248, 249, 0) 0%, #d2d3d6 100%);
 }
