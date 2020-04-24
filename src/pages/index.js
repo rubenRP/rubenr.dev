@@ -19,13 +19,7 @@ import config from "../../data/siteConfig"
 
 const IndexPage = ({ data, location }) => {
   const { siteTitle } = config
-  const heroConfig = {
-    parallax: true,
-    arrow: true,
-    gridSize: "grid-lg",
-    classes: "text-light title-h1h2 hero-fullscreen overlay-dark-gradient",
-    textAlign: "center",
-  }
+  const heroClasses = "text-light hero-fullscreen overlay-dark-gradient"
 
   return (
     <BodyClassName className="header-dark header-transparent header-fixed header-animated">
@@ -35,10 +29,12 @@ const IndexPage = ({ data, location }) => {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Hero
-          config={heroConfig}
-          content={home.hero}
+          title={home.hero.title}
+          subtitle={home.hero.subtitle}
+          text={home.hero.text}
           image={data.fileName.childImageSharp.fluid.src}
           social
+          classes={heroClasses}
         />
         <div id="start" />
         <About info={about} />

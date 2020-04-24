@@ -19,22 +19,6 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
     post.frontmatter.thumbnail &&
     post.frontmatter.thumbnail.childImageSharp.fixed.src
 
-  const heroConfig = {
-    parallax: true,
-    arrow: true,
-    gridSize: "grid-lg",
-    classes:
-      "hero-tiny text-light title-h1h2 parallax overlay-dark-gradient" ||
-      post.frontmatter.hero_classes,
-    textAlign: "center",
-  }
-
-  const heroContent = `${
-    post.frontmatter.hero_subtitle
-      ? `<h1>${post.frontmatter.hero_title}</h1><h2>${post.frontmatter.hero_subtitle}</h2>`
-      : `<h1>${post.frontmatter.title}</h1>`
-  }`
-
   return (
     <BodyClassName className="header-fixed header-animated">
       <Layout location={location} title={siteTitle}>
@@ -45,12 +29,21 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         />
         {post.frontmatter.hero_image ? (
           <Hero
-            config={heroConfig}
-            content={heroContent}
+            title={
+              post.frontmatter.hero_title
+                ? post.frontmatter.hero_title
+                : post.frontmatter.title
+            }
+            subtitle={post.frontmatter.hero_subtitle}
             social={false}
             image={post.frontmatter.hero_image.childImageSharp.fluid.src}
             date={post.frontmatter.date}
             tags={tags}
+            classes={
+              post.frontmatter.hero_classes
+                ? post.frontmatter.hero_classes
+                : undefined
+            }
           />
         ) : (
           ""

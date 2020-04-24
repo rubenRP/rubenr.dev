@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Link } from "gatsby"
+import propTypes from "prop-types"
 import SocialLinks from "../SocialLinks"
 
 class Hero extends Component {
@@ -34,24 +35,42 @@ class Hero extends Component {
   }
 
   render() {
-    const { config, content, image, social, date, tags } = this.props
+    const {
+      title,
+      subtitle,
+      text,
+      image,
+      social,
+      date,
+      tags,
+      parallax,
+      arrow,
+      classes,
+      textAlign,
+    } = this.props
+    const { position } = this.state
     return (
       <>
         <section
-          className={`section modular-hero hero ${config.classes} ${
-            config.parallax ? "parallax" : ""
-          }`}
+          className={`section modular-hero hero ${
+            subtitle ? "title-h1h2" : ""
+          } ${classes} ${parallax ? "parallax" : ""}`}
           style={{
-            backgroundPositionY: this.state.position,
+            backgroundPositionY: position,
             backgroundImage: `url(${image})`,
           }}
         >
           <div className="image-overlay" />
-          <div
-            className={`container ${config.gridSize}`}
-            style={{ textAlign: config.textAlign }}
-          >
-            <div dangerouslySetInnerHTML={{ __html: content }} />
+          <div className="container grid-lg" style={{ textAlign }}>
+            {title ? <h1>{title}</h1> : ""}
+            {subtitle ? <h2>{subtitle}</h2> : ""}
+            {text ? (
+              <p>
+                <span dangerouslySetInnerHTML={{ __html: text }} />
+              </p>
+            ) : (
+              ""
+            )}
             {date ? (
               <span className="blog-date">
                 <time className="dt-published">
@@ -80,7 +99,7 @@ class Hero extends Component {
             )}
           </div>
           {social ? <SocialLinks /> : ""}
-          {config.arrow ? (
+          {arrow ? (
             <i
               id="to-start"
               className="pulse fa fa-angle-down"
@@ -101,3 +120,31 @@ class Hero extends Component {
 }
 
 export default Hero
+
+Hero.defaultProps = {
+  title: null,
+  subtitle: null,
+  text: null,
+  image: null,
+  social: false,
+  date: null,
+  tags: null,
+  parallax: true,
+  arrow: true,
+  classes: "text-light hero-tiny overlay-dark-gradient",
+  textAlign: "center",
+}
+
+Hero.propTypes = {
+  title: propTypes.string,
+  subtitle: propTypes.string,
+  text: propTypes.string,
+  image: propTypes.string,
+  social: propTypes.bool,
+  date: propTypes.string,
+  tags: propTypes.arrayOf(propTypes.string),
+  parallax: propTypes.bool,
+  arrow: propTypes.bool,
+  classes: propTypes.string,
+  textAlign: propTypes.string,
+}

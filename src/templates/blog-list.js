@@ -18,15 +18,10 @@ const BlogList = ({ data, pageContext, location }) => {
   const prevPage =
     currentPage - 1 === 1 ? "/blog" : `/blog/page:${currentPage - 1}`
   const nextPage = `/blog/page:${currentPage + 1}`
-  const heroConfig = {
-    parallax: true,
-    arrow: true,
-    gridSize: "grid-lg",
-    classes: "text-light title-h1h2 hero-tiny overlay-dark-gradient",
-    textAlign: "center",
-  }
-  const content = `<h1>Blog - Dev Blog - Tech Blog</h1>
-    <p><br>Articles and opinions of a frontend developer. Mostly in spanish.</p>`
+
+  const heroTitle = "Blog - Dev Blog - Tech Blog"
+  const heroText =
+    "Articles and opinions of a frontend developer. Mostly in spanish."
 
   return (
     <BodyClassName className="header-fixed header-animated">
@@ -34,8 +29,8 @@ const BlogList = ({ data, pageContext, location }) => {
         <SEO title="Blog" />
 
         <Hero
-          config={heroConfig}
-          content={content}
+          title={heroTitle}
+          text={heroText}
           image={data.fileName.childImageSharp.fluid.src}
         />
 

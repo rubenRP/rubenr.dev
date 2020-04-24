@@ -12,28 +12,26 @@ const PageTemplate = ({ data, location }) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata.title
 
-  const heroConfig = {
-    parallax: true,
-    arrow: true,
-    gridSize: "grid-lg",
-    classes: post.frontmatter.hero_classes,
-    textAlign: "center",
-  }
-
-  const heroContent = `
-      <h1>${post.frontmatter.heading}</h1>
-      `
-
   return (
     <BodyClassName className="header-fixed header-animated">
       <Layout location={location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         {post.frontmatter.hero_image ? (
           <Hero
-            config={heroConfig}
-            content={heroContent}
+            title={
+              post.frontmatter.hero_title
+                ? post.frontmatter.hero_title
+                : post.frontmatter.title
+            }
+            subtitle={post.frontmatter.hero_subtitle}
+            text={post.frontmatter.hero_text}
             social={false}
             image={post.frontmatter.hero_image.childImageSharp.fluid.src}
+            classes={
+              post.frontmatter.hero_classes
+                ? post.frontmatter.hero_classes
+                : undefined
+            }
           />
         ) : (
           ""
@@ -96,7 +94,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
-        heading
+        hero_title
+        hero_subtitle
+        hero_text
         hero_image {
           childImageSharp {
             fluid(maxWidth: 1400) {
@@ -123,5 +123,6 @@ PageTemplate.propTypes = {
     mdx: propTypes.any,
     site: propTypes.any,
   }),
+  // eslint-disable-next-line react/forbid-prop-types
   location: propTypes.any,
 }

@@ -12,14 +12,7 @@ const TagList = ({ data, pageContext, location }) => {
   const { tag } = pageContext
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges
-  const heroConfig = {
-    parallax: true,
-    arrow: true,
-    gridSize: "grid-lg",
-    classes: "text-light title-h1h2 hero-tiny overlay-dark-gradient",
-    textAlign: "center",
-  }
-  const content = `<h1>Tag: ${tag}</h1>`
+  const heroTitle = `Tag: ${tag}`
 
   return (
     <BodyClassName className="header-fixed header-animated">
@@ -27,8 +20,7 @@ const TagList = ({ data, pageContext, location }) => {
         <SEO title="All posts" />
 
         <Hero
-          config={heroConfig}
-          content={content}
+          title={heroTitle}
           image={data.fileName.childImageSharp.fluid.src}
         />
 
