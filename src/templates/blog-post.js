@@ -26,6 +26,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           title={post.frontmatter.title}
           description={post.excerpt}
           thumbnail={thumbnail}
+          lang="es"
         />
         {post.frontmatter.hero_image ? (
           <Hero
