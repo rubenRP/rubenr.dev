@@ -57,7 +57,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
         )}
         <section id="start" />
         <section id="body-wrapper" className="section blog-listing">
-          <div className="container grid-lg">
+          <div className="container grid-md">
             <div className="columns">
               <div id="item" className="column col-12">
                 <div className="content-item h-entry">
