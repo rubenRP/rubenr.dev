@@ -9,7 +9,12 @@ const SocialLinks = () => {
       {userLinks.map(link => {
         return (
           <li key={link.label}>
-            <a href={link.url} target="_blank" rel="noopener noreferrer">
+            <a
+              href={link.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={link.label}
+            >
               <i className={link.iconClassName} />
               <span className="d-none">{link.label}</span>
             </a>

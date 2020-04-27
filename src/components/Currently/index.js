@@ -30,7 +30,7 @@ const Currently = () => {
                 }}
               />
             </div>
-            <div className="columns" />
+            <p className="columns" />
           </div>
         </div>
       </section>

@@ -107,6 +107,7 @@ class Hero extends Component {
               onKeyDown={this.handleKeyDown}
               role="button"
               tabIndex={0}
+              aria-label="Go to content"
             >
               <span className="d-none">Go to content</span>
             </i>

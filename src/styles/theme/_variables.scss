@@ -12,7 +12,7 @@ $background-color: #f7f8f9;
 // Gray colors
 $dark-color: #303742 !default;
 $light-color: #fff !default;
-$gray-color: lighten($dark-color, 55%) !default;
+$gray-color: lighten($dark-color, 30%) !default;
 $gray-color-dark: darken($gray-color, 30%) !default;
 $gray-color-light: lighten($gray-color, 20%) !default;
 

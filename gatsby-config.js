@@ -48,6 +48,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
+              backgroundColor: `#f7f8f9`,
             },
           },
           {
@@ -84,7 +85,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: config.siteTitle,
-        short_name: 'rubenr.dev',
+        short_name: "rubenr.dev",
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#333333`,
