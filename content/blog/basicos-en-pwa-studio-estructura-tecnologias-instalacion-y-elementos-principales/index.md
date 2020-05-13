@@ -16,7 +16,7 @@ hero_image: pwa-basics-hero.jpg
 thumbnail: pwa-basics-thumb.jpg
 ---
 
-Han pasado 536 días desde que Magento lanzó con la versión 2.3 de Magento 2 [PWA Studio](https://magento.com/products/magento-commerce/pwa), aunque esta nueva plataforma de desarrollo para Magento 2 lleva haciendo ruido desde mucho antes, [antes incluso](https://alankent.me/2016/12/14/headless-magento-and-extensions/) de que comenzara su desarrollo.
+Han pasado 536 días desde que Magento lanzó con la versión 2.3 de Magento 2 [PWA Studio](https://magento.com/products/magento-commerce/pwa), aunque esta nueva plataforma de desarrollo para Magento 2 llevaba haciendo ruido desde mucho antes, [antes incluso](https://alankent.me/2016/12/14/headless-magento-and-extensions/) de que comenzara su desarrollo.
 
 A parte de la opinión que me merece tanto el desarrollo de los acontecimiento como las [decisiones tomadas](https://divante.com/blog/pwa-studio-ready-production/) en PWA Studio me gustaría escribir una serie de artículos sobre los procedimientos y cosas básicas que hay que saber para desarrollar en PWA Studio desde el punto de vista del Front-End. Seguramente escriba un post opinando sobre ello y analizando el estado del arte de la plataforma, pero hoy vamos a comenzar con lo más básico, instalación, estructura, tecnologías y elementos principales.
 
@@ -42,7 +42,7 @@ Una _query_ GraphQL se usa para leer o recuperar valores de una API. A su vez, e
 
 ### Componente de React
 
-Los componentes de React son los bloques de código que forman una aplicación en React. Típicamente conforman la representación de una funcionalidad de manera aislada, ya sea un botón, una cabecera o un formulario. De manera sencilla, un componente es una función o clase de JavaScript que, dados unos parámetros devuelve un elemento de React con dicha representación. Un componente puede estar formado de uno o varios componentes, y la granularidad de estos dependerá de la calidad del código y de la complejidad del proyecto
+Los componentes de React son los bloques de código que forman una aplicación en React. Típicamente conforman la representación de una funcionalidad de manera aislada, ya sea un botón, una cabecera o un formulario. De manera sencilla, un componente es una función o clase de JavaScript que, dados unos parámetros devuelve un elemento de React con dicha representación. Un componente puede estar formado de uno o varios componentes, y la granularidad de estos dependerá de la calidad del código y de la complejidad del proyecto. Una de las cosas más importantes a tener en cuenta es que **todo gira en torno a los componentes de React**, por lo que es importante tener unos conocimientos sólidos sobre React.
 
 ### Root Component
 
@@ -94,7 +94,7 @@ Una vez realizada la instalación de PWA Studio nos encontramos una estructura d
   <small>Estructura de ficheros de PWA Studio.</small>
 </div>
 
-A decir verdad, los ficheros que se crean tras la instalación no nos dicen mucho sobre cómo se puede empezar a trabajar en PWA Studio, ya que no hay creados componentes ni ejemplos que ayuden. Una buena manera de hacerse a la idea es revisar la estructura de la carpeta lib del módulo **_@magento/venia-ui_**. Este módulo contiene todo lo necesario para crear un front con PWA Studio y se refleja el el típico front con Venia que se ve en la típica demo de PWA Studio.
+A decir verdad, los ficheros que se crean tras la instalación no nos dicen mucho sobre cómo se puede empezar a trabajar en PWA Studio, ya que casi todo son ficheros de configuración y no hay creados componentes ni ejemplos que ayuden. Una buena manera de hacerse a la idea es revisar la estructura de la carpeta lib del módulo **_@magento/venia-ui_**. Este módulo contiene todo lo necesario para crear un front con PWA Studio y se refleja el el típico front con Venia que se ve en la típica demo de PWA Studio. Es el punto de referencia desde el que partir para desarrollar, el proyecto del que estás "heredando".
 
 <div class="columns" style="justify-content: center">
 <div class="column col-3">
@@ -250,7 +250,7 @@ En los próximos artículos entraremos en detalle sobre la estructura de estos d
 
 > La estrategia a seguir para extender o modificar un componente es sencilla: Sólo es necesario copiar el fichero o los ficheros que se desean modificar bajo la ruta **src/components/nombre_componente** y cambiar las referencias de los _import_ para que se hagan a los ficheros ubicados en la carpeta _node modules_ o a los ubicados en la carpeta src. En algunos casos será necesario relanzar el comando _yarn start_ para actualizar las referencias.
 
-La carpeta _queries_ contiene todas las queries complejas para obtener la información de Magento 2. En este artículo no se profundizará en la estructura de las mismas pero en este sencillo ejemplo de los filtros de cada categoría uno se puede hacer una idea de como se obtienen los datos de la API con GraphQL
+Para finalizar, la carpeta _queries_ contiene todas las queries complejas y mutaciones para obtener la información de Magento 2. En este artículo no se profundizará en la estructura de las mismas pero en este sencillo ejemplo de los filtros de cada categoría uno se puede hacer una idea de como se obtienen los datos de la API con GraphQL
 
 ```js
 query getProductFiltersByCategory($categoryIdFilter: FilterEqualTypeInput!) {
@@ -268,7 +268,7 @@ query getProductFiltersByCategory($categoryIdFilter: FilterEqualTypeInput!) {
 }
 ```
 
-Con esto ya tenemos un pequeño overview de la plataforma desde un punto de vista orientado al frontend y eliminando el ruido de la arquitectura global del proyecto. En próximos artículos se profundizará sobre la creación y modificación de componentes y estracción de datos mediante queries.
+¡Ya estamos listos para desarrollar! Con esto ya tenemos un pequeño overview de la plataforma desde un punto de vista orientado al frontend y eliminando el ruido de la arquitectura global del proyecto. En próximos artículos se profundizará sobre la creación y modificación de componentes y estracción de datos mediante queries.
 
 ## Referencias
 
