@@ -1,5 +1,7 @@
 ---
 title: "#Reacticon 2018 — Crónica"
+hero_title: "#Reacticon 2018"
+hero_subtitle: "Crónica"
 published: true
 date: "2018-04-05T20:39:00.000Z"
 taxonomy:
@@ -9,6 +11,7 @@ taxonomy:
     - Magento
     - JavaScript
     - React
+    - PWA Studio
 hero_classes: "hero-tiny text-light title-h1h2 parallax overlay-dark-gradient"
 hero_image: 1_NT3La54Xzv9gOCtlKtlDRw.png
 thumbnail: 1_NT3La54Xzv9gOCtlKtlDRw.png
