@@ -83,7 +83,7 @@ El terminar nos dirá desde qué url podemos acceder al entorno local de desarro
 Una vez realizada la instalación de PWA Studio nos encontramos una estructura de carpetas como la que sigue:
 
 <div class="columns" style="justify-content: center">
-<div class="column col-4">
+<div class="column col-4 col-sm-8">
 
 ![PWA Studio file structure](pwa-basics-test.png)
 
@@ -97,7 +97,7 @@ Una vez realizada la instalación de PWA Studio nos encontramos una estructura d
 A decir verdad, los ficheros que se crean tras la instalación no nos dicen mucho sobre cómo se puede empezar a trabajar en PWA Studio, ya que casi todo son ficheros de configuración y no hay creados componentes ni ejemplos que ayuden. Una buena manera de hacerse a la idea es revisar la estructura de la carpeta lib del módulo **_@magento/venia-ui_**. Este módulo contiene todo lo necesario para crear un front con PWA Studio y se refleja el el típico front con Venia que se ve en la típica demo de PWA Studio. Es el punto de referencia desde el que partir para desarrollar, el proyecto del que estás "heredando".
 
 <div class="columns" style="justify-content: center">
-<div class="column col-3">
+<div class="column col-3 col-sm-6">
 
 ![Venia UI file structure](pwa-basics-venia.png)
 
@@ -110,7 +110,7 @@ A decir verdad, los ficheros que se crean tras la instalación no nos dicen much
 
 Aquí ya se puede ver algo que puede tener relación con los elementos principales descritos previamente: components, queries y Root Components.
 
-Actualmente se cuenta como Root Component las vistas de 404, listado de productos, detalle de producto. Básicamente obtienen el contenido necesario mediante _talons_ (hablaremos de ellos en otro post) o _queries_ de GraphQL y lo pasan como _props_ a los componentes de vista de producto, lista de productos, etc…
+Actualmente se cuenta como Root Component las vistas de 404, listado de productos y detalle de producto. Básicamente obtienen el contenido necesario mediante _talons_ (hablaremos de ellos en otro post) o _queries_ de GraphQL y lo pasan como _props_ a los componentes de vista de producto, lista de productos, etc…
 
 Dentro de la carpeta de cada Root Component todos tienen en común la misma estructura: un fichero index.js donde se exporta el módulo en cuestión, cuyo código se encuentra en el fichero product.js, search.js o el nombre que corresponda al Root Component.
 
