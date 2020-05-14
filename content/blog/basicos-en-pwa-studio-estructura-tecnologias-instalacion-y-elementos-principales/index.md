@@ -3,7 +3,7 @@ title: "Básicos en PWA Studio: Estructura, tecnologías, instalación y element
 hero_title: "Básicos en PWA Studio"
 hero_subtitle: "Estructura, tecnologías, instalación y elementos principales"
 published: true
-date: "2020-05-17T08:30:00.000Z"
+date: "2020-05-14T08:30:00.000Z"
 taxonomy:
   category:
     - Articles
@@ -16,7 +16,7 @@ hero_image: pwa-basics-hero.jpg
 thumbnail: pwa-basics-thumb.jpg
 ---
 
-Han pasado 536 días desde que Magento lanzó con la versión 2.3 de Magento 2 [PWA Studio](https://magento.com/products/magento-commerce/pwa), aunque esta nueva plataforma de desarrollo para Magento 2 llevaba haciendo ruido desde mucho antes, [antes incluso](https://alankent.me/2016/12/14/headless-magento-and-extensions/) de que comenzara su desarrollo.
+Han pasado 533 días desde que Magento lanzó con la versión 2.3 de Magento 2 [PWA Studio](https://magento.com/products/magento-commerce/pwa), aunque esta nueva plataforma de desarrollo para Magento 2 llevaba haciendo ruido desde mucho antes, [antes incluso](https://alankent.me/2016/12/14/headless-magento-and-extensions/) de que comenzara su desarrollo.
 
 A parte de la opinión que me merece tanto el desarrollo de los acontecimiento como las [decisiones tomadas](https://divante.com/blog/pwa-studio-ready-production/) en PWA Studio me gustaría escribir una serie de artículos sobre los procedimientos y cosas básicas que hay que saber para desarrollar en PWA Studio desde el punto de vista del Front-End. Seguramente escriba un post opinando sobre ello y analizando el estado del arte de la plataforma, pero hoy vamos a comenzar con lo más básico, instalación, estructura, tecnologías y elementos principales.
 
