@@ -38,7 +38,7 @@ const CategoryList = ({ data, pageContext, location }) => {
                           {node.frontmatter.thumbnail ? (
                             <div className="card-image">
                               <Link
-                                to={`blog${node.fields.slug}`}
+                                to={`/blog${node.fields.slug}`}
                                 style={{
                                   backgroundImage: `url(${node.frontmatter.thumbnail.childImageSharp.fluid.src})`,
                                 }}
@@ -57,7 +57,7 @@ const CategoryList = ({ data, pageContext, location }) => {
                             <div className="card-title">
                               <h5 className="p-name mt-1">
                                 <Link
-                                  to={`blog${node.fields.slug}`}
+                                  to={`/blog${node.fields.slug}`}
                                   className="u-url text-dark"
                                 >
                                   {title}

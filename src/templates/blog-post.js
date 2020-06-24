@@ -85,7 +85,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
               <div className="btn-group">
                 {previous && (
                   <Link
-                    to={`blog${previous.fields.slug}`}
+                    to={`/blog${previous.fields.slug}`}
                     rel="prev"
                     className="btn"
                   >
@@ -98,7 +98,7 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
 
                 {next && (
                   <Link
-                    to={`blog${next.fields.slug}`}
+                    to={`/blog${next.fields.slug}`}
                     rel="next"
                     className="btn"
                   >

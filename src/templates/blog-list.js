@@ -48,7 +48,7 @@ const BlogList = ({ data, pageContext, location }) => {
                           {node.frontmatter.thumbnail ? (
                             <div className="card-image">
                               <Link
-                                to={`blog${node.fields.slug}`}
+                                to={`/blog${node.fields.slug}`}
                                 style={{
                                   backgroundImage: `url(${node.frontmatter.thumbnail.childImageSharp.fluid.src})`,
                                 }}
@@ -67,7 +67,7 @@ const BlogList = ({ data, pageContext, location }) => {
                             <div className="card-title">
                               <h5 className="p-name mt-1">
                                 <Link
-                                  to={`blog${node.fields.slug}`}
+                                  to={`/blog${node.fields.slug}`}
                                   className="u-url text-dark"
                                 >
                                   {title}
@@ -109,7 +109,7 @@ const BlogList = ({ data, pageContext, location }) => {
                       {Array.from({ length: numPages }, (_, i) => (
                         <li key={`pagination-number${i + 1}`}>
                           <Link
-                            to={`/${
+                            to={`${
                               i === 0
                                 ? "/blog"
                                 : `/blog/page:${(i + 1).toString()}`
