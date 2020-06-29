@@ -5,8 +5,6 @@ backend:
 media_folder: static/assets
 public_folder: assets
 
-logo_url: https://rubenr.dev/logo-rr.svg
-
 collections:
   - name: blog
     label: Blog

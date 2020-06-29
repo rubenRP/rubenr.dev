@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import Header from "../Header"
 import Footer from "../Footer"
 import MobileNav from "../MobileNav"
@@ -7,7 +6,11 @@ import MobileNav from "../MobileNav"
 import "font-awesome/css/font-awesome.min.css"
 import "../../styles/theme.scss"
 
-const Layout = ({ children }) => {
+interface Props {
+  children?: any
+}
+
+const Layout = ({ children }: Props) => {
   return (
     <>
       <div id="page-wrapper">
@@ -21,12 +24,3 @@ const Layout = ({ children }) => {
 }
 
 export default Layout
-
-Layout.defaultProps = {
-  children: null,
-}
-
-Layout.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  children: PropTypes.any,
-}
