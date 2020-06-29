@@ -1,6 +1,6 @@
 ---
 title: Uses
-date: "2015-12-27T15:17:00.000Z"
+date: "2020-1-27T15:17:00.000Z"
 hero_classes: "parallax text-light hero-tiny overlay-dark-gradient"
 hero_image: anas-alshanti-feXpdV001o4-unsplash.jpg
 hero_title: "Things I use"
