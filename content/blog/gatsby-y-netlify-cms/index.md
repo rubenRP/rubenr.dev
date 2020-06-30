@@ -5,6 +5,8 @@ date: 2020-06-29T08:30:00.000Z
 published: true
 hero_title: Gatsby y Netlify CMS
 hero_subtitle: Toda la potencia de un CMS en JAMstack sin salir de tu repositorio
+description: En este artículo hablaremos de Netlify CMS, sus ventajas e
+  inconvenientes, configuración y el proceso de integración con Gatsby.
 hero_image: netlify-cms-hero.jpg
 thumbnail: netlify-cms-thumb.jpg
 taxonomy:
