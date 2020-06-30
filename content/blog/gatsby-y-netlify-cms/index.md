@@ -1,9 +1,12 @@
 ---
-title: "Gatsby y Netlify CMS: Toda la potencia de un CMS en JAMstack sin salir de tu repositorio"
-hero_title: "Gatsby y Netlify CMS"
-hero_subtitle: "Toda la potencia de un CMS en JAMstack sin salir de tu repositorio"
+title: "Gatsby y Netlify CMS: Toda la potencia de un CMS en JAMstack sin salir
+  de tu repositorio"
+date: 2020-06-29T08:30:00.000Z
 published: true
-date: "2020-06-29T08:30:00.000Z"
+hero_title: Gatsby y Netlify CMS
+hero_subtitle: Toda la potencia de un CMS en JAMstack sin salir de tu repositorio
+hero_image: netlify-cms-hero.jpg
+thumbnail: netlify-cms-thumb.jpg
 taxonomy:
   category:
     - Articles
@@ -13,8 +16,6 @@ taxonomy:
     - GatsbyJS
     - JAMstack
     - NetlifyCMS
-hero_image: netlify-cms-hero.jpg
-thumbnail: netlify-cms-thumb.jpg
 ---
 
 Para una gran comunidad de desarrolladores Gatsby JS y Netlify son la pareja perfecta cuando se habla del desarrollo de aplicaciones web con un _static site generator_ y su combinación con un CMS headless. Esto permite un desarrollo rápido, eficiente y muy útil para desarrolladores con poca experiencia, ya que la creación del CMS sale de la ecuación, simplificando mucho el problema.
@@ -235,6 +236,8 @@ Tras esto ya podemos acceder a nuestro flamante nuevo CMS mediante la url de nue
 <div class="text-center" style="margin: -15px 0 20px;">
   <small>Vista del editor de NetlifyCMS.</small>
 </div>
+
+Como podéis ver, Netlify CMS ofrece toda la potencia de los CMS Headless pero gestionado desde el propio repositorio. Esto en muchos casos puede ser una desventaja, pero para proyectos sencillos puede ser una herramienta muy útil. Lo que sí queda claro es que no es para todos los públicos, requiere de bastante configuración, y aunque es sencilla hay que tener conocimientos de la plataforma.
 
 ## Referencias
 
