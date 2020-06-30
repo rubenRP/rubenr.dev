@@ -14,7 +14,7 @@ const currentlyQuery = graphql`
   }
 `
 
-const Currently = () => {
+const Currently: React.FC = () => {
   return (
     <>
       <div id="working" />

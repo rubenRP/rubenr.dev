@@ -7,10 +7,10 @@ import "font-awesome/css/font-awesome.min.css"
 import "../../styles/theme.scss"
 
 interface Props {
-  children?: any
+  children?: JSX.Element
 }
 
-const Layout = ({ children }: Props) => {
+const Layout: React.FC<Props> = ({ children }: Props) => {
   return (
     <>
       <div id="page-wrapper">

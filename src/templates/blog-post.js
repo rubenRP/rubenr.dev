@@ -113,8 +113,8 @@ const BlogPostTemplate = ({ data, pageContext, location }) => {
           </section>
         </section>
         <Share
-          url={`blog${post.fields.slug}`}
-          title={`${post.frontmatter.title} ${data.site.siteMetadata.siteUrl}/blog${post.fields.slug}`}
+          url={`${data.site.siteMetadata.siteUrl}/blog${post.fields.slug}`}
+          title={`${post.frontmatter.title}`}
         />
       </Layout>
     </BodyClassName>

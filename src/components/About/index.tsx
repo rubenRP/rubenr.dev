@@ -1,6 +1,5 @@
 /* eslint-disable react/no-danger */
 import React from "react"
-import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
 
@@ -16,7 +15,17 @@ const aboutQuery = graphql`
   }
 `
 
-const About = ({ info }) => {
+interface Props {
+  info: {
+    title: string
+    text: string
+    contactName: string
+    contactEmail: string
+    contactLink: string
+  }
+}
+
+const About: React.FC<Props> = ({ info }: Props) => {
   return (
     <>
       <div id="about" />
@@ -29,12 +38,12 @@ const About = ({ info }) => {
               <h4>Contact</h4>
               <div className="columns">
                 <div className="column col-8 col-md-12">
-                  <strong>{info.contact_name}</strong>
-                  <div>{info.contact_email}</div>
+                  <strong>{info.contactName}</strong>
+                  <div>{info.contactEmail}</div>
                 </div>
                 <div
                   className="column col-4 col-md-12"
-                  dangerouslySetInnerHTML={{ __html: info.contact_link }}
+                  dangerouslySetInnerHTML={{ __html: info.contactLink }}
                 />
               </div>
             </div>
@@ -56,23 +65,3 @@ const About = ({ info }) => {
 }
 
 export default About
-
-About.defaultProps = {
-  info: {
-    title: "",
-    text: "",
-    contact_name: "",
-    contact_email: "",
-    contact_link: "",
-  },
-}
-
-About.propTypes = {
-  info: PropTypes.shape({
-    title: PropTypes.string,
-    text: PropTypes.any,
-    contact_name: PropTypes.string,
-    contact_email: PropTypes.string,
-    contact_link: PropTypes.any,
-  }),
-}
