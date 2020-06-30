@@ -2,7 +2,7 @@ import React from "react"
 
 import config from "../../../data/siteConfig"
 
-const SocialLinks = () => {
+const SocialLinks: React.FC = () => {
   const { userLinks } = config
   return (
     <ul className="social-links d-inline-flex list-unstyled">

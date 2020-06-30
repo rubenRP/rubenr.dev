@@ -1,8 +1,11 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { Link } from "gatsby"
 
-const Tags = ({ items }) => {
+interface Props {
+  items: Array<string>
+}
+
+const Tags: React.FC<Props> = ({ items }: Props) => {
   return (
     <span className="tags">
       {items.map(tag => (
@@ -19,11 +22,3 @@ const Tags = ({ items }) => {
 }
 
 export default Tags
-
-Tags.defaultProps = {
-  items: [],
-}
-
-Tags.propTypes = {
-  items: PropTypes.arrayOf(PropTypes.string),
-}

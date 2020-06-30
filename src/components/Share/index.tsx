@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 
 import {
   LinkedinShareButton,
@@ -10,13 +9,18 @@ import {
   WhatsappIcon,
 } from "react-share"
 
-const Share = ({ url, title }) => {
+interface Props {
+  url: string
+  title: string
+}
+
+const Share: React.FC<Props> = ({ url, title }: Props) => {
   return (
     <div className="sharer-buttons-toolbar clearfix floating">
       <TwitterShareButton url={url} title={title}>
         <TwitterIcon size={32} round />
       </TwitterShareButton>
-      <LinkedinShareButton source={url} title={title}>
+      <LinkedinShareButton url={url} title={title}>
         <LinkedinIcon size={32} round />
       </LinkedinShareButton>
       <WhatsappShareButton url={url} title={title}>
@@ -27,13 +31,3 @@ const Share = ({ url, title }) => {
 }
 
 export default Share
-
-Share.defaultProps = {
-  url: null,
-  title: null,
-}
-
-Share.propTypes = {
-  url: PropTypes.string,
-  title: PropTypes.string,
-}

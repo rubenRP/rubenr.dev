@@ -2,7 +2,7 @@ import React from "react"
 
 import config from "../../../data/siteConfig"
 
-const Feedback = () => {
+const Feedback: React.FC = () => {
   const { userLinks } = config
   const [twitter] = userLinks.filter(link => link.label === "Twitter")
 
@@ -26,7 +26,7 @@ const Feedback = () => {
             <br />
           </div>
           <p>
-            Thank you, it means a lot!{" "}
+            Thank you, it means a lot!
             <span role="img" aria-label="Thank you">
               😎
             </span>
