@@ -12,7 +12,6 @@ taxonomy:
     - Articles
   tag:
     - JavaScript
-    - React
     - GatsbyJS
     - JAMstack
     - NetlifyCMS
