@@ -7,7 +7,9 @@ import "font-awesome/css/font-awesome.min.css"
 import "../../styles/theme.scss"
 
 interface Props {
-  children?: JSX.Element
+  location: Location
+  title: string
+  children?: unknown
 }
 
 const Layout: React.FC<Props> = ({ children }: Props) => {

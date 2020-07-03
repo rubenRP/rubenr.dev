@@ -1,7 +1,7 @@
 const about = {
   title: "About me",
   menu: "About",
-  image_align: "left",
+  imageAlign: "left",
   contactName: "Rubén Rodríguez",
   contactEmail: "hola [at] rubenr [dot] dev",
   contactLink:

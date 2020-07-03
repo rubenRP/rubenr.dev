@@ -6,12 +6,27 @@
  */
 
 import React from "react"
-import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import defaultOpenGraphImage from "../../../content/assets/favicon.png"
 
-function SEO({ description, lang, meta, keywords, title, thumbnail }) {
+interface Props {
+  description?: string
+  lang?: string
+  meta?: []
+  title: string
+  keywords?: [string]
+  thumbnail?: any
+}
+
+const SEO: React.FC<Props> = ({
+  description = ``,
+  lang = `en`,
+  meta = [],
+  keywords = [null],
+  title,
+  thumbnail = null,
+}: Props) => {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -95,24 +110,6 @@ function SEO({ description, lang, meta, keywords, title, thumbnail }) {
         .concat(meta)}
     />
   )
-}
-
-SEO.defaultProps = {
-  lang: `en`,
-  meta: [],
-  keywords: [],
-  description: ``,
-  thumbnail: null,
-}
-
-SEO.propTypes = {
-  description: PropTypes.string,
-  lang: PropTypes.string,
-  meta: PropTypes.arrayOf(PropTypes.object),
-  keywords: PropTypes.arrayOf(PropTypes.string),
-  title: PropTypes.string.isRequired,
-  // eslint-disable-next-line react/forbid-prop-types
-  thumbnail: PropTypes.any,
 }
 
 export default SEO

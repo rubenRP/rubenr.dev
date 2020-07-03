@@ -17,7 +17,7 @@ const TagList = ({ data, pageContext, location }) => {
   return (
     <BodyClassName className="header-fixed header-animated">
       <Layout location={location} title={siteTitle}>
-        <SEO title="All posts" />
+        <SEO title={`All posts by tag ${tag}`} />
 
         <Hero
           title={heroTitle}

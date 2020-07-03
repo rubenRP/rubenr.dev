@@ -6,7 +6,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const blogPost = path.resolve(`./src/templates/blog-post.js`)
   const defaultPage = path.resolve(`./src/templates/page.js`)
-  const blogPage = path.resolve(`./src/templates/blog-list.js`)
+  const blogPage = path.resolve(`./src/templates/blog-list.tsx`)
   const tabPage = path.resolve(`./src/templates/tag.js`)
   const categoryPage = path.resolve(`./src/templates/category.js`)
 

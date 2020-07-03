@@ -2,7 +2,7 @@ const resume = [
   {
     id: 1,
     title: "Work",
-    css_class: "work",
+    cssClass: "work",
     items: [
       {
         id: 1,
@@ -17,7 +17,7 @@ const resume = [
   {
     id: 2,
     title: "Education",
-    css_class: "education",
+    cssClass: "education",
     items: [
       {
         id: 1,
@@ -36,7 +36,7 @@ const resume = [
   {
     id: 3,
     title: "Certifications",
-    css_class: "certifications",
+    cssClass: "certifications",
     items: [
       {
         id: 1,

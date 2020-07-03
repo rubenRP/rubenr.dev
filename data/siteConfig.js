@@ -20,6 +20,7 @@ const config = {
   userAvatar: "profile-pic.png",
   userDescription:
     "Madrid based developer. Front-End developer @interactiv4. Javascript enthusiast & Magento certified.",
+  seoKeywords: [`blog`, `gatsby`, `javascript`, `react`],
   headerLinks: [
     {
       title: "Uses",

@@ -5,7 +5,7 @@ import SocialLinks from "../SocialLinks"
 import M1 from "../../../content/assets/middle_frontend_developer.png"
 import M2 from "../../../content/assets/middle_frontend_developer_m2.png"
 
-const Footer = () => {
+const Footer: React.FC = () => {
   return (
     <section id="footer" className="section">
       <section className="container grid-lg">
@@ -26,7 +26,10 @@ const Footer = () => {
       </section>
       <section className="container grid-lg">
         <ul className="copyright d-inline-flex list-unstyled">
-          <li>Copyright © Rubén Rodríguez {new Date().getFullYear()}</li>
+          <li>
+            Copyright © Rubén Rodríguez
+            {new Date().getFullYear()}
+          </li>
           <li>
             Using <a href="https://www.gatsbyjs.org">Gatsby</a>. Based on{" "}
             <a href="https://github.com/getgrav/grav-theme-quark">Quark</a>{" "}
