@@ -1,5 +1,4 @@
 import React from "react"
-import propTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import BodyClassName from "react-body-classname"
@@ -10,7 +9,17 @@ import Hero from "../components/Hero"
 import Share from "../components/Share"
 import Feedback from "../components/Feedback"
 
-const BlogPostTemplate = ({ data, pageContext, location }) => {
+interface Props {
+  data: any
+  pageContext: any
+  location: Location
+}
+
+const BlogPostTemplate: React.FC<Props> = ({
+  data = null,
+  pageContext = null,
+  location = null,
+}: Props) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
@@ -166,25 +175,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-BlogPostTemplate.defaultProps = {
-  data: {
-    mdx: null,
-    site: null,
-  },
-  pageContext: null,
-  location: null,
-}
-
-BlogPostTemplate.propTypes = {
-  data: propTypes.shape({
-    mdx: propTypes.any,
-    site: propTypes.any,
-  }),
-  pageContext: propTypes.shape({
-    previous: propTypes.any,
-    next: propTypes.any,
-  }),
-  // eslint-disable-next-line react/forbid-prop-types
-  location: propTypes.any,
-}

@@ -1,5 +1,4 @@
 import React from "react"
-import propTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import BodyClassName from "react-body-classname"
 
@@ -9,7 +8,17 @@ import SEO from "../components/Seo"
 import Hero from "../components/Hero"
 import Tags from "../components/Tags"
 
-const BlogList = ({ data, pageContext, location }) => {
+interface Props {
+  data: any
+  pageContext: any
+  location: Location
+}
+
+const BlogList: React.FC<Props> = ({
+  data = null,
+  pageContext = null,
+  location = null,
+}: Props) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges
   const { currentPage, numPages } = pageContext
@@ -191,27 +200,3 @@ export const blogListQuery = graphql`
 `
 
 export default BlogList
-
-BlogList.defaultProps = {
-  data: {
-    fileName: null,
-    site: null,
-    allMdx: null,
-  },
-  pageContext: null,
-  location: null,
-}
-
-BlogList.propTypes = {
-  data: propTypes.shape({
-    fileName: propTypes.any,
-    site: propTypes.any,
-    allMdx: propTypes.any,
-  }),
-  pageContext: propTypes.shape({
-    currentPage: propTypes.any,
-    numPages: propTypes.any,
-  }),
-  // eslint-disable-next-line react/forbid-prop-types
-  location: propTypes.any,
-}

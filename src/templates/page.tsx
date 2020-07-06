@@ -1,5 +1,4 @@
 import React from "react"
-import propTypes from "prop-types"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import BodyClassName from "react-body-classname"
@@ -8,7 +7,15 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import Hero from "../components/Hero"
 
-const PageTemplate = ({ data, location }) => {
+interface Props {
+  data: any
+  location: Location
+}
+
+const PageTemplate: React.FC<Props> = ({
+  data = null,
+  location = null,
+}: Props) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata.title
 
@@ -109,20 +116,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-PageTemplate.defaultProps = {
-  data: {
-    mdx: null,
-    site: null,
-  },
-  location: null,
-}
-
-PageTemplate.propTypes = {
-  data: propTypes.shape({
-    mdx: propTypes.any,
-    site: propTypes.any,
-  }),
-  // eslint-disable-next-line react/forbid-prop-types
-  location: propTypes.any,
-}

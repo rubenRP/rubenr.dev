@@ -1,5 +1,4 @@
 import React from "react"
-import propTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 import BodyClassName from "react-body-classname"
 
@@ -8,16 +7,26 @@ import SEO from "../components/Seo"
 
 import Hero from "../components/Hero"
 
-const TagList = ({ data, pageContext, location }) => {
-  const { tag } = pageContext
+interface Props {
+  data: any
+  pageContext: any
+  location: Location
+}
+
+const CategoryList: React.FC<Props> = ({
+  data = null,
+  pageContext = null,
+  location = null,
+}) => {
+  const { category } = pageContext
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges
-  const heroTitle = `Tag: ${tag}`
+  const heroTitle = `Category: ${category}`
 
   return (
     <BodyClassName className="header-fixed header-animated">
       <Layout location={location} title={siteTitle}>
-        <SEO title={`All posts by tag ${tag}`} />
+        <SEO title="All posts by category" />
 
         <Hero
           title={heroTitle}
@@ -104,8 +113,8 @@ const TagList = ({ data, pageContext, location }) => {
   )
 }
 
-export const tagsQuery = graphql`
-  query tagsQuery($tag: String) {
+export const categoryQuery = graphql`
+  query categoryQuery($category: String) {
     fileName: file(
       absolutePath: { regex: "/anas-alshanti-feXpdV001o4-unsplash.jpg/" }
     ) {
@@ -125,7 +134,7 @@ export const tagsQuery = graphql`
       filter: {
         parent: { id: {} }
         fileAbsolutePath: { regex: "\\\\/blog/" }
-        frontmatter: { taxonomy: { tag: { in: [$tag] } } }
+        frontmatter: { taxonomy: { category: { in: [$category] } } }
       }
     ) {
       edges {
@@ -155,30 +164,4 @@ export const tagsQuery = graphql`
   }
 `
 
-export default TagList
-
-TagList.defaultProps = {
-  data: {
-    fileName: null,
-
-    site: null,
-    allMdx: null,
-  },
-  location: null,
-  pageContext: null,
-}
-
-TagList.propTypes = {
-  data: propTypes.shape({
-    fileName: propTypes.any,
-    site: propTypes.any,
-    allMdx: propTypes.any,
-  }),
-  pageContext: propTypes.shape({
-    currentPage: propTypes.any,
-    numPages: propTypes.any,
-    tag: propTypes.any,
-  }),
-  // eslint-disable-next-line react/forbid-prop-types
-  location: propTypes.any,
-}
+export default CategoryList
