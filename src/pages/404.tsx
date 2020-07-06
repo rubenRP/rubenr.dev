@@ -1,5 +1,4 @@
 import React from "react"
-import PropTypes from "prop-types"
 import { graphql } from "gatsby"
 
 import Layout from "../components/Layout"
@@ -7,7 +6,15 @@ import SEO from "../components/Seo"
 
 import gif from "../../content/assets/404.gif"
 
-const NotFoundPage = ({ data, location }) => {
+interface Props {
+  data: unknown
+  location: Location
+}
+
+const NotFoundPage: React.FC<Props> = ({
+  data = {},
+  location = null,
+}: Props) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (
@@ -24,7 +31,7 @@ const NotFoundPage = ({ data, location }) => {
                 </div>
 
                 <div className="e-content text-center">
-                  <p clasName="mb-5">
+                  <p className="mb-5">
                     You just hit a route that doesn&#39;t exist... the sadness.
                   </p>
                   <img src={gif} alt="404" />
@@ -49,15 +56,3 @@ export const pageQuery = graphql`
     }
   }
 `
-
-NotFoundPage.defaultProps = {
-  data: {},
-  location: null,
-}
-
-NotFoundPage.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  data: PropTypes.any,
-  // eslint-disable-next-line react/forbid-prop-types
-  location: PropTypes.any,
-}

@@ -1,6 +1,11 @@
 import React from "react"
-import propTypes from "prop-types"
 import { Link, StaticQuery, graphql } from "gatsby"
+
+interface Props {
+  data: {
+    allMdx: unknown
+  }
+}
 
 const recentQuery = graphql`
   query RecentQuery {
@@ -24,7 +29,7 @@ const recentQuery = graphql`
   }
 `
 
-const Recent = () => {
+const Recent: React.FC = () => {
   return (
     <>
       <div id="recent" />
@@ -74,15 +79,3 @@ const Recent = () => {
 }
 
 export default Recent
-
-Recent.defaultProps = {
-  data: {
-    allMdx: null,
-  },
-}
-
-Recent.propTypes = {
-  data: propTypes.shape({
-    allMdx: propTypes.any,
-  }),
-}

@@ -1,15 +1,33 @@
 /* eslint-disable react/no-danger */
 import React from "react"
-import PropTypes from "prop-types"
 
-const Resume = ({ info }) => {
+interface Props {
+  info: [
+    {
+      cssClass: string
+      id: number
+      title: string
+      items: [
+        {
+          id: number
+          title: string
+          info: string
+          date: string
+          description: string
+        }
+      ]
+    }
+  ]
+}
+
+const Resume: React.FC<Props> = ({ info = null }: Props) => {
   return (
     <>
       <div id="resume" />
       <section className="section modular-resume bg-gray">
         <section className="container grid-lg">
           {info.map(section => (
-            <div className={`columns ${section.css_class}`} key={section.id}>
+            <div className={`columns ${section.cssClass}`} key={section.id}>
               <div className="column col-3 col-md-12 header-col">
                 <h4>
                   <span>{section.title}</span>
@@ -40,12 +58,3 @@ const Resume = ({ info }) => {
 }
 
 export default Resume
-
-Resume.defaultProps = {
-  info: null,
-}
-
-Resume.propTypes = {
-  // eslint-disable-next-line react/forbid-prop-types
-  info: PropTypes.array,
-}

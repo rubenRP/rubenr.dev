@@ -4,11 +4,11 @@ const { createFilePath } = require(`gatsby-source-filesystem`)
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
 
-  const blogPost = path.resolve(`./src/templates/blog-post.js`)
-  const defaultPage = path.resolve(`./src/templates/page.js`)
-  const blogPage = path.resolve(`./src/templates/blog-list.js`)
-  const tabPage = path.resolve(`./src/templates/tag.js`)
-  const categoryPage = path.resolve(`./src/templates/category.js`)
+  const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
+  const defaultPage = path.resolve(`./src/templates/page.tsx`)
+  const blogPage = path.resolve(`./src/templates/blog-list.tsx`)
+  const tabPage = path.resolve(`./src/templates/tag.tsx`)
+  const categoryPage = path.resolve(`./src/templates/category.tsx`)
 
   const result = await graphql(
     `
