@@ -22,13 +22,13 @@ const resume = [
       {
         id: 1,
         title: "Universitat Oberta de Catalunya",
-        info: "Master en Ingeniería Informática",
+        info: "Master of Technology - MTech, Computer Engineering",
         date: "2019",
       },
       {
         id: 2,
         title: "Universidad Autónoma de Madrid",
-        info: "Grado en Ingeniería Informática",
+        info: "Bachelor of Engineering, Computer Engineering",
         date: "2015",
       },
     ],
