@@ -20,9 +20,9 @@ hero_text: "Here a small list of software and hardware that I use."
 - **Editor**: [PhpStorm](https://www.jetbrains.com/es-es/phpstorm/) and [VS Code](https://code.visualstudio.com) with One Dark Theme
 - **Terminal**: [iTerm](http://iterm2.com/) with [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
 - **Font**: [Fira Code Retina](https://www.google.com/search?client=safari&rls=en&q=Fira+Code+Retina&ie=UTF-8&oe=UTF-8)
-- **Browser**: [Brave](https://brave.com/bui464) and [Firefox Developer Edition](https://www.mozilla.org/es-ES/firefox/developer/)
+- **Browser**: [Brave](https://brave.com/) and [Firefox Developer Edition](https://www.mozilla.org/es-ES/firefox/developer/)
 - **Git GUI**: [Tower](https://www.git-tower.com/mac)
-- **Notes**: [Simplenote](https://simplenote.com), [Evernote](https://evernote.com) and [Sublime Text](https://www.sublimetext.com)
+- **Notes**: [Notion](https://www.notion.so/) and [Sublime Text](https://www.sublimetext.com)
 
 ## 🛠 Configs
 
