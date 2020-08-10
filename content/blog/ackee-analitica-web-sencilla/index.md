@@ -1,10 +1,10 @@
 ---
-title: "Descubriendo Ackee: Analítica web sencilla, self-hosted y centrado en la privacidad"
+title: "Descubriendo Ackee: Analítica web sencilla, self-hosted y centrada en la privacidad"
 date: 2020-08-10T08:30:00.000Z
 published: true
 hero_title: Descubriendo Ackee
-hero_subtitle: Analítica web sencilla, self-hosted y centrado la privacidad
-description: En este post vamos a desplegar una instancia de Ackee, herramienta de analítica en Heroku y configurarla en Gatsby de manera muy sencilla.
+hero_subtitle: Analítica web sencilla, self-hosted y centrada la privacidad
+description: En este post vamos a desplegar una instancia de Ackee, herramienta de analítica web, usando Heroku y Gatsby de manera muy sencilla.
 hero_image: ackee-hero.jpg
 thumbnail: ackee-thumb.jpg
 taxonomy:
