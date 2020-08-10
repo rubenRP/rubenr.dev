@@ -75,10 +75,18 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-ackee-tracker",
       options: {
-        trackingId: config.googleAnalyticsID,
-        head: true,
+        // Domain ID found when adding a domain in the admin panel.
+        domainId: config.ackeeId,
+        // URL to Server eg: "https://analytics.test.com".
+        server: config.ackeeHerokuDomain,
+        // Disabled analytic tracking when running locally
+        ignoreLocalhost: true,
+        // If enabled it will collect info on OS, BrowserInfo, Device  & ScreenSize
+        // False due to detailed information being personalized:
+        // https://github.com/electerious/Ackee/blob/master/docs/Anonymization.md#personal-data
+        detailed: false,
       },
     },
     {
