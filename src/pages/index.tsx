@@ -58,7 +58,7 @@ export const pageQuery = graphql`
       absolutePath: { regex: "/ferdinand-stohr-NFs6dRTBgaM-unsplash.jpg/" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1400) {
+        fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid
         }
       }

@@ -106,7 +106,7 @@ export const pageQuery = graphql`
         hero_text
         hero_image {
           childImageSharp {
-            fluid(maxWidth: 1400) {
+            fluid(maxWidth: 1600) {
               src
             }
           }

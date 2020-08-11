@@ -119,7 +119,7 @@ export const categoryQuery = graphql`
       absolutePath: { regex: "/anas-alshanti-feXpdV001o4-unsplash.jpg/" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1400) {
+        fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid
         }
       }

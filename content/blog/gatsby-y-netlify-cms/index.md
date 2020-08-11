@@ -228,7 +228,13 @@ En el panel de Netlify es necesario habilitar la integración OAuth de Github (P
 
 **Site Settings -> Access Control -> OAuth**
 
+<div class="columns" style="justify-content: center">
+<div class="column col-8 col-sm-8">
+
 ![Netlify OAuth Config](netlify-cms-oauth.png)
+
+</div>
+</div>
 
 Tras esto ya podemos acceder a nuestro flamante nuevo CMS mediante la url de nuestro proyecto _/admin_ y modificar nuestros contenidos desde cualquier equipo sin tener que contar con un entorno de desarrollo, editor, etc..
 

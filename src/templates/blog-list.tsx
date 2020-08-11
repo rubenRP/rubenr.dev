@@ -156,7 +156,7 @@ export const blogListQuery = graphql`
       absolutePath: { regex: "/anas-alshanti-feXpdV001o4-unsplash.jpg/" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1400) {
+        fluid(maxWidth: 1600) {
           ...GatsbyImageSharpFluid
         }
       }
@@ -187,7 +187,7 @@ export const blogListQuery = graphql`
             }
             thumbnail {
               childImageSharp {
-                fluid(maxHeight: 400) {
+                fluid(maxHeight: 600) {
                   src
                 }
               }

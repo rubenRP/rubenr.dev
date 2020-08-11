@@ -37,7 +37,13 @@ Como "conejillo de Indias" utilizaremos este blog, por lo que utilizaremos el pl
 
 Primero, es necesario crear una instancia de NodeJS de Heroku. Una vez accedido al dashboard (si no has creado una cuenta antes ;) ) hacemos click en Create New App, y añadimos el nombre de nuestra nueva instancia y la ubicación del servidor.
 
+<div class="columns" style="justify-content: center">
+<div class="column col-8 col-sm-8">
+
 ![Creación de nueva instancia de Heroku](heroku-new-app.png)
+
+</div>
+</div>
 
 <div class="text-center" style="margin: -15px 0 20px;">
   <small>Creación de nueva instancia de Heroku</small>
@@ -57,7 +63,13 @@ Cuando se complete la creación será necesario instalar el _addon_ de MongoDB p
   <small>Configuración del addon de mLab</small>
 </div>
 
+<div class="columns" style="justify-content: center">
+<div class="column col-8 col-sm-8">
+
 ![Vista general del dashboard](heroku-dashboard.png)
+
+</div>
+</div>
 
 <div class="text-center" style="margin: -15px 0 20px;">
   <small>Vista general del dashboard</small>
