@@ -188,7 +188,7 @@ Iniciamos el entorno de desarrollo de Gatsby con _gatsby develop_ y abrimos nues
   <small>Vista de Ackee con visitas y dos dominios, Ackee y Electerious.</small>
 </div>
 
-En este artículo hemos visto como en unos minutos es posible crear un entorno de análisis web bastante completo, independiente, administrado por vosotros y que presta atención por la privacidad de los usuarios. Esta plataforma es increíblemente modificable. Os animo a que echéis un vistazo a su [documentación](https://docs.ackee.electerious.com/#/) y colaboréis :)
+En este artículo hemos visto como en unos minutos es posible crear un entorno de análisis web bastante completo, independiente, administrado por vosotros y que presta atención por la privacidad de los usuarios. Actualmente están preparando la v2 de la herramienta para la release prevista este mismo mes. Os animo a que echéis un vistazo a su [documentación](https://docs.ackee.electerious.com/#/), [Github](https://rubenr-ackee.herokuapp.com) y colaboréis :)
 
 ## Referencias
 
@@ -198,6 +198,6 @@ En este artículo hemos visto como en unos minutos es posible crear un entorno d
 
 [https://www.gatsbyjs.org/packages/gatsby-plugin-ackee/](https://www.gatsbyjs.org/packages/gatsby-plugin-ackee/)
 
-[https://docs.ackee.electerious.com/#/](https://docs.ackee.electerious.com/#/)
+[https://docs.ackee.electerious.com/](https://docs.ackee.electerious.com/)
 
 Photo by [Nick Fewings](https://unsplash.com/@jannerboy62?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
