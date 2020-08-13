@@ -105,3 +105,14 @@ html[data-theme="dark"] {
     }
   }
 }
+
+.header-dark {
+  .switch {
+    --dot: #9ea0be;
+  }
+  .scrolled {
+    .switch {
+      --dot: #ffc14c;
+    }
+  }
+}
