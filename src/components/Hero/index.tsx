@@ -52,7 +52,10 @@ const Hero: React.FC<Props> = ({
 
   useEffect(() => {
     window.addEventListener("scroll", parallax)
-  })
+    return () => {
+      window.removeEventListener("scroll", parallax)
+    }
+  }, [])
 
   return (
     <>

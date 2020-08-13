@@ -1,7 +1,4 @@
 .dropmenu {
-  @include breakpoint(md) {
-    display: none;
-  }
 
   ul {
     white-space: nowrap;

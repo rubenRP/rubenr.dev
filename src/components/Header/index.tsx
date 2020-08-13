@@ -5,6 +5,9 @@ import config from "../../../data/siteConfig"
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false)
+  const [theme, setTheme] = useState("light")
+
+  const htmlEl = document.getElementsByTagName("html")[0]
 
   const navOnScroll = () => {
     if (window.scrollY > 20) {
@@ -27,11 +30,36 @@ const Header: React.FC = () => {
     }
   }
 
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark")
+    } else {
+      setTheme("light")
+    }
+  }
+
   const { headerLinks } = config
 
   useEffect(() => {
+    const currentTheme = localStorage.getItem("theme")
+      ? localStorage.getItem("theme")
+      : null
+    if (currentTheme) {
+      htmlEl.dataset.theme = currentTheme
+      if (currentTheme !== theme) {
+        setTheme(currentTheme)
+      }
+    }
     window.addEventListener("scroll", navOnScroll)
-  })
+    return () => {
+      window.removeEventListener("scroll", navOnScroll)
+    }
+  }, [])
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme)
+    htmlEl.dataset.theme = theme
+  }, [theme])
 
   return (
     <>
@@ -83,6 +111,30 @@ const Header: React.FC = () => {
                       </li>
                     )
                   })}
+                </ul>
+              </nav>
+            </section>
+            <section className="navbar-section">
+              <nav className="dropmenu animated">
+                <ul className="navigation">
+                  <li>
+                    <label
+                      className="switch"
+                      htmlFor="toggle-dark"
+                      onClick={toggleTheme}
+                    >
+                      <input
+                        id="toogle-dark"
+                        type="checkbox"
+                        className="checkbox"
+                        readOnly
+                        checked={theme === "light"}
+                      />
+                      <div>
+                        <span />
+                      </div>
+                    </label>
+                  </li>
                 </ul>
               </nav>
             </section>
