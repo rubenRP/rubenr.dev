@@ -9,6 +9,19 @@ $secondary-color-light: lighten($secondary-color, 3%) !default;
 $detail-color: #6166dc;
 $background-color: #f7f8f9;
 
+$royal-blue: (
+  50: #F7F7FD,
+  100: #EFF0FC,
+  200: #D8D9F6,
+  300: #C0C2F1,
+  400: #9094E7,
+  500: #6166DC,
+  600: #575CC6,
+  700: #3A3D84,
+  800: #2C2E63,
+  900: #1D1F42,
+);
+
 // Gray colors
 $dark-color: #303742 !default;
 $light-color: #fff !default;

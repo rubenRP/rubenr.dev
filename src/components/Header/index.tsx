@@ -114,7 +114,7 @@ const Header: React.FC = () => {
                 </ul>
               </nav>
             </section>
-            <section className="navbar-section">
+            <section className="navbar-section toggle">
               <nav className="dropmenu animated">
                 <ul className="navigation">
                   <li>

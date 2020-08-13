@@ -55,8 +55,16 @@
   }
 
   .navbar-section.desktop-menu {
+    justify-content: center;
     @include breakpoint(md) {
       display: none;
+    }
+  }
+
+  .navbar-section.toggle {
+    flex: 0;
+    @include breakpoint(md) {
+      margin-right: 50px;
     }
   }
 
