@@ -7,8 +7,6 @@ const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false)
   const [theme, setTheme] = useState("light")
 
-  const htmlEl = document.getElementsByTagName("html")[0]
-
   const navOnScroll = () => {
     if (window.scrollY > 20) {
       setScrolled(true)
@@ -41,6 +39,7 @@ const Header: React.FC = () => {
   const { headerLinks } = config
 
   useEffect(() => {
+    const htmlEl = document.getElementsByTagName("html")[0]
     const currentTheme = localStorage.getItem("theme")
       ? localStorage.getItem("theme")
       : null
@@ -57,6 +56,7 @@ const Header: React.FC = () => {
   }, [])
 
   useEffect(() => {
+    const htmlEl = document.getElementsByTagName("html")[0]
     localStorage.setItem("theme", theme)
     htmlEl.dataset.theme = theme
   }, [theme])
