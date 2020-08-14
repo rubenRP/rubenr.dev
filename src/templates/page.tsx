@@ -18,9 +18,12 @@ const PageTemplate: React.FC<Props> = ({
 }: Props) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata.title
+  const bodyClasses = post.frontmatter.hero_image
+    ? "header-dark header-transparent header-fixed header-animated"
+    : "header-fixed header-animated"
 
   return (
-    <BodyClassName className="header-dark header-transparent header-fixed header-animated">
+    <BodyClassName className={bodyClasses}>
       <Layout location={location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         {post.frontmatter.hero_image ? (

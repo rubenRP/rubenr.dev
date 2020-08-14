@@ -27,9 +27,12 @@ const BlogPostTemplate: React.FC<Props> = ({
   const thumbnail =
     post.frontmatter.thumbnail &&
     post.frontmatter.thumbnail.childImageSharp.fixed.src
+  const bodyClasses = post.frontmatter.hero_image
+    ? "header-dark header-transparent header-fixed header-animated"
+    : "header-fixed header-animated"
 
   return (
-    <BodyClassName className="header-dark header-transparent header-fixed header-animated">
+    <BodyClassName className={bodyClasses}>
       <Layout location={location} title={siteTitle}>
         <SEO
           title={post.frontmatter.title}
