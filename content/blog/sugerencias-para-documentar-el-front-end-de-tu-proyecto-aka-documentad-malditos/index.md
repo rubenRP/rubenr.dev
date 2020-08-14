@@ -22,13 +22,13 @@ Breve descripción de las tecnologías utilizadas, frameworks (versiones incluid
 
 ### Organización
 
-![Estructura de ficheros de Bedrock, un boilerplate para Wordpress.](https://cdn-images-1.medium.com/max/2000/1*sxSs-RP0N0U6HR4bYP6sOQ.png)_Estructura de ficheros de Bedrock, un boilerplate para Wordpress._
+![Estructura de ficheros de Bedrock, un boilerplate para Wordpress.](1*sxSs-RP0N0U6HR4bYP6sOQ.png)_Estructura de ficheros de Bedrock, un boilerplate para Wordpress._
 
 A la descripción de las tecnologías utilizadas le sigue una pequeña descripción de la estructura de ficheros utilizada. Si no es algo estandar o lógico lo correcto es argumentarlo, ya que si otro desarrollador toma el proyecto, llegado a este punto puede preguntarse \*¿por qué ha hecho esto?. **\*Un diagrama es de mucha ayuda** para tener una imagen rápida de la disposición de los ficheros.
 
 ### Layout
 
-![Ejemplos de layout para una web. No olvides señalar el nombre de cada bloque y su handle o hook.](https://cdn-images-1.medium.com/max/2000/1*WkFzntViBtGNdDqd4n3Dbw.jpeg)_Ejemplos de layout para una web. No olvides señalar el nombre de cada bloque y su handle o hook._
+![Ejemplos de layout para una web. No olvides señalar el nombre de cada bloque y su handle o hook.](1*WkFzntViBtGNdDqd4n3Dbw.jpeg)_Ejemplos de layout para una web. No olvides señalar el nombre de cada bloque y su handle o hook._
 
 En este apartado se debe explicar la disposición general de los bloques del sitio, usando un esquema, o un boceto en que se situarán los diferentes módulos que compondrán la web, los posibles lugares en los que se puede situar, y los handles o hooks necesarios para llamarlos.
 

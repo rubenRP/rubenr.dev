@@ -29,13 +29,13 @@ Modificar la estructura de la carpeta web de modo que se ajuste a nuestras prefe
 
 ### Modificar la estructura de CSS
 
-![](https://cdn-images-1.medium.com/max/2000/1*XHrY8Uu60Vzu5sDY43mzmg.png)
+![](1*XHrY8Uu60Vzu5sDY43mzmg.png)
 
 Un posible ejemplo sería la disposición arriba descrita, en la que la carpeta web contiene los css resultantes, imágenes, fuentes y otra carpeta llamada scss en la que compilan los ficheros .sass o .scss
 
 ### Actualizando el layout
 
-![](https://cdn-images-1.medium.com/max/2000/1*HkIZbcs5TdbVLxCAIYeSpQ.png)
+![](1*HkIZbcs5TdbVLxCAIYeSpQ.png)
 
 Si el .css resultante de la compilación se llamara “mis-estilos.css” habría que añadirlo mediante una actualización de las cabeceras en el layout. También puede ser necesario eliminar los ficheros por defecto si lo que deseamos es unos estilos totálmente nuevos y un output limpio y sin sobreescrituras. Para ello copiamos en nuestro tema el fichero *default_head_blocks.xml *y realizamos las siguientes modificaciones:
 

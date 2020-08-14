@@ -1,5 +1,7 @@
 ---
 title: "¿Qué tal el Mage Titans ES 2017?"
+hero_title: ¿Qué tal el Mage Titans ES 2017?
+hero_subtitle: Crónica del evento
 published: true
 date: "2017-07-10T17:59:00.000Z"
 taxonomy:
@@ -7,6 +9,7 @@ taxonomy:
     - Eventos
   tag:
     - Magento
+hero_image: 1_13i5ON3WRD1yyly4Ntu17g.jpg
 thumbnail: 1_13i5ON3WRD1yyly4Ntu17g.jpg
 ---
 
@@ -28,7 +31,7 @@ Se pueden ver todos los slides del evento [aquí](https://es.slideshare.net/Mage
 
 A diferencia de otros eventos, este estaba enfocado al 100% en los desarrolladores por lo que en cuanto se rompió el hielo el evento se convirtió en una especie de “terapia de grupo”, en la que no hubo limitaciones por clientes o proveedores. Es agradable compartir experiencias (buenas y malas) con gente que hace lo mismo que tu, aprender de sus errores y sus aciertos.
 
-![](https://cdn-images-1.medium.com/max/8064/1*1rneokqRUsTd_k6LN4gmGA.jpeg)
+![](1*1rneokqRUsTd_k6LN4gmGA.jpeg)
 
 ### Magento 2 ya es una realidad
 

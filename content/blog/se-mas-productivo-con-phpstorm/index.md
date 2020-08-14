@@ -15,7 +15,7 @@ thumbnail: 1_wFWMdeeHAl3hzjxXsryiHg.png
 
 Si hay algo que ayuda y ahorra tiempo en el desarrollo con Magento es el uso de Live Templates en PhpStorm. Un Live Template es una **estructura de código que usas con frecuencia que se inserta mediante un shortcode**. Escribes el shortcode, pulsas TAB y voilá!
 
-![](https://cdn-images-1.medium.com/max/2000/1*AAM9G8Tx-kg_9yh8VapNog.gif)
+![](1*AAM9G8Tx-kg_9yh8VapNog.gif)
 
 Mola, ¿verdad? Yo los utilizo principalmente en los .phtml de Magento para añadir las cabeceras de php. Por ejemplo:
 
@@ -29,7 +29,7 @@ Mola, ¿verdad? Yo los utilizo principalmente en los .phtml de Magento para aña
 
 Añadir un Live Template en PhpStorm es muy sencillo, para ello nos dirigimos a _Preferences -> Editor -> Live templates._
 
-![](https://cdn-images-1.medium.com/max/3360/1*b6IOCV7IuDnUg6FnJS-EbQ.png)
+![](1*b6IOCV7IuDnUg6FnJS-EbQ.png)
 
 En la parte superior de la ventana se puede ver la agrupación de Live Templates por lenguaje. En mi caso no las tengo agrupada en ningún lenguaje, por eso se encuentran dentro de la pestaña “Custom”.
 
@@ -37,6 +37,6 @@ En la parte inferior se define la abreviación a utilizar. Una pequeña descripc
 
 Para finalizar en la parte derecha se puede definir con que tecla o combinación se desea expandir el Live Template. En mi caso utilizo la que tiene por defecto (TAB).
 
-![Detalle de las estadísticas de PhpStorm. Me he ahorrado escribir bastante en dos años…y sólo con esos 4 Live Templates](https://cdn-images-1.medium.com/max/2708/1*7odAtZHjLq_aLBLqxzw3aw.png)_Detalle de las estadísticas de PhpStorm. Me he ahorrado escribir bastante en dos años…y sólo con esos 4 Live Templates_
+![Detalle de las estadísticas de PhpStorm. Me he ahorrado escribir bastante en dos años…y sólo con esos 4 Live Templates](1*7odAtZHjLq_aLBLqxzw3aw.png)_Detalle de las estadísticas de PhpStorm. Me he ahorrado escribir bastante en dos años…y sólo con esos 4 Live Templates_
 
 Como se puede ver es muy fácil de crear y da muchas facilidades para crear muchas estructuras de código tecleando poco. Se pueden utilizar para generar la estructura de un documento HTML, un componente de ReactJS o de Polymer, la estructura de un modelo…las opciones son infinitas y para todos los lenguajes y frameworks.

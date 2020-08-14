@@ -31,7 +31,7 @@ Nos situamos desde el terminal en la raiz del proyecto.
 
 La nueva estructura del proyecto es la siguiente:
 
-![Podemos ver como en la estructura aparece una nueva carpeta “bower_components”](https://cdn-images-1.medium.com/max/3580/1*gqjm_6UwOIaLBeaExKqaXw.png)_Podemos ver como en la estructura aparece una nueva carpeta “bower_components”_
+![Podemos ver como en la estructura aparece una nueva carpeta “bower_components”](1*gqjm_6UwOIaLBeaExKqaXw.png)_Podemos ver como en la estructura aparece una nueva carpeta “bower_components”_
 
 Si deseamos poder utilizar las funciones de breakpoint de Susy:
 

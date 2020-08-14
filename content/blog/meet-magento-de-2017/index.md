@@ -19,17 +19,17 @@ Después de reunirnos en el aeropuerto, tomar el avión y 4 horas de viaje (retr
 
 ## Día 1
 
-![](https://cdn-images-1.medium.com/max/8064/1*e22BAX5bdXsmaHLaxuhMTQ.jpeg)
+![](1*e22BAX5bdXsmaHLaxuhMTQ.jpeg)
 
 El evento se celebró en el **Pentahotel Leipzig**, un agradable hotel con salas de conferencias, pero que no tenía zonas para los expositores por lo que los pasillos estaban bastante concurridos entre la gente, los stands y la zona de catering para los coffee breaks. Estaba todo un poco apelotonado, pero las salas de conferencias estaban muy bien, y tenían un **hilo musical espectacular**. No digo que es lo que más me gustó, pero casi.
 
-![](https://cdn-images-1.medium.com/max/8064/1*vOnpUx65L70ibw10mvD0dw.jpeg)
+![](1*vOnpUx65L70ibw10mvD0dw.jpeg)
 
 Tras recibir las acreditaciones nos acomodamos en la sala principal para escuchar la charla de apertura de la mano de **Thomas Goletz**. En su charla nos habló sobre la proyección de Meet Magento en el mundo, la simbiosis con Magento y los próximos eventos que tendrán lugar en todo el mundo. En este momento me di cuenta de dos cosas: Casi todas las charlas serán en alemán y **Magento 2 se dice Magento zwei**.
 
 Después de la apertura **Paul Boisvert**, VP of Product Management detalló el roadmap de Magento 2 para los próximos meses. El dato más importante de la charla fue el lanzamiento de magento 2.2: último cuarto del año, y traerá muchísimas mejoras de rendimiento y fixes.
 
-![](https://cdn-images-1.medium.com/max/8064/1*u0ZfYKow7eFmiOHWYwpR5A.jpeg)
+![](1*u0ZfYKow7eFmiOHWYwpR5A.jpeg)
 
 Como no había charlas en inglés hasta después de comer me dispuse a dar un paseo por el centro de la ciudad. Algo que me molestó un poco ya que no tenía mucho sentido solapar las charlas en inglés y espaciar las de alemán, pero que luego agradecí porque Leipzig es una ciudad bastante bonita con un centro histórico muy pintoresco. Y el día no invitaba a quedarse en el hotel.
 
@@ -39,7 +39,7 @@ Para terminar la jornada de charlas (en inglés) tocó el turno de **Sandro Wagn
 
 ### Aftershow party
 
-![](https://cdn-images-1.medium.com/max/8064/1*IzaKr2JTSH3gPgsuHh8GyA.jpeg)
+![](1*IzaKr2JTSH3gPgsuHh8GyA.jpeg)
 
 La jornada terminó con la fiesta del evento que se celebró en **Moritzbastei**, una sala-discoteca-recinto subterráneo muy bonito en la que pudimos disfrutar de un buffet riquísimo y gran variedad de cervezas. Tras unos bailes de rigor, cantar _Despacito_ y perder la cuenta de las cervezas creímos conveniente que lo mejor era descansar. El día siguiente tocaba una jornada repleta de charlas en inglés.
 
@@ -49,13 +49,13 @@ El día comenzó como suelen comenzar los días en los que te acabas tomando un 
 
 Tras la entrega de los Meet Magento Awards 2017 en los que el premio gordo recayó en Original Bootcamp como mejor tienda online, **Mark Lavelle** (CEO de Magento Commerce) abrió la mañana de charlas en el escenario principal detallando los retos futuros de la plataforma y su presencia actual. Augura un dominio de la plataforma en la que la omnicanalidad será la base de cualquier comercio con presencia online.
 
-![](https://cdn-images-1.medium.com/max/6798/1*uNLRyAof79YS0BY5pjSEQw.jpeg)
+![](1*uNLRyAof79YS0BY5pjSEQw.jpeg)
 
 Después de hacer un pequeño break a media mañana comenzó el plato fuerte para los desarrolladores: Las charlas más técnicas. **Fabian Schmengler **de integer_net hizo una retrospectiva de su carrera como informático a través de su trabajo e interés en el testing de código. A lo largo de la charla indicó varios tips para comenzar con el TDD en Magento y en Magento 2, lo cual fue de mucha utilidad.
 
 A continuación **Fabrizio Branca**, de AOE explicó en su charla cómo super-escalar un e-commerce usando Magento. Desde mi punto de vista fue **la charla más completa y detallada de todo el evento**. Un espectáculo. Como contrapartida (o no) en su solución para escalar un e-commerce es que el ámbito de uso de Magento en todo el sistema es el cálculo de precios, gestión de carrito, checkout y poco más.
 
-![Fuente [Marcel Hauri](undefined)](https://cdn-images-1.medium.com/max/2400/1*CN6old1tHoXFzIxhOpuVRg.jpeg)_Fuente [Marcel Hauri](undefined)_
+![Fuente [Marcel Hauri](undefined)](1*CN6old1tHoXFzIxhOpuVRg.jpeg)_Fuente [Marcel Hauri](undefined)_
 
 Luego le tocó el turno a **Anna Völkl**. En su charla dio tips para mejorar la seguridad de tu tienda con Magento. En ella mezcló tanto consejos básicos para tener la tienda en orden (que siempre está bien recordar) como otros más específicos y técnicos. Para finalizar nos puso deberes para convertirnos poco a poco en expertos en seguridad. No está mal el reto ;)
 

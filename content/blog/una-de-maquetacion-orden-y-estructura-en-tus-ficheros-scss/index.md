@@ -20,7 +20,7 @@ El modularizar los ficheros es uno de los pasos más importante en el proceso de
 
 ¿Por qué? Porque cuando pasen unas semanas sin tocar el proyecto esa jerarquía te ayudará a encontrar los fragmentos de código rápidamente, y si no eres tú el que tiene que hacer la modificación le va a ayudar a situarse. Una buena organización del código en ficheros ahora horas de tiempo.
 
-![](https://cdn-images-1.medium.com/max/2000/1*9ydSyKpyODTTL-ShyV9qAw.jpeg)
+![](1*9ydSyKpyODTTL-ShyV9qAw.jpeg)
 
 Yo uso [Sassy-Starter](https://github.com/minamarkham/sassy-starter) como toolkit para empezar. Tiene un montón de mixins, funciones y la organización me parece ideal. La versión actual incorpora Atomic Design como metodología para maquetar. En [esta rama](https://github.com/rubenRP/sassy-starter/tree/without-ad) podéis ver una versión sin Atomic Design. Si no te gusta este toolkit, puedes desarrollar una jerarquía propia que se adapte a tus necesidades, siempre que sea coherente y esté documentada.
 
@@ -30,7 +30,7 @@ Imagina una estructura estandar de una web con cabecera, cuerpo, un formulario y
 
 Imaginemos el resumen del pedido en una tienda online. Este resumen cuenta con una lista compuesta por nombre, cantidad, precio y con un total general al final.
 
-![](https://cdn-images-1.medium.com/max/2000/1*Nz5Vf6e7v8ZOyHetSI7ESA.jpeg)
+![](1*Nz5Vf6e7v8ZOyHetSI7ESA.jpeg)
 
 Como se puede ver, en el fragmento de la izquierda no hay orden y no se sigue el orden de lectura ni tiene una indexación coherente, mientras que el de la derecha ya se puede imaginar qué forma tiene el código HTML.
 
