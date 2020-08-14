@@ -24,7 +24,7 @@ const TagList: React.FC<Props> = ({
   const heroTitle = `Tag: ${tag}`
 
   return (
-    <BodyClassName className="header-fixed header-animated">
+    <BodyClassName className="header-dark header-transparent header-fixed header-animated">
       <Layout location={location} title={siteTitle}>
         <SEO title={`All posts by tag ${tag}`} />
 

@@ -20,7 +20,7 @@ const PageTemplate: React.FC<Props> = ({
   const siteTitle = data.site.siteMetadata.title
 
   return (
-    <BodyClassName className="header-fixed header-animated">
+    <BodyClassName className="header-dark header-transparent header-fixed header-animated">
       <Layout location={location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         {post.frontmatter.hero_image ? (

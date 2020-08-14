@@ -33,7 +33,7 @@ const BlogList: React.FC<Props> = ({
     "Articles and opinions of a frontend developer. Mostly in spanish."
 
   return (
-    <BodyClassName className="header-fixed header-animated">
+    <BodyClassName className="header-dark header-transparent header-fixed header-animated">
       <Layout location={location} title={siteTitle}>
         <SEO title="Blog" />
 
