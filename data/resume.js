@@ -9,6 +9,12 @@ const resume = [
         title: "Interactiv4",
         info: "Lead Magento Front-End Architect",
         date: "2018 - Current",
+      },
+      {
+        id: 2,
+        title: "Universitat Oberta de Catalunya",
+        info: "Course Instructor",
+        date: "2020 - Current",
         description:
           'More details in my <a href="https://www.linkedin.com/in/rubenrodriguezpaz/" target="_blank" rel="noopener">LinkedIn</a> profile.',
       },
@@ -36,12 +42,12 @@ const resume = [
   {
     id: 3,
     title: "Certifications",
-    cssClass: "certifications",
+    cssClass: "education",
     items: [
       {
         id: 1,
-        title: "Magento",
-        info: "Magento 2 Certified Professional Front End Developer",
+        title: "Adobe",
+        info: "Magento Commerce Front-End Developer",
         date: "2019",
       },
       {
@@ -49,6 +55,29 @@ const resume = [
         title: "Magento",
         info: "Magento Certified Front End Developer",
         date: "2015",
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Speaking",
+    cssClass: "speaking",
+    items: [
+      {
+        id: 1,
+        title: "MageTitans ES",
+        info: "PWA & Magento: Deity, another point of view",
+        url:
+          "https://www.slideshare.net/RubnRodrguezPaz/pwa-magento-2-deity-otro-punto-de-vista",
+        date: "2018",
+      },
+      {
+        id: 2,
+        title: "Meet Magento Spain",
+        info: "Theming in Magento 2 using a frontend framework",
+        url:
+          "https://www.slideshare.net/RubnRodrguezPaz/mm17es-theming-en-magento-2-usando-un-framework-de-frontend",
+        date: "2017",
       },
     ],
   },

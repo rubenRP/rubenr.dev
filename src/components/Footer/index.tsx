@@ -2,8 +2,7 @@ import React from "react"
 
 import SocialLinks from "../SocialLinks"
 
-import M1 from "../../../content/assets/middle_frontend_developer.png"
-import M2 from "../../../content/assets/middle_frontend_developer_m2.png"
+import M2 from "../../../content/assets/adobe-certified-expert.png"
 
 const Footer: React.FC = () => {
   return (
@@ -16,11 +15,8 @@ const Footer: React.FC = () => {
           <li>
             <img
               src={M2}
-              alt="Magento 2 Certified Professional Front End Developer"
+              alt="Adobe Certified Expert - Magento Commerce Front-End Developer"
             />
-          </li>
-          <li>
-            <img src={M1} alt="Magento Certified Front End Developer" />
           </li>
         </ul>
       </section>
