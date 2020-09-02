@@ -41,8 +41,8 @@ const IndexPage: React.FC<Props> = ({
           classes={heroClasses}
         />
         <div id="start" />
-        <About info={about} />
         <Recent />
+        <About info={about} />
         <Resume info={resume} />
         <Currently />
       </Layout>

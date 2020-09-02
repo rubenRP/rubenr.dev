@@ -32,13 +32,12 @@ const About: React.FC<Props> = ({ info }: Props) => {
       <section className="section modular-about">
         <div className="container grid-lg">
           <div className="columns left">
-            <div className="column col-8 col-md-12">
+            <div className="column col-9 col-md-12">
               <h2>{info.title}</h2>
               <p dangerouslySetInnerHTML={{ __html: info.text }} />
               <h4>Contact</h4>
               <div className="columns">
                 <div className="column col-8 col-md-12">
-                  <strong>{info.contactName}</strong>
                   <div>{info.contactEmail}</div>
                 </div>
                 <div
@@ -47,7 +46,7 @@ const About: React.FC<Props> = ({ info }: Props) => {
                 />
               </div>
             </div>
-            <div className="column col-4 col-md-12">
+            <div className="column col-3 col-md-12">
               <div className="image">
                 <StaticQuery
                   query={aboutQuery}

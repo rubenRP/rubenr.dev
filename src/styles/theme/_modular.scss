@@ -125,7 +125,8 @@
 .modular-about {
   padding-top: 4rem;
   padding-bottom: 4rem;
-  background: $light-color;
+  // background: $light-color;
+  background-color: $bg-color-dark;
   .columns.left {
     flex-direction: row-reverse;
   }
@@ -141,9 +142,6 @@
       display: none;
     }
   }
-}
-.modular-recent {
-  background-color: $light-color;
 }
 .modular-resume,
 .modular-recent {
@@ -202,4 +200,10 @@
       }
     }
   }
+}
+
+.modular-recent {
+  // background-color: $bg-color-dark;
+  background: $light-color;
+  padding-top: 2rem;
 }
