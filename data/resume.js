@@ -67,6 +67,8 @@ const resume = [
         id: 1,
         title: "MageTitans ES",
         info: "PWA & Magento: Deity, another point of view",
+        description:
+          "Brief description of the Deity platform, its architecture, integration with Magento 2 and module development with it. Slides <a href='https://www.slideshare.net/RubnRodrguezPaz/pwa-magento-2-deity-otro-punto-de-vista' target='_blank'>here</a>.",
         url:
           "https://www.slideshare.net/RubnRodrguezPaz/pwa-magento-2-deity-otro-punto-de-vista",
         date: "2018",
@@ -75,6 +77,8 @@ const resume = [
         id: 2,
         title: "Meet Magento Spain",
         info: "Theming in Magento 2 using a frontend framework",
+        description:
+          "How to develop a new framework on top of Magento 2 architecture and integration with Bootstrap 4. Slides <a href='https://www.slideshare.net/RubnRodrguezPaz/mm17es-theming-en-magento-2-usando-un-framework-de-frontend' target='_blank'>here</a>.",
         url:
           "https://www.slideshare.net/RubnRodrguezPaz/mm17es-theming-en-magento-2-usando-un-framework-de-frontend",
         date: "2017",
