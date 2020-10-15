@@ -2,6 +2,7 @@
 title: "Generación de librerías JS con Webpack: Configuración de un stack para generar librerías importables por terceros."
 date: 2020-10-13T08:30:00.000Z
 published: true
+description: Vivimos en un tiempo en el que Javascript domina la web y la arquitectura basada en microservicios se tiene como un estándar...
 hero_title: Generación de librerías JS con Webpack
 hero_subtitle: Configuración de un stack para generar librerías importables por terceros
 hero_image: webpack-widget-hero.jpg
@@ -198,7 +199,6 @@ Para probar el funcionamiento vamos a crear un fichero sencillo [index.js](https
 ```jsx
 import Widget from "./components/widget"
 import styles from "./styles/main.scss"
-
 ;(function(window) {
   console.log("Widget initialized!")
   const _init = params => {
