@@ -10,7 +10,7 @@ const config = {
   siteRss: "/rss.xml",
   siteRssTitle: "Rubén Rodríguez - Front-End Developer",
   googleAnalyticsID: "UA-156169940-1",
-  ackeeId: "1db8ea7f-cec4-44cc-8ef2-bc467e77bf69",
+  ackeeId: "d1415f24-ccb0-4493-bdbb-6f49d3c278a1",
   ackeeHerokuDomain: "https://rubenr-ackee.herokuapp.com",
   dateFromFormat: "YYYY-MM-DD",
   dateFormat: "DD/MM/YYYY",
