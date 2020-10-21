@@ -86,7 +86,7 @@ module.exports = {
         // If enabled it will collect info on OS, BrowserInfo, Device  & ScreenSize
         // False due to detailed information being personalized:
         // https://github.com/electerious/Ackee/blob/master/docs/Anonymization.md#personal-data
-        detailed: false,
+        detailed: true,
       },
     },
     {
