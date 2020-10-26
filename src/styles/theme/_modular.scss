@@ -144,7 +144,8 @@
   }
 }
 .modular-resume,
-.modular-recent {
+.modular-recent,
+.modular-popular {
   padding-top: 4rem;
   padding-bottom: 4rem;
   .education,
@@ -205,5 +206,11 @@
 .modular-recent {
   // background-color: $bg-color-dark;
   background: $light-color;
+  padding-top: 2rem;
+}
+
+.modular-popular {
+  // background-color: $bg-color-dark;
+  // background: $light-color;
   padding-top: 2rem;
 }

@@ -9,6 +9,7 @@ description: En este artículo hablaremos de Netlify CMS, sus ventajas e
   inconvenientes, configuración y el proceso de integración con Gatsby.
 hero_image: netlify-cms-hero.jpg
 thumbnail: netlify-cms-thumb.jpg
+popular: true
 taxonomy:
   category:
     - Articles

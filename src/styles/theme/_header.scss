@@ -55,7 +55,7 @@
   }
 
   .navbar-section.desktop-menu {
-    justify-content: center;
+    justify-content: flex-end;
     @include breakpoint(md) {
       display: none;
     }

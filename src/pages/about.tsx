@@ -2,16 +2,16 @@ import React from "react"
 import { graphql } from "gatsby"
 import BodyClassName from "react-body-classname"
 
-import Popular from "../components/Popular"
 import Layout from "../components/Layout"
-import About from "../components/About"
 import SEO from "../components/Seo"
 
 import Hero from "../components/Hero"
-import Recent from "../components/Recent"
+import About from "../components/About"
+import Resume from "../components/Resume"
+import Currently from "../components/Currently"
 
-import home from "../../data/home"
 import about from "../../data/about"
+import resume from "../../data/resume"
 import config from "../../data/siteConfig"
 
 interface Props {
@@ -19,7 +19,7 @@ interface Props {
   location: Location
 }
 
-const IndexPage: React.FC<Props> = ({
+const AboutPage: React.FC<Props> = ({
   data = null,
   location = null,
 }: Props) => {
@@ -29,25 +29,22 @@ const IndexPage: React.FC<Props> = ({
   return (
     <BodyClassName className="header-dark header-transparent header-fixed header-animated">
       <Layout location={location} title={siteTitle}>
-        <SEO title="Home" keywords={seoKeywords} />
+        <SEO title="About" keywords={seoKeywords} />
         <Hero
-          title={home.hero.title}
-          subtitle={home.hero.subtitle}
-          text={home.hero.text}
+          title="About me"
           image={data.fileName.childImageSharp.fluid.src}
-          social
           classes={heroClasses}
         />
         <div id="start" />
-        <Recent />
-        <Popular />
         <About info={about} />
+        <Resume info={resume} />
+        <Currently />
       </Layout>
     </BodyClassName>
   )
 }
 
-export default IndexPage
+export default AboutPage
 
 export const pageQuery = graphql`
   query {

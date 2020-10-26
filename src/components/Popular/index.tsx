@@ -7,11 +7,15 @@ interface Props {
   }
 }
 
-const recentQuery = graphql`
-  query RecentQuery {
+const popularQuery = graphql`
+  query PopularQuery {
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { parent: { id: {} }, fileAbsolutePath: { regex: "\\\\/blog/" } }
+      filter: {
+        parent: { id: {} }
+        fileAbsolutePath: { regex: "\\\\/blog/" }
+        frontmatter: { popular: { eq: true } }
+      }
       limit: 4
     ) {
       edges {
@@ -29,22 +33,22 @@ const recentQuery = graphql`
   }
 `
 
-const Recent: React.FC = () => {
+const Popular: React.FC = () => {
   return (
     <>
-      <div id="recent" />
-      <section className="section modular-recent">
+      <div id="popular" />
+      <section className="section modular-popular">
         <div className="container grid-lg">
           <div className="columns">
             <div className="column col-3 col-md-12 header-col">
               <h4>
-                <span>Latest posts</span>
+                <span>Popular posts</span>
               </h4>
             </div>
             <div className="column col-9 col-md-12 main-col">
               <div className="columns item">
                 <StaticQuery
-                  query={recentQuery}
+                  query={popularQuery}
                   render={data => {
                     return data.allMdx.edges.map(({ node }) => {
                       const title = node.frontmatter.title || node.fields.slug
@@ -78,4 +82,4 @@ const Recent: React.FC = () => {
   )
 }
 
-export default Recent
+export default Popular
