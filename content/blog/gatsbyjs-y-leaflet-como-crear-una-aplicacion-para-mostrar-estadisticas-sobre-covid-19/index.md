@@ -4,6 +4,7 @@ hero_title: "GatsbyJS y Leaflet"
 hero_subtitle: "Cómo crear una aplicación para mostrar estadísticas sobre COVID-19"
 published: true
 date: "2020-03-30T08:30:00.000Z"
+popular: true
 taxonomy:
   category:
     - Articles

@@ -88,18 +88,8 @@ const Header: React.FC = () => {
               <nav className="dropmenu animated">
                 <ul className="navigation">
                   <li>
-                    <Link to="/" className="">
-                      Home
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/#about" className="">
+                    <Link to="/about" className="">
                       About
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/#resume" className="">
-                      Resume
                     </Link>
                   </li>
                   {headerLinks.map(link => {

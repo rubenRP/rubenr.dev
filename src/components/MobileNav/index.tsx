@@ -54,24 +54,13 @@ const MobileNav: React.FC = () => {
             </li>
             <li className="tree-empty">
               <Link
-                to="/#about"
+                to="/about"
                 className=""
                 onClick={mobileNavOnClick}
                 onKeyDown={handleKeyDown}
                 role="button"
               >
                 About
-              </Link>
-            </li>
-            <li className="tree-empty">
-              <Link
-                to="/#resume"
-                className=""
-                onClick={mobileNavOnClick}
-                onKeyDown={handleKeyDown}
-                role="button"
-              >
-                Resume
               </Link>
             </li>
             {headerLinks.map(link => {

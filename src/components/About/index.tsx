@@ -33,7 +33,6 @@ const About: React.FC<Props> = ({ info }: Props) => {
         <div className="container grid-lg">
           <div className="columns left">
             <div className="column col-9 col-md-12">
-              <h2>{info.title}</h2>
               <p dangerouslySetInnerHTML={{ __html: info.text }} />
               <h4>Contact</h4>
               <div className="columns">

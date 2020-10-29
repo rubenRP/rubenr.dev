@@ -4,6 +4,7 @@ hero_title: "Básicos para comenzar un proyecto en React"
 hero_subtitle: "VS Code + ESLint + Prettier"
 published: true
 date: "2020-02-16T18:46:00.000Z"
+popular: true
 taxonomy:
   category:
     - Articles

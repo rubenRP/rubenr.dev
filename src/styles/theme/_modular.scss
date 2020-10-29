@@ -7,6 +7,9 @@
       padding: 1rem 1rem;
       background: $light-color;
       box-shadow: 0 0 75px 0 rgba($dark-color, 0.1);
+      &.without-offset-top {
+        margin-top: 0;
+      }
     }
   }
 
@@ -144,7 +147,8 @@
   }
 }
 .modular-resume,
-.modular-recent {
+.modular-recent,
+.modular-popular {
   padding-top: 4rem;
   padding-bottom: 4rem;
   .education,
@@ -167,6 +171,9 @@
   .main-col {
     .item {
       width: 100%;
+      .padded {
+        margin-top: 2rem;
+      }
     }
   }
   .bars {
@@ -204,6 +211,12 @@
 
 .modular-recent {
   // background-color: $bg-color-dark;
+  padding-top: 2rem;
+}
+
+.modular-popular {
+  // background-color: $bg-color-dark;
+  // background: $light-color;
   background: $light-color;
   padding-top: 2rem;
 }

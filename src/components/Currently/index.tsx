@@ -4,9 +4,9 @@ import Image from "gatsby-image"
 
 const currentlyQuery = graphql`
   query CurrentlyQuery {
-    currently: file(absolutePath: { regex: "/interactiv4.png/" }) {
+    currently: file(absolutePath: { regex: "/scalefast-logo.jpg/" }) {
       childImageSharp {
-        fixed(width: 300) {
+        fixed(width: 400) {
           ...GatsbyImageSharpFixed
         }
       }
@@ -20,7 +20,7 @@ const Currently: React.FC = () => {
       <div id="working" />
       <section className="section modular-features offset-box">
         <div className="container grid-sm">
-          <div className="frame-box">
+          <div className="frame-box without-offset-top">
             <h3>Currently working at</h3>
             <div>
               <StaticQuery
@@ -30,7 +30,6 @@ const Currently: React.FC = () => {
                 }}
               />
             </div>
-            <p className="columns" />
           </div>
         </div>
       </section>
