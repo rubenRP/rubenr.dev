@@ -1,6 +1,6 @@
 import React from "react"
 
-import config from "../../../data/siteConfig"
+import config from "../../../content/data/siteConfig"
 
 const SocialLinks: React.FC = () => {
   const { userLinks } = config

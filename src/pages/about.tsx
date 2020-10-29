@@ -9,9 +9,9 @@ import Hero from "../components/Hero"
 import About from "../components/About"
 import Resume from "../components/Resume"
 
-import about from "../../data/about"
-import resume from "../../data/resume"
-import config from "../../data/siteConfig"
+import about from "../../content/data/about.json"
+import resume from "../../content/data/resume.json"
+import config from "../../content/data/siteConfig.json"
 
 interface Props {
   data?: any

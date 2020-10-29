@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 
-import config from "../../../data/siteConfig"
+import config from "../../../content/data/siteConfig"
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false)

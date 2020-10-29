@@ -15,7 +15,7 @@ interface Props {
   lang?: string
   meta?: []
   title: string
-  keywords?: [string]
+  keywords?: string[]
   thumbnail?: any
 }
 

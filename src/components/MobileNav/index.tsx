@@ -2,7 +2,7 @@ import React from "react"
 
 import { Link } from "gatsby"
 
-import config from "../../../data/siteConfig"
+import config from "../../../content/data/siteConfig"
 
 const MobileNav: React.FC = () => {
   const mobileNavOnClick = () => {

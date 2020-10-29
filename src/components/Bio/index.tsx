@@ -9,6 +9,7 @@ interface Props {
     contactName: string
     contactEmail: string
     contactLink: string
+    shortInfo: string
   }
 }
 
@@ -27,7 +28,7 @@ const Bio: React.FC<Props> = ({ info }: Props) => {
             <div className="column col-9 col-md-12 main-col">
               <div className="columns item">
                 <p
-                  dangerouslySetInnerHTML={{ __html: info.text }}
+                  dangerouslySetInnerHTML={{ __html: info.shortInfo }}
                   className="padded"
                 />
                 <div className="col-4 col-md-12">

@@ -10,9 +10,9 @@ import Currently from "../components/Currently"
 import Hero from "../components/Hero"
 import Recent from "../components/Recent"
 
-import home from "../../data/home"
-import about from "../../data/about"
-import config from "../../data/siteConfig"
+import home from "../../content/data/home.json"
+import about from "../../content/data/about.json"
+import config from "../../content/data/siteConfig.json"
 
 interface Props {
   data?: any
