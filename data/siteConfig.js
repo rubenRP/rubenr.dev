@@ -6,7 +6,7 @@ const config = {
   siteUrl: "https://rubenr.dev",
   pathPrefix: "/",
   siteDescription:
-    "Madrid based developer. Front-End developer @interactiv4. Javascript enthusiast & Magento certified.",
+    "Madrid based developer. Front-End developer @ Scalefast. Javascript enthusiast & Magento certified.",
   siteRss: "/rss.xml",
   siteRssTitle: "Rubén Rodríguez - Front-End Developer",
   googleAnalyticsID: "UA-156169940-1",
@@ -21,7 +21,7 @@ const config = {
   userLocation: "Madrid, Spain",
   userAvatar: "profile-pic.png",
   userDescription:
-    "Madrid based developer. Front-End developer @interactiv4. Javascript enthusiast & Magento certified.",
+    "Madrid based developer. Front-End developer @ Scalefast. Javascript enthusiast & Magento certified.",
   seoKeywords: [`blog`, `gatsby`, `javascript`, `react`],
   headerLinks: [
     {

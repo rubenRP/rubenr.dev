@@ -4,9 +4,9 @@ import BodyClassName from "react-body-classname"
 
 import Popular from "../components/Popular"
 import Layout from "../components/Layout"
-import About from "../components/About"
+import Bio from "../components/Bio"
 import SEO from "../components/Seo"
-
+import Currently from "../components/Currently"
 import Hero from "../components/Hero"
 import Recent from "../components/Recent"
 
@@ -41,7 +41,8 @@ const IndexPage: React.FC<Props> = ({
         <div id="start" />
         <Recent />
         <Popular />
-        <About info={about} />
+        <Bio info={about} />
+        <Currently />
       </Layout>
     </BodyClassName>
   )

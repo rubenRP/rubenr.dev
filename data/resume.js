@@ -6,15 +6,21 @@ const resume = [
     items: [
       {
         id: 1,
-        title: "Interactiv4",
-        info: "Lead Magento Front-End Architect",
-        date: "2018 - Current",
+        title: "Scalefast",
+        info: "Developer Analyst",
+        date: "2020 - Current",
       },
       {
         id: 2,
         title: "Universitat Oberta de Catalunya",
         info: "Course Instructor",
         date: "2020 - Current",
+      },
+      {
+        id: 3,
+        title: "Interactiv4",
+        info: "Lead Magento Front-End Architect",
+        date: "2018 - 2020",
         description:
           'More details in my <a href="https://www.linkedin.com/in/rubenrodriguezpaz/" target="_blank" rel="noopener">LinkedIn</a> profile.',
       },

@@ -8,7 +8,6 @@ import SEO from "../components/Seo"
 import Hero from "../components/Hero"
 import About from "../components/About"
 import Resume from "../components/Resume"
-import Currently from "../components/Currently"
 
 import about from "../../data/about"
 import resume from "../../data/resume"
@@ -32,13 +31,13 @@ const AboutPage: React.FC<Props> = ({
         <SEO title="About" keywords={seoKeywords} />
         <Hero
           title="About me"
+          text="Who I am? What I did? What I know?"
           image={data.fileName.childImageSharp.fluid.src}
           classes={heroClasses}
         />
         <div id="start" />
         <About info={about} />
         <Resume info={resume} />
-        <Currently />
       </Layout>
     </BodyClassName>
   )
@@ -49,7 +48,7 @@ export default AboutPage
 export const pageQuery = graphql`
   query {
     fileName: file(
-      absolutePath: { regex: "/ferdinand-stohr-NFs6dRTBgaM-unsplash.jpg/" }
+      absolutePath: { regex: "/anas-alshanti-feXpdV001o4-unsplash.jpg/" }
     ) {
       childImageSharp {
         fluid(maxWidth: 1600) {
