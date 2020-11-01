@@ -57,6 +57,7 @@ const BlogPostTemplate: React.FC<Props> = ({
                 ? post.frontmatter.hero_classes
                 : undefined
             }
+            smallHeadings
           />
         ) : (
           ""

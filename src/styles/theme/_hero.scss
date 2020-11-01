@@ -3,8 +3,8 @@
   align-items: center;
   justify-content: center;
 
-  padding-top: 6rem;
-  padding-bottom: 7rem;
+  // padding-top: 6rem;
+  // padding-bottom: 7rem;
   background-size: cover;
   background-position: center;
   @include breakpoint(sm) {
@@ -78,6 +78,34 @@
     }
   }
 
+  &.small-headings {
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.3em;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    @include breakpoint(md) {
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 1.75rem;
+      }
+    }
+
+    @include breakpoint(sm) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
   p {
     font-size: 0.9rem;
     font-weight: 300;
@@ -97,7 +125,8 @@
   #to-start {
     display: inline-block;
     position: absolute;
-    bottom: 3.5rem;
+    // bottom: 3.5rem;
+    bottom: 1rem;
     font-size: 2rem;
     cursor: pointer;
     @include breakpoint(sm) {

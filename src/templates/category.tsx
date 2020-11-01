@@ -31,6 +31,7 @@ const CategoryList: React.FC<Props> = ({
         <Hero
           title={heroTitle}
           image={data.fileName.childImageSharp.fluid.src}
+          smallHeadings
         />
 
         <section id="start" />

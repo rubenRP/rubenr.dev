@@ -16,6 +16,7 @@ interface Props {
   arrow?: boolean
   classes?: string
   textAlign?: TextAlignProperty
+  smallHeadings?: boolean
 }
 
 const Hero: React.FC<Props> = ({
@@ -30,6 +31,7 @@ const Hero: React.FC<Props> = ({
   arrow = true,
   classes = "text-light hero-tiny overlay-dark-gradient",
   textAlign = "center",
+  smallHeadings = false,
 }: Props) => {
   const [position, setPosition] = useState(0)
 
@@ -62,7 +64,9 @@ const Hero: React.FC<Props> = ({
       <section
         className={`section modular-hero hero ${
           subtitle ? "title-h1h2" : ""
-        } ${classes} ${isParallax ? "parallax" : ""}`}
+        } ${classes} ${isParallax ? "parallax" : ""} ${
+          smallHeadings ? "small-headings" : ""
+        }`}
         style={{
           backgroundPositionY: position,
           backgroundImage: `url(${image})`,

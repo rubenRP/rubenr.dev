@@ -41,6 +41,7 @@ const BlogList: React.FC<Props> = ({
           title={heroTitle}
           text={heroText}
           image={data.fileName.childImageSharp.fluid.src}
+          smallHeadings
         />
 
         <section id="start" />

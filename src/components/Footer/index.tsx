@@ -24,9 +24,11 @@ const Footer: React.FC = () => {
         <ul className="copyright d-inline-flex list-unstyled">
           <li>Copyright © Rubén Rodríguez {new Date().getFullYear()}</li>
           <li>
-            Using <a href="https://www.gatsbyjs.org">Gatsby</a>. Based on{" "}
-            <a href="https://github.com/getgrav/grav-theme-quark">Quark</a>{" "}
-            modified theme.
+            With{" "}
+            <span role="img" aria-label="heart">
+              ❤️
+            </span>{" "}
+            using <a href="https://www.gatsbyjs.org">Gatsby</a>.
           </li>
         </ul>
       </section>

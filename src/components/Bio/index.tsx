@@ -29,9 +29,9 @@ const Bio: React.FC<Props> = ({ info }: Props) => {
               <div className="columns item">
                 <p
                   dangerouslySetInnerHTML={{ __html: info.shortInfo }}
-                  className="padded"
+                  className="column col-12 padded"
                 />
-                <div className="col-4 col-md-12">
+                <div className="column col-4 col-md-12">
                   <Link to="/about" className="btn btn-lg">
                     More things about me...
                   </Link>

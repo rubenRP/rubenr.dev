@@ -34,6 +34,7 @@ const AboutPage: React.FC<Props> = ({
           text="Who I am? What I did? What I know?"
           image={data.fileName.childImageSharp.fluid.src}
           classes={heroClasses}
+          smallHeadings
         />
         <div id="start" />
         <About info={about} />
