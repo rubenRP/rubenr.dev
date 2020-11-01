@@ -1,26 +1,8 @@
 /* eslint-disable react/no-danger */
+import { ResumeData } from "models/resume"
 import React from "react"
 
-interface Props {
-  info: [
-    {
-      cssClass: string
-      id: number
-      title: string
-      items: [
-        {
-          id: number
-          title: string
-          info: string
-          date: string
-          description: string
-        }
-      ]
-    }
-  ]
-}
-
-const Resume: React.FC<Props> = ({ info = null }: Props) => {
+const Resume: React.FC<ResumeData> = ({ info = null }: ResumeData) => {
   return (
     <>
       <div id="resume" />

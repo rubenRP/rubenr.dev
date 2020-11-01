@@ -2,6 +2,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import Image from "gatsby-image"
+import { AboutData } from "models/about"
 
 const aboutQuery = graphql`
   query AboutQuery {
@@ -15,17 +16,7 @@ const aboutQuery = graphql`
   }
 `
 
-interface Props {
-  info: {
-    title: string
-    text: string
-    contactName: string
-    contactEmail: string
-    contactLink: string
-  }
-}
-
-const About: React.FC<Props> = ({ info }: Props) => {
+const About: React.FC<AboutData> = ({ info }: AboutData) => {
   return (
     <>
       <div id="about" />

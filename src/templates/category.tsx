@@ -2,18 +2,13 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import BodyClassName from "react-body-classname"
 
+import { PageData } from "models/page"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 
 import Hero from "../components/Hero"
 
-interface Props {
-  data: any
-  pageContext: any
-  location: Location
-}
-
-const CategoryList: React.FC<Props> = ({
+const CategoryList: React.FC<PageData> = ({
   data = null,
   pageContext = null,
   location = null,

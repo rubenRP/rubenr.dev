@@ -2,23 +2,18 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import BodyClassName from "react-body-classname"
 
+import { PageData } from "models/page"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 
 import Hero from "../components/Hero"
 import Tags from "../components/Tags"
 
-interface Props {
-  data: any
-  pageContext: any
-  location: Location
-}
-
-const BlogList: React.FC<Props> = ({
+const BlogList: React.FC<PageData> = ({
   data = null,
   pageContext = null,
   location = null,
-}: Props) => {
+}: PageData) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges
   const { currentPage, numPages } = pageContext

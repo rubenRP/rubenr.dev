@@ -2,22 +2,17 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import BodyClassName from "react-body-classname"
 
+import { PageData } from "models/page"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 
 import Hero from "../components/Hero"
 
-interface Props {
-  data: any
-  pageContext: any
-  location: Location
-}
-
-const TagList: React.FC<Props> = ({
+const TagList: React.FC<PageData> = ({
   data = null,
   pageContext = null,
   location = null,
-}: Props) => {
+}: PageData) => {
   const { tag } = pageContext
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges
@@ -86,14 +81,14 @@ const TagList: React.FC<Props> = ({
                           <div className="card-footer">
                             <span className="tags">
                               {node.frontmatter.taxonomy
-                                ? node.frontmatter.taxonomy.tag.map(tag => {
+                                ? node.frontmatter.taxonomy.tag.map(tagItem => {
                                     return (
                                       <Link
-                                        to={`/blog/tag:${tag.toLowerCase()}`}
-                                        key={tag}
+                                        to={`/blog/tag:${tagItem.toLowerCase()}`}
+                                        key={tagItem}
                                         className="label label-rounded"
                                       >
-                                        {tag}
+                                        {tagItem}
                                       </Link>
                                     )
                                   })

@@ -3,23 +3,18 @@ import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import BodyClassName from "react-body-classname"
 
+import { PageData } from "models/page"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import Hero from "../components/Hero"
 import Share from "../components/Share"
 import Feedback from "../components/Feedback"
 
-interface Props {
-  data: any
-  pageContext: any
-  location: Location
-}
-
-const BlogPostTemplate: React.FC<Props> = ({
+const BlogPostTemplate: React.FC<PageData> = ({
   data = null,
   pageContext = null,
   location = null,
-}: Props) => {
+}: PageData) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext

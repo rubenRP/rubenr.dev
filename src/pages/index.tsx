@@ -2,6 +2,7 @@ import React from "react"
 import { graphql } from "gatsby"
 import BodyClassName from "react-body-classname"
 
+import { PageData } from "models/page"
 import Popular from "../components/Popular"
 import Layout from "../components/Layout"
 import Bio from "../components/Bio"
@@ -14,15 +15,10 @@ import home from "../../content/data/home.json"
 import about from "../../content/data/about.json"
 import config from "../../content/data/siteConfig.json"
 
-interface Props {
-  data?: any
-  location: Location
-}
-
-const IndexPage: React.FC<Props> = ({
+const IndexPage: React.FC<PageData> = ({
   data = null,
   location = null,
-}: Props) => {
+}: PageData) => {
   const { siteTitle, seoKeywords } = config
   const heroClasses = "text-light hero-tiny overlay-dark-gradient"
 

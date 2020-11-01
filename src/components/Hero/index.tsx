@@ -1,25 +1,10 @@
 /* eslint-disable react/no-danger */
 import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
-import { TextAlignProperty } from "csstype"
+import { HeroData } from "models/hero"
 import SocialLinks from "../SocialLinks"
 
-interface Props {
-  title?: string
-  subtitle?: string
-  text?: string
-  image?: string
-  social?: boolean
-  date?: string
-  tags?: [string]
-  isParallax?: boolean
-  arrow?: boolean
-  classes?: string
-  textAlign?: TextAlignProperty
-  smallHeadings?: boolean
-}
-
-const Hero: React.FC<Props> = ({
+const Hero: React.FC<HeroData> = ({
   title = null,
   subtitle = null,
   text = null,
@@ -32,7 +17,7 @@ const Hero: React.FC<Props> = ({
   classes = "text-light hero-tiny overlay-dark-gradient",
   textAlign = "center",
   smallHeadings = false,
-}: Props) => {
+}: HeroData) => {
   const [position, setPosition] = useState(0)
 
   const parallax = () => {

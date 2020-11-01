@@ -1,19 +1,9 @@
 /* eslint-disable react/no-danger */
 import { Link } from "gatsby"
+import { AboutData } from "models/about"
 import React from "react"
 
-interface Props {
-  info: {
-    title: string
-    text: string
-    contactName: string
-    contactEmail: string
-    contactLink: string
-    shortInfo: string
-  }
-}
-
-const Bio: React.FC<Props> = ({ info }: Props) => {
+const Bio: React.FC<AboutData> = ({ info }: AboutData) => {
   return (
     <>
       <div id="about" />
