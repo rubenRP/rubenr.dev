@@ -7,7 +7,6 @@ hero_title: Generación de librerías JS con Webpack
 hero_subtitle: Configuración de un stack para generar librerías importables por terceros
 hero_image: webpack-widget-hero.jpg
 thumbnail: webpack-widget-thumb.jpg
-popular: true
 taxonomy:
   category:
     - Articles

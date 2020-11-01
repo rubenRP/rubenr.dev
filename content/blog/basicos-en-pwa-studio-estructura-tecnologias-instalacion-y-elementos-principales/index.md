@@ -4,6 +4,7 @@ hero_title: "Básicos en PWA Studio"
 hero_subtitle: "Estructura, tecnologías, instalación y elementos principales"
 published: true
 date: "2020-05-14T08:30:00.000Z"
+popular: true
 taxonomy:
   category:
     - Articles

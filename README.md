@@ -9,6 +9,7 @@ Personal website made with Gatsby
 - Posts and pages in Markdown
 - Tags and categories
 - Sass Integration
+- Ackee Stats integration
 
 ## Contributing
 
