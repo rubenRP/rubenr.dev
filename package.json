@@ -46,6 +46,7 @@
     "react-switch": "^5.0.0",
     "react-typography": "^0.16.19",
     "spectre.css": "^0.5.8",
+    "typed.js": "^2.0.11",
     "typescript": "^3.9.5",
     "update": "^0.7.4"
   },

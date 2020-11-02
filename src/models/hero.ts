@@ -1,7 +1,7 @@
 import { TextAlignProperty } from "csstype"
 
 export interface HeroData {
-  title?: string
+  title?: any
   subtitle?: string
   text?: string
   image?: string

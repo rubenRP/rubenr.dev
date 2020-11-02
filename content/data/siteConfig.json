@@ -20,7 +20,14 @@
   "userLocation": "Madrid, Spain",
   "userAvatar": "profile-pic.png",
   "userDescription": "Madrid based developer. Front-End developer @ Scalefast. Javascript enthusiast & Magento certified.",
-  "seoKeywords": ["blog", "gatsby", "javascript", "react"],
+  "seoKeywords": [
+    "blog",
+    "gatsby",
+    "javascript",
+    "react",
+    "ecommerce",
+    "magento"
+  ],
   "headerLinks": [
     {
       "title": "Uses",

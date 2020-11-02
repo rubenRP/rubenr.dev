@@ -8,7 +8,7 @@ import Layout from "../components/Layout"
 import Bio from "../components/Bio"
 import SEO from "../components/Seo"
 import Currently from "../components/Currently"
-import Hero from "../components/Hero"
+import HeroTyped from "../components/HeroTyped"
 import Recent from "../components/Recent"
 
 import home from "../../content/data/home.json"
@@ -26,10 +26,12 @@ const IndexPage: React.FC<PageData> = ({
     <BodyClassName className="header-dark header-transparent header-fixed header-animated">
       <Layout location={location} title={siteTitle}>
         <SEO title="Home" keywords={seoKeywords} />
-        <Hero
+
+        <HeroTyped
           title={home.hero.title}
           subtitle={home.hero.subtitle}
           text={home.hero.text}
+          typedText={home.hero.typedText}
           image={data.fileName.childImageSharp.fluid.src}
           social
           classes={heroClasses}
