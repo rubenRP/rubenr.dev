@@ -8,7 +8,6 @@ const HeroTyped: React.FC<HeroData> = ({
   title = null,
   subtitle = null,
   text = null,
-  typedText = [""],
   image = null,
   social = false,
   isParallax = true,
