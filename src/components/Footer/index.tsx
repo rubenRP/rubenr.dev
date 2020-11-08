@@ -27,7 +27,8 @@ const Footer: React.FC = () => {
             With{" "}
             <span role="img" aria-label="heart">
               ❤️
-            </span>{" "}
+            </span>
+            {"  "}
             using <a href="https://www.gatsbyjs.org">Gatsby</a>.
           </li>
         </ul>
