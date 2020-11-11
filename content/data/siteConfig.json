@@ -10,7 +10,7 @@
   "siteRssTitle": "Rubén Rodríguez - Front-End Developer",
   "googleAnalyticsID": "UA-156169940-1",
   "ackeeId": "d1415f24-ccb0-4493-bdbb-6f49d3c278a1",
-  "ackeeHerokuDomain": "https://rubenr-ackee.herokuapp.com",
+  "ackeeHerokuDomain": "https://ackee.rubenr.dev",
   "dateFromFormat": "YYYY-MM-DD",
   "dateFormat": "DD/MM/YYYY",
   "postsPerPage": 10,
