@@ -5,6 +5,10 @@ backend:
 media_folder: static/assets
 public_folder: assets
 
+slug:
+  encoding: "ascii"
+  clean_accents: true
+
 collections:
   - name: blog
     label: Blog
@@ -33,7 +37,7 @@ collections:
         label: Taxonomy
         widget: "object"
         fields:
-          - { name: category, label: Category, required: false }
+          - { name: category, label: Category, widget: "list", required: false }
           - { name: tag, label: Tags, widget: "list", required: false }
       - { name: body, label: Body, widget: markdown }
   - name: pages

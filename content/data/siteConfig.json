@@ -30,12 +30,34 @@
   ],
   "headerLinks": [
     {
-      "title": "Uses",
-      "url": "/uses"
+      "title": "Home",
+      "url": "/"
+    },
+    {
+      "title": "About",
+      "url": "/about"
     },
     {
       "title": "Blog",
       "url": "/blog"
+    }
+  ],
+  "footerLinks": [
+    {
+      "title": "About",
+      "url": "/about"
+    },
+    {
+      "title": "Blog",
+      "url": "/blog"
+    },
+    {
+      "title": "Uses",
+      "url": "/uses"
+    },
+    {
+      "title": "RSS",
+      "url": "/rss.xml"
     }
   ],
   "userLinks": [

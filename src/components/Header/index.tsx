@@ -87,11 +87,6 @@ const Header: React.FC = () => {
             <section className="navbar-section desktop-menu">
               <nav className="dropmenu animated">
                 <ul className="navigation">
-                  <li>
-                    <Link to="/about" className="">
-                      About
-                    </Link>
-                  </li>
                   {headerLinks.map(link => {
                     return (
                       <li key={link.url}>

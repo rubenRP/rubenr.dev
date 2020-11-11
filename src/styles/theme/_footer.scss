@@ -20,4 +20,15 @@ body.sticky-footer {
       max-width: 80px;
     }
   }
+  .copyright {
+    ul {
+      margin: 0;
+      li {
+        margin: 0;
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
 }
