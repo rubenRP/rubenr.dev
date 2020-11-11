@@ -1,7 +1,5 @@
 ---
-title: "Iniciarse en la programación: Retos, problemas y estrategias de la
-  docencia y aprendizaje en línea"
-path: programacion-retos-problemas-aprendizaje-en-linea
+title: "Iniciarse en la programación: Retos, problemas y estrategias de la docencia y aprendizaje en línea"
 date: 2020-11-11T11:48:36.959Z
 published: true
 hero_title: Iniciarse en la programación
@@ -9,12 +7,14 @@ hero_subtitle: Retos, problemas y estrategias de la docencia y aprendizaje en l�
 hero_image: docencia-hero.jpg
 thumbnail: docencia-thumb.jpg
 taxonomy:
-  category: Articles
+  category:
+    - Articles
   tag:
     - Teaching
     - JavaScript
 ---
-La enseñanza de un lenguaje de programación programación puede suponer un reto tanto para los alumnos como para los docentes, si se prueba por primera vez como si se es un desarrollador experimentado que quiere aprender un nuevo lenguaje o paradigma. Se parte de un mundo relativamente ajeno a lo cotidiano, todo el mundo utiliza la tecnología, pero no todos entienden cómo funciona. Hay una gran cantidad de conceptos que son necesarios compartir, una serie de ideas que deben estar claras incluso antes de sentarse delante de un ordenador y ponerse a practicar. 
+
+La enseñanza de un lenguaje de programación programación puede suponer un reto tanto para los alumnos como para los docentes, si se prueba por primera vez como si se es un desarrollador experimentado que quiere aprender un nuevo lenguaje o paradigma. Se parte de un mundo relativamente ajeno a lo cotidiano, todo el mundo utiliza la tecnología, pero no todos entienden cómo funciona. Hay una gran cantidad de conceptos que son necesarios compartir, una serie de ideas que deben estar claras incluso antes de sentarse delante de un ordenador y ponerse a practicar.
 
 Aunque es cierto que en el aprendizaje más o menos todos los que pueden leer este blog tienen experiencia, en la enseñanza no es algo tan habitual. Este año tengo el gusto de participar como profesor colaborador en la UOC. En la asignatura en la que participo, los alumnos tienen como reto aprender a programar en JavaScript. En estas semanas estoy aprendiendo tanto como los alumnos y a la vez poniendo en cuestión varias ideas que tenía en cuanto a cómo abordar el aprendizaje de un lenguaje de programación.
 
@@ -22,7 +22,11 @@ Sin entrar en muchos detalles se trata de una asignatura englobada dentro de un 
 
 Mediante la lectura de los mensajes que he recibido, como de el código que he tenido que corregir, me he encontrado con muchas preguntas con las que no contaba que recibiría, una aproximación a los problemas totalmente sorprendente para mi y mucho código que hace lo que se pide pero de un modo sorprendente. Si bien tenía claro que iba a tener cierta disparidad en el modo de hacer las cosas (ES5, ES6, etc...) no me esperaba algo así...
 
+<div style="margin: 0 auto; max-width: 400px;">
+
 ![Expectativa vs realidad](teaching-idea.jpg)
+
+</div>
 
 <div class="text-center" style="margin: -15px 0 20px;">
   <small>Expectativa vs realidad</small>
@@ -74,7 +78,7 @@ Estos son solo unos pequeños consejos basados en mi breve experiencia, pero que
 
 Derek Sleeman. 1986. The challenges of teaching computer programming. Commun. ACM 29, 9 (Sept. 1986), 840–841. DOI:<https://doi.org/10.1145/6592.214913>
 
-O. Oroma, Josephat & Wanga, Herbert & Ngumbuke, Fredrick. (2012). CHALLENGES OF TEACHING AND LEARNING COMPUTER PROGRAMMING IN DEVELOPING COUNTRIES: LESSONS FROM TUMAINI UNIVERSITY. 10.13140/2.1.3836.6407. <https://www.researchgate.net/publication/267926470_CHALLENGES_OF_TEACHING_AND_LEARNING_COMPUTER_PROGRAMMING_IN_DEVELOPING_COUNTRIES_LESSONS_FROM_TUMAINI_UNIVERSITY>
+O. Oroma, Josephat & Wanga, Herbert & Ngumbuke, Fredrick. (2012). CHALLENGES OF TEACHING AND LEARNING COMPUTER PROGRAMMING IN DEVELOPING COUNTRIES: LESSONS FROM TUMAINI UNIVERSITY. 10.13140/2.1.3836.6407.
 
 Cole, Robert W.. Educating Everybody's Children : Diverse Teaching Strategies for Diverse Learners, Revised and Expanded, Association for Supervision & Curriculum Development, 2008. ProQuest Ebook Central, <https://ebookcentral.proquest.com/lib/bibliouocsp-ebooks/detail.action?docID=350251>.
 
