@@ -2,7 +2,7 @@
 title: "Enseñar a programar: Retos, problemas y estrategias de la docencia y
   aprendizaje en línea"
 date: 2020-11-11T11:48:36.959Z
-published: true
+published: false
 hero_title: Enseñar a programar
 hero_subtitle: Retos, problemas y estrategias de la docencia y aprendizaje en línea
 hero_image: docencia-hero.jpg
