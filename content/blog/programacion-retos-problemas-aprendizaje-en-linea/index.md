@@ -1,7 +1,8 @@
 ---
-title: "Iniciarse en la programación: Retos, problemas y estrategias de la docencia y aprendizaje en línea"
+title: "Iniciarse en la programación: Retos, problemas y estrategias de la
+  docencia y aprendizaje en línea"
 date: 2020-11-11T11:48:36.959Z
-published: true
+published: false
 hero_title: Iniciarse en la programación
 hero_subtitle: Retos, problemas y estrategias de la docencia y aprendizaje en línea
 hero_image: docencia-hero.jpg
@@ -13,8 +14,7 @@ taxonomy:
     - Teaching
     - JavaScript
 ---
-
-La enseñanza de un lenguaje de programación programación puede suponer un reto tanto para los alumnos como para los docentes, si se prueba por primera vez como si se es un desarrollador experimentado que quiere aprender un nuevo lenguaje o paradigma. Se parte de un mundo relativamente ajeno a lo cotidiano, todo el mundo utiliza la tecnología, pero no todos entienden cómo funciona. Hay una gran cantidad de conceptos que son necesarios compartir, una serie de ideas que deben estar claras incluso antes de sentarse delante de un ordenador y ponerse a practicar.
+La enseñanza de un lenguaje de programación puede suponer un reto tanto para alumnos como para docentes, si se prueba por primera vez como si se es un desarrollador experimentado que quiere aprender un nuevo lenguaje o paradigma. Se parte de un mundo relativamente ajeno a lo cotidiano, todo el mundo utiliza la tecnología, pero no todos entienden cómo funciona. Hay una gran cantidad de conceptos que son necesarios compartir, una serie de ideas que deben estar claras incluso antes de sentarse delante de un ordenador y ponerse a practicar.
 
 Aunque es cierto que en el aprendizaje más o menos todos los que pueden leer este blog tienen experiencia, en la enseñanza no es algo tan habitual. Este año tengo el gusto de participar como profesor colaborador en la UOC. En la asignatura en la que participo, los alumnos tienen como reto aprender a programar en JavaScript. En estas semanas estoy aprendiendo tanto como los alumnos y a la vez poniendo en cuestión varias ideas que tenía en cuanto a cómo abordar el aprendizaje de un lenguaje de programación.
 
