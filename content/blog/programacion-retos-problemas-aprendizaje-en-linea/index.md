@@ -1,9 +1,9 @@
 ---
-title: "Iniciarse en la programación: Retos, problemas y estrategias de la
-  docencia y aprendizaje en línea"
+title: "Enseñar a programar: Retos, problemas y estrategias de la docencia y
+  aprendizaje en línea"
 date: 2020-11-11T11:48:36.959Z
-published: false
-hero_title: Iniciarse en la programación
+published: true
+hero_title: Enseñar a programar
 hero_subtitle: Retos, problemas y estrategias de la docencia y aprendizaje en línea
 hero_image: docencia-hero.jpg
 thumbnail: docencia-thumb.jpg
@@ -32,15 +32,17 @@ Mediante la lectura de los mensajes que he recibido, como de el código que he t
   <small>Expectativa vs realidad</small>
 </div>
 
-Una vez asimilada la sorpresa he tratado de analizar por qué ocurre estro, he leído un poco sobre el tema y me ha dado ideas para agrupar y relacionar esos conceptos con mi experiencia personal. Por una parte hay que tener en cuenta los retos que supone la docencia con las
+Una vez asimilada la sorpresa he tratado de analizar por qué ocurre estro, he leído un poco sobre el tema y me ha dado ideas para agrupar y relacionar esos conceptos con mi experiencia personal. Por una parte hay que tener en cuenta los retos que supone la docencia en este tipo de campos, pero también los que están relacionados con el modelo de aprendizaje y el tipo de alumno al que se dirige.
+
+## Retos de la docencia online
 
 ### Background del alumnado
 
 El alumno tiene como punto de partida su conocimiento actual de programación. El ejercicio mental que puede hacer devops con 15 años de carrera puede ser muy diferente a un estudiante recién salido de la carrera o un frontend con experiencia básica en programación en JavaScript. Esto se ve reflejado en cosas tan sencillas como si el código entregado está formateado o no, si el código utiliza patrones de diseño o se centra en lo que muestra en pantalla con console.log().
 
-### Carencias de formación
+### Falta de herramientas para resolución de problemas y errores
 
-Esto es una de las cosas más importantes y siempre se suele tener como punto débil lo mismo. Todos los programas de formación se centran en como aprender a programar, teoría, patrones, etc...pero la formación que se da sobre cómo resolver problemas de ejecución, usar el debugger, acotar el área de un error, etc...es mínima. Y esto es algo que se pone de manifiesto cuando te enfrentas a un error resolviendo un problema que no dominas del todo: Es mucho más sencillo trazar los errores, los valores de tus variables, el contexto en el que está sabiendo depurar correctamente que mediante printf, console.log, echo...
+Esto es una de las cosas más importantes y siempre se suele tener como punto débil lo mismo. Los programas de formación se suelen centrar en cómo aprender a programar, teoría, patrones, etc...pero la formación que se da sobre cómo resolver problemas de ejecución, usar el debugger, acotar el área de un error, etc...es mínima y no se suele poner en práctica. Y esto es algo que se pone de manifiesto cuando te enfrentas a un error resolviendo un problema que no dominas del todo: Es mucho más sencillo trazar los errores, los valores de tus variables, el contexto en el que está sabiendo depurar correctamente que mediante printf, console.log, echo...
 
 ### Objetivo personal del alumnado
 
