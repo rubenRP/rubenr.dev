@@ -82,7 +82,7 @@ Estos son solo unos pequeños consejos basados en mi breve experiencia, pero que
 
 Derek Sleeman. 1986. The challenges of teaching computer programming. Commun. ACM 29, 9 (Sept. 1986), 840–841. DOI:[https://doi.org/10.1145/6592.214913](https://doi.org/10.1145/6592.214913)
 
-O. Oroma, Josephat & Wanga, Herbert & Ngumbuke, Fredrick. (2012). CHALLENGES OF TEACHING AND LEARNING COMPUTER PROGRAMMING IN DEVELOPING COUNTRIES: LESSONS FROM TUMAINI UNIVERSITY. 10.13140/2.1.3836.6407. [https://www.researchgate.net/publication/267926470_CHALLENGES_OF_TEACHING_AND_LEARNING_COMPUTER_PROGRAMMING_IN_DEVELOPING_COUNTRIES_LESSONS_FROM_TUMAINI_UNIVERSITY](https://www.researchgate.net/publication/267926470_CHALLENGES_OF_TEACHING_AND_LEARNING_COMPUTER_PROGRAMMING_IN_DEVELOPING_COUNTRIES_LESSONS_FROM_TUMAINI_UNIVERSITY)
+O. Oroma, Josephat & Wanga, Herbert & Ngumbuke, Fredrick. (2012). CHALLENGES OF TEACHING AND LEARNING COMPUTER PROGRAMMING IN DEVELOPING COUNTRIES: LESSONS FROM TUMAINI UNIVERSITY. 10.13140/2.1.3836.6407.
 
 Cole, Robert W.. Educating Everybody's Children : Diverse Teaching Strategies for Diverse Learners, Revised and Expanded, Association for Supervision & Curriculum Development, 2008. ProQuest Ebook Central, [https://ebookcentral.proquest.com/lib/bibliouocsp-ebooks/detail.action?docID=350251](https://ebookcentral.proquest.com/lib/bibliouocsp-ebooks/detail.action?docID=350251).
 
