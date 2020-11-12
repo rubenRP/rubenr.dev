@@ -53,8 +53,6 @@ Primero, es necesario crear una instancia de NodeJS de Heroku. Una vez accedido 
 
 Cuando se complete la creación será necesario instalar el _addon_ de MongoDB para que Ackee pueda guardar los datos. Esto se realiza de modo muy sencillo en el dashboard de Heroku. Click en _Configure New Addons,_ Buscar **_mLab MongoDB_** y añadir el addon (en nuestro caso con el plan gratuito)
 
-> Actualización (noviembre 2020): mLab se ha integrado con MongoDB, por lo que la integración con mongoDB se debe hacer con Atlas. Más info [aquí](https://docs.mlab.com/how-to-migrate-sandbox-heroku-addons-to-atlas/).
-
 <div class="columns" style="justify-content: center">
 <div class="column col-4 col-sm-8">
 
@@ -78,6 +76,8 @@ Cuando se complete la creación será necesario instalar el _addon_ de MongoDB p
 <div class="text-center" style="margin: -15px 0 20px;">
   <small>Vista general del dashboard</small>
 </div>
+
+> **_Actualización (noviembre 2020):_** mLab se ha integrado con MongoDB, por lo que la integración con mongoDB se debe hacer con Atlas. Más info [aquí](https://docs.mlab.com/how-to-migrate-sandbox-heroku-addons-to-atlas/).
 
 Una vez configurado el entorno estamos listos para instalar Ackee mediante la consola de Heroku. Si es la primera vez que se utiliza Heroku será necesario descargar la consola [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) usando [Brew](https://brew.sh/index_es).
 
