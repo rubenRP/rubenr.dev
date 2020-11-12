@@ -1,10 +1,12 @@
 ---
-title: "Descubriendo Ackee: Analítica web sencilla, self-hosted y centrada en la privacidad"
+title: "Descubriendo Ackee: Analítica web sencilla, self-hosted y centrada en la
+  privacidad"
 date: 2020-08-10T08:30:00.000Z
 published: true
 hero_title: Descubriendo Ackee
 hero_subtitle: Analítica web sencilla, self-hosted y centrada la privacidad
-description: En este post vamos a desplegar una instancia de Ackee, herramienta de analítica web, usando Heroku y Gatsby de manera muy sencilla.
+description: En este post vamos a desplegar una instancia de Ackee, herramienta
+  de analítica web, usando Heroku y Gatsby de manera muy sencilla.
 hero_image: ackee-hero.jpg
 thumbnail: ackee-thumb.jpg
 taxonomy:
@@ -51,6 +53,8 @@ Primero, es necesario crear una instancia de NodeJS de Heroku. Una vez accedido 
 
 Cuando se complete la creación será necesario instalar el _addon_ de MongoDB para que Ackee pueda guardar los datos. Esto se realiza de modo muy sencillo en el dashboard de Heroku. Click en _Configure New Addons,_ Buscar **_mLab MongoDB_** y añadir el addon (en nuestro caso con el plan gratuito)
 
+> Actualización (noviembre 2020): mLab se ha integrado con MongoDB, por lo que la integración con mongoDB se debe hacer con Atlas. Más info [aquí](https://docs.mlab.com/how-to-migrate-sandbox-heroku-addons-to-atlas/).
+
 <div class="columns" style="justify-content: center">
 <div class="column col-4 col-sm-8">
 
@@ -76,6 +80,7 @@ Cuando se complete la creación será necesario instalar el _addon_ de MongoDB p
 </div>
 
 Una vez configurado el entorno estamos listos para instalar Ackee mediante la consola de Heroku. Si es la primera vez que se utiliza Heroku será necesario descargar la consola [Heroku CLI](https://devcenter.heroku.com/articles/heroku-cli) usando [Brew](https://brew.sh/index_es).
+
 
 ```bash
 // Download Heroku CLI
