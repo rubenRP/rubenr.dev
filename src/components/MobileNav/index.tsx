@@ -41,28 +41,6 @@ const MobileNav: React.FC = () => {
         </div>
         <nav className="overlay-menu">
           <ul className="tree treemenu treemenu-root">
-            <li className="tree-empty">
-              <Link
-                to="/"
-                className=""
-                onClick={mobileNavOnClick}
-                onKeyDown={handleKeyDown}
-                role="button"
-              >
-                Home
-              </Link>
-            </li>
-            <li className="tree-empty">
-              <Link
-                to="/about"
-                className=""
-                onClick={mobileNavOnClick}
-                onKeyDown={handleKeyDown}
-                role="button"
-              >
-                About
-              </Link>
-            </li>
             {headerLinks.map(link => {
               return (
                 <li className="tree-empty" key={link.url}>
