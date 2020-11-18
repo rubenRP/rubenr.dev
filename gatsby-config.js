@@ -83,7 +83,7 @@ module.exports = {
         server: config.ackeeHerokuDomain,
         // Disabled analytic tracking when running locally
         ignoreLocalhost: true,
-        ignoreOwnVisits: true,
+        ignoreOwnVisits: false,
         detailed: false,
       },
     },
