@@ -83,9 +83,7 @@ module.exports = {
         server: config.ackeeHerokuDomain,
         // Disabled analytic tracking when running locally
         ignoreLocalhost: true,
-        // If enabled it will collect info on OS, BrowserInfo, Device  & ScreenSize
-        // False due to detailed information being personalized:
-        // https://github.com/electerious/Ackee/blob/master/docs/Anonymization.md#personal-data
+        ignoreOwnVisits: true,
         detailed: false,
       },
     },
