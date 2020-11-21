@@ -6,7 +6,7 @@ published: true
 date: "2018-04-05T20:39:00.000Z"
 taxonomy:
   category:
-    - Eventos
+    - Events
   tag:
     - Magento
     - JavaScript

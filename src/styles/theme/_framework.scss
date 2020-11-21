@@ -78,7 +78,9 @@ ul {
     }
     @media (max-width: 840px) {
       display: flex;
-      flex-direction: column;
+      flex-direction: column-reverse;
+      margin-bottom: 0;
+      padding-bottom: 10px;
       li + li:before {
         content: none;
       }

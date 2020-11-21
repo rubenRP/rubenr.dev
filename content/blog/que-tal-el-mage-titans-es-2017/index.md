@@ -6,7 +6,7 @@ published: true
 date: "2017-07-10T17:59:00.000Z"
 taxonomy:
   category:
-    - Eventos
+    - Events
   tag:
     - Magento
 hero_image: 1_13i5ON3WRD1yyly4Ntu17g.jpg
