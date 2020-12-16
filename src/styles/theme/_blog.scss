@@ -9,6 +9,7 @@
       "image body"
       "image footer";
     background: transparent;
+    justify-content: flex-start;
     @include breakpoint(md) {
       grid-template-areas:
         "image"

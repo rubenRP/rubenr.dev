@@ -66,29 +66,25 @@ const PostList: React.FC<any> = ({
                                 </div>
                               </Link>
                             ) : (
-                              <h5 className="p-name mt-1">
+                              <h4 className="p-name mt-1">
                                 <Link
                                   to={`/blog${node.fields.slug}`}
                                   className="u-url text-dark"
                                 >
                                   {title}
                                 </Link>
-                              </h5>
+                              </h4>
                             )}
                           </div>
                         </div>
                         <div className="card-body">
-                          {node.frontmatter.description ? (
-                            <p
-                              // eslint-disable-next-line react/no-danger
-                              dangerouslySetInnerHTML={{
-                                __html:
-                                  node.frontmatter.description || node.excerpt,
-                              }}
-                            />
-                          ) : (
-                            ""
-                          )}
+                          <p
+                            // eslint-disable-next-line react/no-danger
+                            dangerouslySetInnerHTML={{
+                              __html:
+                                node.frontmatter.description || node.excerpt,
+                            }}
+                          />
                         </div>
                         <div className="card-footer">
                           {node.frontmatter.taxonomy ? (
