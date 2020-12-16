@@ -73,7 +73,7 @@ const HeroTyped: React.FC<HeroData> = ({
         }}
       >
         <div className="image-overlay" />
-        <div className="container grid-lg" style={{ textAlign }}>
+        <div className="container grid-md" style={{ textAlign }}>
           {title ? (
             <h1>
               <span ref={typeTarget} />

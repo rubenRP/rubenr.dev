@@ -50,22 +50,23 @@ const PageTemplate: React.FC<PageData> = ({
               <div id="item" className="column col-12">
                 <div className="content-item h-entry">
                   {!post.frontmatter.hero_image ? (
-                    <div className="content-title text-center">
-                      <h2 className="p-name mt-1">{post.frontmatter.title}</h2>
-                      {post.frontmatter.subtitle ? (
-                        <h3>{post.frontmatter.subtitle}</h3>
+                    <div className="content-title">
+                      {post.frontmatter.hero_text ? (
+                        <div>
+                          <h1 className="p-name h2 mt-1">
+                            {post.frontmatter.hero_title}
+                          </h1>
+                          <div className="text-grey">
+                            <h2 className="p-name h3 mt-1 light">
+                              {post.frontmatter.hero_text}
+                            </h2>
+                          </div>
+                        </div>
                       ) : (
-                        ""
+                        <h2 className="p-name mt-1">
+                          {post.frontmatter.title}
+                        </h2>
                       )}
-                      <span className="blog-date">
-                        <time
-                          className="dt-published"
-                          dateTime={post.frontmatter.date}
-                        >
-                          <i className="fa fa-calendar" />{" "}
-                          {post.frontmatter.date}
-                        </time>
-                      </span>
                     </div>
                   ) : (
                     ""

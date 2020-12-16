@@ -58,7 +58,7 @@ const Hero: React.FC<HeroData> = ({
         }}
       >
         <div className="image-overlay" />
-        <div className="container grid-lg" style={{ textAlign }}>
+        <div className="container grid-md" style={{ textAlign }}>
           {title ? <h1>{title}</h1> : ""}
           {subtitle ? <h2>{subtitle}</h2> : ""}
           {text ? (

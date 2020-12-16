@@ -13,7 +13,8 @@ body {
 
 #body-wrapper {
   .container {
-    padding: $vert-padding;
+    padding-top: $top-padding;
+    padding-bottom: $top-padding;
   }
 
   // Fixed Header solution

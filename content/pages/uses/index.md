@@ -2,7 +2,6 @@
 title: Uses
 date: "2015-12-27T15:17:00.000Z"
 hero_classes: "parallax text-light hero-tiny overlay-dark-gradient"
-hero_image: anas-alshanti-feXpdV001o4-unsplash.jpg
 hero_title: "Things I use"
 hero_text: "Here a small list of software and hardware that I use."
 ---

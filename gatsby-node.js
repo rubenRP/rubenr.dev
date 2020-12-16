@@ -26,6 +26,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               fileAbsolutePath
               frontmatter {
                 title
+                hero_title
               }
             }
           }

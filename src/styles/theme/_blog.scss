@@ -94,6 +94,15 @@
   }
 }
 
+.content-tags {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid $gray-color-light;
+}
+
 .label {
   font-size: 12px;
   text-transform: uppercase;
@@ -116,6 +125,20 @@
   }
 }
 
-.modular-hero .reading {
-  font-size: 16px;
+.e-content {
+  h1 {
+    @extend .h2;
+  }
+  h2 {
+    @extend .h3;
+  }
+  h3 {
+    @extend .h4;
+  }
+  h4 {
+    @extend .h5;
+  }
+  h5 {
+    @extend .h6;
+  }
 }
