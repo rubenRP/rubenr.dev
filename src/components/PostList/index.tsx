@@ -51,14 +51,30 @@ const PostList: React.FC<any> = ({
                             </span>
                           </div>
                           <div className="card-title">
-                            <h5 className="p-name mt-1">
+                            {node.frontmatter.hero_subtitle ? (
                               <Link
                                 to={`/blog${node.fields.slug}`}
                                 className="u-url text-dark"
                               >
-                                {title}
+                                <h4 className="p-name mt-1 mb-1">
+                                  {node.frontmatter.hero_title}
+                                </h4>
+                                <div className="text-grey">
+                                  <h5 className="p-name mt-1 light">
+                                    {node.frontmatter.hero_subtitle}
+                                  </h5>
+                                </div>
                               </Link>
-                            </h5>
+                            ) : (
+                              <h5 className="p-name mt-1">
+                                <Link
+                                  to={`/blog${node.fields.slug}`}
+                                  className="u-url text-dark"
+                                >
+                                  {title}
+                                </Link>
+                              </h5>
+                            )}
                           </div>
                         </div>
                         <div className="card-body">

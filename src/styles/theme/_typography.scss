@@ -149,6 +149,17 @@ strong {
     color: rgba($light-color, 0.9);
   }
 }
+.text-grey {
+  color: rgba($secondary-color, 0.8);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: rgba($secondary-color, 0.9);
+  }
+}
 
 // Error configuration
 #error {

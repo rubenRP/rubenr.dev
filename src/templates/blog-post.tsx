@@ -64,8 +64,24 @@ const BlogPostTemplate: React.FC<PageData> = ({
               <div id="item" className="column col-12">
                 <div className="content-item h-entry">
                   {!post.frontmatter.hero_image ? (
-                    <div className="content-title text-center">
-                      <h2 className="p-name mt-1">{post.frontmatter.title}</h2>
+                    <div className="content-title">
+                      {post.frontmatter.hero_subtitle ? (
+                        <div>
+                          <h2 className="p-name mt-1">
+                            {post.frontmatter.hero_title}
+                          </h2>
+                          <div className="text-grey">
+                            <h3 className="p-name mt-1 light">
+                              {post.frontmatter.hero_subtitle}
+                            </h3>
+                          </div>
+                        </div>
+                      ) : (
+                        <h2 className="p-name mt-1">
+                          {post.frontmatter.title}
+                        </h2>
+                      )}
+
                       <span className="blog-date">
                         <time
                           className="dt-published"

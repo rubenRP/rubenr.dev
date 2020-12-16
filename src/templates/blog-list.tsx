@@ -67,6 +67,8 @@ export const blogListQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            hero_title
+            hero_subtitle
             taxonomy {
               tag
             }
