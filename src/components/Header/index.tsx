@@ -64,7 +64,7 @@ const Header: React.FC = () => {
   return (
     <>
       <header id="header" className={scrolled ? "section scrolled" : "section"}>
-        <section className="container grid-xl">
+        <section className="container grid-lg">
           <nav className="navbar">
             <section className="navbar-section logo">
               <Link to="/" className="navbar-brand mr-10">
