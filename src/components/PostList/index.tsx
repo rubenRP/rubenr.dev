@@ -22,7 +22,7 @@ const PostList: React.FC<any> = ({
       <Hero title={heroTitle} text={heroText} image={heroImage} smallHeadings />
       <section id="start" />
       <section id="body-wrapper" className="section blog-listing">
-        <div className="container grid-lg">
+        <div className="container grid-md">
           <div className="columns">
             <div id="item" className="column col-12">
               <div className="columns">
@@ -78,13 +78,17 @@ const PostList: React.FC<any> = ({
                           </div>
                         </div>
                         <div className="card-body">
-                          <p
-                            // eslint-disable-next-line react/no-danger
-                            dangerouslySetInnerHTML={{
-                              __html:
-                                node.frontmatter.description || node.excerpt,
-                            }}
-                          />
+                          {node.frontmatter.description ? (
+                            <p
+                              // eslint-disable-next-line react/no-danger
+                              dangerouslySetInnerHTML={{
+                                __html:
+                                  node.frontmatter.description || node.excerpt,
+                              }}
+                            />
+                          ) : (
+                            ""
+                          )}
                         </div>
                         <div className="card-footer">
                           {node.frontmatter.taxonomy ? (

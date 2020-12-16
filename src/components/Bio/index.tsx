@@ -8,7 +8,7 @@ const Bio: React.FC<AboutData> = ({ info }: AboutData) => {
     <>
       <div id="about" />
       <section className="section modular-recent">
-        <div className="container grid-lg">
+        <div className="container grid-md">
           <div className="columns">
             <div className="column col-3 col-md-12 header-col">
               <h4>

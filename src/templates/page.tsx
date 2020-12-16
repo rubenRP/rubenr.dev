@@ -45,7 +45,7 @@ const PageTemplate: React.FC<PageData> = ({
         )}
         <section id="start" />
         <section id="body-wrapper" className="section blog-listing">
-          <div className="container grid-md">
+          <div className="container grid-sm">
             <div className="columns">
               <div id="item" className="column col-12">
                 <div className="content-item h-entry">

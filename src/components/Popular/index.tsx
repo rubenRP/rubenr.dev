@@ -26,6 +26,8 @@ const popularQuery = graphql`
           frontmatter {
             date(formatString: "MMMM DD, YYYY")
             title
+            hero_title
+            hero_subtitle
           }
         }
       }
@@ -38,7 +40,7 @@ const Popular: React.FC = () => {
     <>
       <div id="popular" />
       <section className="section modular-popular">
-        <div className="container grid-lg">
+        <div className="container grid-md">
           <div className="columns">
             <div className="column col-3 col-md-12 header-col">
               <h4>
@@ -54,14 +56,30 @@ const Popular: React.FC = () => {
                       const title = node.frontmatter.title || node.fields.slug
                       return (
                         <div className="column col-12" key={node.fields.slug}>
-                          <h4>
+                          {node.frontmatter.hero_subtitle ? (
                             <Link
-                              to={`blog${node.fields.slug}`}
-                              className="text-dark"
+                              to={`/blog${node.fields.slug}`}
+                              className="u-url text-dark"
                             >
-                              {title}
+                              <h4 className="p-name mb-1">
+                                {node.frontmatter.hero_title}
+                              </h4>
+                              <div className="text-grey">
+                                <h5 className="p-name mt-1 light">
+                                  {node.frontmatter.hero_subtitle}
+                                </h5>
+                              </div>
                             </Link>
-                          </h4>
+                          ) : (
+                            <h4 className="p-name mt-1">
+                              <Link
+                                to={`/blog${node.fields.slug}`}
+                                className="u-url text-dark"
+                              >
+                                {title}
+                              </Link>
+                            </h4>
+                          )}
                           <div className="text-gray">
                             <small className="blog-date">
                               <i className="fa fa-calendar" />{" "}

@@ -21,7 +21,7 @@ const About: React.FC<AboutData> = ({ info }: AboutData) => {
     <>
       <div id="about" />
       <section className="section modular-about">
-        <div className="container grid-lg">
+        <div className="container grid-md">
           <div className="columns left">
             <div className="column col-9 col-md-12">
               <p dangerouslySetInnerHTML={{ __html: info.text }} />

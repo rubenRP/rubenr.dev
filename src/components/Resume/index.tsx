@@ -7,7 +7,7 @@ const Resume: React.FC<ResumeData> = ({ info = null }: ResumeData) => {
     <>
       <div id="resume" />
       <section className="section modular-resume bg-gray">
-        <section className="container grid-lg">
+        <section className="container grid-md">
           {info.map(section => (
             <div className={`columns ${section.cssClass}`} key={section.id}>
               <div className="column col-3 col-md-12 header-col">
