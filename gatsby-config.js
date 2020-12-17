@@ -112,5 +112,6 @@ module.exports = {
         exclude: [`/blog/page:*`, `/blog/tag:*`, `/blog/category:*`],
       },
     },
+    "gatsby-remark-reading-time",
   ],
 }

@@ -9,6 +9,7 @@ import SEO from "../components/Seo"
 import Hero from "../components/Hero"
 import Share from "../components/Share"
 import Tags from "../components/Tags"
+import ReadingTime from "../components/ReadingTime"
 
 const BlogPostTemplate: React.FC<PageData> = ({
   data = null,
@@ -87,7 +88,12 @@ const BlogPostTemplate: React.FC<PageData> = ({
                   <div className="content-tags">
                     <span className="blog-date">
                       <i className="fa fa-calendar" /> {post.frontmatter.date}
+                      <ReadingTime
+                        text={post.fields.readingTime.text}
+                        minutes={post.fields.readingTime.minutes}
+                      />
                     </span>
+
                     <span>
                       {post.frontmatter.taxonomy ? <Tags items={tags} /> : ""}
                     </span>
@@ -182,6 +188,10 @@ export const pageQuery = graphql`
       }
       fields {
         slug
+        readingTime {
+          text
+          minutes
+        }
       }
     }
   }

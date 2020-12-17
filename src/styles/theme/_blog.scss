@@ -101,6 +101,14 @@
   margin-bottom: 2rem;
   padding-bottom: 1.5rem;
   border-bottom: 1px solid $gray-color-light;
+  .reading-time {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid $gray-color-light;
+    span {
+      margin-left: 5px;
+    }
+  }
   @include breakpoint(md) {
     justify-content: center;
     flex-direction: column;
