@@ -8,11 +8,10 @@ taxonomy:
   tag:
     - Magento
 hero_classes: "text-light title-h1h2 parallax overlay-dark"
-hero_image: 1_0-Gbhb5fuXWxZ_j9YAOxrg.jpg
 thumbnail: 1_0-Gbhb5fuXWxZ_j9YAOxrg.jpg
+hero_title: "Layout: Extend y override"
+hero_subtitle: "Básicos en Magento 2"
 ---
-
-**Básicos en Magento 2**
 
 En Magento 2 la gestión de layout toma gran importancia en el stack de tecnologías incorporadas en el front-end. Entre las novedades que trae Magento 2 destaca el nuevo método para sobreescribir y extender xml cuando se está desarrollando un tema. Desde mi punto de vista es un paso hacia adelante, sobre todo en lo que a extender se refiere; ya que si se extendían muchos handles en Magento 1 te podías ver en la situación de tener un local.xml enorme e inmanejable.
 

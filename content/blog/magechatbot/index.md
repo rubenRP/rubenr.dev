@@ -12,7 +12,6 @@ taxonomy:
     - JavaScript
     - Chatbots
 hero_classes: "hero-tiny text-light title-h1h2 parallax overlay-dark-gradient"
-hero_image: cover.jpg
 thumbnail: "cover.jpg"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Se más productivo con PhpStorm"
+title: "Se más productivo con PhpStorm: 3 Live Templates que te ahorrarán muchísimo tiempo"
 published: true
 date: "2017-06-05T17:58:00.000Z"
 taxonomy:
@@ -9,9 +9,9 @@ taxonomy:
     - Magento
     - PhpStorm
 thumbnail: 1_wFWMdeeHAl3hzjxXsryiHg.png
+hero_title: "Se más productivo con PhpStorm"
+hero_subtitle: "3 Live Templates que te ahorrarán muchísimo tiempo"
 ---
-
-**3 Live Templates que te ahorrarán muchísimo tiempo**
 
 Si hay algo que ayuda y ahorra tiempo en el desarrollo con Magento es el uso de Live Templates en PhpStorm. Un Live Template es una **estructura de código que usas con frecuencia que se inserta mediante un shortcode**. Escribes el shortcode, pulsas TAB y voilá!
 
