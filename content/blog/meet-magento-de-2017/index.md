@@ -1,5 +1,7 @@
 ---
 title: "Meet Magento DE 2017"
+hero_title: "Meet Magento DE 2017"
+hero_subtitle: "Crónica del evento"
 published: true
 date: "2017-05-30T17:56:00.000Z"
 taxonomy:
@@ -10,8 +12,6 @@ taxonomy:
     - "Meet Magento"
 thumbnail: 1_rP1lBxWd6I07qFN0qGovfQ.jpg
 ---
-
-**Crónica del evento**
 
 **Meet Magento Deutschland 2017** tuvo lugar el pasado 22 y 23 de mayo, evento al que tuve el placer de poder a asistir junto con Carlos Aguilar, content manager e Ignacio Riesco, CEO de Interactiv4. Tras unos días revisando las notas del evento os cuento un pequeño resumen de lo acontecido en Leipzig y de mis impresiones en el evento.
 
