@@ -8,7 +8,7 @@ import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 import Hero from "../components/Hero"
 import Share from "../components/Share"
-import Feedback from "../components/Feedback"
+import Tags from "../components/Tags"
 
 const BlogPostTemplate: React.FC<PageData> = ({
   data = null,
@@ -45,8 +45,6 @@ const BlogPostTemplate: React.FC<PageData> = ({
             subtitle={post.frontmatter.hero_subtitle}
             social={false}
             image={post.frontmatter.hero_image.childImageSharp.fluid.src}
-            date={post.frontmatter.date}
-            tags={tags}
             classes={
               post.frontmatter.hero_classes
                 ? post.frontmatter.hero_classes
@@ -67,13 +65,13 @@ const BlogPostTemplate: React.FC<PageData> = ({
                     <div className="content-title">
                       {post.frontmatter.hero_subtitle ? (
                         <div>
-                          <h2 className="p-name mt-1">
+                          <h1 className="p-name h2 mt-1">
                             {post.frontmatter.hero_title}
-                          </h2>
+                          </h1>
                           <div className="text-grey">
-                            <h3 className="p-name mt-1 light">
+                            <h2 className="p-name h3 mt-1 light">
                               {post.frontmatter.hero_subtitle}
-                            </h3>
+                            </h2>
                           </div>
                         </div>
                       ) : (
@@ -81,20 +79,19 @@ const BlogPostTemplate: React.FC<PageData> = ({
                           {post.frontmatter.title}
                         </h2>
                       )}
-
-                      <span className="blog-date">
-                        <time
-                          className="dt-published"
-                          dateTime={post.frontmatter.date}
-                        >
-                          <i className="fa fa-calendar" />{" "}
-                          {post.frontmatter.date}
-                        </time>
-                      </span>
                     </div>
                   ) : (
                     ""
                   )}
+
+                  <div className="content-tags">
+                    <span className="blog-date">
+                      <i className="fa fa-calendar" /> {post.frontmatter.date}
+                    </span>
+                    <span>
+                      {post.frontmatter.taxonomy ? <Tags items={tags} /> : ""}
+                    </span>
+                  </div>
 
                   <div className="e-content">
                     <MDXRenderer>{post.body}</MDXRenderer>
@@ -103,20 +100,19 @@ const BlogPostTemplate: React.FC<PageData> = ({
               </div>
             </div>
           </div>
-          <Feedback />
-          <section className="container grid-lg">
+          <section className="container grid-md">
             <div className="prev-next text-center">
               <div className="btn-group">
                 {previous && (
                   <Link
                     to={`/blog${previous.fields.slug}`}
                     rel="prev"
-                    className="btn"
+                    className="btn btn-lg btn-detailed btn-detailed--left text-dark"
                   >
-                    <i className="fa fa-angle-left" />{" "}
-                    {previous.frontmatter.title.length > 30
-                      ? `${previous.frontmatter.title.slice(0, 30)}...`
-                      : previous.frontmatter.title}
+                    <div className="text-grey light">Previous</div>
+                    {previous.frontmatter.hero_title
+                      ? previous.frontmatter.hero_title
+                      : `${previous.frontmatter.title.slice(0, 30)}...`}
                   </Link>
                 )}
 
@@ -124,12 +120,12 @@ const BlogPostTemplate: React.FC<PageData> = ({
                   <Link
                     to={`/blog${next.fields.slug}`}
                     rel="next"
-                    className="btn"
+                    className="btn btn-lg btn-detailed btn-detailed--right text-dark"
                   >
-                    {next.frontmatter.title.length > 30
-                      ? `${next.frontmatter.title.slice(0, 30)}...`
-                      : next.frontmatter.title}{" "}
-                    <i className="fa fa-angle-right" />
+                    <div className="text-grey light">Next</div>
+                    {next.frontmatter.hero_title
+                      ? next.frontmatter.hero_title
+                      : `${next.frontmatter.title.slice(0, 30)}...`}
                   </Link>
                 )}
               </div>

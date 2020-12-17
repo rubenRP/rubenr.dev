@@ -1,5 +1,7 @@
 ---
 title: "Sugerencias para documentar el front-end de tu proyecto (aka Documentad Malditos!)"
+hero_title: "Sugerencias para documentar el front-end de tu proyecto"
+hero_subtitle: "aka Documentad Malditos!"
 published: true
 date: "2015-12-17T17:51:00.000Z"
 taxonomy:
