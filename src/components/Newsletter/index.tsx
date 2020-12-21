@@ -26,7 +26,7 @@ const Newsletter: React.FC = () => {
       <section className="section modular-features offset-box">
         <div className="container grid-sm">
           <div className="frame-box without-offset-top columns justify-center">
-            <h3 className="col-12">Newsletter</h3>
+            <h3 className="col-12">Devletter</h3>
             <div className="column col-8 col-md-8">
               <p>
                 Subscribe to the newsletter to receive my posts, news and more
@@ -68,7 +68,11 @@ const Newsletter: React.FC = () => {
                     Subscribe
                   </button>
                 </div>
-                {message ?? <div>{message}</div>}
+                {message ?? (
+                  <div>
+                    <small>{message}</small>
+                  </div>
+                )}
               </form>
             </div>
           </div>
