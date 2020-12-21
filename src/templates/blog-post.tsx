@@ -10,6 +10,7 @@ import Hero from "../components/Hero"
 import Share from "../components/Share"
 import Tags from "../components/Tags"
 import ReadingTime from "../components/ReadingTime"
+import Newsletter from "../components/Newsletter"
 
 const BlogPostTemplate: React.FC<PageData> = ({
   data = null,
@@ -138,6 +139,7 @@ const BlogPostTemplate: React.FC<PageData> = ({
             </div>
           </section>
         </section>
+        <Newsletter />
         <Share
           url={`${data.site.siteMetadata.siteUrl}/blog${post.fields.slug}`}
           title={`${post.frontmatter.title}`}

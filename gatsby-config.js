@@ -1,5 +1,12 @@
 const config = require("./content/data/siteConfig.json")
 
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+
+require("dotenv").config({
+  path: `.env.${activeEnv}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: config.siteTitle,
@@ -77,11 +84,8 @@ module.exports = {
     {
       resolve: "gatsby-plugin-ackee-tracker",
       options: {
-        // Domain ID found when adding a domain in the admin panel.
-        domainId: config.ackeeId,
-        // URL to Server eg: "https://analytics.test.com".
-        server: config.ackeeHerokuDomain,
-        // Disabled analytic tracking when running locally
+        domainId: process.env.ACKEE_ID,
+        server: process.env.ACKEE_DOMAIN,
         ignoreLocalhost: true,
         ignoreOwnVisits: false,
         detailed: false,

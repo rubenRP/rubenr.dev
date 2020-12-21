@@ -7,7 +7,7 @@ import Popular from "../components/Popular"
 import Layout from "../components/Layout"
 import Bio from "../components/Bio"
 import SEO from "../components/Seo"
-import Currently from "../components/Currently"
+import Newsletter from "../components/Newsletter"
 import HeroTyped from "../components/HeroTyped"
 import Recent from "../components/Recent"
 
@@ -39,7 +39,7 @@ const IndexPage: React.FC<PageData> = ({
         <Recent />
         <Popular />
         <Bio info={about} />
-        <Currently />
+        <Newsletter />
       </Layout>
     </BodyClassName>
   )
