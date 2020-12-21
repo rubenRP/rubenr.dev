@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useState } from "react"
 
 const Newsletter: React.FC = () => {
+  const [message, setMessage] = useState("")
   const processForm = form => {
     const data = new FormData(form)
     data.append("form-name", "newsletter")
@@ -9,18 +10,15 @@ const Newsletter: React.FC = () => {
       body: data,
     })
       .then(() => {
-        form.innerHTML = `<div class="form--success">Almost there! Check your inbox for a confirmation e-mail.</div>`
+        setMessage(`Almost there! Check your inbox for a confirmation e-mail.`)
       })
       .catch(error => {
-        form.innerHTML = `<div class="form--error">Error: ${error}</div>`
+        setMessage(`Error: ${error}`)
       })
   }
-  const emailForm = document.querySelector(".email-form")
-  if (emailForm) {
-    emailForm.addEventListener("submit", e => {
-      e.preventDefault()
-      processForm(emailForm)
-    })
+  const handleSubmit = e => {
+    e.preventDefault()
+    processForm(e.target)
   }
   return (
     <>
@@ -49,6 +47,7 @@ const Newsletter: React.FC = () => {
                 method="POST"
                 data-netlify="true"
                 netlify-honeypot="bot-field"
+                onSubmit={handleSubmit}
               >
                 <div hidden aria-hidden="true">
                   <label>
@@ -69,6 +68,7 @@ const Newsletter: React.FC = () => {
                     Subscribe
                   </button>
                 </div>
+                {message ?? <div>{message}</div>}
               </form>
             </div>
           </div>
