@@ -27,10 +27,10 @@ const Newsletter: React.FC = () => {
         <div className="container grid-sm">
           <div className="frame-box without-offset-top columns justify-center">
             <h3 className="col-12">Devletter</h3>
-            <div className="column col-8 col-md-8">
+            <div className="col-8 col-md-8">
               <p>
                 Subscribe to the newsletter to receive my posts, news and more
-                things right to your inbox.{" "}
+                cool things right to your inbox.{" "}
                 <span role="img" aria-label="Newsletter">
                   🚀
                 </span>
