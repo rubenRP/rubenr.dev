@@ -87,7 +87,7 @@ module.exports = {
         domainId: process.env.ACKEE_ID,
         server: process.env.ACKEE_DOMAIN,
         ignoreLocalhost: true,
-        ignoreOwnVisits: true,
+        ignoreOwnVisits: false,
         detailed: false,
       },
     },
