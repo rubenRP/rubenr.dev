@@ -137,6 +137,20 @@ export class HeadingComponent implements OnInit {
 
 > **Es importante modificar las llamadas al componente** ButtonComponent y HeadingComponent en los módulos _button.module_ y _heading.module_.
 
+Una vez modificadas las llamadas al componente se deberán exponer los componentes y módulos para que al hacer la _build_, se puedan consumir los componentes. Este export se suele realizar en el documento **public-api.ts**
+
+
+```jsx
+/*
+ * Public API Surface of system-design-library
+ */
+
+export * from './lib/button.component';
+export * from './lib/button.module';
+export * from './lib/heading.component';
+export * from './lib/heading.module';
+```
+
 ## Publicación
 
 Antes de publicar necesitamos **crear un personal token** en nuestra cuenta de GitHub. Esto se puede hacer en _Settings / Developer settings / personal access tokens_. El nuevo token creado debe tener permisos de escritura y eliminación de paquetes como se puede ver en la siguiente imagen:
