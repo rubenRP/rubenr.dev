@@ -54,7 +54,10 @@ export const categoryQuery = graphql`
       filter: {
         parent: { id: {} }
         fileAbsolutePath: { regex: "\\\\/blog/" }
-        frontmatter: { taxonomy: { category: { in: [$category] } } }
+        frontmatter: {
+          taxonomy: { category: { in: [$category] } }
+          language: { ne: "en" }
+        }
       }
     ) {
       edges {

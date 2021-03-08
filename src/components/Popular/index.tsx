@@ -14,7 +14,7 @@ const popularQuery = graphql`
       filter: {
         parent: { id: {} }
         fileAbsolutePath: { regex: "\\\\/blog/" }
-        frontmatter: { popular: { eq: true } }
+        frontmatter: { popular: { eq: true }, language: { ne: "en" } }
       }
       limit: 4
     ) {
@@ -51,7 +51,7 @@ const Popular: React.FC = () => {
               <div className="columns item">
                 <StaticQuery
                   query={popularQuery}
-                  render={data => {
+                  render={(data) => {
                     return data.allMdx.edges.map(({ node }) => {
                       const title = node.frontmatter.title || node.fields.slug
                       return (

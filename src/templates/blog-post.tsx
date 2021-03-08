@@ -34,7 +34,7 @@ const BlogPostTemplate: React.FC<PageData> = ({
           title={post.frontmatter.title}
           description={post.excerpt}
           thumbnail={thumbnail}
-          lang="es"
+          lang={pageContext.language}
         />
         {post.frontmatter.hero_image ? (
           <Hero

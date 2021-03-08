@@ -11,7 +11,11 @@ const recentQuery = graphql`
   query RecentQuery {
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { parent: { id: {} }, fileAbsolutePath: { regex: "\\\\/blog/" } }
+      filter: {
+        parent: { id: {} }
+        fileAbsolutePath: { regex: "\\\\/blog/" }
+        frontmatter: { language: { ne: "en" } }
+      }
       limit: 4
     ) {
       edges {
@@ -47,7 +51,7 @@ const Recent: React.FC = () => {
               <div className="columns item">
                 <StaticQuery
                   query={recentQuery}
-                  render={data => {
+                  render={(data) => {
                     return data.allMdx.edges.map(({ node }) => {
                       const title = node.frontmatter.title || node.fields.slug
                       return (

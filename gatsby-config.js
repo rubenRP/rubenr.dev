@@ -117,5 +117,12 @@ module.exports = {
       },
     },
     "gatsby-remark-reading-time",
+    {
+      resolve: "gatsby-plugin-i18n",
+      options: {
+        langKeyDefault: "es",
+        useLangKeyLayout: false,
+      },
+    },
   ],
 }

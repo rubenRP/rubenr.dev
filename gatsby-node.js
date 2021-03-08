@@ -73,24 +73,39 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const next = index === 0 ? null : posts[index - 1].node
     // eslint-disable-next-line no-shadow
     const path = post.node.fileAbsolutePath
-    const regex = "/blog/"
+    let language = "es"
+    const regex = "blog/"
+
+    let pathUrl = post.node.fields.slug
 
     if (path.match(regex)) {
+      pathUrl = "blog" + pathUrl
+    }
+
+    if (path.includes("index.en")) {
+      pathUrl = pathUrl.replace("index.en/", "")
+      pathUrl = "en/" + pathUrl
+      language = "en"
+    }
+    if (path.match(regex)) {
+      console.log(pathUrl)
       createPage({
-        path: `blog${post.node.fields.slug}`,
+        path: pathUrl,
         component: blogPost,
         context: {
           slug: post.node.fields.slug,
           previous,
           next,
+          language: language,
         },
       })
     } else {
       createPage({
-        path: `${post.node.fields.slug}`,
+        path: pathUrl,
         component: defaultPage,
         context: {
           slug: post.node.fields.slug,
+          language: language,
         },
       })
     }
@@ -99,7 +114,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const tags = result.data.tagsGroup.group
 
-  tags.forEach(tag => {
+  tags.forEach((tag) => {
     createPage({
       path: `/blog/tag:${tag.fieldValue.toLowerCase()}`,
       component: tabPage,
@@ -111,7 +126,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const categories = result.data.categoriesGroup.group
 
-  categories.forEach(category => {
+  categories.forEach((category) => {
     createPage({
       path: `/blog/category:${category.fieldValue.toLowerCase()}`,
       component: categoryPage,

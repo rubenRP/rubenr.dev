@@ -54,7 +54,10 @@ export const tagsQuery = graphql`
       filter: {
         parent: { id: {} }
         fileAbsolutePath: { regex: "\\\\/blog/" }
-        frontmatter: { taxonomy: { tag: { in: [$tag] } } }
+        frontmatter: {
+          taxonomy: { tag: { in: [$tag] } }
+          language: { ne: "en" }
+        }
       }
     ) {
       edges {
