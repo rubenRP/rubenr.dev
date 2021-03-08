@@ -1,18 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
-
-const currentlyQuery = graphql`
-  query CurrentlyQuery {
-    currently: file(absolutePath: { regex: "/scalefast-logo.jpg/" }) {
-      childImageSharp {
-        fixed(width: 400) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`
+import { StaticImage } from "gatsby-plugin-image"
 
 const Currently: React.FC = () => {
   return (
@@ -23,11 +10,12 @@ const Currently: React.FC = () => {
           <div className="frame-box without-offset-top">
             <h3>Currently working at</h3>
             <div>
-              <StaticQuery
-                query={currentlyQuery}
-                render={data => {
-                  return <Image fixed={data.currently.childImageSharp.fixed} />
-                }}
+              <StaticImage
+                src="../../../content/assets/scalefast-logo.jpg"
+                alt="Scalefast"
+                placeholder="blurred"
+                layout="fixed"
+                width={400}
               />
             </div>
           </div>

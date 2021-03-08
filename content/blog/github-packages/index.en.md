@@ -153,7 +153,7 @@ export * from "./lib/heading.module"
 
 Before publishing we need to ** create a personal token ** in our GitHub account. This can be done in _Settings / Developer settings / personal access tokens_. The new token created must have permissions to write and delete packages as can be seen in the following image:
 
-! [Personal token creation detail on GitHub.] (Package-token.png)
+![Personal token creation detail on GitHub.](package-token.png)
 
 <div class = "text-center" style = "margin: -15px 0 20px;">
   <small> Detail of personal token creation on GitHub. </small>
@@ -218,7 +218,7 @@ Ready! We can now make use of the components created in our design system by cal
 <rr-heading><rr-heading>
 ```
 
-# Referencias
+# References
 
 [https://designhandbook.mendesaltaren.com/design-systems](https://designhandbook.mendesaltaren.com/design-systems)
 

@@ -22,7 +22,8 @@ const BlogPostTemplate: React.FC<PageData> = ({
   const tags = post.frontmatter.taxonomy ? post.frontmatter.taxonomy.tag : ""
   const thumbnail =
     post.frontmatter.thumbnail &&
-    post.frontmatter.thumbnail.childImageSharp.fixed.src
+    post.frontmatter.thumbnail.childImageSharp.gatsbyImageData.images.fallback
+      .src
   const bodyClasses = post.frontmatter.hero_image
     ? "header-dark header-transparent header-fixed header-animated"
     : "header-fixed header-animated"
@@ -45,7 +46,10 @@ const BlogPostTemplate: React.FC<PageData> = ({
             }
             subtitle={post.frontmatter.hero_subtitle}
             social={false}
-            image={post.frontmatter.hero_image.childImageSharp.fluid.src}
+            image={
+              post.frontmatter.hero_image.childImageSharp.gatsbyImageData.images
+                .fallback.src
+            }
             classes={
               post.frontmatter.hero_classes
                 ? post.frontmatter.hero_classes
@@ -169,16 +173,12 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         hero_image {
           childImageSharp {
-            fluid(maxWidth: 1600) {
-              src
-            }
+            gatsbyImageData(width: 1600)
           }
         }
         thumbnail {
           childImageSharp {
-            fixed(width: 600) {
-              src
-            }
+            gatsbyImageData(width: 600)
           }
         }
         hero_classes

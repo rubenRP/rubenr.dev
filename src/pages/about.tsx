@@ -28,7 +28,9 @@ const AboutPage: React.FC<PageData> = ({
         <Hero
           title="About me"
           text="Who I am? What I did? What I know?"
-          image={data.fileName.childImageSharp.fluid.src}
+          image={
+            data.fileName.childImageSharp.gatsbyImageData.images.fallback.src
+          }
           classes={heroClasses}
           smallHeadings
         />
@@ -48,9 +50,7 @@ export const pageQuery = graphql`
       absolutePath: { regex: "/anas-alshanti-feXpdV001o4-unsplash.jpg/" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 1600)
       }
     }
   }

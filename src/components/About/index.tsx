@@ -1,20 +1,7 @@
 /* eslint-disable react/no-danger */
 import React from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Image from "gatsby-image"
+import { StaticImage } from "gatsby-plugin-image"
 import { AboutData } from "models/about"
-
-const aboutQuery = graphql`
-  query AboutQuery {
-    avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
-      childImageSharp {
-        fixed(width: 170, height: 170) {
-          ...GatsbyImageSharpFixed
-        }
-      }
-    }
-  }
-`
 
 const About: React.FC<AboutData> = ({ info }: AboutData) => {
   return (
@@ -38,11 +25,13 @@ const About: React.FC<AboutData> = ({ info }: AboutData) => {
             </div>
             <div className="column col-3 col-md-12">
               <div className="image">
-                <StaticQuery
-                  query={aboutQuery}
-                  render={data => {
-                    return <Image fixed={data.avatar.childImageSharp.fixed} />
-                  }}
+                <StaticImage
+                  src="../../../content/assets/profile-pic.jpg"
+                  alt="Rubén Rodríguez"
+                  placeholder="blurred"
+                  layout="fixed"
+                  width={170}
+                  height={170}
                 />
               </div>
             </div>

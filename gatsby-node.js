@@ -88,7 +88,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       language = "en"
     }
     if (path.match(regex)) {
-      console.log(pathUrl)
       createPage({
         path: pathUrl,
         component: blogPost,

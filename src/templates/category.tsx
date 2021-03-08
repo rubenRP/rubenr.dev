@@ -24,7 +24,9 @@ const CategoryList: React.FC<PageData> = ({
 
         <PostList
           heroTitle={heroTitle}
-          heroImage={data.fileName.childImageSharp.fluid.src}
+          heroImage={
+            data.fileName.childImageSharp.gatsbyImageData.images.fallback.src
+          }
           posts={posts}
           pageContext={pageContext}
         />
@@ -39,9 +41,7 @@ export const categoryQuery = graphql`
       absolutePath: { regex: "/anas-alshanti-feXpdV001o4-unsplash.jpg/" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 1600)
       }
     }
     site {
@@ -75,9 +75,7 @@ export const categoryQuery = graphql`
             published
             thumbnail {
               childImageSharp {
-                fluid(maxWidth: 600) {
-                  src
-                }
+                gatsbyImageData(height: 600)
               }
             }
           }

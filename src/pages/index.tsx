@@ -31,7 +31,9 @@ const IndexPage: React.FC<PageData> = ({
           title={home.hero.title}
           subtitle={home.hero.subtitle}
           text={home.hero.text}
-          image={data.fileName.childImageSharp.fluid.src}
+          image={
+            data.fileName.childImageSharp.gatsbyImageData.images.fallback.src
+          }
           social
           classes={heroClasses}
         />
@@ -53,9 +55,7 @@ export const pageQuery = graphql`
       absolutePath: { regex: "/ferdinand-stohr-NFs6dRTBgaM-unsplash.jpg/" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 1600)
       }
     }
   }

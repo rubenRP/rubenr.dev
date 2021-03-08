@@ -26,7 +26,9 @@ const BlogList: React.FC<PageData> = ({
         <PostList
           heroTitle={heroTitle}
           heroText={heroText}
-          heroImage={data.fileName.childImageSharp.fluid.src}
+          heroImage={
+            data.fileName.childImageSharp.gatsbyImageData.images.fallback.src
+          }
           posts={posts}
           pageContext={pageContext}
         />
@@ -41,9 +43,7 @@ export const blogListQuery = graphql`
       absolutePath: { regex: "/anas-alshanti-feXpdV001o4-unsplash.jpg/" }
     ) {
       childImageSharp {
-        fluid(maxWidth: 1600) {
-          ...GatsbyImageSharpFluid
-        }
+        gatsbyImageData(width: 1600)
       }
     }
     site {
@@ -78,9 +78,7 @@ export const blogListQuery = graphql`
             }
             thumbnail {
               childImageSharp {
-                fluid(maxHeight: 600) {
-                  src
-                }
+                gatsbyImageData(height: 600)
               }
             }
           }

@@ -32,7 +32,10 @@ const PageTemplate: React.FC<PageData> = ({
             subtitle={post.frontmatter.hero_subtitle}
             text={post.frontmatter.hero_text}
             social={false}
-            image={post.frontmatter.hero_image.childImageSharp.fluid.src}
+            image={
+              post.frontmatter.hero_image.childImageSharp.gatsbyImageData.images
+                .fallback.src
+            }
             classes={
               post.frontmatter.hero_classes
                 ? post.frontmatter.hero_classes
@@ -107,9 +110,7 @@ export const pageQuery = graphql`
         hero_text
         hero_image {
           childImageSharp {
-            fluid(maxWidth: 1600) {
-              src
-            }
+            gatsbyImageData(width: 1600)
           }
         }
         hero_classes

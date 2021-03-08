@@ -36,7 +36,7 @@ const PostList: React.FC<any> = ({
                             <Link
                               to={`/blog${node.fields.slug}`}
                               style={{
-                                backgroundImage: `url(${node.frontmatter.thumbnail.childImageSharp.fluid.src})`,
+                                backgroundImage: `url(${node.frontmatter.thumbnail.childImageSharp.gatsbyImageData.images.fallback.src})`,
                               }}
                             />
                           </div>
