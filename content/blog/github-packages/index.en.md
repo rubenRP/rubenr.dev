@@ -62,7 +62,7 @@ ng generate library system-design-library
 
 This last command will generate a file structure similar to that of a standard Angular application with the difference that the content will hang in the projects folder and that the library itself has its own configuration files and its _package.json_
 
-![File structure of the library created.](Angular-library-structure.png)
+![File structure of the library created.](angular-library-structure.png)
 
 <div class = "text-center" style = "margin: -15px 0 20px;">
   <small> File structure of the library created. </small>
