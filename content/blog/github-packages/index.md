@@ -18,6 +18,8 @@ taxonomy:
 
 ![GitHub packages: Creación y publicación de paquetes de Angular en tu repositorio](github-hero.jpg)
 
+> You can read this article also in [English](https://rubenr.dev/en/blog/github-packages).
+
 El uso la paquetización es habitual en proyectos Open Source a través de [NPM](https://www.npmjs.com/), pero también existe la posibilidad de publicar tus propios paquetes privados para que puedan ser consumidos por tus aplicaciones sin exponerlos a todo el mundo. Estamos acostumbrados a trabajar en proyectos cerrados y monorepo (o como mínimo aprender lenguajes y frameworks bajo este modo de funcionamiento), pero cada vez es más habitual dividir las funcionalidades de un proyecto por ámbito en paquetes, sobre todo en lo relacionado al desarrollo de sistemas de diseño y componentes.
 
 En este artículo profundizaremos en la publicación de paquetes de [Angular](https://angular.io/) usando [GitHub Packages.](https://github.com/features/packages)
@@ -125,9 +127,7 @@ import { Component, Input, OnInit } from "@angular/core"
 
 @Component({
   selector: "rr-heading",
-  template: `
-    <h1>{{text}}</h1>
-  `,
+  template: ` <h1>{{ text }}</h1> `,
   styles: [],
 })
 export class HeadingComponent implements OnInit {
@@ -139,16 +139,15 @@ export class HeadingComponent implements OnInit {
 
 Una vez modificadas las llamadas al componente se deberán exponer los componentes y módulos para que al hacer la _build_, se puedan consumir los componentes. Este export se suele realizar en el documento **public-api.ts**
 
-
 ```jsx
 /*
  * Public API Surface of system-design-library
  */
 
-export * from './lib/button.component';
-export * from './lib/button.module';
-export * from './lib/heading.component';
-export * from './lib/heading.module';
+export * from "./lib/button.component"
+export * from "./lib/button.module"
+export * from "./lib/heading.component"
+export * from "./lib/heading.module"
 ```
 
 ## Publicación
