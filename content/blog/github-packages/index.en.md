@@ -151,7 +151,7 @@ export * from "./lib/heading.component"
 export * from "./lib/heading.module"
 ```
 
-## Publication
+## Publishing
 
 Before publishing we need to ** create a personal token ** in our GitHub account. This can be done in _Settings / Developer settings / personal access tokens_. The new token created must have permissions to write and delete packages as can be seen in the following image:
 
