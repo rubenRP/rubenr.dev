@@ -83,10 +83,6 @@ plugins: [
 ]
 ```
 
-Como se puede ver se añade la referencia a un fichero _cms.js._ Este fichero es el utilizado para realizar modificaciones el _look and feel_ del editor como puede ser añadir estilos en el live preview del editor, cosa de la que hablaremos más adelante.
-
-Toda la configuración de repositorio, campos, url, etc...se realiza desde un único fichero YAML alojado en la carpeta _/static/admin_ y llamado _config.yml_. Como ejemplo tomaremos el fichero de configuración de [este mismo blog](https://github.com/rubenRP/rubenr.dev/blob/master/static/admin/config.yml). Dividiremos el código por partes para realizar un análisis pormenorizado del fichero.
-
 As you can see, the reference to a _cms.js._ file is added. This file is used to make modifications to the editor's _look and feel_, such as adding styles to the editor's live preview, which we'll talk about later.
 
 All the repository configuration, fields, url, etc ... is done from a single YAML file hosted in the _ / static / admin_ folder and called _config.yml_. As an example we will take the configuration file of [this same blog](https://github.com/rubenRP/rubenr.dev/blob/master/static/admin/config.yml). We will divide the code into parts to carry out a detailed analysis of the file.
