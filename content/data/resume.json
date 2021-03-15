@@ -14,15 +14,10 @@
         "id": 2,
         "title": "Universitat Oberta de Catalunya",
         "info": "Course Instructor",
-        "date": "2020 - Current"
-      },
-      {
-        "id": 3,
-        "title": "Interactiv4",
-        "info": "Lead Magento Front-End Architect",
-        "date": "2018 - 2020",
+        "date": "2020 - Current",
         "description": "More details in my <a href=\"https://www.linkedin.com/in/rubenrodriguezpaz/\" target=\"_blank\" rel=\"noopener\">LinkedIn</a> profile."
-      }
+
+      },
     ]
   },
   {
