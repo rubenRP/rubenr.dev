@@ -16,7 +16,9 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         pagesGroup: allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
-          filter: { frontmatter: { published: { ne: false } } }
+          filter: {
+            frontmatter: { published: { ne: false }, language: { ne: "en" } }
+          }
         ) {
           edges {
             node {
@@ -27,6 +29,27 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
               frontmatter {
                 title
                 hero_title
+              }
+            }
+          }
+        }
+        enPagesGroup: allMdx(
+          sort: { fields: [frontmatter___date], order: DESC }
+          limit: 1000
+          filter: {
+            frontmatter: { published: { ne: false }, language: { eq: "en" } }
+          }
+        ) {
+          edges {
+            node {
+              fields {
+                slug
+              }
+              fileAbsolutePath
+              frontmatter {
+                title
+                hero_title
+                slug
               }
             }
           }
@@ -54,6 +77,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const posts = result.data.pagesGroup.edges
   const postsPerPage = 10
   const numPages = Math.ceil(posts.length / postsPerPage)
+  const regex = "blog/"
 
   Array.from({ length: numPages }).forEach((_, i) => {
     createPage({
@@ -73,21 +97,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     const next = index === 0 ? null : posts[index - 1].node
     // eslint-disable-next-line no-shadow
     const path = post.node.fileAbsolutePath
-    let language = "es"
-    const regex = "blog/"
+    const language = "es"
 
     let pathUrl = post.node.fields.slug
 
     if (path.match(regex)) {
       pathUrl = "blog" + pathUrl
-    }
-
-    if (path.includes("index.en")) {
-      pathUrl = pathUrl.replace("index.en/", "")
-      pathUrl = "en/" + pathUrl
-      language = "en"
-    }
-    if (path.match(regex)) {
       createPage({
         path: pathUrl,
         component: blogPost,
@@ -108,6 +123,31 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         },
       })
     }
+    // return null
+  })
+
+  const enPosts = result.data.enPagesGroup.edges
+
+  enPosts.forEach((post, index) => {
+    // eslint-disable-next-line no-shadow
+    const language = "en"
+
+    let pathUrl = post.node.frontmatter.slug
+      ? post.node.frontmatter.slug
+      : post.node.fields.slug
+
+    pathUrl = "blog" + pathUrls
+    pathUrl = pathUrl.replace("index.en/", "")
+    pathUrl = "en/" + pathUrl
+
+    createPage({
+      path: pathUrl,
+      component: blogPost,
+      context: {
+        slug: post.node.fields.slug,
+        language: language,
+      },
+    })
     // return null
   })
 

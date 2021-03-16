@@ -7,7 +7,7 @@ hero_subtitle: All the power of a CMS in JAMstack without leaving your repositor
 description: In this article we will talk about Netlify CMS, advantages and issues, setup, and Gatsby integration process.
 hero_image: netlify-cms-hero.jpg
 thumbnail: netlify-cms-thumb.jpg
-slug: /gatsby-and-netlify-cms/
+slug: /gatsby-netlify-cms/
 popular: true
 language: en
 taxonomy:
