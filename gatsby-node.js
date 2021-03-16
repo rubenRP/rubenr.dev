@@ -136,7 +136,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       ? post.node.frontmatter.slug
       : post.node.fields.slug
 
-    pathUrl = "blog" + pathUrls
+    pathUrl = "blog" + pathUrl
     pathUrl = pathUrl.replace("index.en/", "")
     pathUrl = "en/" + pathUrl
 
