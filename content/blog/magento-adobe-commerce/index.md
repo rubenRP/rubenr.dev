@@ -14,7 +14,7 @@ taxonomy:
 ---
 
 <div class="columns" style="justify-content: center">
-<div class="column col-6 col-sm-12">
+<div class="column col-6 col-sm-10">
 
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">We are now officially consolidating the branding of the licensed commerce product from Magento Commerce and Adobe Commerce Cloud to the single brand of Adobe Commerce. Read more: <a href="https://t.co/LWzx7g0ANT">https://t.co/LWzx7g0ANT</a><a href="https://twitter.com/hashtag/AdobeCommerce?src=hash&amp;ref_src=twsrc%5Etfw">#AdobeCommerce</a> <a href="https://t.co/ingpC10N0M">pic.twitter.com/ingpC10N0M</a></p>&mdash; Adobe Commerce (@AdobeCommerce) <a href="https://twitter.com/AdobeCommerce/status/1384907699272421377?ref_src=twsrc%5Etfw">April 21, 2021</a></blockquote>
 
@@ -48,6 +48,14 @@ Estos cambios han acelerado el proceso de degradación que ya existía previamen
 Como algún lector sabe, hace algunos meses que no me dedico al desarrollo con Magento, pero eso no significa que me guste ver como algo que se construyó durante tantos años, a lo que debo tantas cosas y que generó un ecosistema tan importante tanto tecnológicamente como socialmente se vaya por el sumidero por una cuestión de números y gráficos. Me quedo con los días buenos en la que pude formar parte de esta historia.
 
 Larga vida a Magento 🙂
+
+<div class="columns" style="justify-content: center">
+<div class="column col-3 col-sm-6">
+
+![Magento](magento-logo.png)
+
+</div>
+</div>
 
 <span>Photo by <a href="https://unsplash.com/@thebrownspy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Spencer Watson</a> on <a href="https://unsplash.com/s/photos/sunset?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 </span>
