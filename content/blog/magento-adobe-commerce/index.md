@@ -49,13 +49,5 @@ Como algún lector sabe, hace algunos meses que no me dedico al desarrollo con M
 
 Larga vida a Magento 🙂
 
-<div class="columns" style="justify-content: center">
-<div class="column col-3 col-sm-6">
-
-![Magento](magento-logo.png)
-
-</div>
-</div>
-
 <span>Photo by <a href="https://unsplash.com/@thebrownspy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Spencer Watson</a> on <a href="https://unsplash.com/s/photos/sunset?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 </span>
