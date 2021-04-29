@@ -41,7 +41,7 @@ Hace un momento mencioné que Magento aleccionó a la comunidad para mejorar la 
 
 Estos cambios han acelerado el proceso de degradación que ya existía previamente, y ha dejado el proyecto en un punto, que si bien no tengo claro que sea de no-retorno, requiere de mucho trabajo para volver a encauzar, por lo menos en cuanto a compromiso y comunidad se refiere.
 
-**¿Es el fin de una era?** Desde mi punto de vista sí, sobre todo teniendo en cuenta mis circunstancias personales y a lo que me dedico actualmente. El coronavirus no ha ayudado nada, ya que los eventos era el pegamento que unía a la comunidad en cierta forma y le daba velocidad y ahora la realización de los mismos está gestionada por Adobe y ha dejado MageTitans, MeetMagento y la futura realización de los mismos en un lugar que desconozco.
+**¿Es el fin de una era?** Desde mi punto de vista sí (sobre todo para mi, teniendo en cuenta mis circunstancias personales y a lo que me dedico actualmente). El coronavirus no ha ayudado nada, ya que los eventos era el pegamento que unía a la comunidad en cierta forma y le daba velocidad y ahora la realización de los mismos está gestionada por Adobe y ha dejado MageTitans, MeetMagento y la futura realización de los mismos en un lugar que desconozco.
 
 **¿Magento (Ahora Adobe Commerce) sigue teniendo recorrido?** Desde mi punto de vista creo que sí. Hace años que hemos entrado en un mercado con múltiples competidores y múltiples propósitos, por lo que es muy dificil que ninguna plataforma pueda tener una posición monopolística, por lo menos durante unos años. Sin embargo creo que Adobe puede encontrar un nicho en el que pueda crecer, y no tiene sentido dejar morir un software que no era competencia suya después de una inversión tan grande.
 
