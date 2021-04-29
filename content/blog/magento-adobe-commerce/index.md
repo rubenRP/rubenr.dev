@@ -11,6 +11,7 @@ taxonomy:
     - Articles
   tag:
     - Magento
+    - Open Source
 ---
 
 <div class="columns" style="justify-content: center">
