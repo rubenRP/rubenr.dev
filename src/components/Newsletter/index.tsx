@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 const Newsletter: React.FC = () => {
   const [message, setMessage] = useState("")
-  const processForm = form => {
+  const processForm = (form) => {
     const data = new FormData(form)
     data.append("form-name", "newsletter")
     fetch("/", {
@@ -12,11 +12,11 @@ const Newsletter: React.FC = () => {
       .then(() => {
         setMessage(`Almost there! Check your inbox for a confirmation e-mail.`)
       })
-      .catch(error => {
+      .catch((error) => {
         setMessage(`Error: ${error}`)
       })
   }
-  const handleSubmit = e => {
+  const handleSubmit = (e) => {
     e.preventDefault()
     processForm(e.target)
   }
@@ -27,7 +27,7 @@ const Newsletter: React.FC = () => {
         <div className="container grid-sm">
           <div className="frame-box without-offset-top columns justify-center">
             <h3 className="col-12">Devletter</h3>
-            <div className="col-8 col-md-8">
+            <div className="col-8 col-md-8 mb-2">
               <p>
                 Subscribe to the newsletter to receive my posts, news and more
                 cool things right to your inbox.{" "}
