@@ -5,7 +5,7 @@
   "siteLogo": "/assets/logo-rr-svg",
   "siteUrl": "https://rubenr.dev",
   "pathPrefix": "/",
-  "siteDescription": "Madrid based developer. Front-End developer @ Scalefast. Javascript enthusiast & Magento certified.",
+  "siteDescription": "Madrid based developer. Front-End developer @ Scalefast. Javascript enthusiast.",
   "siteRss": "/rss.xml",
   "siteRssTitle": "Rubén Rodríguez - Front-End Developer",
   "dateFromFormat": "YYYY-MM-DD",
@@ -16,7 +16,7 @@
   "userTwitter": "@_rubenr",
   "userLocation": "Madrid, Spain",
   "userAvatar": "profile-pic.png",
-  "userDescription": "Madrid based developer. Front-End developer @ Scalefast. Javascript enthusiast & Magento certified.",
+  "userDescription": "Madrid based developer. Front-End developer @ Scalefast. Javascript enthusiast.",
   "seoKeywords": [
     "blog",
     "gatsby",
