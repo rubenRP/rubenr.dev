@@ -54,6 +54,12 @@
         "title": "Magento",
         "info": "Magento Certified Front End Developer",
         "date": "2015"
+      },
+      {
+        "id": 3,
+        "title": "GitLab",
+        "info": "GitLab Certified Associate",
+        "date": "2021"
       }
     ]
   },
