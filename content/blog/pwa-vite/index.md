@@ -132,9 +132,9 @@ export default defineConfig({
 })
 ```
 
-Toda PWA debe contar con un manifiesto. Un Progressive Web App) es un fichero en el que se define (en formato JSON) el nombre de la aplicación, el color de fondo que tendrá en el dispositivo una vez instalada, la ubicación y formatos de los iconos utilizados y la url raíz para la PWA (la aplicación web puede tener url distintas para web y PWA). Es decir, los requisitos mínimos de comportamiento de esa aplicación web en un dispositivo.
+Toda PWA debe contar con un manifiesto. Un **Manifesto** es un fichero en el que se define (en formato JSON) el nombre de la aplicación, el color de fondo que tendrá en el dispositivo una vez instalada, la ubicación, formatos de los iconos utilizados y la url raíz para la PWA (la aplicación web puede tener url distintas para web y PWA). Es decir, los requisitos mínimos de comportamiento de esa aplicación web en un dispositivo.
 
-A su vez, es necesario definir la ubicación de la raíz del código (en este caso src) y la ubicación del Service Worker. Un **Service Worker** es un conjunto de código que se ejecuta en segundo plano y que permite realizar acciones secundarias con la aplicación que se está ejecutando. En nuestro caso vamos a gestionar el cacheo de la aplicación y su actualización mediante un Service Worker ubicado en _src/sw.ts._
+A su vez, es necesario definir la ubicación de la raíz del código (en este caso _src_) y la ubicación del Service Worker. Un **Service Worker** es un conjunto de código que se ejecuta en segundo plano y que permite realizar acciones secundarias con la aplicación que se está ejecutando. En nuestro caso vamos a gestionar el cacheo de la aplicación y su actualización mediante un Service Worker ubicado en _src/sw.ts._
 
 ```jsx
 import { precacheAndRoute } from 'workbox-precaching'
