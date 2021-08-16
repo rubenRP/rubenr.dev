@@ -6,6 +6,7 @@ hero_title: PWA & Vite
 hero_subtitle: Development of a Progressive Web App with Vue 3.
 description: In this post we are going to develop a boilerplate to develop PWA using Vite as a building tool and Vue.js 3 as a JavaScript framework.
 thumbnail: thumb.jpg
+language: en
 taxonomy:
   category:
     - Articles
