@@ -66,6 +66,7 @@ export const blogListQuery = graphql`
             description
             hero_title
             hero_subtitle
+            slug
             language
             taxonomy {
               tag

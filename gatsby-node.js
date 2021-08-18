@@ -143,11 +143,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       index === enPosts.length - 1 ? null : enPosts[index + 1].node
     const next = index === 0 ? null : enPosts[index - 1].node
     const language = post.node.frontmatter.language
-    let pathUrl = post.node.frontmatter.slug || post.node.fields.slug
-
-    let oldPathUrl = pathUrl.replace("/en/", "")
-    oldPathUrl = "blog" + pathUrl
-    oldPathUrl = "/en/" + oldPathUrl
+    const pathUrl = post.node.frontmatter.slug || post.node.fields.slug
 
     createPage({
       path: pathUrl,
@@ -159,13 +155,26 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         language: language || "en",
       },
     })
-    createRedirect({
-      fromPath: oldPathUrl,
-      toPath: pathUrl,
-      redirectInBrowser: true,
-      isPermanent: true,
-    })
     // return null
+  })
+
+  createRedirect({
+    fromPath: "/en/blog/pwa-vite/",
+    toPath: "/en/pwa-vite/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  })
+  createRedirect({
+    fromPath: "/en/blog/github-packages/",
+    toPath: "/en/github-packages/",
+    redirectInBrowser: true,
+    isPermanent: true,
+  })
+  createRedirect({
+    fromPath: "/en/blog/gatsby-netlify-cms/",
+    toPath: "/en/gatsby-netlify-cms/",
+    redirectInBrowser: true,
+    isPermanent: true,
   })
 
   const tags = result.data.tagsGroup.group

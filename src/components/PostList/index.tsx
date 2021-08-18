@@ -71,7 +71,7 @@ const PostList: React.FC<any> = ({
                         <div className="column col-12">
                           {node.frontmatter.hero_subtitle ? (
                             <Link
-                              to={node.fields.slug}
+                              to={node.frontmatter.slug || node.fields.slug}
                               className="u-url text-dark"
                             >
                               <h4 className="p-name mb-1">
@@ -86,7 +86,7 @@ const PostList: React.FC<any> = ({
                           ) : (
                             <h4 className="p-name mb-1">
                               <Link
-                                to={node.fields.slug}
+                                to={node.frontmatter.slug || node.fields.slug}
                                 className="u-url text-dark"
                               >
                                 {title}
