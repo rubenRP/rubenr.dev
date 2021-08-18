@@ -19,6 +19,7 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-netlify`,
     `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
@@ -58,6 +59,7 @@ module.exports = {
             options: {
               maxWidth: 860,
               backgroundColor: `#f7f8f9`,
+              linkImagesToOriginal: false,
             },
           },
           {

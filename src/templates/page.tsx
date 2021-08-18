@@ -91,14 +91,14 @@ const PageTemplate: React.FC<PageData> = ({
 export default PageTemplate
 
 export const pageQuery = graphql`
-  query PageBySlug($slug: String!) {
+  query PageById($id: String!) {
     site {
       siteMetadata {
         title
         author
       }
     }
-    mdx(fields: { slug: { eq: $slug } }) {
+    mdx(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)
       body

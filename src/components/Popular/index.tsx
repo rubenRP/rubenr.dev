@@ -58,7 +58,7 @@ const Popular: React.FC = () => {
                         <div className="column col-12" key={node.fields.slug}>
                           {node.frontmatter.hero_subtitle ? (
                             <Link
-                              to={`/blog${node.fields.slug}`}
+                              to={node.fields.slug}
                               className="u-url text-dark"
                             >
                               <h4 className="p-name mb-1">
@@ -73,7 +73,7 @@ const Popular: React.FC = () => {
                           ) : (
                             <h4 className="p-name mt-1">
                               <Link
-                                to={`/blog${node.fields.slug}`}
+                                to={node.fields.slug}
                                 className="u-url text-dark"
                               >
                                 {title}

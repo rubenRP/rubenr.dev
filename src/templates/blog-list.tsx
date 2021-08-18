@@ -9,7 +9,6 @@ import SEO from "../components/Seo"
 
 const BlogList: React.FC<PageData> = ({
   data = null,
-  pageContext = null,
   location = null,
 }: PageData) => {
   const siteTitle = data.site.siteMetadata.title
@@ -30,7 +29,6 @@ const BlogList: React.FC<PageData> = ({
             data.fileName.childImageSharp.gatsbyImageData.images.fallback.src
           }
           posts={posts}
-          pageContext={pageContext}
         />
       </Layout>
     </BodyClassName>
@@ -38,7 +36,7 @@ const BlogList: React.FC<PageData> = ({
 }
 
 export const blogListQuery = graphql`
-  query blogListQuery($skip: Int!, $limit: Int!) {
+  query blogListQuery {
     fileName: file(
       absolutePath: { regex: "/anas-alshanti-feXpdV001o4-unsplash.jpg/" }
     ) {
@@ -53,16 +51,11 @@ export const blogListQuery = graphql`
     }
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: {
-        parent: { id: {} }
-        fileAbsolutePath: { regex: "\\\\/blog/" }
-        frontmatter: { language: { ne: "en" } }
-      }
-      limit: $limit
-      skip: $skip
+      filter: { parent: { id: {} }, fileAbsolutePath: { regex: "\\\\/blog/" } }
     ) {
       edges {
         node {
+          id
           excerpt(pruneLength: 140)
           fields {
             slug
@@ -73,13 +66,10 @@ export const blogListQuery = graphql`
             description
             hero_title
             hero_subtitle
+            slug
+            language
             taxonomy {
               tag
-            }
-            thumbnail {
-              childImageSharp {
-                gatsbyImageData(height: 600)
-              }
             }
           }
         }
