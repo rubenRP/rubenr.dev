@@ -84,7 +84,7 @@ const PostList: React.FC<any> = ({
                               </div>
                             </Link>
                           ) : (
-                            <h4 className="p-name mt-1">
+                            <h4 className="p-name mb-1">
                               <Link
                                 to={node.fields.slug}
                                 className="u-url text-dark"
