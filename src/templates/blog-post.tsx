@@ -6,7 +6,6 @@ import BodyClassName from "react-body-classname"
 import { PageData } from "models/page"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import Hero from "../components/Hero"
 import Share from "../components/Share"
 import Tags from "../components/Tags"
 import ReadingTime from "../components/ReadingTime"
@@ -20,14 +19,12 @@ const BlogPostTemplate: React.FC<PageData> = ({
   const post = data.mdx
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
-  const tags = post.frontmatter.taxonomy ? post.frontmatter.taxonomy.tag : ""
+  const tags = post.frontmatter.taxonomy && post.frontmatter.taxonomy.tag
   const thumbnail =
     post.frontmatter.thumbnail &&
     post.frontmatter.thumbnail.childImageSharp.gatsbyImageData.images.fallback
       .src
-  const bodyClasses = post.frontmatter.hero_image
-    ? "header-dark header-transparent header-fixed header-animated"
-    : "header-fixed header-animated"
+  const bodyClasses = "header-fixed header-animated"
 
   return (
     <BodyClassName className={bodyClasses}>
@@ -38,57 +35,28 @@ const BlogPostTemplate: React.FC<PageData> = ({
           thumbnail={thumbnail}
           lang={pageContext.language}
         />
-        {post.frontmatter.hero_image ? (
-          <Hero
-            title={
-              post.frontmatter.hero_title
-                ? post.frontmatter.hero_title
-                : post.frontmatter.title
-            }
-            subtitle={post.frontmatter.hero_subtitle}
-            social={false}
-            image={
-              post.frontmatter.hero_image.childImageSharp.gatsbyImageData.images
-                .fallback.src
-            }
-            classes={
-              post.frontmatter.hero_classes
-                ? post.frontmatter.hero_classes
-                : undefined
-            }
-            smallHeadings
-          />
-        ) : (
-          ""
-        )}
         <section id="start" />
         <section id="body-wrapper" className="section blog-listing">
           <div className="container grid-md">
             <div className="columns">
               <div id="item" className="column col-12">
                 <div className="content-item h-entry">
-                  {!post.frontmatter.hero_image ? (
-                    <div className="content-title">
-                      {post.frontmatter.hero_subtitle ? (
-                        <div>
-                          <h1 className="p-name h2 mt-1">
-                            {post.frontmatter.hero_title}
-                          </h1>
-                          <div className="text-grey">
-                            <h2 className="p-name h3 mt-1 light">
-                              {post.frontmatter.hero_subtitle}
-                            </h2>
-                          </div>
+                  <div className="content-title">
+                    {post.frontmatter.hero_subtitle ? (
+                      <div>
+                        <h1 className="p-name h2 mt-1">
+                          {post.frontmatter.hero_title}
+                        </h1>
+                        <div className="text-grey">
+                          <h2 className="p-name h3 mt-1 light">
+                            {post.frontmatter.hero_subtitle}
+                          </h2>
                         </div>
-                      ) : (
-                        <h2 className="p-name mt-1">
-                          {post.frontmatter.title}
-                        </h2>
-                      )}
-                    </div>
-                  ) : (
-                    ""
-                  )}
+                      </div>
+                    ) : (
+                      <h2 className="p-name mt-1">{post.frontmatter.title}</h2>
+                    )}
+                  </div>
 
                   <div className="content-tags">
                     <span className="blog-date">
@@ -100,11 +68,22 @@ const BlogPostTemplate: React.FC<PageData> = ({
                     </span>
 
                     <span>
-                      {post.frontmatter.taxonomy ? <Tags items={tags} /> : ""}
+                      {post.frontmatter.taxonomy && <Tags items={tags} />}
                     </span>
                   </div>
 
                   <div className="e-content">
+                    {post.frontmatter.hero_image && (
+                      <div className="mb-2">
+                        <img
+                          className="mb-2"
+                          src={
+                            post.frontmatter.hero_image.childImageSharp
+                              .gatsbyImageData.images.fallback.src
+                          }
+                        />
+                      </div>
+                    )}
                     <MDXRenderer>{post.body}</MDXRenderer>
                   </div>
                 </div>
@@ -156,17 +135,14 @@ const BlogPostTemplate: React.FC<PageData> = ({
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BlogPostById($id: String!) {
     site {
       siteMetadata {
         title
-        author
         siteUrl
       }
     }
-    mdx(fields: { slug: { eq: $slug } }) {
-      id
-      excerpt(pruneLength: 160)
+    mdx(id: { eq: $id }) {
       body
       frontmatter {
         title
@@ -183,7 +159,6 @@ export const pageQuery = graphql`
             gatsbyImageData(width: 600)
           }
         }
-        hero_classes
         taxonomy {
           tag
         }

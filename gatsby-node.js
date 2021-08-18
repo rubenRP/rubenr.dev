@@ -2,7 +2,7 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage } = actions
+  const { createPage, createRedirect } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
   const defaultPage = path.resolve(`./src/templates/page.tsx`)
@@ -22,13 +22,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         ) {
           edges {
             node {
+              id
               fields {
                 slug
               }
               fileAbsolutePath
               frontmatter {
                 title
-                hero_title
+                slug
+                language
               }
             }
           }
@@ -42,24 +44,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         ) {
           edges {
             node {
+              id
               fields {
                 slug
               }
               fileAbsolutePath
               frontmatter {
                 title
-                hero_title
                 slug
+                language
               }
             }
           }
         }
-        tagsGroup: allMdx(limit: 2000) {
+        tagsGroup: allMdx(limit: 500) {
           group(field: frontmatter___taxonomy___tag) {
             fieldValue
           }
         }
-        categoriesGroup: allMdx(limit: 2000) {
+        categoriesGroup: allMdx(limit: 500) {
           group(field: frontmatter___taxonomy___category) {
             fieldValue
           }
@@ -80,46 +83,53 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const regex = "blog/"
 
   Array.from({ length: numPages }).forEach((_, i) => {
-    createPage({
-      path: i === 0 ? `/blog` : `/blog/page:${i + 1}`,
-      component: blogPage,
-      context: {
-        limit: postsPerPage,
-        skip: i * postsPerPage,
-        numPages,
-        currentPage: i + 1,
-      },
-    })
+    if (i > 0) {
+      createRedirect({
+        fromPath: `/blog/page:${i + 1}`,
+        toPath: `/blog`,
+      })
+    }
+  })
+
+  createPage({
+    path: `/blog`,
+    component: blogPage,
   })
 
   posts.forEach((post, index) => {
     const previous = index === posts.length - 1 ? null : posts[index + 1].node
     const next = index === 0 ? null : posts[index - 1].node
-    // eslint-disable-next-line no-shadow
     const path = post.node.fileAbsolutePath
-    const language = "es"
+    const language = post.node.frontmatter.language
+    let pathUrl = post.node.frontmatter.slug || post.node.fields.slug
 
-    let pathUrl = post.node.fields.slug
-
+    // Blog Posts
     if (path.match(regex)) {
       pathUrl = "blog" + pathUrl
       createPage({
-        path: pathUrl,
+        path: post.node.fields.slug,
         component: blogPost,
         context: {
-          slug: post.node.fields.slug,
+          id: post.node.id,
           previous,
           next,
-          language: language,
+          language: language || "es",
         },
       })
+      createRedirect({
+        fromPath: pathUrl,
+        toPath: post.node.fields.slug,
+        redirectInBrowser: true,
+        isPermanent: true,
+      })
+      // Pages
     } else {
       createPage({
         path: pathUrl,
         component: defaultPage,
         context: {
-          slug: post.node.fields.slug,
-          language: language,
+          id: post.node.id,
+          language: language || "en",
         },
       })
     }
@@ -129,24 +139,31 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   const enPosts = result.data.enPagesGroup.edges
 
   enPosts.forEach((post, index) => {
-    // eslint-disable-next-line no-shadow
-    const language = "en"
+    const previous =
+      index === enPosts.length - 1 ? null : enPosts[index + 1].node
+    const next = index === 0 ? null : enPosts[index - 1].node
+    const language = post.node.frontmatter.language
+    let pathUrl = post.node.frontmatter.slug || post.node.fields.slug
 
-    let pathUrl = post.node.frontmatter.slug
-      ? post.node.frontmatter.slug
-      : post.node.fields.slug
-
-    pathUrl = "blog" + pathUrl
-    pathUrl = pathUrl.replace("index.en/", "")
-    pathUrl = "en/" + pathUrl
+    let oldPathUrl = pathUrl.replace("/en/", "")
+    oldPathUrl = "blog" + pathUrl
+    oldPathUrl = "/en/" + oldPathUrl
 
     createPage({
       path: pathUrl,
       component: blogPost,
       context: {
-        slug: post.node.fields.slug,
-        language: language,
+        id: post.node.id,
+        previous,
+        next,
+        language: language || "en",
       },
+    })
+    createRedirect({
+      fromPath: oldPathUrl,
+      toPath: pathUrl,
+      redirectInBrowser: true,
+      isPermanent: true,
     })
     // return null
   })
@@ -178,13 +195,24 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
-
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
-    createNodeField({
-      name: `slug`,
-      node,
-      value,
-    })
+    if (node.frontmatter.language) {
+      const newVal = `/${node.frontmatter.language}${value.replace(
+        "index." + node.frontmatter.language + "/",
+        ""
+      )}`
+      createNodeField({
+        name: `slug`,
+        node,
+        value: newVal,
+      })
+    } else {
+      createNodeField({
+        name: `slug`,
+        node,
+        value,
+      })
+    }
   }
 }
