@@ -158,25 +158,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
     // return null
   })
 
-  createRedirect({
-    fromPath: "/en/blog/pwa-vite/",
-    toPath: "/en/pwa-vite/",
-    redirectInBrowser: true,
-    isPermanent: true,
-  })
-  createRedirect({
-    fromPath: "/en/blog/github-packages/",
-    toPath: "/en/github-packages/",
-    redirectInBrowser: true,
-    isPermanent: true,
-  })
-  createRedirect({
-    fromPath: "/en/blog/gatsby-netlify-cms/",
-    toPath: "/en/gatsby-netlify-cms/",
-    redirectInBrowser: true,
-    isPermanent: true,
-  })
-
   const tags = result.data.tagsGroup.group
 
   tags.forEach((tag) => {

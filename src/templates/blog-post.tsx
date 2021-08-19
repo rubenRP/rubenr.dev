@@ -124,7 +124,9 @@ const BlogPostTemplate: React.FC<PageData> = ({
         </section>
         <Newsletter />
         <Share
-          url={`${data.site.siteMetadata.siteUrl}/blog${post.fields.slug}`}
+          url={`${data.site.siteMetadata.siteUrl}${
+            post.frontmatter.slug || post.fields.slug
+          }`}
           title={`${post.frontmatter.title}`}
         />
       </Layout>
@@ -149,6 +151,7 @@ export const pageQuery = graphql`
         hero_title
         hero_subtitle
         date(formatString: "MMMM DD, YYYY")
+        slug
         hero_image {
           childImageSharp {
             gatsbyImageData(width: 1600)
