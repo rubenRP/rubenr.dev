@@ -27,10 +27,9 @@ const Newsletter: React.FC = () => {
         <div className="container grid-sm">
           <div className="frame-box without-offset-top columns justify-center">
             <h3 className="col-12">Devletter</h3>
-            <div className="col-8 col-md-8 mb-2">
+            <div className="col-9 col-md-9 mb-2">
               <p>
-                Subscribe to the newsletter to receive my posts, news and more
-                cool things right to your inbox.{" "}
+                I send out an email when I create or post something new.{" "}
                 <span role="img" aria-label="Newsletter">
                   🚀
                 </span>

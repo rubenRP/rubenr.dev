@@ -95,7 +95,7 @@ const BlogPostTemplate: React.FC<PageData> = ({
               <div className="btn-group">
                 {previous && (
                   <Link
-                    to={`/blog${previous.fields.slug}`}
+                    to={previous.frontmatter.slug || previous.fields.slug}
                     rel="prev"
                     className="btn btn-lg btn-detailed btn-detailed--left text-dark"
                   >
@@ -108,7 +108,7 @@ const BlogPostTemplate: React.FC<PageData> = ({
 
                 {next && (
                   <Link
-                    to={`/blog${next.fields.slug}`}
+                    to={next.frontmatter.slug || next.fields.slug}
                     rel="next"
                     className="btn btn-lg btn-detailed btn-detailed--right text-dark"
                   >
