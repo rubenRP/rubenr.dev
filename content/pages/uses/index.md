@@ -10,17 +10,16 @@ hero_text: "Here a small list of software and hardware that I use."
 
 - **Computer **: 2017 13-inch MacBook Pro, Two Thunderbolt 3 ports
 - **External Display**: Dell U2414H
-- **Keyboard**: Apple Magic Keyboard
+- **Keyboard**: Apple Magic Keyboard || Custom bm60rgb mechanical keyboard
 - **Mouse**: Apple Magic Mouse
-- **Headphones**: Sennheiser Hd-25
+- **Headphones**: Sennheiser Hd-25 || Huawei FreeBuds Pro
 
 ## 📀 Software
 
-- **Editor**: [PhpStorm](https://www.jetbrains.com/es-es/phpstorm/) and [VS Code](https://code.visualstudio.com) with One Dark Theme
+- **Editor**: [VS Code](https://code.visualstudio.com) with One Dark Theme
 - **Terminal**: [iTerm](http://iterm2.com/) with [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
 - **Font**: [Fira Code Retina](https://www.google.com/search?client=safari&rls=en&q=Fira+Code+Retina&ie=UTF-8&oe=UTF-8)
 - **Browser**: [Brave](https://brave.com/) and [Firefox Developer Edition](https://www.mozilla.org/es-ES/firefox/developer/)
-- **Git GUI**: [Tower](https://www.git-tower.com/mac)
 - **Notes**: [Notion](https://www.notion.so/) and [Sublime Text](https://www.sublimetext.com)
 
 ## 🛠 Configs
