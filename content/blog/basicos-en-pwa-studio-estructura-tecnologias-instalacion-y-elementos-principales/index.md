@@ -1,9 +1,12 @@
 ---
-title: "Básicos en PWA Studio: Estructura, tecnologías, instalación y elementos principales"
-hero_title: "Básicos en PWA Studio"
-hero_subtitle: "Estructura, tecnologías, instalación y elementos principales"
+title: "Básicos en PWA Studio: Estructura, tecnologías, instalación y elementos
+  principales"
+date: 2020-05-14T08:30:00.000Z
 published: true
-date: "2020-05-14T08:30:00.000Z"
+hero_title: Básicos en PWA Studio
+hero_subtitle: Estructura, tecnologías, instalación y elementos principales
+hero_image: pwa-basics-hero.jpg
+thumbnail: pwa-basics-thumb.jpg
 taxonomy:
   category:
     - Articles
@@ -12,8 +15,6 @@ taxonomy:
     - PWA Studio
     - JavaScript
     - React
-hero_image: pwa-basics-hero.jpg
-thumbnail: pwa-basics-thumb.jpg
 ---
 
 Han pasado 533 días desde que Magento lanzó con la versión 2.3 de Magento 2 [PWA Studio](https://magento.com/products/magento-commerce/pwa), aunque esta nueva plataforma de desarrollo para Magento 2 llevaba haciendo ruido desde mucho antes, [antes incluso](https://alankent.me/2016/12/14/headless-magento-and-extensions/) de que comenzara su desarrollo.
