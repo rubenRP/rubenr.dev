@@ -4,9 +4,10 @@ date: 2021-08-10T08:30:00.000Z
 published: true
 hero_title: PWA & Vite
 hero_subtitle: Development of a Progressive Web App with Vue 3.
-description: In this post we are going to develop a boilerplate to develop PWA using Vite as a building tool and Vue.js 3 as a JavaScript framework.
-thumbnail: thumb.jpg
+description: In this post we are going to develop a boilerplate to develop PWA
+  using Vite as a building tool and Vue.js 3 as a JavaScript framework.
 language: en
+thumbnail: thumb.jpg
 taxonomy:
   category:
     - Articles
@@ -15,7 +16,6 @@ taxonomy:
     - Vue.js
     - PWA
 ---
-
 ![PWA & Vite: Development of a Progressive Web App with Vue 3](hero.jpg)
 
 > You can read this article also in [Spanish](https://rubenr.dev/blog/pwa-vite).
@@ -40,7 +40,7 @@ Since the arrival of the PWA concept in 2015 until its implementation in most br
 </small>
 </div>
 
-In this post we are going to develop a boilerplate to develop PWA using Vite as _building_ tool and Vue.js 3 as JavaScript framework, but first we are going to briefly explain what a PWA is.
+In this post we are going to develop a boilerplate to develop PWA using Vite as *building* tool and Vue.js 3 as JavaScript framework, but first we are going to briefly explain what a PWA is.
 
 ## What is a PWA?
 
@@ -57,7 +57,7 @@ yarn
 yarn dev
 ```
 
-With this we already have the Vue.js application running with Vite as we can see in [http://localhost:3000/](http://localhost:3000/)
+With this we already have the Vue.js application running with Vite as we can see in <http://localhost:3000/>
 
 ![Vite + Vue.js Hello World page](vite-vue-startup.png)
 
@@ -73,7 +73,7 @@ yarn add vite-plugin-pwa workbox-precaching -D
 
 ## Config
 
-The configuration of both Vite and its plugins is done in the _vite.config.js_ file, which is located in the root of the project. A simple installation of the PWA plugin would be the following:
+The configuration of both Vite and its plugins is done in the *vite.config.js* file, which is located in the root of the project. A simple installation of the PWA plugin would be the following:
 
 ```jsx
 import { defineConfig } from "vite"
@@ -137,7 +137,7 @@ export default defineConfig({
 
 Every PWA must have a manifest. A **Manifest** is a file that defines (in JSON format) the name of the application, the background color that it will have on the device once installed, the location, formats of the icons used and the root url for PWA (web application can have different url for web and PWA). That is, the minimum behavioral requirements of that web application on a device.
 
-In turn, it is necessary to define the location of the root of the code (in this case _src_) and the location of the Service Worker. A **Service Worker** is a set of code that runs in the background and allows secondary actions to be performed with the running application. In our case we are going to manage the caching of the application and its update through a Service Worker located in _src / sw.ts._
+In turn, it is necessary to define the location of the root of the code (in this case *src*) and the location of the Service Worker. A **Service Worker** is a set of code that runs in the background and allows secondary actions to be performed with the running application. In our case we are going to manage the caching of the application and its update through a Service Worker located in *src / sw.ts.*
 
 ```jsx
 import { precacheAndRoute } from 'workbox-precaching'
@@ -151,7 +151,7 @@ self.addEventListener('message', (event) => {
 precacheAndRoute(self.__WB_MANIFEST)
 ```
 
-At this point, if your editor is Visual Studio Code, multiple formatting errors will appear. This is because the type library that manages workers has not been added. To do this, it is necessary to extend the TypeScript definition by creating a tsconfig.json configuration file, adding WebWorker as a library and excluding from the analysis the .worker.ts files that may exist in the _node-modules_ folder.
+At this point, if your editor is Visual Studio Code, multiple formatting errors will appear. This is because the type library that manages workers has not been added. To do this, it is necessary to extend the TypeScript definition by creating a tsconfig.json configuration file, adding WebWorker as a library and excluding from the analysis the .worker.ts files that may exist in the *node-modules* folder.
 
 ```jsx
 {
@@ -190,35 +190,16 @@ To register the PWA and make it functional, it is necessary to create a componen
 
 ```jsx
 <template>
-  <div
-    v-if="offlineReady || needRefresh"
-    class="
-      flex flex-wrap
-    "
-    role="alert"
-  >
+  <div v-if="offlineReady || needRefresh" class="flex flex-wrap" role="alert">
     <div class="message mt-1">
       <span v-if="offlineReady"> App ready to work offline </span>
-      <span v-else>
-        New content available, click on reload button to update.
-      </span>
+      <span v-else>New content available, click on reload button to update.</span>
     </div>
     <div class="buttons flex align-middle mt-2 md:mt-0">
-      <button
-        v-if="needRefresh"
-        @click="updateServiceWorker()"
-        class="
-          button
-        "
-      >
+      <button v-if="needRefresh" @click="updateServiceWorker()" class="button">
         Reload
       </button>
-      <button
-        @click="close"
-        class="
-          button
-        "
-      >
+      <button @click="close" class="button">
         Close
       </button>
     </div>
@@ -281,19 +262,19 @@ When making changes to the content and running the app from the mobile device, t
 
 The code for this project can be seen in the following repo:
 
-[https://github.com/rubenRP/vite-pwa-boilerplate](https://github.com/rubenRP/vite-pwa-boilerplate)
+<https://github.com/rubenRP/vite-pwa-boilerplate>
 
 ## References
 
-[https://web.dev/progressive-web-apps/](https://web.dev/progressive-web-apps/)
+<https://web.dev/progressive-web-apps/>
 
 [https://es.wikipedia.org/wiki/Aplicación_web_progresiva](https://es.wikipedia.org/wiki/Aplicaci%C3%B3n_web_progresiva)
 
-[https://github.com/antfu/vite-plugin-pwa](https://github.com/antfu/vite-plugin-pwa)
+<https://github.com/antfu/vite-plugin-pwa>
 
-[https://vitejs.dev/guide/#community-templates](https://vitejs.dev/guide/#community-templates)
+<https://vitejs.dev/guide/#community-templates>
 
-[https://developers.google.com/web/tools/workbox/modules/workbox-precaching](https://developers.google.com/web/tools/workbox/modules/workbox-precaching)
+<https://developers.google.com/web/tools/workbox/modules/workbox-precaching>
 
 <span>Photo by <a href="https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Annie Spratt</a> on <a href="https://unsplash.com/s/photos/phone?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
 </span>
