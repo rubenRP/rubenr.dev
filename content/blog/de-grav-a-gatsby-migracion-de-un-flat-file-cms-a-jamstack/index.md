@@ -1,10 +1,14 @@
 ---
 title: "De Grav a Gatsby: Migración de un Flat-File CMS a JAMstack"
-description: "Dicen que comer y cantar todo es empezar. Pues yo empecé a introducirme en Gatsby con el proyecto COVID-19 Map y unas semanas después he acabado migrando mi blog personal a Gatsby."
-hero_title: "De Grav a Gatsby"
-hero_subtitle: "Migración de un Flat-File CMS a JAMstack"
+date: 2020-04-19T08:30:00.000Z
 published: true
-date: "2020-04-19T08:30:00.000Z"
+hero_title: De Grav a Gatsby
+hero_subtitle: Migración de un Flat-File CMS a JAMstack
+description: Dicen que comer y cantar todo es empezar. Pues yo empecé a
+  introducirme en Gatsby con el proyecto COVID-19 Map y unas semanas después he
+  acabado migrando mi blog personal a Gatsby.
+hero_image: gatsby-grav-hero.jpg
+thumbnail: gatsby-grav-thumb.png
 taxonomy:
   category:
     - Articles
@@ -13,8 +17,6 @@ taxonomy:
     - React
     - GatsbyJS
     - JAMstack
-hero_image: gatsby-grav-hero.jpg
-thumbnail: gatsby-grav-thumb.png
 ---
 
 Dicen que comer y cantar todo es empezar. Pues yo empecé a introducirme en Gatsby con el proyecto [COVID-19 Map](https://rubenr.dev/blog/gatsbyjs-y-leaflet-como-crear-una-aplicacion-para-mostrar-estadisticas-sobre-covid-19/) y unas semanas después he acabado migrando mi blog personal a Gatsby.

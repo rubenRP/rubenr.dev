@@ -1,11 +1,11 @@
 ---
 title: "2 horas con Magento 2: Primeras impresiones (Front-end edition)"
+date: 2015-12-27T15:17:00.000Z
+published: true
 hero_title: 2 horas con Magento 2
 hero_subtitle: Primeras impresiones (Front-end edition)
 hero_image: 1*OddzhRy0jxiADpTDXecWVg.jpeg
 thumbnail: 1*OddzhRy0jxiADpTDXecWVg.jpeg
-published: true
-date: "2015-12-27T15:17:00.000Z"
 taxonomy:
   category:
     - Articles
