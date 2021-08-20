@@ -19,13 +19,13 @@ collections:
     create: true
     fields:
       - { name: title, label: Title }
-      - { name: path, label: Path, required: false }
       - { name: date, label: Date, widget: date }
+      - { name: slug, label: Slug, required: false }
       - { name: published, label: Published, widget: "boolean", default: false }
       - { name: hero_title, label: Hero Title, required: false }
       - { name: hero_subtitle, label: Hero Subtitle, required: false }
       - { name: description, label: Description, required: false }
-      - { name: hero_classes, label: Hero Classes, required: false }
+      - { name: language, label: Language, required: false }
       - {
           name: hero_image,
           label: Hero Image,

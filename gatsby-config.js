@@ -19,8 +19,6 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-typescript`,
-    `gatsby-plugin-netlify`,
-    `gatsby-plugin-netlify-cms`,
     `gatsby-plugin-image`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
@@ -107,12 +105,6 @@ module.exports = {
         icon: `content/assets/favicon.png`,
       },
     },
-    // {
-    // resolve: `gatsby-plugin-typography`,
-    // options: {
-    // pathToConfigModule: `src/utils/typography`,
-    // },
-    // },
     `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-sitemap",
@@ -128,5 +120,12 @@ module.exports = {
         useLangKeyLayout: false,
       },
     },
+    {
+      resolve: "gatsby-plugin-netlify-cms",
+      options: {
+        modulePath: `${__dirname}/src/cms/cms.js`,
+      },
+    },
+    `gatsby-plugin-netlify`,
   ],
 }
