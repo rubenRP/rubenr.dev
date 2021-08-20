@@ -19,7 +19,7 @@ collections:
     create: true
     fields:
       - { name: title, label: Title }
-      - { name: date, label: Date, widget: date }
+      - { name: date, label: Date, widget: datetime }
       - { name: slug, label: Slug, required: false }
       - { name: published, label: Published, widget: "boolean", default: false }
       - { name: hero_title, label: Hero Title, required: false }
@@ -50,7 +50,7 @@ collections:
     fields:
       - { name: title, label: Title }
       - { name: path, label: Path, required: false }
-      - { name: date, label: Date, widget: date }
+      - { name: date, label: Date, widget: datetime }
       - { name: hero_classes, label: Hero Classes, required: false }
       - {
           name: hero_image,
