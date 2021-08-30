@@ -80,7 +80,7 @@ Tras un par de clics más para confirmar el repositorio que se creará se confir
   <small>Ejemplo del despliegue de Next.js en Vercel</small>
 </div>
 
-Tras finalizar el despliegue Vercel nos muestra la URL del storefront y. No vamos a indagar en las posibilidades de Vercel que son infinitas y nos vamos a centrar en la estructura del código y qué se puede hacer en un par de horas trabajando con Next.js Commerce.
+Tras finalizar el despliegue Vercel nos muestra la URL del storefront. No vamos a indagar en las posibilidades de Vercel que son infinitas y nos vamos a centrar en la estructura del código y qué se puede hacer en un par de horas trabajando con Next.js Commerce.
 
 <div class="columns" style="justify-content: center">
 <div class="column col-8 col-sm-8">
