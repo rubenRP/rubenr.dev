@@ -22,6 +22,8 @@ taxonomy:
 </div>
 </div>
 
+> You can read this article also in [English](https://rubenr.dev/en/blog/magento-adobe-commerce).
+
 > **Disclaimer**: Esto es un artículo de opinión
 
 Todo comenzó con este tuit de Adobe en el que informaba del rebranding de Magento Commerce como Adobe Commerce y con ello me percaté de que el handle [@magento](https://twitter.com/magento) había sido bloqueado y abandonado por Adobe en favor de [@AdobeCommerce](https://twitter.com/AdobeCommerce). Ya se ha escrito y opinado largo y tendido sobre el tema, pero también me gustaría ofrecer mi punto de vista sobre el asunto.
