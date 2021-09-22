@@ -17,6 +17,8 @@ taxonomy:
     - JavaScript
 ---
 
+> You can read this article also in [English](https://rubenr.dev/en/blog/github-copilot).
+
 A principios de julio, [GitHub presentó](https://www.fastcompany.com/90653878/github-copilot-microsoft-openai-coding-tool-backlash) en beta privada la que a mi parecer es una de las tecnologías más interesantes del año: GitHub Copilot, una herramienta de autocompletado asistido por IA que ha generado titulares y opiniones en todos los ámbitos.
 
 Si bien todavía está en Beta Pública y ni el desarrollo ni el entrenamiento de la IA está completado, he tenido acceso tanto a la herramienta como al repositorio y he estado utilizándolo desde hace más de un mes con Angular, Vue.js y GatsbyJS (React). Estás son mis reflexiones acerca de esta nueva herramienta y las conclusiones que he sacado. Pero antes de exponer mi opinión, aquí va un breve resumen sobre qué es GitHub Copilot.
