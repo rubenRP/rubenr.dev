@@ -20,7 +20,7 @@ taxonomy:
     - NetlifyCMS
 ---
 
-> You can read this article also in [English](https://rubenr.dev/en/blog/gatsby-netlify-cms).
+> You can read this article also in [English](https://rubenr.dev/en/gatsby-netlify-cms).
 
 Para una gran comunidad de desarrolladores Gatsby JS y Netlify son la pareja perfecta cuando se habla del desarrollo de aplicaciones web con un _static site generator_ y su combinación con un CMS headless. Esto permite un desarrollo rápido, eficiente y muy útil para desarrolladores con poca experiencia, ya que la creación del CMS sale de la ecuación, simplificando mucho el problema.
 

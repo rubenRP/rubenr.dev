@@ -17,6 +17,8 @@ taxonomy:
     - Libraries
 ---
 
+> You can read this article also in [Spanish](https://rubenr.dev/generacion-de-librerias-js-con-webpack).
+
 We live in a time when Javascript dominates the web and the architecture based on microservices is taken as a standard. React, Vue and Angular have a dominant and growing position in the scene, however there is a large percentage of front development that is done the "old way" and it is necessary to encapsulate functionalities in a library so that they can be imported into an HTML.
 
 A typical example is the import of a third-party widget, library or service into an existing website. The simplest and most basic option is to create a .js file and develop there, exposing the content using [UMD](https://github.com/umdjs/umd) if necessary. This would be a somewhat limited approach for libraries with complex functionality. Currently there are tools that allow the generation of libraries while developing in a modern _stack_ js. This is the case of [Webpack](https://webpack.js.org), a tool used by almost everyone, and especially in React but very unknown since it works "behind the curtain".

@@ -16,9 +16,10 @@ taxonomy:
     - Vue.js
     - PWA
 ---
+
 ![PWA y Vite: Desarrollo de una Progressive Web App con Vue 3](hero.jpg)
 
-> You can read this article also in [English](https://rubenr.dev/en/blog/pwa-vite).
+> You can read this article also in [English](https://rubenr.dev/en/pwa-vite).
 
 Desde la llegada del concepto de PWA en el año 2015 hasta su implementación en la mayoría de los navegadores en 2019, el concepto ha ido apareciendo y desapareciendo entre las tecnologías a tener en cuenta o tecnologías que aprender ese año. A día de hoy la implementación y uso sigue sin ser masiva. Sin embargo la idea y las ventajas que ofrece a una aplicación web son muy a tener en cuenta. Con una implementación de PWA en una aplicación web se permite la ejecución "nativa" e integración en SO móviles, permite el envío de actualizaciones a los dispositivos que la tienen instalada y la implementación de la misma para una aplicación sencilla no supone un gran problema.
 
@@ -40,7 +41,7 @@ Desde la llegada del concepto de PWA en el año 2015 hasta su implementación en
 </small>
 </div>
 
-En este post vamos a desarrollar un boilerplate para desarrollar PWA utilizando Vite como herramienta de *building* y Vue.js 3 como framework JavaScript, pero antes vamos a explicar brevemente qué es una PWA.
+En este post vamos a desarrollar un boilerplate para desarrollar PWA utilizando Vite como herramienta de _building_ y Vue.js 3 como framework JavaScript, pero antes vamos a explicar brevemente qué es una PWA.
 
 ## ¿Qué es una PWA?
 
@@ -73,7 +74,7 @@ yarn add vite-plugin-pwa workbox-precaching -D
 
 ## Configuración
 
-La configuración tanto de Vite como de sus plugins se realiza en el fichero *vite.config.js*, que se encuentra en la raíz del proyecto. Una instalación sencilla del plugin de PWA sería la siguiente:
+La configuración tanto de Vite como de sus plugins se realiza en el fichero _vite.config.js_, que se encuentra en la raíz del proyecto. Una instalación sencilla del plugin de PWA sería la siguiente:
 
 ```jsx
 import { defineConfig } from "vite"
@@ -137,7 +138,7 @@ export default defineConfig({
 
 Toda PWA debe contar con un manifiesto. Un **Manifesto** es un fichero en el que se define (en formato JSON) el nombre de la aplicación, el color de fondo que tendrá en el dispositivo una vez instalada, la ubicación, formatos de los iconos utilizados y la url raíz para la PWA (la aplicación web puede tener url distintas para web y PWA). Es decir, los requisitos mínimos de comportamiento de esa aplicación web en un dispositivo.
 
-A su vez, es necesario definir la ubicación de la raíz del código (en este caso *src*) y la ubicación del Service Worker. Un **Service Worker** es un conjunto de código que se ejecuta en segundo plano y que permite realizar acciones secundarias con la aplicación que se está ejecutando. En nuestro caso vamos a gestionar el cacheo de la aplicación y su actualización mediante un Service Worker ubicado en *src/sw.ts.*
+A su vez, es necesario definir la ubicación de la raíz del código (en este caso _src_) y la ubicación del Service Worker. Un **Service Worker** es un conjunto de código que se ejecuta en segundo plano y que permite realizar acciones secundarias con la aplicación que se está ejecutando. En nuestro caso vamos a gestionar el cacheo de la aplicación y su actualización mediante un Service Worker ubicado en _src/sw.ts._
 
 ```jsx
 import { precacheAndRoute } from 'workbox-precaching'
@@ -151,7 +152,7 @@ self.addEventListener('message', (event) => {
 precacheAndRoute(self.__WB_MANIFEST)
 ```
 
-Llegado este punto, si tu editor es Visual Studio Code aparecerán múltiples errores de formato. Esto es debido a que no se ha añadido la librería de tipos que gestiona workers. Para ello es necesario extender la definición de TypeScript creando un fichero de configuración tsconfig.json, añadiendo WebWorker como librería y excluyendo del análisis los ficheros .worker.ts que puedan existir en la carpeta *node_modules*.
+Llegado este punto, si tu editor es Visual Studio Code aparecerán múltiples errores de formato. Esto es debido a que no se ha añadido la librería de tipos que gestiona workers. Para ello es necesario extender la definición de TypeScript creando un fichero de configuración tsconfig.json, añadiendo WebWorker como librería y excluyendo del análisis los ficheros .worker.ts que puedan existir en la carpeta _node_modules_.
 
 ```jsx
 {

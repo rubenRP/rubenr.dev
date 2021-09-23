@@ -22,7 +22,7 @@ taxonomy:
 </div>
 </div>
 
-> You can read this article also in [English](https://rubenr.dev/en/blog/magento-adobe-commerce).
+> You can read this article also in [English](https://rubenr.dev/en/magento-adobe-commerce).
 
 > **Disclaimer**: Esto es un artículo de opinión
 

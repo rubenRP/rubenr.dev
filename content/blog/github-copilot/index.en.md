@@ -18,7 +18,7 @@ taxonomy:
     - JavaScript
 ---
 
-> You can read this article also in [Spanish](https://rubenr.dev/blog/github-copilot).
+> You can read this article also in [Spanish](https://rubenr.dev/github-copilot).
 
 At the beginning of July, [GitHub presented](https://www.fastcompany.com/90653878/github-copilot-microsoft-openai-coding-tool-backlash) in private beta what in my opinion is one of the most interesting technologies of the year: GitHub Copilot, an AI-assisted autocompletion tool that has generated headlines and opinions across the board.
 
