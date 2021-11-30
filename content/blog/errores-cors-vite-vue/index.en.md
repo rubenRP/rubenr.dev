@@ -66,8 +66,6 @@ However, when testing it in our development environment, the following error app
 
 This is because our server tries to make the request to the API, but within our domain, since to make a request to a different domain, it is necessary to set special rules so that the request can _"exit"_ from our development environment. Well, this is due to CORS.
 
-Los problemas de CORS son fáciles de identificar; pero no son tan fáciles de analizar, ya que no son posibles de trazar con el inspector del navegador. A su vez, no se suele conocer muy bien el funcionamiento de CORS, por lo que buscar soluciones en los diferentes frameworks y sistemas de hosting JAMstack se vuelve muy complicado.
-
 CORS problems are easy to identify; but they are not so easy to parse, since they are not possible to trace with the browser inspector. In turn, the operation of CORS is not usually well known, so looking for solutions in the different frameworks and JAMstack hosting systems becomes very complicated.
 
 ## What is a CORS error?
@@ -171,8 +169,6 @@ With these modifications in the calls and the proxy settings, we are now ready t
 ## Netlify configuration
 
 This does not end here. We have fixed our CORS issues to develop on our local server, but what happens when deploying our application on Netlify?
-
-El despliegue es correcto y parece funcionar correctamente, pero no se realiza la petición a la API. Tampoco aparecen errores de consola, por lo que no queda claro qué está pasando. Esto es debido a que hay que realizar un proceso similar a la ejecución en local y permitir la ejecución de la URL mediante una regla de redirección. De lo contrario se llamará desde la URL desde la que se está ejecutando la aplicación.
 
 The deployment is successful and appears to be working correctly, but the API request is not working. There are also no console errors, so it is not clear what is happening. This is due to the fact that it is necessary recreate a similar process and allow the execution of the URL through a redirection rule. Otherwise it will be called from the URL from which the application is running.
 
