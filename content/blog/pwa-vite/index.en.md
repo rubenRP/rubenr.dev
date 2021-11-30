@@ -15,6 +15,7 @@ taxonomy:
     - JavaScript
     - Vue.js
     - PWA
+    - Vite
 ---
 
 ![PWA & Vite: Development of a Progressive Web App with Vue 3](hero.jpg)
