@@ -90,7 +90,7 @@ module.exports = {
         server: process.env.ACKEE_DOMAIN,
         ignoreLocalhost: true,
         ignoreOwnVisits: false,
-        detailed: false,
+        detailed: true,
       },
     },
     {
