@@ -7,7 +7,6 @@ hero_subtitle: Overview y primeros pasos
 description: En este artículo vamos a resumir el proceso de creación, instalación y desarrollo de un proyecto con Next.js commerce y varios ejemplos sencillos de desarrollo.
 hero_image: nextjscommerce-hero.jpg
 thumbnail: nextjscommerce-thumb.jpg
-popular: true
 taxonomy:
   category:
     - Articles

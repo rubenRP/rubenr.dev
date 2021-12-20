@@ -4,7 +4,6 @@ hero_title: "GatsbyJS y Leaflet"
 hero_subtitle: "Cómo crear una aplicación para mostrar estadísticas sobre COVID-19"
 published: true
 date: "2020-03-30T08:30:00.000Z"
-popular: true
 taxonomy:
   category:
     - Articles
@@ -116,7 +115,7 @@ Para interactuar con ella utilizaremos Axios. De momento, y al tratarse de un ej
 ```js
 const axios = require("axios")
 
-const get = endpoint => axios.get(`https://corona.lmao.ninja${endpoint}`)
+const get = (endpoint) => axios.get(`https://corona.lmao.ninja${endpoint}`)
 
 export async function getAllCountriesInfo() {
   try {
@@ -272,7 +271,7 @@ class IndexPage extends Component {
     }
   }
   componentDidMount = () => {
-    getAllCountriesInfo().then(countries => {
+    getAllCountriesInfo().then((countries) => {
       this.setState({ countries: countries })
     })
   }
