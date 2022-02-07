@@ -19,7 +19,7 @@ taxonomy:
 
 Las guías de estilos han existido desde hace años, pero desde hace no tanto, diseñadores y desarrolladores se han puesto de acuerdo para trabajar en conjunto en una idea que está dinamizando y facilitando el uso de UIs a lo largo de los productos de grandes compañías. Estoy hablando de los **sistemas de diseño.** y su consecuencia en el desarrollo de sofware: las **librerías de componentes**.
 
-En este post vamos a crear una aplicación de Angular con Angular Libraries y Storybook, lista para publicar un sistema de diseño como paquete. El resultado lo puedes ver en el [siguiente repositorio](https://github.com/rubenRP/angular-lib-storybook-demo).
+En este post vamos a crear una aplicación de Angular con **Angular Libraries y Storybook**, lista para publicar un sistema de diseño como paquete. El resultado lo puedes ver en el [siguiente repositorio](https://github.com/rubenRP/angular-lib-storybook-demo).
 
 Un **sistema de diseño** es un conjunto de componentes UI reusables que permiten a los equipos construir interfaces complejas y consistentes entre varios proyectos. A su vez pueden contener información sobre su uso, cómo construir dichas interfaces, o cualquier información relevante para su implementación o instalación. Las ventajas de los sistemas de diseño respecto a las antiguas prácticas son su escalabilidad, coherencia y solidez, por lo que se han convertido en la piedra angular de las grandes compañías y grandes proyectos en sus aplicaciones.
 
@@ -36,7 +36,7 @@ Con esta situación y este nuevo paradigma surgía la necesidad de tener una her
 
 ## ¿Qué es Storybook?
 
-Storybook es una herramienta para construir componentes UI y páginas de manera aislada, generando documentación, y posibilitando tanto desarrollo como el testing de componentes. Permite la visualización de los componentes de una manera organizada, interactuar con ellos y testearlos como si se encontraran desplegados en una aplicación real. Esta herramienta es capaz de integrarse con múltiples frameworks como React, Vue.js, Angular...
+[Storybook](https://storybook.js.org/) es una herramienta para construir componentes UI y páginas de manera aislada, generando documentación, y posibilitando tanto desarrollo como el testing de componentes. Permite la visualización de los componentes de una manera organizada, interactuar con ellos y testearlos como si se encontraran desplegados en una aplicación real. Esta herramienta es capaz de integrarse con múltiples frameworks como React, Vue.js, Angular...
 
 <div style="margin: 0 auto; max-width: 600px;">
 
@@ -184,7 +184,7 @@ En [este repositorio](https://github.com/rubenRP/angular-lib-storybook-demo) se 
 
 <div style="margin: 0 auto; max-width: 600px;">
 
-![Final result](project-storybook.png)
+![Final result](project-storybook.jpg)
 
 </div>
 
