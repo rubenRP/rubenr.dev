@@ -1,9 +1,9 @@
 ---
-title: "Angular libraries y Storybook: Generación de sistemas de diseño listos para publicar en paquetes"
+title: "Angular libraries y Storybook: Generación una librería de componentes lista para publicar en paquetes"
 date: 2022-02-08T10:30:00.000Z
 published: true
 hero_title: Angular libraries y Storybook
-hero_subtitle: Generación de sistemas de diseño listos para publicar en paquetes.
+hero_subtitle: Generación una librería de componentes lista para publicar en paquetes.
 description: En este post vamos a crear una aplicación de Angular con Angular Libraries y Storybook, lista para publicar un sistema de diseño como paquete.
 hero_image: hero.jpg
 thumbnail: thumb.jpg
@@ -17,11 +17,11 @@ taxonomy:
     - Angular Libraries
 ---
 
-Las librerías de componentes y guías de estilos han existido desde hace años, pero desde hace no tanto, diseñadores y desarrolladores se han puesto de acuerdo para trabajar en conjunto en una idea que está dinamizando y facilitando el uso de UIs a lo largo de los productos de grandes compañías. Estoy hablando de los **sistemas de diseño.**
+Las guías de estilos han existido desde hace años, pero desde hace no tanto, diseñadores y desarrolladores se han puesto de acuerdo para trabajar en conjunto en una idea que está dinamizando y facilitando el uso de UIs a lo largo de los productos de grandes compañías. Estoy hablando de los **sistemas de diseño.** y su consecuencia en el desarrollo de sofware: las **librerías de componentes**.
 
 En este post vamos a crear una aplicación de Angular con Angular Libraries y Storybook, lista para publicar un sistema de diseño como paquete. El resultado lo puedes ver en el [siguiente repositorio](https://github.com/rubenRP/angular-lib-storybook-demo).
 
-Un **sistema de diseño** es un conjunto de componentes UI reusables que permiten a los equipos construir interfaces complejas y consistentes entre varios proyectos. A su vez pueden contener información sobre su uso, cómo construir dichas interfaces, etc...Las ventajas de los sistemas de diseño respecto a las antiguas prácticas son su escalabilidad, coherencia y solidez, por lo que se han convertido en la piedra angular de las grandes compañías y grandes proyectos en sus aplicaciones.
+Un **sistema de diseño** es un conjunto de componentes UI reusables que permiten a los equipos construir interfaces complejas y consistentes entre varios proyectos. A su vez pueden contener información sobre su uso, cómo construir dichas interfaces, o cualquier información relevante para su implementación o instalación. Las ventajas de los sistemas de diseño respecto a las antiguas prácticas son su escalabilidad, coherencia y solidez, por lo que se han convertido en la piedra angular de las grandes compañías y grandes proyectos en sus aplicaciones.
 
 <div style="margin: 0 auto; max-width: 400px;">
 
@@ -32,11 +32,11 @@ Un **sistema de diseño** es un conjunto de componentes UI reusables que permite
   <small>Fuente: Storybook</small>
 </div>
 
-Con esta situación surgía la necesidad de tener una herramienta que catalice ese conocimiento entre diseñadores y desarrolladores, genere una documentación útil para ambos y además facilite el consumo de esos componentes por parte de los proyectos que quieran usar ese sistema de diseño. Y **Storybook llegó al rescate.**
+Con esta situación y este nuevo paradigma surgía la necesidad de tener una herramienta que catalice ese conocimiento entre diseñadores y desarrolladores, genere una documentación útil para ambos y además facilite el consumo de esos componentes por parte de los proyectos que quieran usar ese sistema de diseño. Y **Storybook llegó al rescate.**
 
 ## ¿Qué es Storybook?
 
-Storybook es una herramienta para construir componentes UI y páginas de manera aislada, generando documentación, y posibilitando tanto desarrollo como el testing de componentes. Esta herramienta es capaz de integrarse con múltiples frameworks como React, Vue.js, Angular...
+Storybook es una herramienta para construir componentes UI y páginas de manera aislada, generando documentación, y posibilitando tanto desarrollo como el testing de componentes. Permite la visualización de los componentes de una manera organizada, interactuar con ellos y testearlos como si se encontraran desplegados en una aplicación real. Esta herramienta es capaz de integrarse con múltiples frameworks como React, Vue.js, Angular...
 
 <div style="margin: 0 auto; max-width: 600px;">
 
@@ -47,11 +47,11 @@ Storybook es una herramienta para construir componentes UI y páginas de manera 
   <small>Fuente: Storybook</small>
 </div>
 
-También puede generar una página estática con toda la documentación referida a esos componentes, información extra, etc...en fin, en 3 años se ha convertido en el estandar para este tipo de proyectos por su utilidad y su potencia.
+También puede generar una página estática con toda la documentación referida a esos componentes, información extra, para que sirva de referencia a los desarrolladores del proyecto. En fin, en 3 años se ha convertido en el estandar para este tipo de proyectos por su utilidad y su potencia. Podemos ver ejemplos de completas librerías de componentes, como la de [Carbon Components](https://angular.carbondesignsystem.com/?path=/story/components-welcome--to-carbon-angular), [The Guardian](https://5dfcbf3012392c0020e7140b-gmgigeoguh.chromatic.com/?path=/story/layouts-immersive--article-story) o [Shopify Polaris](https://5d559397bae39100201eedc1-iwzjuhbhrb.chromatic.com/?path=/story/playground-playground--playground)
 
 Storybook cobra especial importancia si se le suma la idea de poder publicar paquetes con esos componentes, de manera aislada, para poder ser consumidos por cualquier aplicación que desee
 
-En un post anterior hablamos de cómo publicar componentes de Angular utilizando Angular Libraries. Mediante el uso de Storybook, se puede mantener el desarrollo, visualización, y testing de componentes de forma aislada y a su vez publicar los paquetes para que se pueden generar múltiples aplicaciones que usen dichos componentes.
+En un [post anterior](https://rubenr.dev/github-packages/) hablamos de cómo publicar componentes de Angular utilizando Angular Libraries. Mediante el uso de Storybook, se puede mantener el desarrollo, visualización, y testing de componentes de forma aislada y a su vez publicar los paquetes para que se pueden generar múltiples aplicaciones que usen dichos componentes.
 
 ## Instalación
 
@@ -78,9 +78,9 @@ npx sb init
 ```
 
 > Las versiones utilizadas tanto de Angular como de Storybook son las siguientes:
-> **Angular: ^13.1.0** > **Storybook-angular: ^6.4.14**
+> **Angular:** ^13.1.0 - **Storybook-angular:** ^6.4.14
 
-Esto hace que haya una serie de cambios necesarios para que todo funcione correctamente. En futuras versiones tanto de Angular como de Storybook esto debería quedar solucionado.
+Esto hace que haya una serie de **cambios necesarios** para que todo funcione correctamente. En futuras versiones tanto de Angular como de Storybook esto debería quedar solucionado.
 
 Primero es necesario realizar un fix en el fichero `tsconfig.json` de la carpeta _.storybook_.
 
@@ -207,3 +207,6 @@ Si bien la instalación de Storybook con Angular es un poco áspera para este ti
 [https://github.com/storybookjs/storybook/issues/17039](https://github.com/storybookjs/storybook/issues/17039)
 
 [https://storybook.js.org/tutorials/design-systems-for-developers/react/en/introduction/](https://storybook.js.org/tutorials/design-systems-for-developers/react/en/introduction/)
+
+Photo by <a href="https://unsplash.com/@byfortytwo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">FORTYTWO</a> on <a href="https://unsplash.com/s/photos/lego-bricks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  
