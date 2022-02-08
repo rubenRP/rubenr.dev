@@ -17,7 +17,7 @@ taxonomy:
     - Angular Libraries
 ---
 
-Las guías de estilos han existido desde hace años, pero desde hace no tanto, diseñadores y desarrolladores se han puesto de acuerdo para trabajar en conjunto en una idea que está dinamizando y facilitando el uso de UIs a lo largo de los productos de grandes compañías. Estoy hablando de los **sistemas de diseño.** y su consecuencia en el desarrollo de sofware: las **librerías de componentes**.
+Las guías de estilos han existido desde hace años, pero desde hace no tanto, diseñadores y desarrolladores se han puesto de acuerdo para trabajar en conjunto en una idea que está dinamizando y facilitando el uso de UIs a lo largo de los productos de grandes compañías. Estoy hablando de los **sistemas de diseño** y su consecuencia en el desarrollo de sofware: las **librerías de componentes**.
 
 En este post vamos a crear una aplicación de Angular con **Angular Libraries y Storybook**, lista para publicar un sistema de diseño como paquete. El resultado lo puedes ver en el [siguiente repositorio](https://github.com/rubenRP/angular-lib-storybook-demo).
 
@@ -209,4 +209,3 @@ Si bien la instalación de Storybook con Angular es un poco áspera para este ti
 [https://storybook.js.org/tutorials/design-systems-for-developers/react/en/introduction/](https://storybook.js.org/tutorials/design-systems-for-developers/react/en/introduction/)
 
 Photo by <a href="https://unsplash.com/@byfortytwo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">FORTYTWO</a> on <a href="https://unsplash.com/s/photos/lego-bricks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-  
