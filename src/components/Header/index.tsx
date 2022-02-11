@@ -8,8 +8,6 @@ const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false)
   const [theme, setTheme] = useState("light")
 
-  const instance = ackeeTracker.create("https://rubenr.dev")
-
   const navOnScroll = () => {
     if (window.scrollY > 20) {
       setScrolled(true)
@@ -32,12 +30,15 @@ const Header: React.FC = () => {
   }
 
   const toggleTheme = () => {
-    instance.action("ec5f713a-0172-4398-a7c2-2e3b98fc9a13", {
-      key: "Toggled theme",
-      value: 1,
-    })
     if (theme === "light") {
-      setTheme("dark")
+      setTheme(() => {
+        const instance = ackeeTracker.create("https://rubenr.dev")
+        instance.action("ec5f713a-0172-4398-a7c2-2e3b98fc9a13", {
+          key: "Dark Mode",
+          value: 1,
+        })
+        return "dark"
+      })
     } else {
       setTheme("light")
     }
