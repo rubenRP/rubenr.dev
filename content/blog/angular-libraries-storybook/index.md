@@ -17,6 +17,8 @@ taxonomy:
     - Angular Libraries
 ---
 
+> You can read this article also in [English](/en/angular-libraries-storybook).
+
 Las guías de estilos han existido desde hace años, pero desde hace no tanto, diseñadores y desarrolladores se han puesto de acuerdo para trabajar en conjunto en una idea que está dinamizando y facilitando el uso de UIs a lo largo de los productos de grandes compañías. Estoy hablando de los **sistemas de diseño** y su consecuencia en el desarrollo de sofware: las **librerías de componentes**.
 
 En este post vamos a crear una aplicación de Angular con **Angular Libraries y Storybook**, lista para publicar un sistema de diseño como paquete. El resultado lo puedes ver en el [siguiente repositorio](https://github.com/rubenRP/angular-lib-storybook-demo).
@@ -49,7 +51,7 @@ Con esta situación y este nuevo paradigma surgía la necesidad de tener una her
 
 También puede generar una página estática con toda la documentación referida a esos componentes, información extra, para que sirva de referencia a los desarrolladores del proyecto. En fin, en 3 años se ha convertido en el estandar para este tipo de proyectos por su utilidad y su potencia. Podemos ver ejemplos de completas librerías de componentes, como la de [Carbon Components](https://angular.carbondesignsystem.com/?path=/story/components-welcome--to-carbon-angular), [The Guardian](https://5dfcbf3012392c0020e7140b-gmgigeoguh.chromatic.com/?path=/story/layouts-immersive--article-story) o [Shopify Polaris](https://5d559397bae39100201eedc1-iwzjuhbhrb.chromatic.com/?path=/story/playground-playground--playground)
 
-Storybook cobra especial importancia si se le suma la idea de poder publicar paquetes con esos componentes, de manera aislada, para poder ser consumidos por cualquier aplicación que desee
+Storybook cobra especial importancia si se le suma la idea de poder publicar paquetes con esos componentes, de manera aislada, para poder ser consumidos por cualquier aplicación que desee.
 
 En un [post anterior](https://rubenr.dev/github-packages/) hablamos de cómo publicar componentes de Angular utilizando Angular Libraries. Mediante el uso de Storybook, se puede mantener el desarrollo, visualización, y testing de componentes de forma aislada y a su vez publicar los paquetes para que se pueden generar múltiples aplicaciones que usen dichos componentes.
 
