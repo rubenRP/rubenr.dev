@@ -32,7 +32,7 @@ const Header: React.FC = () => {
   const toggleTheme = () => {
     if (theme === "light") {
       setTheme(() => {
-        const instance = ackeeTracker.create("https://rubenr.dev")
+        const instance = ackeeTracker.create("https://ackee.rubenr.dev")
         instance.action("ec5f713a-0172-4398-a7c2-2e3b98fc9a13", {
           key: "Dark Mode",
           value: 1,
