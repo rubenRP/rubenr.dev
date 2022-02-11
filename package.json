@@ -57,6 +57,7 @@
     "update": "^0.7.4"
   },
   "devDependencies": {
+    "@types/ackee-tracker": "^5.0.2",
     "@types/node": "^14.17.9",
     "@types/react": "^17.0.16",
     "@types/react-dom": "^17.0.9",

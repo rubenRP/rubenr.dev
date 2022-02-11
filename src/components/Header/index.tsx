@@ -2,10 +2,13 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 
 import config from "../../../content/data/siteConfig.json"
+import * as ackeeTracker from "ackee-tracker"
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false)
   const [theme, setTheme] = useState("light")
+
+  const instance = ackeeTracker.create("https://rubenr.dev")
 
   const navOnScroll = () => {
     if (window.scrollY > 20) {
@@ -21,7 +24,7 @@ const Header: React.FC = () => {
     document.body.classList.toggle("mobile-nav-open")
   }
 
-  const handleKeyDown = ev => {
+  const handleKeyDown = (ev) => {
     // M key
     if (ev.keyCode === 77) {
       mobileNavOnClick()
@@ -29,6 +32,10 @@ const Header: React.FC = () => {
   }
 
   const toggleTheme = () => {
+    instance.action("ec5f713a-0172-4398-a7c2-2e3b98fc9a13", {
+      key: "Toggled theme",
+      value: 1,
+    })
     if (theme === "light") {
       setTheme("dark")
     } else {
@@ -87,7 +94,7 @@ const Header: React.FC = () => {
             <section className="navbar-section desktop-menu">
               <nav className="dropmenu animated">
                 <ul className="navigation">
-                  {headerLinks.map(link => {
+                  {headerLinks.map((link) => {
                     return (
                       <li key={link.url}>
                         <Link to={link.url} className="external">
