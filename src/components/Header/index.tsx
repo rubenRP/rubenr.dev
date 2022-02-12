@@ -100,30 +100,6 @@ const Header: React.FC = () => {
                 </ul>
               </nav>
             </section>
-            <section className="navbar-section toggle">
-              <nav className="dropmenu animated">
-                <ul className="navigation">
-                  <li>
-                    <label
-                      className="switch"
-                      htmlFor="toggle-dark"
-                      onClick={toggleTheme}
-                    >
-                      <input
-                        id="toogle-dark"
-                        type="checkbox"
-                        className="checkbox"
-                        readOnly
-                        checked={theme === "light"}
-                      />
-                      <div>
-                        <span />
-                      </div>
-                    </label>
-                  </li>
-                </ul>
-              </nav>
-            </section>
           </nav>
         </section>
       </header>
