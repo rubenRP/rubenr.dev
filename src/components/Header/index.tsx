@@ -40,7 +40,14 @@ const Header: React.FC = () => {
         return "dark"
       })
     } else {
-      setTheme("light")
+      setTheme(() => {
+        const instance = ackeeTracker.create(process.env.ACKEE_DOMAIN)
+        instance.action("ec5f713a-0172-4398-a7c2-2e3b98fc9a13", {
+          key: "Light Mode",
+          value: 1,
+        })
+        return "light"
+      })
     }
   }
 
