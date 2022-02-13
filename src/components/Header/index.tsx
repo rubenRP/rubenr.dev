@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 
 import config from "../../../content/data/siteConfig.json"
-import * as ackeeTracker from "ackee-tracker"
 
 const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false)
@@ -56,11 +55,11 @@ const Header: React.FC = () => {
     }
   }, [])
 
-  useEffect(() => {
+  /*   useEffect(() => {
     const htmlEl = document.getElementsByTagName("html")[0]
     localStorage.setItem("theme", theme)
     htmlEl.dataset.theme = theme
-  }, [theme])
+  }, [theme]) */
 
   return (
     <>
