@@ -1,12 +1,14 @@
 ---
-title: "Pinia: La alternativa más amigable a Vuex en Vue 3"
+title: "Pinia: The friendlier alternative to Vuex in Vue 3"
 date: 2022-02-23T0:00:00.000Z
 published: true
 hero_title: Pinia
-hero_subtitle: La alternativa más amigable a Vuex en Vue 3
-description: Pequeña overview sobre esta nueva librería y las implicaciones que esto tiene en el desarrollo de aplicaciones en Vue 3.
+hero_subtitle: The friendlier alternative to Vuex in Vue 3
+description: Small overview on this new library and the implications this has on the development of applications in Vue 3.
 hero_image: hero.jpg
 thumbnail: thumb.jpg
+slug: /en/pinia-vuex/
+language: en
 taxonomy:
   category:
     - Articles
@@ -18,20 +20,20 @@ taxonomy:
     - Libraries
 ---
 
-> You can read this article also in [English](/en/pinia-vuex).
+> You can read this article also in [Spanish](/pinia-vuex).
 
-El 8 de febrero de 2022 [Vue 3](https://vuejs.org/) se convirtió en la [versión por defecto](https://blog.vuejs.org/posts/vue-3-as-the-new-default.html) de Vue. Esto es un paso importante, ya que no solo considera Vue 3 _totalmente_ estable para aplicaciones en producción; también da por hecho que el ecosistema de aplicaciones propuesto alrededor de Vue 3 es estable. Uno de los cambios sugeridos gira en torno a la gestión de estado en Vue 3, como mencionó Evan You en su [charla en la VueConf Toronto](https://www.youtube.com/watch?v=2KBHvaAWJOA&t=1183s) celebrada el pasado noviembre.
+On February 8, 2022 [Vue 3](https://vuejs.org/) became the [default version](https://blog.vuejs.org/posts/vue-3-as-the-new-default.html) of Vue. This is an important step, as it not only considers Vue 3 _totally_ stable for production applications; it also assumes that the proposed application ecosystem around Vue 3 is stable. One of the suggested changes revolves around state management in Vue 3, as Evan You mentioned in his [talk at VueConf Toronto](https://www.youtube.com/watch?v=2KBHvaAWJOA&t=1183s) held last November.
 
 <div style="margin: 50px auto 0; max-width: 600px;">
 
-![Captura de la charla con las nuevas recomendaciones para Vue3. Fuente: YouTube](vue-default-recs.png)
+![Screenshot of the talk with the new recommendations for Vue3. Source: YouTube](vue-default-recs.png)
 
 </div>
 <div class="text-center" style="margin: -15px 0 70px;">
-  <small>Captura de la charla con las nuevas recomendaciones para Vue3. Fuente: YouTube</small>
+  <small>Screenshot of the talk with the new recommendations for Vue3. Source: YouTube</small>
 </div>
 
-Como se puede ver en la imagen, hay cambios en el _tooling_, en la extensión de VSCode y en la gestión de estado, que es en lo que nos vamos a centrar hoy. Desde ahora [Pinia](https://pinia.vuejs.org/) será la opción recomendada por defecto para la gestión de estados sobre Vuex, así que haremos un pequeño _overview_ sobre esta nueva librería, qué es y las implicaciones que esto tiene en el desarrollo de aplicaciones en Vue 3.
+As you can see in the image, there are changes in the _tooling_, in the VSCode extension and in the state management, which is what we are going to focus on today. From now on [Pinia](https://pinia.vuejs.org/) will be the recommended default option for state management on Vuex, so we will do a little _overview_ about this new library, what it is and the implications this has on application development in Vue 3.
 
 <div style="margin: 50px auto; max-width: 100px;">
 
@@ -39,18 +41,18 @@ Como se puede ver en la imagen, hay cambios en el _tooling_, en la extensión de
 
 </div>
 
-## ¿Qué es Pinia?
+## What is Pinia?
 
-**[Pinia](https://pinia.vuejs.org/)** es una librería de JavaScript para el manejo de estados bajo un _store_. Permite compartir un estado a través de múltiples páginas y componentes. Esta librería surgió en 2019 a raíz de los primeros experimentos de Composition API realizados para Vue 3 y fue concebida pensando en ella, aunque también da soporte a Vue 2 y Vue 3 con _Options API._ Como características principales destaca la **gestión de tipos**, soporte para _Devtools_ y su ligereza.
+**[Pinia](https://pinia.vuejs.org/)** is a JavaScript library for state management under a _store_. It allows sharing a state across multiple pages and components. This library emerged in 2019 as a result of the first Composition API experiments done for Vue 3 and was conceived with it in mind, although it also supports Vue 2 and Vue 3 with _Options API._ As main features it highlights the **type management**, support for _Devtools_ and its lightweight.
 
 ## Vuex vs Pinia
 
-Al pensar en Vue y la gestión de estado es un ejercicio automático pensar en Vuex en lugar de Pinia; primero porque es una librería relatívamente nueva y segundo porque Vuex es una librería fuertemente establecida en la comunidad. Por esta razón utilizaremos la comparación con Vuex para establecer las diferencias y ventajas con Pinia.
+When thinking about Vue and state management it is an automatic exercise to think of Vuex instead of Pinia; first because it is a relatively new library and second because Vuex is a strongly established library in the community. For this reason we will use the comparison with Vuex to establish the differences and advantages with Pinia.
 
-### Diseño modular
+### Diseño by design
 
-El enfoque que hace Pinia es ligeramente diferente al de Vuex, ya que Pinia **genera un Store por módulo**, que puede ser importado o no en los componentes que convenga. Por una parte, simplifica el desarrollo, puesto que sólo es necesario operar con los métodos del Store (o módulo) en cada ocasión, en lugar de con el Store “_completo_” de Vuex. Esto facilita a su vez el _code splitting_ y cargar sólo lo necesario en cada componente. Sí, Pinia permite _code splitting_
-en Webpack.
+Pinia's approach is slightly different from Vuex, since Pinia **generates a Store per module**, which can be imported or not in the components as needed. On the one hand, it simplifies development, since only the methods of the Store (or module) need to be operated on each time, rather than the "_complete_" Store of Vuex. This in turn makes it easier to _code splitting_ and load only what is needed in each component. Yes, Pinia allows _code splitting_ in Webpack.
+in Webpack.
 
 ### Eliminación de Mutaciones
 
