@@ -49,34 +49,34 @@ As you can see in the image, there are changes in the _tooling_, in the VSCode e
 
 When thinking about Vue and state management it is an automatic exercise to think of Vuex instead of Pinia; first because it is a relatively new library and second because Vuex is a strongly established library in the community. For this reason we will use the comparison with Vuex to establish the differences and advantages with Pinia.
 
-### Diseño by design
+### Modular by design
 
 Pinia's approach is slightly different from Vuex, since Pinia **generates a Store per module**, which can be imported or not in the components as needed. On the one hand, it simplifies development, since only the methods of the Store (or module) need to be operated on each time, rather than the "_complete_" Store of Vuex. This in turn makes it easier to _code splitting_ and load only what is needed in each component. Yes, Pinia allows _code splitting_ in Webpack.
 in Webpack.
 
-### Eliminación de Mutaciones
+### Mutations Removal
 
-Debido al diseño de Pinia, las mutaciones ya no son neceserarias. Uno de los objetivos iniciales de las mutaciones en Vuex (y otras librerías) era poder mostrar los cambios de estado en las Devtools. A su vez se establecía como parte necesaria en el workflow de Vuex considerado “buena práctica”: Componente llama acción, acción a mutación y mutación cambia el estado. La eliminación de las mutaciones tiene ciertas implicaciones en la práctica que describiremos posteriormente.
+Due to the design of Pinia, mutations are no longer necessary. One of the initial goals of mutations in Vuex (and other libraries) was to be able to show state changes in Devtools. At the same time it was established as a necessary part of the Vuex workflow considered "good practice": Component calls action, action to mutation and mutation changes the state. The elimination of mutations has some implications in practice that we will describe later.
 
 <div style="margin: 0 auto; max-width: 700px;">
 
-![Descripción gráfica de las diferencias de arquitectura de Vuex y Pinia.](vuex-pinia-comp.png)
+![Graphical description of the architectural differences between Vuex and Pinia.](vuex-pinia-comp.png)
 
 </div>
 <div class="text-center" style="margin: -70px 0 20px;">
-  <small>Descripción gráfica de las diferencias de arquitectura de Vuex y Pinia.</small>
+  <small>Graphical description of the architectural differences between Vuex and Pinia.</small>
 </div>
 
-A su vez hay que destacar las siguientes características de Pinia:
+In addition, the following characteristics of Pinia should be noted:
 
-- **Completa integración con TypeScript**
-- **Muy ligero**, pesa sobre 1kb
-- **Soporte para _Vue devtools_**
-- **Soporte para SSR**
+- **Full TypeScript integration**
+- **Very lightweight**, weighs about 1kb
+- **Support for _Vue devtools_**
+- **Support for SSR**
 
-## Pinia en la práctica
+## Pinia in action
 
-En los siguientes fragmentos de código se muestra la definición de un módulo de Vuex y su traducción en un store de Pinia:
+The following code snippets show the definition of a Vuex module and its translation into a Pinia store:
 
 ```jsx
 // Vuex
@@ -118,17 +118,17 @@ const useCounterStore = defineStore("counter", {
 })
 ```
 
-Como se puede ver, no hay excesivas diferencias en la sintaxis de definición de un Store de Pinia vs un módulo de Vuex: Ni las acciones ni las mutaciones necesitan como parámetro el estado o el payload, pero poco más. Si bien hay que mencionar que a la definición del módulo de Vuex le debería seguir su importación en la store para que pueda ser utilizada. En Pinia esa definición es **suficiente** y ya puede ser usada en los componentes. En cualquier caso, más allá de la definición de una Store en Pinia y las ligeras diferencias respecto a Vuex, los cambios importantes vienen en el uso de las Stores.
+As you can see, there are no excessive differences in the definition syntax of a Pinia Store vs. a Vuex module: Neither the actions nor the mutations need as parameter the state or the payload, but little else. It is worth mentioning that the definition of the Vuex module should be followed by its import into the store so that it can be used. In Pinia this definition is **sufficient** and can already be used in the components. In any case, beyond the definition of a Store in Pinia and the slight differences with respect to Vuex, the important changes come in the use of the Stores.
 
-Por una parte, la invocación del store se realiza directamente en los componentes. Debido a esto, no es necesario llamar a todos los stores en la invocación a _**createApp**_ en `main.ts`. La llamada a _**createPinia**_ lo único que hace es crear una instancia de Pinia, nada más.
+On the one hand, the invocation of the store is performed directly on the components. Because of this, it is not necessary to call all the stores in the invocation to _**createApp**_ in `main.ts`. The call to _**createPinia**_ just creates an instance of Pinia, nothing else.
 
 ```jsx
 import { useCounterStore } from "../stores/counterStore"
 ```
 
-Por otra parte, el acceso a estado, getters y acciones se realiza de modo diferente, ya que hay helpers específicos para mapearlos en options API).
+On the other hand, access to state, getters and actions is done differently, since there are specific helpers to map them to options API).
 
-Las llamadas con **Options API** son más o menos similares a las ejecutadas en Vuex si se usaran los helpers.
+The calls with **Options API** are more or less similar to those executed in Vuex if the helpers were used.
 
 ```jsx
 import { mapState, mapActions } from "pinia"
@@ -145,7 +145,7 @@ export default {
 }
 ```
 
-También se pueden renombrar los métodos o estado en el componente:
+You can also rename the methods or state in the component:
 
 ```jsx
 import { mapState, mapActions } from "pinia"
@@ -166,7 +166,7 @@ export default {
 }
 ```
 
-La ventaja de Pinia, es que a su vez se puede hacer uso de los estados de manera muy sencilla en componentes con **Composition API**:
+The advantage of Pinia is that the states can be used in a very simple way in components with **Composition API**:
 
 ```jsx
 export default {
@@ -182,22 +182,22 @@ export default {
 }
 ```
 
-### Migración de Vuex a Pinia
+### Migrating from Vuex to Pinia
 
-En la documentación de Pinia una [extensa guía](https://pinia.vuejs.org/cookbook/migration-vuex.html) detallando los pasos para migrar una store de Vuex a Pinia. En cualquier caso, y una vez teniendo claros los conceptos la migración es relativamente sencilla siempre y cuando se sea un poco ordenado:
+In the Pinia documentation there is an [extensive guide](https://pinia.vuejs.org/cookbook/migration-vuex.html) detailing the steps to migrate a store from Vuex to Pinia. In any case, and once the concepts are clear, the migration is relatively simple as long as you are a bit tidy:
 
-- **Reestructuración de carpetas**: De módulos a Stores y eliminación del store principal.
-- **Conversión de módulos**: modificar sintaxis para convertirlos en Stores.
-- **Eliminación de mutaciones y conversión a acciones.**
-- **Modificación de llamadas en componentes añadiendo helpers** (si aplica). Si tras la refactorización de las stores se ha modificado el nombre de los métodos se pueden hacer uso de los alias para evitar tocar más código del necesario.
+- **Folder restructuring**: From modules to Stores and removal of the main store.
+- **Module conversion**: Modify syntax to convert them into Stores.
+- **Mutations removal and conversion to actions.**
+- **Modification of calls in components by adding helpers** (if applicable). If after the refactoring of the stores the name of the methods has been modified, aliases can be used to avoid touching more code than necessary.
 
-En mi caso he realizado la migración de un proyecto bastante sencillo y ha funcionado a la primera. Por mi experiencia lo importante del proceso de migración es ser metódico en todos los pasos. Es posible que temporalmente aparezcan errores en el editor, pero hay que esperar hasta el final para revisar y comprobar que todo está correcto.
+In my case I have done the migration of a very simple project and it worked the first time. In my experience, the important thing in the migration process is to be systematic in all the steps. It is possible that temporarily errors may appear in the editor, but you have to wait until the end to check and verify that everything is correct.
 
-## Conclusiones
+## Conclusions
 
-Desde mi punto de vista, Pinia supone un avance en la simplificación de la gestión de estados en proyectos con Vue (u otro framework JS). Es más fácil de entender, ya que no tiene conceptos que se solapen como mutación y acción. A su vez la sintaxis de uso es muy sencilla y clara: ya queda lejos las definiciones de stores y mutaciones en Redux de hace 5 años. No obstante, para proyectos que ya tienen implementado Vuex o incluso proyectos en Vue 3 con Vuex, no supone un gran avance, aunque la migración en aplicaciones pequeñas es bastante sencilla y agradecida.
+In my opinion, Pinia is a step forward in simplifying state management in projects with Vue (or another JS framework). It is easier to understand, since it does not have overlapping concepts such as mutation and action. At the same time the syntax of use is very simple and clear: the definitions of stores and mutations in Redux of 5 years ago are already far away. However, for projects that already have Vuex implemented or even projects in Vue 3 with Vuex, it is not a big step forward, although the migration in small applications is quite simple and pleasant.
 
-## Referencias
+## References
 
 [https://blog.vuejs.org/posts/vue-3-as-the-new-default.html](https://blog.vuejs.org/posts/vue-3-as-the-new-default.html)
 
