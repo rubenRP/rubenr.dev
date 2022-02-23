@@ -23,7 +23,10 @@
     "javascript",
     "react",
     "ecommerce",
-    "magento"
+    "magento",
+    "vuejs",
+    "vite",
+    "developer"
   ],
   "headerLinks": [
     {
@@ -72,11 +75,6 @@
       "label": "GitHub",
       "url": "http://github.com/rubenRP",
       "iconClassName": "fa fa-github"
-    },
-    {
-      "label": "Instagram",
-      "url": "http://instagram.com/_rubenr",
-      "iconClassName": "fa fa-instagram"
     }
   ],
   "certifications": [
