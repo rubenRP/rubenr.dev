@@ -1,17 +1,11 @@
-import React from "react"
 import { graphql } from "gatsby"
+import React from "react"
 import BodyClassName from "react-body-classname"
-
-import { PageData } from "models/page"
-import PostList from "../components/PostList"
 import Layout from "../components/Layout"
+import PostList from "../components/PostList"
 import SEO from "../components/Seo"
 
-const CategoryList: React.FC<PageData> = ({
-  data = null,
-  pageContext = null,
-  location = null,
-}) => {
+const CategoryList = ({ data = null, pageContext = null, location = null }) => {
   const { category } = pageContext
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges

@@ -1,11 +1,5 @@
+import { graphql, Link, StaticQuery } from "gatsby"
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
-
-interface Props {
-  data: {
-    allMdx: unknown
-  }
-}
 
 const recentQuery = graphql`
   query RecentQuery {
@@ -35,7 +29,7 @@ const recentQuery = graphql`
   }
 `
 
-const Recent: React.FC = () => {
+const Recent = () => {
   return (
     <>
       <div id="recent" />

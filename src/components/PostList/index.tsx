@@ -1,9 +1,9 @@
-import React, { useState } from "react"
 import { Link } from "gatsby"
+import React, { useState } from "react"
 import Hero from "../Hero"
 import Tags from "../Tags"
 
-const PostList: React.FC<any> = ({
+const PostList = ({
   posts = null,
   heroImage = null,
   heroTitle = null,

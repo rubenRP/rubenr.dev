@@ -10,7 +10,7 @@ import SEO from "../components/Seo"
 import Share from "../components/Share"
 import Tags from "../components/Tags"
 
-const BlogPostTemplate: React.FC<PageData> = ({
+const BlogPostTemplate = ({
   data = null,
   pageContext = null,
   location = null,

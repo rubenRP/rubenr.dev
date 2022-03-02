@@ -1,12 +1,11 @@
 import React from "react"
-
 import config from "../../../content/data/siteConfig.json"
 
-const SocialLinks: React.FC = () => {
+const SocialLinks = () => {
   const { userLinks } = config
   return (
     <ul className="social-links d-inline-flex list-unstyled">
-      {userLinks.map(link => {
+      {userLinks.map((link) => {
         return (
           <li key={link.label}>
             <a

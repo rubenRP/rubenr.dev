@@ -1,11 +1,5 @@
+import { graphql, Link, StaticQuery } from "gatsby"
 import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
-
-interface Props {
-  data: {
-    allMdx: unknown
-  }
-}
 
 const popularQuery = graphql`
   query PopularQuery {
@@ -35,7 +29,7 @@ const popularQuery = graphql`
   }
 `
 
-const Popular: React.FC = () => {
+const Popular = () => {
   return (
     <>
       <div id="popular" />

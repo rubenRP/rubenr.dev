@@ -1,13 +1,12 @@
-import React from "react"
 import { graphql } from "gatsby"
-import BodyClassName from "react-body-classname"
-
 import { PageData } from "models/page"
-import PostList from "../components/PostList"
+import React from "react"
+import BodyClassName from "react-body-classname"
 import Layout from "../components/Layout"
+import PostList from "../components/PostList"
 import SEO from "../components/Seo"
 
-const TagList: React.FC<PageData> = ({
+const TagList = ({
   data = null,
   pageContext = null,
   location = null,

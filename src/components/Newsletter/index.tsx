@@ -1,6 +1,6 @@
 import React, { useState } from "react"
 
-const Newsletter: React.FC = () => {
+const Newsletter = () => {
   const [message, setMessage] = useState("")
   const processForm = (form) => {
     const data = new FormData(form)

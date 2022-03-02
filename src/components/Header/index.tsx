@@ -1,9 +1,8 @@
-import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
-
+import React, { useEffect, useState } from "react"
 import config from "../../../content/data/siteConfig.json"
 
-const Header: React.FC = () => {
+const Header = () => {
   const [scrolled, setScrolled] = useState(false)
   const [theme, setTheme] = useState("light")
 
@@ -28,13 +27,13 @@ const Header: React.FC = () => {
     }
   }
 
-  const toggleTheme = () => {
+  /*   const toggleTheme = () => {
     if (theme === "light") {
       setTheme("dark")
     } else {
       setTheme("light")
     }
-  }
+  } */
 
   const { headerLinks } = config
 

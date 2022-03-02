@@ -1,12 +1,11 @@
 import React from "react"
-
 import {
-  LinkedinShareButton,
   LinkedinIcon,
-  TwitterShareButton,
+  LinkedinShareButton,
   TwitterIcon,
-  WhatsappShareButton,
+  TwitterShareButton,
   WhatsappIcon,
+  WhatsappShareButton,
 } from "react-share"
 
 interface Props {
@@ -14,7 +13,7 @@ interface Props {
   title: string
 }
 
-const Share: React.FC<Props> = ({ url, title }: Props) => {
+const Share = ({ url, title }: Props) => {
   return (
     <div className="sharer-buttons-toolbar clearfix floating">
       <TwitterShareButton url={url} title={title}>

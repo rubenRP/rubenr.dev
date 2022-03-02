@@ -1,10 +1,11 @@
 /* eslint-disable react/no-danger */
-import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
 import { HeroData } from "models/hero"
+import React, { useEffect, useState } from "react"
 import SocialLinks from "../SocialLinks"
+}
 
-const Hero: React.FC<HeroData> = ({
+const Hero = ({
   title = null,
   subtitle = null,
   text = null,
@@ -30,7 +31,7 @@ const Hero: React.FC<HeroData> = ({
     window.scroll({ top: start - offset, left: 0, behavior: "smooth" })
   }
 
-  const handleKeyDown = ev => {
+  const handleKeyDown = (ev) => {
     // M key
     if (ev.keyCode === 67) {
       toStart()
@@ -80,7 +81,7 @@ const Hero: React.FC<HeroData> = ({
           {tags ? (
             <div className="taxonomy">
               <span className="tags">
-                {tags.map(tag => (
+                {tags.map((tag) => (
                   <Link
                     to={`/blog/tag:${tag.toLowerCase()}`}
                     className="label label-rounded"

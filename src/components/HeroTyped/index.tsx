@@ -1,10 +1,9 @@
-/* eslint-disable react/no-danger */
-import React, { useRef, useState, useEffect } from "react"
 import { HeroData } from "models/hero"
+import React, { useEffect, useRef, useState } from "react"
 import Typed from "typed.js"
 import SocialLinks from "../SocialLinks"
 
-const HeroTyped: React.FC<HeroData> = ({
+const HeroTyped = ({
   title = null,
   subtitle = null,
   text = null,
@@ -28,7 +27,7 @@ const HeroTyped: React.FC<HeroData> = ({
     window.scroll({ top: start - offset, left: 0, behavior: "smooth" })
   }
 
-  const handleKeyDown = ev => {
+  const handleKeyDown = (ev) => {
     // M key
     if (ev.keyCode === 67) {
       toStart()

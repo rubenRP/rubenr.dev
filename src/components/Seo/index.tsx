@@ -5,9 +5,9 @@
  * See: https://www.gatsbyjs.org/docs/use-static-query/
  */
 
+import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Helmet from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
 import defaultOpenGraphImage from "../../../content/assets/favicon.png"
 
 interface Props {
@@ -19,7 +19,7 @@ interface Props {
   thumbnail?: any
 }
 
-const SEO: React.FC<Props> = ({
+const SEO = ({
   description = ``,
   lang = `en`,
   meta = [],

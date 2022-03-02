@@ -1,16 +1,12 @@
-import React from "react"
 import { graphql } from "gatsby"
-import BodyClassName from "react-body-classname"
-
 import { PageData } from "models/page"
-import PostList from "../components/PostList"
+import React from "react"
+import BodyClassName from "react-body-classname"
 import Layout from "../components/Layout"
+import PostList from "../components/PostList"
 import SEO from "../components/Seo"
 
-const BlogList: React.FC<PageData> = ({
-  data = null,
-  location = null,
-}: PageData) => {
+const BlogList = ({ data = null, location = null }: PageData) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges
   const heroTitle = "Blog - Dev Blog - Tech Blog"

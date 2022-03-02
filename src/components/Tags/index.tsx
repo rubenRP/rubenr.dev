@@ -1,14 +1,14 @@
-import React from "react"
 import { Link } from "gatsby"
+import React from "react"
 
 interface Props {
   items: Array<string>
 }
 
-const Tags: React.FC<Props> = ({ items }: Props) => {
+const Tags = ({ items }: Props) => {
   return (
     <span className="tags">
-      {items.map(tag => (
+      {items.map((tag) => (
         <Link
           to={`/blog/tag:${tag.toLowerCase()}`}
           key={tag}

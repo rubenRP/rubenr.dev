@@ -1,9 +1,8 @@
-/* eslint-disable react/no-danger */
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
 import { AboutData } from "models/about"
+import React from "react"
 
-const About: React.FC<AboutData> = ({ info }: AboutData) => {
+const About = ({ info }: AboutData) => {
   return (
     <>
       <div id="about" />

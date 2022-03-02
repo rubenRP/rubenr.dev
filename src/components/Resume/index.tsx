@@ -1,14 +1,13 @@
-/* eslint-disable react/no-danger */
 import { ResumeData } from "models/resume"
 import React from "react"
 
-const Resume: React.FC<ResumeData> = ({ info = null }: ResumeData) => {
+const Resume = ({ info = null }: ResumeData) => {
   return (
     <>
       <div id="resume" />
       <section className="section modular-resume bg-gray">
         <section className="container grid-md">
-          {info.map(section => (
+          {info.map((section) => (
             <div className={`columns ${section.cssClass}`} key={section.id}>
               <div className="column col-3 col-md-12 header-col">
                 <h4>
@@ -16,7 +15,7 @@ const Resume: React.FC<ResumeData> = ({ info = null }: ResumeData) => {
                 </h4>
               </div>
               <div className="column col-9 col-md-12 main-col">
-                {section.items.map(item => (
+                {section.items.map((item) => (
                   <div className="columns item" key={item.id}>
                     <div className="column col-12">
                       <h4>{item.title}</h4>

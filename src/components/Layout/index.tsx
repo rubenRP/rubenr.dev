@@ -1,10 +1,9 @@
-import React from "react"
-import Header from "../Header"
-import Footer from "../Footer"
-import MobileNav from "../MobileNav"
-
 import "font-awesome/css/font-awesome.min.css"
+import React from "react"
 import "../../styles/theme.scss"
+import Footer from "../Footer"
+import Header from "../Header"
+import MobileNav from "../MobileNav"
 
 interface Props {
   location: Location
@@ -12,7 +11,7 @@ interface Props {
   children?: unknown
 }
 
-const Layout: React.FC<Props> = ({ children }: Props) => {
+const Layout = ({ children }: Props) => {
   return (
     <>
       <div id="page-wrapper">

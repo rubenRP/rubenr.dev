@@ -1,24 +1,19 @@
-import React from "react"
 import { graphql } from "gatsby"
-import BodyClassName from "react-body-classname"
-
 import { PageData } from "models/page"
-import Popular from "../components/Popular"
-import Layout from "../components/Layout"
-import Bio from "../components/Bio"
-import SEO from "../components/Seo"
-import Newsletter from "../components/Newsletter"
-import HeroTyped from "../components/HeroTyped"
-import Recent from "../components/Recent"
-
-import home from "../../content/data/home.json"
+import React from "react"
+import BodyClassName from "react-body-classname"
 import about from "../../content/data/about.json"
+import home from "../../content/data/home.json"
 import config from "../../content/data/siteConfig.json"
+import Bio from "../components/Bio"
+import HeroTyped from "../components/HeroTyped"
+import Layout from "../components/Layout"
+import Newsletter from "../components/Newsletter"
+import Popular from "../components/Popular"
+import Recent from "../components/Recent"
+import SEO from "../components/Seo"
 
-const IndexPage: React.FC<PageData> = ({
-  data = null,
-  location = null,
-}: PageData) => {
+const IndexPage = ({ data = null, location = null }: PageData) => {
   const { siteTitle, seoKeywords } = config
   const heroClasses = "text-light hero-tiny overlay-dark-gradient"
 

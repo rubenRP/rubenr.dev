@@ -1,7 +1,7 @@
-import React from "react"
 import { StaticImage } from "gatsby-plugin-image"
+import React from "react"
 
-const Currently: React.FC = () => {
+const Currently = () => {
   return (
     <>
       <div id="working" />

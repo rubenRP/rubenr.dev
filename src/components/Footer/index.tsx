@@ -1,12 +1,9 @@
-import React from "react"
 import { Link } from "gatsby"
-
-import SocialLinks from "../SocialLinks"
+import React from "react"
 import config from "../../../content/data/siteConfig.json"
+import SocialLinks from "../SocialLinks"
 
-import M2 from "../../../content/assets/adobe-certified-expert.png"
-
-const Footer: React.FC = () => {
+const Footer = () => {
   const { footerLinks } = config
   return (
     <section id="footer" className="section">
@@ -18,7 +15,7 @@ const Footer: React.FC = () => {
           <li>© {new Date().getFullYear()} Rubén Rodríguez </li>
           <li>
             <ul className=" d-inline-flex list-unstyled">
-              {footerLinks.map(link => {
+              {footerLinks.map((link) => {
                 return (
                   <li key={link.url}>
                     <Link to={link.url} className="external">

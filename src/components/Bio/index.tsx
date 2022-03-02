@@ -1,9 +1,8 @@
-/* eslint-disable react/no-danger */
 import { Link } from "gatsby"
 import { AboutData } from "models/about"
 import React from "react"
 
-const Bio: React.FC<AboutData> = ({ info }: AboutData) => {
+const Bio = ({ info }: AboutData) => {
   return (
     <>
       <div id="about" />

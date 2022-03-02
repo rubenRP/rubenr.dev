@@ -1,17 +1,15 @@
-import React from "react"
-
 import { Link } from "gatsby"
-
+import React from "react"
 import config from "../../../content/data/siteConfig.json"
 
-const MobileNav: React.FC = () => {
+const MobileNav = () => {
   const mobileNavOnClick = () => {
     document.getElementById("toggle").classList.toggle("active")
     document.getElementById("overlay").classList.toggle("open")
     document.body.classList.toggle("mobile-nav-open")
   }
 
-  const handleKeyDown = ev => {
+  const handleKeyDown = (ev) => {
     // M key
     if (ev.keyCode === 77) {
       mobileNavOnClick()
@@ -41,7 +39,7 @@ const MobileNav: React.FC = () => {
         </div>
         <nav className="overlay-menu">
           <ul className="tree treemenu treemenu-root">
-            {headerLinks.map(link => {
+            {headerLinks.map((link) => {
               return (
                 <li className="tree-empty" key={link.url}>
                   <Link

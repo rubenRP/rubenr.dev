@@ -1,16 +1,11 @@
-import React from "react"
 import { graphql } from "gatsby"
-
 import { PageData } from "models/page"
+import React from "react"
+import gif from "../../content/assets/404.gif"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
 
-import gif from "../../content/assets/404.gif"
-
-const NotFoundPage: React.FC<PageData> = ({
-  data = {},
-  location = null,
-}: PageData) => {
+const NotFoundPage = ({ data = {}, location = null }: PageData) => {
   const siteTitle = data.site.siteMetadata.title
 
   return (

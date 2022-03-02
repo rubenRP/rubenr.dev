@@ -1,17 +1,13 @@
-import React from "react"
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import BodyClassName from "react-body-classname"
-
 import { PageData } from "models/page"
+import React from "react"
+import BodyClassName from "react-body-classname"
+import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import SEO from "../components/Seo"
-import Hero from "../components/Hero"
 
-const PageTemplate: React.FC<PageData> = ({
-  data = null,
-  location = null,
-}: PageData) => {
+const PageTemplate = ({ data = null, location = null }: PageData) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata.title
   const bodyClasses = post.frontmatter.hero_image
