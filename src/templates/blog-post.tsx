@@ -5,6 +5,7 @@ import React from "react"
 import BodyClassName from "react-body-classname"
 import Layout from "../components/Layout"
 import Newsletter from "../components/Newsletter"
+import ReadingTime from "../components/ReadingTime"
 import SEO from "../components/Seo"
 import Share from "../components/Share"
 import Tags from "../components/Tags"
@@ -59,6 +60,7 @@ const BlogPostTemplate: React.FC<PageData> = ({
                   <div className="content-tags">
                     <span className="blog-date">
                       <i className="fa fa-calendar" /> {post.frontmatter.date}
+                      <ReadingTime minutes={post.timeToRead} />
                     </span>
 
                     <span>
@@ -140,6 +142,7 @@ export const pageQuery = graphql`
     }
     mdx(id: { eq: $id }) {
       body
+      timeToRead
       frontmatter {
         title
         hero_title

@@ -7,15 +7,16 @@ export interface RedingTimeData {
 }
 
 const ReadingTime: React.FC<RedingTimeData> = ({
-  text,
   minutes,
+  text = "min read",
 }: RedingTimeData) => {
-  const icon = "🚀"
+  const time = minutes && Math.ceil(minutes * 1.4)
 
   return (
     <span className="reading-time">
-      {minutes ? `${icon.repeat(minutes / 3)} ` : ""}
-      <span>{text}</span>
+      <span>
+        {time} {text}
+      </span>
     </span>
   )
 }
