@@ -7,7 +7,7 @@ export interface HeroData {
   image?: string
   social?: boolean
   date?: string
-  tags?: [string]
+  tags?: [string] | []
   isParallax?: boolean
   arrow?: boolean
   classes?: string

@@ -29,6 +29,7 @@ const PagePreview = ({ entry, widgetFor, getAsset }) => {
                 {entry.getIn(["data", "hero_image"]) && (
                   <div className="mb-2">
                     <img
+                      alt={entry.getIn(["data", "hero_title"])}
                       className="mb-2"
                       src={getAsset(entry.getIn(["data", "hero_image"]))}
                     />
