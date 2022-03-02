@@ -3,7 +3,6 @@ import { Link } from "gatsby"
 import { HeroData } from "models/hero"
 import React, { useEffect, useState } from "react"
 import SocialLinks from "../SocialLinks"
-}
 
 const Hero = ({
   title = null,
