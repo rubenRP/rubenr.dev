@@ -74,15 +74,5 @@
       "url": "http://github.com/rubenRP",
       "iconClassName": "fa fa-github"
     }
-  ],
-  "certifications": [
-    {
-      "name": "Magento 2 Certified Professional Front End Developer",
-      "file": "middle_frontend_developer_m2.png"
-    },
-    {
-      "name": "Magento Certified Front End Developer",
-      "file": "middle_frontend_developer.png"
-    }
   ]
 }

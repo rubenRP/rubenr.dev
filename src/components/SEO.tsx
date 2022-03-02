@@ -23,7 +23,7 @@ const SEO = ({
   description = ``,
   lang = `en`,
   meta = [],
-  keywords = [null],
+  keywords = [],
   title,
   thumbnail = null,
 }: Props) => {
