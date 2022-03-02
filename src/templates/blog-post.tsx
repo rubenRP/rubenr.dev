@@ -8,7 +8,7 @@ import Newsletter from "../components/Newsletter"
 import ReadingTime from "../components/ReadingTime"
 import SEO from "../components/Seo"
 import Share from "../components/Share"
-import Tags from "../components/Tags"
+import Tags from "../components/tags"
 
 const BlogPostTemplate = ({
   data = null,

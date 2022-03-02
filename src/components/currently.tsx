@@ -11,7 +11,7 @@ const Currently = () => {
             <h3>Currently working at</h3>
             <div>
               <StaticImage
-                src="../../../content/assets/scalefast-logo.jpg"
+                src="../images/scalefast-logo.jpg"
                 alt="Scalefast"
                 placeholder="blurred"
                 layout="fixed"

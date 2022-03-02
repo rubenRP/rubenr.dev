@@ -25,7 +25,7 @@ const About = ({ info }: AboutData) => {
             <div className="column col-3 col-md-12">
               <div className="image">
                 <StaticImage
-                  src="../../../content/assets/profile-pic.jpg"
+                  src="../images/profile-pic.jpg"
                   alt="Rubén Rodríguez"
                   placeholder="blurred"
                   layout="fixed"
