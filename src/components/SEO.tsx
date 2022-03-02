@@ -8,7 +8,7 @@
 import { graphql, useStaticQuery } from "gatsby"
 import React from "react"
 import Helmet from "react-helmet"
-import defaultOpenGraphImage from "../../../content/assets/favicon.png"
+import defaultOpenGraphImage from "../../content/assets/favicon.png"
 
 interface Props {
   description?: string

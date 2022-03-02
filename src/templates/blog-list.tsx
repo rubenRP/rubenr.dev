@@ -4,7 +4,7 @@ import React from "react"
 import BodyClassName from "react-body-classname"
 import Layout from "../components/Layout"
 import PostList from "../components/PostList"
-import SEO from "../components/Seo"
+import SEO from "../components/SEO"
 
 const BlogList = ({ data = null, location = null }: PageData) => {
   const siteTitle = data.site.siteMetadata.title

@@ -3,7 +3,7 @@ import { PageData } from "models/page"
 import React from "react"
 import gif from "../../content/assets/404.gif"
 import Layout from "../components/Layout"
-import SEO from "../components/Seo"
+import SEO from "../components/SEO"
 
 const NotFoundPage = ({ data = {}, location = null }: PageData) => {
   const siteTitle = data.site.siteMetadata.title

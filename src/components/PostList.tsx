@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import React, { useState } from "react"
-import Hero from "../Hero"
-import Tags from "../tags"
+import Hero from "./Hero"
+import Tags from "./Tags"
 
 const PostList = ({
   posts = null,

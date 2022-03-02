@@ -5,13 +5,13 @@ import BodyClassName from "react-body-classname"
 import about from "../../content/data/about.json"
 import home from "../../content/data/home.json"
 import config from "../../content/data/siteConfig.json"
-import Bio from "../components/bio"
+import Bio from "../components/Bio"
 import HeroTyped from "../components/HeroTyped"
 import Layout from "../components/Layout"
 import Newsletter from "../components/Newsletter"
 import Popular from "../components/Popular"
 import Recent from "../components/Recent"
-import SEO from "../components/Seo"
+import SEO from "../components/SEO"
 
 const IndexPage = ({ data = null, location = null }: PageData) => {
   const { siteTitle, seoKeywords } = config

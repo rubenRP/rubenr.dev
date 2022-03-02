@@ -1,7 +1,7 @@
 import { Link } from "gatsby"
 import React from "react"
-import config from "../../../content/data/siteConfig.json"
-import SocialLinks from "../SocialLinks"
+import config from "../../content/data/siteConfig.json"
+import SocialLinks from "./SocialLinks"
 
 const Footer = () => {
   const { footerLinks } = config

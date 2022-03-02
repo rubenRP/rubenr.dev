@@ -5,7 +5,7 @@ import React from "react"
 import BodyClassName from "react-body-classname"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
-import SEO from "../components/Seo"
+import SEO from "../components/SEO"
 
 const PageTemplate = ({ data = null, location = null }: PageData) => {
   const post = data.mdx

@@ -4,10 +4,7 @@
   "siteTitleAlt": "Front-End Developer",
   "siteLogo": "/assets/logo-rr-svg",
   "siteUrl": "https://rubenr.dev",
-  "pathPrefix": "/",
   "siteDescription": "Madrid based developer. Front-End developer @ Scalefast. Javascript enthusiast.",
-  "siteRss": "/rss.xml",
-  "siteRssTitle": "Rubén Rodríguez - Front-End Developer",
   "dateFromFormat": "YYYY-MM-DD",
   "dateFormat": "DD/MM/YYYY",
   "postsPerPage": 10,
@@ -16,7 +13,6 @@
   "userTwitter": "@_rubenr",
   "userLocation": "Madrid, Spain",
   "userAvatar": "profile-pic.png",
-  "userDescription": "Madrid based developer. Front-End developer @ Scalefast. Javascript enthusiast.",
   "seoKeywords": [
     "blog",
     "gatsby",
@@ -72,11 +68,6 @@
       "label": "GitHub",
       "url": "http://github.com/rubenRP",
       "iconClassName": "fa fa-github"
-    },
-    {
-      "label": "Instagram",
-      "url": "http://instagram.com/_rubenr",
-      "iconClassName": "fa fa-instagram"
     }
   ],
   "certifications": [

@@ -5,11 +5,11 @@ import BodyClassName from "react-body-classname"
 import about from "../../content/data/about.json"
 import resume from "../../content/data/resume.json"
 import config from "../../content/data/siteConfig.json"
-import About from "../components/about"
+import About from "../components/About"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import Resume from "../components/Resume"
-import SEO from "../components/Seo"
+import SEO from "../components/SEO"
 
 const AboutPage = ({ data = null, location = null }: PageData) => {
   const { siteTitle, seoKeywords } = config

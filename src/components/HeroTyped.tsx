@@ -1,17 +1,14 @@
-/* eslint-disable react/no-danger */
-import { Link } from "gatsby"
 import { HeroData } from "models/hero"
-import React, { useEffect, useState } from "react"
-import SocialLinks from "../SocialLinks"
+import React, { useEffect, useRef, useState } from "react"
+import Typed from "typed.js"
+import SocialLinks from "./SocialLinks"
 
-const Hero = ({
+const HeroTyped = ({
   title = null,
   subtitle = null,
   text = null,
   image = null,
   social = false,
-  date = null,
-  tags = null,
   isParallax = true,
   arrow = true,
   classes = "text-light hero-tiny overlay-dark-gradient",
@@ -44,6 +41,23 @@ const Hero = ({
     }
   }, [])
 
+  const typeTarget = useRef(null)
+
+  useEffect(() => {
+    const typed = new Typed(typeTarget.current, {
+      strings: title,
+      typeSpeed: 50,
+      backSpeed: 10,
+      backDelay: 7000,
+      cursorChar: "_",
+      loop: true,
+    })
+
+    return () => {
+      typed.destroy()
+    }
+  }, [])
+
   return (
     <>
       <section
@@ -59,38 +73,18 @@ const Hero = ({
       >
         <div className="image-overlay" />
         <div className="container grid-md" style={{ textAlign }}>
-          {title ? <h1>{title}</h1> : ""}
+          {title ? (
+            <h1>
+              <span ref={typeTarget} />
+            </h1>
+          ) : (
+            ""
+          )}
           {subtitle ? <h2>{subtitle}</h2> : ""}
           {text ? (
             <p>
               <span dangerouslySetInnerHTML={{ __html: text }} />
             </p>
-          ) : (
-            ""
-          )}
-          {date ? (
-            <span className="blog-date">
-              <time className="dt-published">
-                <i className="fa fa-calendar" /> {date}
-              </time>
-            </span>
-          ) : (
-            ""
-          )}
-          {tags ? (
-            <div className="taxonomy">
-              <span className="tags">
-                {tags.map((tag) => (
-                  <Link
-                    to={`/blog/tag:${tag.toLowerCase()}`}
-                    className="label label-rounded"
-                    key={tag}
-                  >
-                    {tag}
-                  </Link>
-                ))}
-              </span>
-            </div>
           ) : (
             ""
           )}
@@ -116,4 +110,4 @@ const Hero = ({
   )
 }
 
-export default Hero
+export default HeroTyped

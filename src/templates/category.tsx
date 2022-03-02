@@ -3,7 +3,7 @@ import React from "react"
 import BodyClassName from "react-body-classname"
 import Layout from "../components/Layout"
 import PostList from "../components/PostList"
-import SEO from "../components/Seo"
+import SEO from "../components/SEO"
 
 const CategoryList = ({ data = null, pageContext = null, location = null }) => {
   const { category } = pageContext

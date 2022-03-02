@@ -1,6 +1,6 @@
 import { Link } from "gatsby"
 import React from "react"
-import config from "../../../content/data/siteConfig.json"
+import config from "../../content/data/siteConfig.json"
 
 const MobileNav = () => {
   const mobileNavOnClick = () => {

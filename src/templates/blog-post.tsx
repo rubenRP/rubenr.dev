@@ -6,9 +6,9 @@ import BodyClassName from "react-body-classname"
 import Layout from "../components/Layout"
 import Newsletter from "../components/Newsletter"
 import ReadingTime from "../components/ReadingTime"
-import SEO from "../components/Seo"
+import SEO from "../components/SEO"
 import Share from "../components/Share"
-import Tags from "../components/tags"
+import Tags from "../components/Tags"
 
 const BlogPostTemplate = ({
   data = null,
