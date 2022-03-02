@@ -3,12 +3,7 @@ import React, { useState } from "react"
 import Hero from "./Hero"
 import Tags from "./Tags"
 
-const PostList = ({
-  posts = null,
-  heroImage = null,
-  heroTitle = null,
-  heroText = null,
-}) => {
+const PostList = ({ posts = null, heroImage, heroTitle = null, heroText }) => {
   const [filteredLanguage, setFilteredLanguage] = useState("es")
 
   const filteredPosts = posts.filter(({ node }) => {
@@ -110,10 +105,8 @@ const PostList = ({
                                 {node.frontmatter.date}
                               </small>
                             </div>
-                            {node.frontmatter.taxonomy ? (
+                            {node.frontmatter.taxonomy && (
                               <Tags items={node.frontmatter.taxonomy.tag} />
-                            ) : (
-                              ""
                             )}
                           </div>
                         </div>

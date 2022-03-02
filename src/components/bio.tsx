@@ -1,5 +1,5 @@
 import { Link } from "gatsby"
-import { AboutData } from "models/about"
+import { AboutData } from "../models/about"
 import React from "react"
 
 const Bio = ({ info }: AboutData) => {

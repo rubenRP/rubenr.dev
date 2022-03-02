@@ -4,7 +4,7 @@
   "siteTitleAlt": "Front-End Developer",
   "siteLogo": "/assets/logo-rr-svg",
   "siteUrl": "https://rubenr.dev",
-  "siteDescription": "Madrid based developer. Front-End developer @ Scalefast. Javascript enthusiast.",
+  "siteDescription": "Front-End developer. Javascript & Open Source enthusiast. This is my personal website & blog. I write about tech, programming, and web technologies.",
   "dateFromFormat": "YYYY-MM-DD",
   "dateFormat": "DD/MM/YYYY",
   "postsPerPage": 10,
@@ -15,11 +15,16 @@
   "userAvatar": "profile-pic.png",
   "seoKeywords": [
     "blog",
-    "gatsby",
+    "front-end",
+    "developer",
     "javascript",
     "react",
+    "gatsby",
+    "angular",
     "ecommerce",
-    "magento"
+    "magento",
+    "vuejs",
+    "vite"
   ],
   "headerLinks": [
     {

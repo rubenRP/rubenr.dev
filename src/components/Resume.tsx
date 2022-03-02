@@ -1,7 +1,7 @@
-import { ResumeData } from "models/resume"
+import { ResumeData } from "../models/resume"
 import React from "react"
 
-const Resume = ({ info = null }: ResumeData) => {
+const Resume = ({ info }: ResumeData) => {
   return (
     <>
       <div id="resume" />

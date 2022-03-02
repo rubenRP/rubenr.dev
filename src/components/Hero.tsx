@@ -1,17 +1,17 @@
 /* eslint-disable react/no-danger */
 import { Link } from "gatsby"
-import { HeroData } from "models/hero"
+import { HeroData } from "../models/hero"
 import React, { useEffect, useState } from "react"
 import SocialLinks from "./SocialLinks"
 
 const Hero = ({
   title = null,
-  subtitle = null,
-  text = null,
-  image = null,
+  subtitle,
+  image,
+  text,
   social = false,
-  date = null,
-  tags = null,
+  date,
+  tags = [],
   isParallax = true,
   arrow = true,
   classes = "text-light hero-tiny overlay-dark-gradient",
@@ -25,12 +25,12 @@ const Hero = ({
   }
 
   const toStart = () => {
-    const start = document.getElementById("start").offsetTop
+    const start = document.getElementById("start")!.offsetTop
     const offset = 45
     window.scroll({ top: start - offset, left: 0, behavior: "smooth" })
   }
 
-  const handleKeyDown = (ev) => {
+  const handleKeyDown = (ev: any) => {
     // M key
     if (ev.keyCode === 67) {
       toStart()
@@ -48,9 +48,9 @@ const Hero = ({
     <>
       <section
         className={`section modular-hero hero ${
-          subtitle ? "title-h1h2" : ""
-        } ${classes} ${isParallax ? "parallax" : ""} ${
-          smallHeadings ? "small-headings" : ""
+          subtitle && "title-h1h2"
+        } ${classes} ${isParallax && "parallax"} ${
+          smallHeadings && "small-headings"
         }`}
         style={{
           backgroundPositionY: position,
@@ -59,25 +59,21 @@ const Hero = ({
       >
         <div className="image-overlay" />
         <div className="container grid-md" style={{ textAlign }}>
-          {title ? <h1>{title}</h1> : ""}
-          {subtitle ? <h2>{subtitle}</h2> : ""}
-          {text ? (
+          {title && <h1>{title}</h1>}
+          {subtitle && <h2>{subtitle}</h2>}
+          {text && (
             <p>
               <span dangerouslySetInnerHTML={{ __html: text }} />
             </p>
-          ) : (
-            ""
           )}
-          {date ? (
+          {date && (
             <span className="blog-date">
               <time className="dt-published">
                 <i className="fa fa-calendar" /> {date}
               </time>
             </span>
-          ) : (
-            ""
           )}
-          {tags ? (
+          {tags && (
             <div className="taxonomy">
               <span className="tags">
                 {tags.map((tag) => (
@@ -91,12 +87,10 @@ const Hero = ({
                 ))}
               </span>
             </div>
-          ) : (
-            ""
           )}
         </div>
-        {social ? <SocialLinks /> : ""}
-        {arrow ? (
+        {social && <SocialLinks />}
+        {arrow && (
           <i
             id="to-start"
             className="pulse fa fa-angle-down"
@@ -108,8 +102,6 @@ const Hero = ({
           >
             <span className="d-none">Go to content</span>
           </i>
-        ) : (
-          ""
         )}
       </section>
     </>

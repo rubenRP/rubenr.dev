@@ -1,5 +1,5 @@
 import { StaticImage } from "gatsby-plugin-image"
-import { AboutData } from "models/about"
+import { AboutData } from "../models/about"
 import React from "react"
 
 const About = ({ info }: AboutData) => {

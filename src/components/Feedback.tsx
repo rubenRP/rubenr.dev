@@ -3,7 +3,9 @@ import config from "../../content/data/siteConfig.json"
 
 const Feedback = () => {
   const { userLinks } = config
-  const [twitter] = userLinks.filter((link) => link.label === "Twitter")
+  const [twitter] = userLinks.filter(
+    (link: { label: string }) => link.label === "Twitter"
+  )
 
   return (
     <section className="section modular-features offset-box">

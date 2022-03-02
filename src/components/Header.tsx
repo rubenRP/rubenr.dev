@@ -15,12 +15,12 @@ const Header = () => {
   }
 
   const mobileNavOnClick = () => {
-    document.getElementById("toggle").classList.toggle("active")
-    document.getElementById("overlay").classList.toggle("open")
+    document.getElementById("toggle")?.classList.toggle("active")
+    document.getElementById("overlay")?.classList.toggle("open")
     document.body.classList.toggle("mobile-nav-open")
   }
 
-  const handleKeyDown = (ev) => {
+  const handleKeyDown = (ev: any) => {
     // M key
     if (ev.keyCode === 77) {
       mobileNavOnClick()

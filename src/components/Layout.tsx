@@ -8,7 +8,7 @@ import MobileNav from "./MobileNav"
 interface Props {
   location: Location
   title: string
-  children?: unknown
+  children?: React.ReactNode
 }
 
 const Layout = ({ children }: Props) => {

@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 const Newsletter = () => {
   const [message, setMessage] = useState("")
-  const processForm = (form) => {
+  const processForm = (form: HTMLFormElement | undefined) => {
     const data = new FormData(form)
     data.append("form-name", "newsletter")
     fetch("/", {
@@ -16,7 +16,7 @@ const Newsletter = () => {
         setMessage(`Error: ${error}`)
       })
   }
-  const handleSubmit = (e) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault()
     processForm(e.target)
   }
@@ -33,12 +33,6 @@ const Newsletter = () => {
                 <span role="img" aria-label="Newsletter">
                   🚀
                 </span>
-                <br />
-                (content in{" "}
-                <span role="img" aria-label="Flag">
-                  🇪🇸
-                </span>{" "}
-                )
               </p>
               <form
                 className="email-form form"

@@ -1,13 +1,13 @@
-import { HeroData } from "models/hero"
+import { HeroData } from "../models/hero"
 import React, { useEffect, useRef, useState } from "react"
 import Typed from "typed.js"
 import SocialLinks from "./SocialLinks"
 
 const HeroTyped = ({
   title = null,
-  subtitle = null,
-  text = null,
-  image = null,
+  subtitle,
+  text,
+  image,
   social = false,
   isParallax = true,
   arrow = true,
@@ -22,12 +22,12 @@ const HeroTyped = ({
   }
 
   const toStart = () => {
-    const start = document.getElementById("start").offsetTop
+    const start = document.getElementById("start")!.offsetTop
     const offset = 45
     window.scroll({ top: start - offset, left: 0, behavior: "smooth" })
   }
 
-  const handleKeyDown = (ev) => {
+  const handleKeyDown = (ev: any) => {
     // M key
     if (ev.keyCode === 67) {
       toStart()
@@ -44,7 +44,7 @@ const HeroTyped = ({
   const typeTarget = useRef(null)
 
   useEffect(() => {
-    const typed = new Typed(typeTarget.current, {
+    const typed = new Typed(typeTarget.current!, {
       strings: title,
       typeSpeed: 50,
       backSpeed: 10,
@@ -62,9 +62,9 @@ const HeroTyped = ({
     <>
       <section
         className={`section modular-hero hero ${
-          subtitle ? "title-h1h2" : ""
-        } ${classes} ${isParallax ? "parallax" : ""} ${
-          smallHeadings ? "small-headings" : ""
+          subtitle && "title-h1h2"
+        } ${classes} ${isParallax && "parallax"} ${
+          smallHeadings && "small-headings"
         }`}
         style={{
           backgroundPositionY: position,
@@ -73,24 +73,20 @@ const HeroTyped = ({
       >
         <div className="image-overlay" />
         <div className="container grid-md" style={{ textAlign }}>
-          {title ? (
+          {title && (
             <h1>
               <span ref={typeTarget} />
             </h1>
-          ) : (
-            ""
           )}
-          {subtitle ? <h2>{subtitle}</h2> : ""}
-          {text ? (
+          {subtitle && <h2>{subtitle}</h2>}
+          {text && (
             <p>
               <span dangerouslySetInnerHTML={{ __html: text }} />
             </p>
-          ) : (
-            ""
           )}
         </div>
-        {social ? <SocialLinks /> : ""}
-        {arrow ? (
+        {social && <SocialLinks />}
+        {arrow && (
           <i
             id="to-start"
             className="pulse fa fa-angle-down"
@@ -102,8 +98,6 @@ const HeroTyped = ({
           >
             <span className="d-none">Go to content</span>
           </i>
-        ) : (
-          ""
         )}
       </section>
     </>

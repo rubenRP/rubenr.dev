@@ -1,5 +1,5 @@
 import { graphql } from "gatsby"
-import { PageData } from "models/page"
+import { PageData } from "../models/page"
 import React from "react"
 import BodyClassName from "react-body-classname"
 import about from "../../content/data/about.json"
@@ -11,13 +11,13 @@ import Layout from "../components/Layout"
 import Resume from "../components/Resume"
 import SEO from "../components/SEO"
 
-const AboutPage = ({ data = null, location = null }: PageData) => {
-  const { siteTitle, seoKeywords } = config
+const AboutPage = ({ data, location }: PageData) => {
+  const { siteTitleShort, seoKeywords } = config
   const heroClasses = "text-light hero-tiny overlay-dark-gradient"
 
   return (
     <BodyClassName className="header-dark header-transparent header-fixed header-animated">
-      <Layout location={location} title={siteTitle}>
+      <Layout location={location} title={siteTitleShort}>
         <SEO title="About" keywords={seoKeywords} />
         <Hero
           title="About me"
