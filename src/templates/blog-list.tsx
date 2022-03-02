@@ -1,12 +1,12 @@
 import { graphql } from "gatsby"
-import { PageData } from "models/page"
 import React from "react"
 import BodyClassName from "react-body-classname"
 import Layout from "../components/Layout"
 import PostList from "../components/PostList"
 import SEO from "../components/SEO"
+import { PageData } from "../models/page"
 
-const BlogList = ({ data = null, location = null }: PageData) => {
+const BlogList = ({ data = null, location }: PageData) => {
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges
   const heroTitle = "Blog - Dev Blog - Tech Blog"

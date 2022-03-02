@@ -1,13 +1,13 @@
 import { graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { PageData } from "models/page"
 import React from "react"
 import BodyClassName from "react-body-classname"
 import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
+import { PageData } from "../models/page"
 
-const PageTemplate = ({ data = null, location = null }: PageData) => {
+const PageTemplate = ({ data, location }: PageData) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata.title
   const bodyClasses = post.frontmatter.hero_image
@@ -18,7 +18,7 @@ const PageTemplate = ({ data = null, location = null }: PageData) => {
     <BodyClassName className={bodyClasses}>
       <Layout location={location} title={siteTitle}>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
-        {post.frontmatter.hero_image ? (
+        {post.frontmatter.hero_image && (
           <Hero
             title={
               post.frontmatter.hero_title
@@ -39,8 +39,6 @@ const PageTemplate = ({ data = null, location = null }: PageData) => {
             }
             smallHeadings
           />
-        ) : (
-          ""
         )}
         <section id="start" />
         <section id="body-wrapper" className="section blog-listing">
@@ -48,7 +46,7 @@ const PageTemplate = ({ data = null, location = null }: PageData) => {
             <div className="columns">
               <div id="item" className="column col-12">
                 <div className="content-item h-entry">
-                  {!post.frontmatter.hero_image ? (
+                  {!post.frontmatter.hero_image && (
                     <div className="content-title">
                       {post.frontmatter.hero_text ? (
                         <div>
@@ -67,8 +65,6 @@ const PageTemplate = ({ data = null, location = null }: PageData) => {
                         </h2>
                       )}
                     </div>
-                  ) : (
-                    ""
                   )}
 
                   <div className="e-content">

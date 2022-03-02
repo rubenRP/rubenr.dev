@@ -1,16 +1,12 @@
 import { graphql } from "gatsby"
-import { PageData } from "models/page"
 import React from "react"
 import BodyClassName from "react-body-classname"
 import Layout from "../components/Layout"
 import PostList from "../components/PostList"
 import SEO from "../components/SEO"
+import { PageData } from "../models/page"
 
-const TagList = ({
-  data = null,
-  pageContext = null,
-  location = null,
-}: PageData) => {
+const TagList = ({ data, pageContext, location }: PageData) => {
   const { tag } = pageContext
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges

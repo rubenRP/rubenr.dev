@@ -1,5 +1,4 @@
 import { graphql } from "gatsby"
-import { PageData } from "../models/page"
 import React from "react"
 import BodyClassName from "react-body-classname"
 import about from "../../content/data/about.json"
@@ -10,6 +9,7 @@ import Hero from "../components/Hero"
 import Layout from "../components/Layout"
 import Resume from "../components/Resume"
 import SEO from "../components/SEO"
+import { PageData } from "../models/page"
 
 const AboutPage = ({ data, location }: PageData) => {
   const { siteTitleShort, seoKeywords } = config

@@ -1,6 +1,5 @@
 import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import { PageData } from "models/page"
 import React from "react"
 import BodyClassName from "react-body-classname"
 import Layout from "../components/Layout"
@@ -9,12 +8,9 @@ import ReadingTime from "../components/ReadingTime"
 import SEO from "../components/SEO"
 import Share from "../components/Share"
 import Tags from "../components/Tags"
+import { PageData } from "../models/page"
 
-const BlogPostTemplate = ({
-  data = null,
-  pageContext = null,
-  location = null,
-}: PageData) => {
+const BlogPostTemplate = ({ data, pageContext, location }: PageData) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext

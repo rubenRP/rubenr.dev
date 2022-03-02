@@ -5,7 +5,7 @@ import Layout from "../components/Layout"
 import PostList from "../components/PostList"
 import SEO from "../components/SEO"
 
-const CategoryList = ({ data = null, pageContext = null, location = null }) => {
+const CategoryList = ({ data, pageContext, location }: any) => {
   const { category } = pageContext
   const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges

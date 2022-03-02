@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import Hero from "./Hero"
 import Tags from "./Tags"
 
-const PostList = ({ posts = null, heroImage, heroTitle = null, heroText }) => {
+const PostList = ({ posts, heroImage, heroTitle, heroText }: any) => {
   const [filteredLanguage, setFilteredLanguage] = useState("es")
 
   const filteredPosts = posts.filter(({ node }) => {

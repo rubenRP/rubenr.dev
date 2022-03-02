@@ -1,5 +1,4 @@
 import { graphql } from "gatsby"
-import { PageData } from "models/page"
 import React from "react"
 import BodyClassName from "react-body-classname"
 import about from "../../content/data/about.json"
@@ -12,8 +11,9 @@ import Newsletter from "../components/Newsletter"
 import Popular from "../components/Popular"
 import Recent from "../components/Recent"
 import SEO from "../components/SEO"
+import { PageData } from "../models/page"
 
-const IndexPage = ({ data = null, location = null }: PageData) => {
+const IndexPage = ({ data, location }: PageData) => {
   const { siteTitle, seoKeywords } = config
   const heroClasses = "text-light hero-tiny overlay-dark-gradient"
 

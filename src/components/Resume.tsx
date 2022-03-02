@@ -1,5 +1,5 @@
-import { ResumeData } from "../models/resume"
 import React from "react"
+import { ResumeData } from "../models/resume"
 
 const Resume = ({ info }: ResumeData) => {
   return (
