@@ -1,15 +1,13 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-import BodyClassName from "react-body-classname"
-
 import { PageData } from "models/page"
+import React from "react"
+import BodyClassName from "react-body-classname"
 import Layout from "../components/Layout"
+import Newsletter from "../components/Newsletter"
 import SEO from "../components/Seo"
 import Share from "../components/Share"
 import Tags from "../components/Tags"
-import ReadingTime from "../components/ReadingTime"
-import Newsletter from "../components/Newsletter"
 
 const BlogPostTemplate: React.FC<PageData> = ({
   data = null,
@@ -61,10 +59,6 @@ const BlogPostTemplate: React.FC<PageData> = ({
                   <div className="content-tags">
                     <span className="blog-date">
                       <i className="fa fa-calendar" /> {post.frontmatter.date}
-                      <ReadingTime
-                        text={post.fields.readingTime.text}
-                        minutes={post.fields.readingTime.minutes}
-                      />
                     </span>
 
                     <span>
@@ -168,10 +162,6 @@ export const pageQuery = graphql`
       }
       fields {
         slug
-        readingTime {
-          text
-          minutes
-        }
       }
     }
   }

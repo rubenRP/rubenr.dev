@@ -24,7 +24,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-feed-mdx`,
     `gatsby-plugin-twitter`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -67,19 +66,21 @@ module.exports = {
             },
           },
           {
-            resolve: `gatsby-remark-vscode`,
-            options: {
-              theme: "Dark+ (default dark)",
-              injectStyles: true,
-              logLevel: "warn",
-            },
-          },
-          {
             resolve: `gatsby-remark-copy-linked-files`,
           },
           {
             resolve: `gatsby-remark-smartypants`,
           },
+        ],
+        remarkPlugins: [
+          [
+            require("gatsby-remark-vscode").remarkPlugin,
+            {
+              theme: "Dark+ (default dark)",
+              injectStyles: true,
+              logLevel: "warn",
+            },
+          ],
         ],
       },
     },
@@ -109,10 +110,9 @@ module.exports = {
     {
       resolve: "gatsby-plugin-sitemap",
       options: {
-        exclude: [`/blog/page:*`, `/blog/tag:*`, `/blog/category:*`],
+        excludes: [`/blog/tag:*`, `/blog/category:*`],
       },
     },
-    "gatsby-remark-reading-time",
     {
       resolve: "gatsby-plugin-i18n",
       options: {
