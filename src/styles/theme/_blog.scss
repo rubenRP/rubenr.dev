@@ -29,6 +29,12 @@
   .label {
     margin: 0 2px;
   }
+  .blog-tags {
+    @include breakpoint(md) {
+      text-align: center;
+      margin-top: 10px;
+    }
+  }
 }
 
 /** Blog Item **/

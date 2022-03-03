@@ -8,7 +8,6 @@ description: En este post vamos a desarrollar un boilerplate para desarrollar
   PWA utilizando Vite como herramienta de building y Vue.js 3 como framework
   JavaScript.
 thumbnail: thumb.jpg
-popular: true
 taxonomy:
   category:
     - Articles

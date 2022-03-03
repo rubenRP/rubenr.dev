@@ -7,6 +7,7 @@ hero_subtitle: Create and publish Angular packages in your repository.
 description: In this article we will delve into publishing Angular packages using GitHub Packages.
 thumbnail: github-thumb.jpg
 language: en
+popular: true
 taxonomy:
   category:
     - Articles

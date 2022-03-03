@@ -1,7 +1,8 @@
 // Core variables and mixins
 @import "theme/variables";
 
-@import "~spectre.css/src/spectre";
+// Spectre CSS framework with division fix.
+@import "spectre.css/spectre";
 
 @import "theme/fonts";
 @import "theme/mixins";

@@ -8,10 +8,10 @@ hero_text: "Here a small list of software and hardware that I use."
 
 ## 💻 Hardware
 
-- **Computer **: 2017 13-inch MacBook Pro, Two Thunderbolt 3 ports
+- **Computer **: 2021 13-inch MacBook Pro M1
 - **External Display**: Dell U2414H
 - **Keyboard**: Apple Magic Keyboard || Custom bm60rgb mechanical keyboard
-- **Mouse**: Apple Magic Mouse
+- **Mouse**: Logitech MX Master 3
 - **Headphones**: Sennheiser Hd-25 || Huawei FreeBuds Pro
 
 ## 📀 Software

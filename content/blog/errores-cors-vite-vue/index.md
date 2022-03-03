@@ -7,7 +7,6 @@ hero_subtitle: Solución a los problemas de CORS en local y desplegando con Netl
 description: En el artículo de hoy hablaremos de CORS, configuración de proxies con Vite y redirecciones con Netlify.
 hero_image: hero.jpg
 thumbnail: thumb.jpg
-popular: true
 taxonomy:
   category:
     - Articles

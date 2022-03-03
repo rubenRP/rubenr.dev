@@ -1,21 +1,15 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
+import React from "react"
 import BodyClassName from "react-body-classname"
-
-import { PageData } from "models/page"
 import Layout from "../components/Layout"
-import SEO from "../components/Seo"
-import Share from "../components/Share"
-import Tags from "../components/Tags"
-import ReadingTime from "../components/ReadingTime"
 import Newsletter from "../components/Newsletter"
+import ReadingTime from "../components/ReadingTime"
+import SEO from "../components/SEO"
+import Tags from "../components/Tags"
+import { PageData } from "../models/page"
 
-const BlogPostTemplate: React.FC<PageData> = ({
-  data = null,
-  pageContext = null,
-  location = null,
-}: PageData) => {
+const BlogPostTemplate = ({ data, pageContext, location }: PageData) => {
   const post = data.mdx
   const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
@@ -61,13 +55,10 @@ const BlogPostTemplate: React.FC<PageData> = ({
                   <div className="content-tags">
                     <span className="blog-date">
                       <i className="fa fa-calendar" /> {post.frontmatter.date}
-                      <ReadingTime
-                        text={post.fields.readingTime.text}
-                        minutes={post.fields.readingTime.minutes}
-                      />
+                      <ReadingTime minutes={post.timeToRead} />
                     </span>
 
-                    <span>
+                    <span className="blog-tags">
                       {post.frontmatter.taxonomy && <Tags items={tags} />}
                     </span>
                   </div>
@@ -77,6 +68,7 @@ const BlogPostTemplate: React.FC<PageData> = ({
                       <div className="mb-2">
                         <img
                           className="mb-2"
+                          alt={post.frontmatter.hero_title}
                           src={
                             post.frontmatter.hero_image.childImageSharp
                               .gatsbyImageData.images.fallback.src
@@ -123,12 +115,6 @@ const BlogPostTemplate: React.FC<PageData> = ({
           </section>
         </section>
         <Newsletter />
-        <Share
-          url={`${data.site.siteMetadata.siteUrl}${
-            post.frontmatter.slug || post.fields.slug
-          }`}
-          title={`${post.frontmatter.title}`}
-        />
       </Layout>
     </BodyClassName>
   )
@@ -146,6 +132,7 @@ export const pageQuery = graphql`
     }
     mdx(id: { eq: $id }) {
       body
+      timeToRead
       frontmatter {
         title
         hero_title
@@ -168,10 +155,6 @@ export const pageQuery = graphql`
       }
       fields {
         slug
-        readingTime {
-          text
-          minutes
-        }
       }
     }
   }

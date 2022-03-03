@@ -4,29 +4,23 @@
   "siteTitleAlt": "Front-End Developer",
   "siteLogo": "/assets/logo-rr-svg",
   "siteUrl": "https://rubenr.dev",
-  "pathPrefix": "/",
-  "siteDescription": "Madrid based developer. Front-End developer @ Scalefast. Javascript enthusiast.",
-  "siteRss": "/rss.xml",
-  "siteRssTitle": "Rubén Rodríguez - Front-End Developer",
-  "dateFromFormat": "YYYY-MM-DD",
-  "dateFormat": "DD/MM/YYYY",
-  "postsPerPage": 10,
+  "siteDescription": "Front-End developer. Javascript & Open Source enthusiast. This is my personal website & blog. I write about tech, programming, and web technologies.",
   "userName": "Rubén Rodríguez",
   "userEmail": "hola@rubenr.dev",
   "userTwitter": "@_rubenr",
   "userLocation": "Madrid, Spain",
-  "userAvatar": "profile-pic.png",
-  "userDescription": "Madrid based developer. Front-End developer @ Scalefast. Javascript enthusiast.",
   "seoKeywords": [
     "blog",
-    "gatsby",
+    "front-end",
+    "developer",
     "javascript",
     "react",
+    "gatsby",
+    "angular",
     "ecommerce",
     "magento",
     "vuejs",
-    "vite",
-    "developer"
+    "vite"
   ],
   "headerLinks": [
     {
@@ -75,16 +69,6 @@
       "label": "GitHub",
       "url": "http://github.com/rubenRP",
       "iconClassName": "fa fa-github"
-    }
-  ],
-  "certifications": [
-    {
-      "name": "Magento 2 Certified Professional Front End Developer",
-      "file": "middle_frontend_developer_m2.png"
-    },
-    {
-      "name": "Magento Certified Front End Developer",
-      "file": "middle_frontend_developer.png"
     }
   ]
 }
