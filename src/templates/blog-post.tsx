@@ -68,6 +68,7 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageData) => {
                       <div className="mb-2">
                         <img
                           className="mb-2"
+                          alt={post.frontmatter.hero_title}
                           src={
                             post.frontmatter.hero_image.childImageSharp
                               .gatsbyImageData.images.fallback.src
