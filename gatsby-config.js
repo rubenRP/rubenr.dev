@@ -109,7 +109,6 @@ module.exports = {
     `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-sitemap",
-      siteUrl: `https://rubenr.dev`,
       options: {
         excludes: [`/blog/tag:*`, `/blog/category:*`],
       },
