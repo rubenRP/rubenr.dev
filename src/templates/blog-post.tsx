@@ -6,7 +6,6 @@ import Layout from "../components/Layout"
 import Newsletter from "../components/Newsletter"
 import ReadingTime from "../components/ReadingTime"
 import SEO from "../components/SEO"
-import Share from "../components/Share"
 import Tags from "../components/Tags"
 import { PageData } from "../models/page"
 
@@ -115,12 +114,6 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageData) => {
           </section>
         </section>
         <Newsletter />
-        <Share
-          url={`${data.site.siteMetadata.siteUrl}${
-            post.frontmatter.slug || post.fields.slug
-          }`}
-          title={`${post.frontmatter.title}`}
-        />
       </Layout>
     </BodyClassName>
   )

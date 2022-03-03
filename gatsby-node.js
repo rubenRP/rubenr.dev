@@ -2,7 +2,7 @@ const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
-  const { createPage, createRedirect } = actions
+  const { createPage } = actions
 
   const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
   const defaultPage = path.resolve(`./src/templates/page.tsx`)
@@ -78,18 +78,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   // Create pages and blog posts.
   const posts = result.data.pagesGroup.edges
-  const postsPerPage = 10
-  const numPages = Math.ceil(posts.length / postsPerPage)
   const regex = "blog/"
-
-  Array.from({ length: numPages }).forEach((_, i) => {
-    if (i > 0) {
-      createRedirect({
-        fromPath: `/blog/page:${i + 1}`,
-        toPath: `/blog`,
-      })
-    }
-  })
 
   createPage({
     path: `/blog`,
@@ -105,7 +94,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
     // Blog Posts
     if (path.match(regex)) {
-      pathUrl = "blog" + pathUrl
       createPage({
         path: post.node.fields.slug,
         component: blogPost,
@@ -115,12 +103,6 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
           next,
           language: language || "es",
         },
-      })
-      createRedirect({
-        fromPath: pathUrl,
-        toPath: post.node.fields.slug,
-        redirectInBrowser: true,
-        isPermanent: true,
       })
       // Pages
     } else {
