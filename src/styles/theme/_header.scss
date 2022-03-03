@@ -58,7 +58,9 @@
     justify-content: flex-end;
     padding-right: 10px;
     @include breakpoint(md) {
-      display: none;
+      //display: none;
+      padding-right: 0;
+      margin-right: 0;
     }
   }
 

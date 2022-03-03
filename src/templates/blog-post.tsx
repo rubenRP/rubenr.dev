@@ -59,7 +59,7 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageData) => {
                       <ReadingTime minutes={post.timeToRead} />
                     </span>
 
-                    <span>
+                    <span className="blog-tags">
                       {post.frontmatter.taxonomy && <Tags items={tags} />}
                     </span>
                   </div>

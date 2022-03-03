@@ -101,20 +101,6 @@ const Header = () => {
           </nav>
         </section>
       </header>
-      <div className="mobile-menu">
-        <div
-          className="button_container"
-          id="toggle"
-          onClick={mobileNavOnClick}
-          onKeyDown={handleKeyDown}
-          role="button"
-          tabIndex={0}
-        >
-          <span className="top" />
-          <span className="middle" />
-          <span className="bottom" />
-        </div>
-      </div>
     </>
   )
 }
