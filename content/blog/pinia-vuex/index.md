@@ -207,4 +207,4 @@ Desde mi punto de vista, Pinia supone un avance en la simplificación de la gest
 
 [https://www.youtube.com/watch?v=2KBHvaAWJOA&t=1183s](https://www.youtube.com/watch?v=2KBHvaAWJOA&t=1183s)
 
-Photo by [Asso Myron](https://unsplash.com/@assomyron?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/pineapple?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
+Photo by <a href="https://unsplash.com/@phienix_han?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Phoenix Han</a> on <a href="https://unsplash.com/s/photos/pineapple?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
