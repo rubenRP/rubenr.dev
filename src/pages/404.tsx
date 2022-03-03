@@ -1,8 +1,8 @@
 import { graphql } from "gatsby"
 import React from "react"
-import gif from "../../content/assets/404.gif"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
+import gif from "../images/404.gif"
 import { PageData } from "../models/page"
 
 const NotFoundPage = ({ data = {}, location }: PageData) => {
