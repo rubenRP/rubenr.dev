@@ -8,7 +8,7 @@ const popularQuery = graphql`
       filter: {
         parent: { id: {} }
         fileAbsolutePath: { regex: "\\\\/blog/" }
-        frontmatter: { popular: { eq: true }, language: { ne: "en" } }
+        frontmatter: { popular: { eq: true } }
       }
       limit: 4
     ) {

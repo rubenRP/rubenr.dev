@@ -4,7 +4,7 @@ import Hero from "./Hero"
 import Tags from "./Tags"
 
 const PostList = ({ posts, heroImage, heroTitle, heroText }: any) => {
-  const [filteredLanguage, setFilteredLanguage] = useState("es")
+  const [filteredLanguage, setFilteredLanguage] = useState("en")
 
   const filteredPosts = posts.filter(({ node }) => {
     const lang = node.frontmatter.language || "es"
@@ -26,16 +26,6 @@ const PostList = ({ posts, heroImage, heroTitle, heroText }: any) => {
             <div id="item" className="column col-12">
               <div className="language-filter">
                 <a
-                  className={filteredLanguage == "es" ? "chip active" : "chip"}
-                  onClick={() => setFilteredLanguage("es")}
-                >
-                  <figure
-                    className="avatar avatar-sm"
-                    data-initial="ES"
-                  ></figure>
-                  Spanish
-                </a>
-                <a
                   className={filteredLanguage == "en" ? "chip active" : "chip"}
                   onClick={() => setFilteredLanguage("en")}
                 >
@@ -44,6 +34,16 @@ const PostList = ({ posts, heroImage, heroTitle, heroText }: any) => {
                     data-initial="EN"
                   ></figure>
                   English
+                </a>
+                <a
+                  className={filteredLanguage == "es" ? "chip active" : "chip"}
+                  onClick={() => setFilteredLanguage("es")}
+                >
+                  <figure
+                    className="avatar avatar-sm"
+                    data-initial="ES"
+                  ></figure>
+                  Spanish
                 </a>
               </div>
               {filteredPosts.map(({ node }) => {

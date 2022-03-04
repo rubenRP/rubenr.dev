@@ -6,7 +6,6 @@ hero_title: GitHub packages
 hero_subtitle: Creación y publicación de paquetes de Angular en tu repositorio.
 description: En este artículo profundizaremos en la publicación de paquetes de Angular usando GitHub Packages.
 thumbnail: github-thumb.jpg
-popular: true
 taxonomy:
   category:
     - Articles

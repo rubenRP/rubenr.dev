@@ -11,7 +11,7 @@ const BlogList = ({ data = null, location }: PageData) => {
   const posts = data.allMdx.edges
   const heroTitle = "Blog - Dev Blog - Tech Blog"
   const heroText =
-    "Articles and opinions of a frontend developer. Mostly in spanish."
+    "Articles and opinions of a frontend developer. Also in spanish."
 
   return (
     <BodyClassName className="header-dark header-transparent header-fixed header-animated">
