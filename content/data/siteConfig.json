@@ -51,7 +51,7 @@
     },
     {
       "title": "RSS",
-      "url": "/rss.xml"
+      "url": "/sitemap/sitemap-index.xml"
     }
   ],
   "userLinks": [
