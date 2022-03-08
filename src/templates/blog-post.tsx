@@ -22,7 +22,7 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageData) => {
   const bodyClasses = "header-fixed header-animated"
 
   const triggerAck = () => {
-    const instance = ackeeTracker.create(process.env.ACKEE_DOMAIN || "")
+    const instance = ackeeTracker.create(process.env.GATSBY_ACKEE_DOMAIN || "")
     instance.action("bd5564b3-a008-4c96-884a-d6d9b44915f8", {
       key: "Next/Prev post",
       value: 1,
