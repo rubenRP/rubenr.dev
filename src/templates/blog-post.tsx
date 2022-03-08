@@ -8,7 +8,6 @@ import ReadingTime from "../components/ReadingTime"
 import SEO from "../components/SEO"
 import Tags from "../components/Tags"
 import { PageData } from "../models/page"
-import * as ackeeTracker from "ackee-tracker"
 
 const BlogPostTemplate = ({ data, pageContext, location }: PageData) => {
   const post = data.mdx
@@ -20,14 +19,6 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageData) => {
     post.frontmatter.thumbnail.childImageSharp.gatsbyImageData.images.fallback
       .src
   const bodyClasses = "header-fixed header-animated"
-
-  const triggerAck = () => {
-    const instance = ackeeTracker.create(process.env.GATSBY_ACKEE_DOMAIN || "")
-    instance.action("bd5564b3-a008-4c96-884a-d6d9b44915f8", {
-      key: "Next/Prev post",
-      value: 1,
-    })
-  }
 
   return (
     <BodyClassName className={bodyClasses}>
@@ -99,7 +90,6 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageData) => {
                     to={previous.frontmatter.slug || previous.fields.slug}
                     rel="prev"
                     className="btn btn-lg btn-detailed btn-detailed--left text-dark"
-                    onClick={triggerAck}
                   >
                     <div className="text-grey light">Previous</div>
                     {previous.frontmatter.hero_title
@@ -113,7 +103,6 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageData) => {
                     to={next.frontmatter.slug || next.fields.slug}
                     rel="next"
                     className="btn btn-lg btn-detailed btn-detailed--right text-dark"
-                    onClick={triggerAck}
                   >
                     <div className="text-grey light">Next</div>
                     {next.frontmatter.hero_title
