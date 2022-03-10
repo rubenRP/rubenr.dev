@@ -1,10 +1,10 @@
 import { Link } from "gatsby"
 import React, { useEffect, useState } from "react"
 import config from "../../content/data/siteConfig.json"
+import ModeSwitcher from "./ModeSwitcher"
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false)
-  const [theme, setTheme] = useState("light")
 
   const navOnScroll = () => {
     if (window.scrollY > 20) {
@@ -27,38 +27,14 @@ const Header = () => {
     }
   }
 
-  /*   const toggleTheme = () => {
-    if (theme === "light") {
-      setTheme("dark")
-    } else {
-      setTheme("light")
-    }
-  } */
-
   const { headerLinks } = config
 
   useEffect(() => {
-    const htmlEl = document.getElementsByTagName("html")[0]
-    const currentTheme = localStorage.getItem("theme")
-      ? localStorage.getItem("theme")
-      : null
-    if (currentTheme) {
-      htmlEl.dataset.theme = currentTheme
-      if (currentTheme !== theme) {
-        setTheme(currentTheme)
-      }
-    }
     window.addEventListener("scroll", navOnScroll)
     return () => {
       window.removeEventListener("scroll", navOnScroll)
     }
   }, [])
-
-  /*   useEffect(() => {
-    const htmlEl = document.getElementsByTagName("html")[0]
-    localStorage.setItem("theme", theme)
-    htmlEl.dataset.theme = theme
-  }, [theme]) */
 
   return (
     <>
@@ -98,6 +74,7 @@ const Header = () => {
                 </ul>
               </nav>
             </section>
+            <ModeSwitcher />
           </nav>
         </section>
       </header>
