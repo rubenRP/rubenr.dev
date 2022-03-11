@@ -8,7 +8,7 @@ const popularQuery = graphql`
       filter: {
         parent: { id: {} }
         fileAbsolutePath: { regex: "\\\\/blog/" }
-        frontmatter: { popular: { eq: true } }
+        frontmatter: { popular: { eq: true }, published: { eq: true } }
       }
       limit: 4
     ) {

@@ -8,7 +8,7 @@ const recentQuery = graphql`
       filter: {
         parent: { id: {} }
         fileAbsolutePath: { regex: "\\\\/blog/" }
-        frontmatter: { language: { eq: "en" } }
+        frontmatter: { language: { eq: "en" }, published: { eq: true } }
       }
       limit: 4
     ) {
