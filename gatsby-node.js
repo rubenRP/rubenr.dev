@@ -6,18 +6,18 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
 
   const blogPost = path.resolve(`./src/templates/blog-post.tsx`)
   const defaultPage = path.resolve(`./src/templates/page.tsx`)
-  const blogPage = path.resolve(`./src/templates/blog-list.tsx`)
   const tabPage = path.resolve(`./src/templates/tag.tsx`)
   const categoryPage = path.resolve(`./src/templates/category.tsx`)
 
   const result = await graphql(
     `
       {
-        pagesGroup: allMdx(
+        blogGroup: allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
           filter: {
-            frontmatter: { published: { ne: false }, language: { ne: "en" } }
+            fileAbsolutePath: { regex: "\\\\/blog/" }
+            frontmatter: { published: { ne: false } }
           }
         ) {
           edges {
@@ -35,11 +35,12 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
             }
           }
         }
-        enPagesGroup: allMdx(
+        pagesGroup: allMdx(
           sort: { fields: [frontmatter___date], order: DESC }
           limit: 1000
           filter: {
-            frontmatter: { published: { ne: false }, language: { eq: "en" } }
+            fileAbsolutePath: { regex: "\\\\/pages/" }
+            frontmatter: { published: { ne: false } }
           }
         ) {
           edges {
@@ -77,55 +78,55 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
   }
 
   // Create pages and blog posts.
-  const posts = result.data.pagesGroup.edges
-  const regex = "blog/"
+  const allPosts = result.data.blogGroup.edges
 
-  createPage({
-    path: `/blog`,
-    component: blogPage,
+  const esPosts = allPosts.filter(({ node }) =>
+    node.frontmatter.language ? node.frontmatter.language == "es" : true
+  )
+
+  const enPosts = allPosts.filter(({ node }) =>
+    node.frontmatter.language ? node.frontmatter.language == "en" : false
+  )
+
+  esPosts.forEach((post, index) => {
+    const previous =
+      index === esPosts.length - 1 ? null : esPosts[index + 1].node
+    const next = index === 0 ? null : esPosts[index - 1].node
+    const pathUrl = post.node.frontmatter.slug || post.node.fields.slug
+    const language = post.node.frontmatter.language || "es"
+    const enPost = enPosts.find(
+      ({ node }) => node.fields.slug === post.node.fields.slug
+    )
+    const hrefLang = enPost
+      ? { lang: "en", url: enPost.node.frontmatter.slug }
+      : null
+    createPage({
+      path: pathUrl,
+      component: blogPost,
+      context: {
+        id: post.node.id,
+        previous,
+        next,
+        language,
+        hrefLang,
+      },
+    })
   })
-
-  posts.forEach((post, index) => {
-    const previous = index === posts.length - 1 ? null : posts[index + 1].node
-    const next = index === 0 ? null : posts[index - 1].node
-    const path = post.node.fileAbsolutePath
-    const language = post.node.frontmatter.language
-    let pathUrl = post.node.frontmatter.slug || post.node.fields.slug
-
-    // Blog Posts
-    if (path.match(regex)) {
-      createPage({
-        path: post.node.fields.slug,
-        component: blogPost,
-        context: {
-          id: post.node.id,
-          previous,
-          next,
-          language: language || "es",
-        },
-      })
-      // Pages
-    } else {
-      createPage({
-        path: pathUrl,
-        component: defaultPage,
-        context: {
-          id: post.node.id,
-          language: language || "en",
-        },
-      })
-    }
-    // return null
-  })
-
-  const enPosts = result.data.enPagesGroup.edges
 
   enPosts.forEach((post, index) => {
     const previous =
       index === enPosts.length - 1 ? null : enPosts[index + 1].node
     const next = index === 0 ? null : enPosts[index - 1].node
-    const language = post.node.frontmatter.language
-    const pathUrl = post.node.frontmatter.slug || post.node.fields.slug
+    const pathUrl = post.node.frontmatter.slug
+      ? post.node.frontmatter.slug
+      : `/en${post.node.fields.slug}`
+    const language = post.node.frontmatter.language || "en"
+    const esPost = esPosts.find(
+      ({ node }) => node.fields.slug === post.node.fields.slug
+    )
+    const hrefLang = esPost
+      ? { lang: "es", url: esPost.node.fields.slug }
+      : null
 
     createPage({
       path: pathUrl,
@@ -134,10 +135,25 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         id: post.node.id,
         previous,
         next,
-        language: language || "en",
+        language,
+        hrefLang,
       },
     })
-    // return null
+  })
+
+  const pages = result.data.pagesGroup.edges
+
+  pages.forEach((post) => {
+    const pathUrl = post.node.frontmatter.slug || post.node.fields.slug
+    const language = post.node.frontmatter.language || "en"
+    createPage({
+      path: pathUrl,
+      component: defaultPage,
+      context: {
+        id: post.node.id,
+        language: language,
+      },
+    })
   })
 
   const tags = result.data.tagsGroup.group
@@ -170,7 +186,7 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   if (node.internal.type === `Mdx`) {
     const value = createFilePath({ node, getNode })
     if (node.frontmatter.language) {
-      const newVal = `/${node.frontmatter.language}${value.replace(
+      const newVal = `${value.replace(
         "index." + node.frontmatter.language + "/",
         ""
       )}`

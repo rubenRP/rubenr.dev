@@ -11,7 +11,7 @@ import { PageData } from "../models/page"
 
 const BlogPostTemplate = ({ data, pageContext }: PageData) => {
   const post = data.mdx
-  const { previous, next } = pageContext
+  const { previous, next, hrefLang } = pageContext
   const tags = post.frontmatter.taxonomy && post.frontmatter.taxonomy.tag
   const thumbnail =
     post.frontmatter.thumbnail &&
@@ -27,6 +27,7 @@ const BlogPostTemplate = ({ data, pageContext }: PageData) => {
           description={post.excerpt}
           thumbnail={thumbnail}
           lang={pageContext.language}
+          hrefLang={hrefLang}
         />
         <section id="start" />
         <section id="body-wrapper" className="section blog-listing">
