@@ -1,6 +1,6 @@
 ---
 title: "Pinia: The friendlier alternative to Vuex in Vue 3"
-date: 2022-03-16T0:00:00.000Z
+date: 2022-03-14T0:00:00.000Z
 published: true
 hero_title: Pinia
 hero_subtitle: The friendlier alternative to Vuex in Vue 3
