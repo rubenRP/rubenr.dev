@@ -50,7 +50,7 @@ export const categoryQuery = graphql`
         fileAbsolutePath: { regex: "\\\\/blog/" }
         frontmatter: {
           taxonomy: { category: { in: [$category] } }
-          language: { ne: "en" }
+          published: { eq: true }
         }
       }
     ) {
@@ -66,6 +66,7 @@ export const categoryQuery = graphql`
             taxonomy {
               tag
             }
+            language
             published
             thumbnail {
               childImageSharp {

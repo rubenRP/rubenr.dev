@@ -47,7 +47,11 @@ export const blogListQuery = graphql`
     }
     allMdx(
       sort: { fields: [frontmatter___date], order: DESC }
-      filter: { parent: { id: {} }, fileAbsolutePath: { regex: "\\\\/blog/" } }
+      filter: {
+        parent: { id: {} }
+        fileAbsolutePath: { regex: "\\\\/blog/" }
+        frontmatter: { published: { eq: true } }
+      }
     ) {
       edges {
         node {

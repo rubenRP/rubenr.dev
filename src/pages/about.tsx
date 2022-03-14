@@ -12,12 +12,12 @@ import SEO from "../components/SEO"
 import { PageData } from "../models/page"
 
 const AboutPage = ({ data, location }: PageData) => {
-  const { siteTitleShort, seoKeywords } = config
+  const { siteTitle, seoKeywords } = config
   const heroClasses = "text-light hero-tiny overlay-dark-gradient"
 
   return (
     <BodyClassName className="header-dark header-transparent header-fixed header-animated">
-      <Layout location={location} title={siteTitleShort}>
+      <Layout location={location} title={siteTitle}>
         <SEO title="About" keywords={seoKeywords} />
         <Hero
           title="About me"

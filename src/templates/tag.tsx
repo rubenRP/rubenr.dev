@@ -51,7 +51,7 @@ export const tagsQuery = graphql`
         fileAbsolutePath: { regex: "\\\\/blog/" }
         frontmatter: {
           taxonomy: { tag: { in: [$tag] } }
-          language: { ne: "en" }
+          published: { eq: true }
         }
       }
     ) {
@@ -67,6 +67,7 @@ export const tagsQuery = graphql`
             taxonomy {
               tag
             }
+            language
             published
             thumbnail {
               childImageSharp {

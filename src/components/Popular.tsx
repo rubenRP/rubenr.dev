@@ -8,7 +8,7 @@ const popularQuery = graphql`
       filter: {
         parent: { id: {} }
         fileAbsolutePath: { regex: "\\\\/blog/" }
-        frontmatter: { popular: { eq: true } }
+        frontmatter: { popular: { eq: true }, published: { eq: true } }
       }
       limit: 4
     ) {
@@ -22,6 +22,7 @@ const popularQuery = graphql`
             title
             hero_title
             hero_subtitle
+            slug
           }
         }
       }
@@ -52,7 +53,7 @@ const Popular = () => {
                         <div className="column col-12" key={node.fields.slug}>
                           {node.frontmatter.hero_subtitle ? (
                             <Link
-                              to={node.fields.slug}
+                              to={node.frontmatter.slug || node.fields.slug}
                               className="u-url text-dark"
                             >
                               <h4 className="p-name mb-1">
@@ -67,7 +68,7 @@ const Popular = () => {
                           ) : (
                             <h4 className="p-name mt-1">
                               <Link
-                                to={node.fields.slug}
+                                to={node.frontmatter.slug || node.fields.slug}
                                 className="u-url text-dark"
                               >
                                 {title}
