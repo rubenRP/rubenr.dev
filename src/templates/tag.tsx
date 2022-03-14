@@ -8,13 +8,12 @@ import { PageData } from "../models/page"
 
 const TagList = ({ data, pageContext, location }: PageData) => {
   const { tag } = pageContext
-  const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges
   const heroTitle = `Tag: ${tag}`
 
   return (
     <BodyClassName className="header-dark header-transparent header-fixed header-animated">
-      <Layout location={location} title={siteTitle}>
+      <Layout>
         <SEO title={`All posts by tag ${tag}`} />
 
         <PostList
@@ -37,11 +36,6 @@ export const tagsQuery = graphql`
     ) {
       childImageSharp {
         gatsbyImageData(width: 1600)
-      }
-    }
-    site {
-      siteMetadata {
-        title
       }
     }
     allMdx(

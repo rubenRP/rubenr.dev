@@ -5,17 +5,15 @@ import Layout from "../components/Layout"
 import PostList from "../components/PostList"
 import SEO from "../components/SEO"
 
-const CategoryList = ({ data, pageContext, location }: any) => {
+const CategoryList = ({ data, pageContext }: any) => {
   const { category } = pageContext
-  const siteTitle = data.site.siteMetadata.title
   const posts = data.allMdx.edges
   const heroTitle = `Category: ${category}`
 
   return (
     <BodyClassName className="header-dark header-transparent header-fixed header-animated">
-      <Layout location={location} title={siteTitle}>
+      <Layout>
         <SEO title="All posts by category" />
-
         <PostList
           heroTitle={heroTitle}
           heroImage={
@@ -36,11 +34,6 @@ export const categoryQuery = graphql`
     ) {
       childImageSharp {
         gatsbyImageData(width: 1600)
-      }
-    }
-    site {
-      siteMetadata {
-        title
       }
     }
     allMdx(

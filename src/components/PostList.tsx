@@ -6,7 +6,7 @@ import Tags from "./Tags"
 const PostList = ({ posts, heroImage, heroTitle, heroText }: any) => {
   const [filteredLanguage, setFilteredLanguage] = useState("en")
 
-  const filteredPosts = posts.filter(({ node }) => {
+  const filteredPosts = posts.filter(({ node }: any) => {
     const lang = node.frontmatter.language || "es"
     return lang === filteredLanguage
   })
@@ -46,7 +46,7 @@ const PostList = ({ posts, heroImage, heroTitle, heroText }: any) => {
                   Spanish
                 </a>
               </div>
-              {filteredPosts.map(({ node }) => {
+              {filteredPosts.map(({ node }: any) => {
                 const title = node.frontmatter.title || node.fields.slug
                 return (
                   <div className="columns" key={node.id}>

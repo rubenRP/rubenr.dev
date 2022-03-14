@@ -1,15 +1,11 @@
-import { graphql } from "gatsby"
 import React from "react"
 import Layout from "../components/Layout"
 import SEO from "../components/SEO"
 import gif from "../images/404.gif"
-import { PageData } from "../models/page"
 
-const NotFoundPage = ({ data = {}, location }: PageData) => {
-  const siteTitle = data.site.siteMetadata.title
-
+const NotFoundPage = () => {
   return (
-    <Layout location={location} title={siteTitle}>
+    <Layout>
       <SEO title="404: Not Found" />
       <section id="start" />
       <section id="body-wrapper" className="section blog-listing">
@@ -37,13 +33,3 @@ const NotFoundPage = ({ data = {}, location }: PageData) => {
 }
 
 export default NotFoundPage
-
-export const pageQuery = graphql`
-  query {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

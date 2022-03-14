@@ -9,9 +9,8 @@ import SEO from "../components/SEO"
 import Tags from "../components/Tags"
 import { PageData } from "../models/page"
 
-const BlogPostTemplate = ({ data, pageContext, location }: PageData) => {
+const BlogPostTemplate = ({ data, pageContext }: PageData) => {
   const post = data.mdx
-  const siteTitle = data.site.siteMetadata.title
   const { previous, next } = pageContext
   const tags = post.frontmatter.taxonomy && post.frontmatter.taxonomy.tag
   const thumbnail =
@@ -22,7 +21,7 @@ const BlogPostTemplate = ({ data, pageContext, location }: PageData) => {
 
   return (
     <BodyClassName className={bodyClasses}>
-      <Layout location={location} title={siteTitle}>
+      <Layout>
         <SEO
           title={post.frontmatter.title}
           description={post.excerpt}
@@ -124,12 +123,6 @@ export default BlogPostTemplate
 
 export const pageQuery = graphql`
   query BlogPostById($id: String!) {
-    site {
-      siteMetadata {
-        title
-        siteUrl
-      }
-    }
     mdx(id: { eq: $id }) {
       body
       timeToRead

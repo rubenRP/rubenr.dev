@@ -14,14 +14,13 @@ import SEO from "../components/SEO"
 import { PageData } from "../models/page"
 
 const IndexPage = ({ data, location }: PageData) => {
-  const { siteTitle, seoKeywords } = config
+  const { seoKeywords } = config
   const heroClasses = "text-light hero-tiny overlay-dark-gradient"
 
   return (
     <BodyClassName className="header-dark header-transparent header-fixed header-animated">
-      <Layout location={location} title={siteTitle}>
+      <Layout>
         <SEO title="Home" keywords={seoKeywords} />
-
         <HeroTyped
           title={home.hero.title}
           subtitle={home.hero.subtitle}

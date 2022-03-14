@@ -9,14 +9,13 @@ import { PageData } from "../models/page"
 
 const PageTemplate = ({ data, location }: PageData) => {
   const post = data.mdx
-  const siteTitle = data.site.siteMetadata.title
   const bodyClasses = post.frontmatter.hero_image
     ? "header-dark header-transparent header-fixed header-animated"
     : "header-fixed header-animated"
 
   return (
     <BodyClassName className={bodyClasses}>
-      <Layout location={location} title={siteTitle}>
+      <Layout>
         <SEO title={post.frontmatter.title} description={post.excerpt} />
         {post.frontmatter.hero_image && (
           <Hero
@@ -84,12 +83,6 @@ export default PageTemplate
 
 export const pageQuery = graphql`
   query PageById($id: String!) {
-    site {
-      siteMetadata {
-        title
-        author
-      }
-    }
     mdx(id: { eq: $id }) {
       id
       excerpt(pruneLength: 160)

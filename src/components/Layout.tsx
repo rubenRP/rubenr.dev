@@ -5,8 +5,6 @@ import Footer from "./Footer"
 import Header from "./Header"
 
 interface Props {
-  location: Location
-  title: string
   children?: React.ReactNode
 }
 

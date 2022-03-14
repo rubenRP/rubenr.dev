@@ -6,18 +6,16 @@ import PostList from "../components/PostList"
 import SEO from "../components/SEO"
 import { PageData } from "../models/page"
 
-const BlogList = ({ data = null, location }: PageData) => {
-  const siteTitle = data.site.siteMetadata.title
+const BlogList = ({ data }: PageData) => {
   const posts = data.allMdx.edges
-  const heroTitle = "Blog - Dev Blog - Tech Blog"
+  const heroTitle = "Dev Blog"
   const heroText =
     "Articles and opinions of a frontend developer. Also in spanish."
 
   return (
     <BodyClassName className="header-dark header-transparent header-fixed header-animated">
-      <Layout location={location} title={siteTitle}>
+      <Layout>
         <SEO title="Blog" />
-
         <PostList
           heroTitle={heroTitle}
           heroText={heroText}
@@ -38,11 +36,6 @@ export const blogListQuery = graphql`
     ) {
       childImageSharp {
         gatsbyImageData(width: 1600)
-      }
-    }
-    site {
-      siteMetadata {
-        title
       }
     }
     allMdx(

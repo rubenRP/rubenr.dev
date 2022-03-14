@@ -55,7 +55,7 @@ module.exports = {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 860,
-              backgroundColor: `#f7f8f9`,
+              backgroundColor: `transparent`,
               linkImagesToOriginal: false,
             },
           },
@@ -116,7 +116,7 @@ module.exports = {
     {
       resolve: "gatsby-plugin-i18n",
       options: {
-        langKeyDefault: "es",
+        langKeyDefault: "en",
         useLangKeyLayout: false,
       },
     },
