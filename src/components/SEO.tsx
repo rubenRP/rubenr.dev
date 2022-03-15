@@ -27,7 +27,7 @@ const SEO = ({
   keywords = [],
   title,
   thumbnail = null,
-  hrefLang = null,
+  hrefLang = [],
 }: Props) => {
   const { site } = useStaticQuery(
     graphql`
@@ -47,10 +47,6 @@ const SEO = ({
   const metaDescription = description || site.siteMetadata.description
   const ogImageUrl =
     site.siteMetadata.siteUrl + (thumbnail || defaultOpenGraphImage)
-
-  const hrefLinks = hrefLang
-    ? [{ href: hrefLang.url, rel: "alternate", hreflang: hrefLang.lang }]
-    : []
 
   return (
     <Helmet
@@ -114,7 +110,7 @@ const SEO = ({
             : []
         )
         .concat(meta)}
-      link={hrefLinks}
+      link={hrefLang}
     />
   )
 }

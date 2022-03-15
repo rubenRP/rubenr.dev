@@ -1,5 +1,6 @@
 const path = require(`path`)
 const { createFilePath } = require(`gatsby-source-filesystem`)
+const config = require("./content/data/siteConfig.json")
 
 exports.createPages = async ({ graphql, actions, reporter }) => {
   const { createPage } = actions
@@ -98,8 +99,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       ({ node }) => node.fields.slug === post.node.fields.slug
     )
     const hrefLang = enPost
-      ? { lang: "en", url: enPost.node.frontmatter.slug }
-      : null
+      ? [
+          { hreflang: "es", href: config.siteUrl + pathUrl, rel: "alternate" },
+          {
+            hreflang: "en",
+            href: config.siteUrl + enPost.node.frontmatter.slug,
+            rel: "alternate",
+          },
+        ]
+      : [{ hreflang: "es", href: config.siteUrl + pathUrl, rel: "alternate" }]
     createPage({
       path: pathUrl,
       component: blogPost,
@@ -125,8 +133,15 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       ({ node }) => node.fields.slug === post.node.fields.slug
     )
     const hrefLang = esPost
-      ? { lang: "es", url: esPost.node.fields.slug }
-      : null
+      ? [
+          { hreflang: "en", href: config.siteUrl + pathUrl, rel: "alternate" },
+          {
+            hreflang: "es",
+            href: config.siteUrl + esPost.node.fields.slug,
+            rel: "alternate",
+          },
+        ]
+      : [{ hreflang: "en", href: config.siteUrl + pathUrl, rel: "alternate" }]
 
     createPage({
       path: pathUrl,
