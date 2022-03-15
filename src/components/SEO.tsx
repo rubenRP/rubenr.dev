@@ -17,6 +17,7 @@ interface Props {
   title: string
   keywords?: string[]
   thumbnail?: any
+  hrefLang?: any | null
 }
 
 const SEO = ({
@@ -26,6 +27,7 @@ const SEO = ({
   keywords = [],
   title,
   thumbnail = null,
+  hrefLang = [],
 }: Props) => {
   const { site } = useStaticQuery(
     graphql`
@@ -108,6 +110,7 @@ const SEO = ({
             : []
         )
         .concat(meta)}
+      link={hrefLang}
     />
   )
 }
