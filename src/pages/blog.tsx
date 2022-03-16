@@ -15,7 +15,7 @@ const BlogList = ({ data }: PageData) => {
   return (
     <BodyClassName className="header-dark header-transparent header-fixed header-animated">
       <Layout>
-        <SEO title="Blog" />
+        <SEO title="Blog" description={heroText} />
         <PostList
           heroTitle={heroTitle}
           heroText={heroText}
