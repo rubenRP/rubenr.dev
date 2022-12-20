@@ -114,7 +114,6 @@ const BlogPostTemplate = ({ data, pageContext }: PageData) => {
             </div>
           </section>
         </section>
-        <Newsletter />
       </Layout>
     </BodyClassName>
   )

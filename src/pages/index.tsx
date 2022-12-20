@@ -35,7 +35,6 @@ const IndexPage = ({ data, location }: PageData) => {
         <Recent />
         <Popular />
         <Bio info={about} />
-        <Newsletter />
       </Layout>
     </BodyClassName>
   )
