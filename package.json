@@ -1,4 +1,25 @@
 {
+  "name": "rubenr.dev",
+  "description": "Personal website and blog made with Nuxt",
+  "version": "3.0.0",
+  "author": "Rubén Rodríguez <hola@rubenr.dev>",
+  "bugs": {
+    "url": "https://github.com/rubenRP/rubenr.dev/issues"
+  },
+  "homepage": "https://github.com/rubenRP/rubenr.dev#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubenRP/rubenr.dev.git"
+  },
+  "keywords": [
+    "nuxt",
+    "nuxt3",
+    "nuxtjs",
+    "blog",
+    "personal",
+    "website"
+  ],
+  "license": "MIT",
   "private": true,
   "scripts": {
     "build": "nuxt build",
