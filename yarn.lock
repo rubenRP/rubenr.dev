@@ -504,6 +504,37 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.17.8.tgz#200a0965cf654ac28b971358ecdca9cc5b44c335"
   integrity sha512-1iuezdyDNngPnz8rLRDO2C/ZZ/emJLb72OsZeqQ6gL6Avko/XCXZw+NuxBSNhBAP13Hie418V7VMt9et1FMvpg==
 
+"@fortawesome/fontawesome-common-types@6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-6.3.0.tgz#51f734e64511dbc3674cd347044d02f4dd26e86b"
+  integrity sha512-4BC1NMoacEBzSXRwKjZ/X/gmnbp/HU5Qqat7E8xqorUtBFZS+bwfGH5/wqOC2K6GV0rgEobp3OjGRMa5fK9pFg==
+
+"@fortawesome/fontawesome-svg-core@^6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-6.3.0.tgz#b6a17d48d231ac1fad93e43fca7271676bf316cf"
+  integrity sha512-uz9YifyKlixV6AcKlOX8WNdtF7l6nakGyLYxYaCa823bEBqyj/U2ssqtctO38itNEwXb8/lMzjdoJ+aaJuOdrw==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.3.0"
+
+"@fortawesome/free-brands-svg-icons@^6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-6.3.0.tgz#436e5fcba4f4f0902edcceaec5c4ff887ba7328f"
+  integrity sha512-xI0c+a8xnKItAXCN8rZgCNCJQiVAd2Y7p9e2ND6zN3J3ekneu96qrePieJ7yA7073C1JxxoM3vH1RU7rYsaj8w==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.3.0"
+
+"@fortawesome/free-solid-svg-icons@^6.3.0":
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/@fortawesome/free-solid-svg-icons/-/free-solid-svg-icons-6.3.0.tgz#d3bd33ae18bb15fdfc3ca136e2fea05f32768a65"
+  integrity sha512-x5tMwzF2lTH8pyv8yeZRodItP2IVlzzmBuD1M7BjawWgg9XAvktqJJ91Qjgoaf8qJpHQ8FEU9VxRfOkLhh86QA==
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "6.3.0"
+
+"@fortawesome/vue-fontawesome@^3.0.3":
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/@fortawesome/vue-fontawesome/-/vue-fontawesome-3.0.3.tgz#633e2998d11f7d4ed41f0d5ea461a22ec9b9d034"
+  integrity sha512-KCPHi9QemVXGMrfuwf3nNnNo129resAIQWut9QTAMXmXqL2ErABC6ohd2yY5Ipq0CLWNbKHk8TMdTXL/Zf3ZhA==
+
 "@intlify/bundle-utils@^3.4.0":
   version "3.4.0"
   resolved "https://registry.yarnpkg.com/@intlify/bundle-utils/-/bundle-utils-3.4.0.tgz#72558611f4b223a6791f591363dc48a4bcacdf70"
@@ -1616,7 +1647,7 @@ chardet@^0.7.0:
   resolved "https://registry.yarnpkg.com/chardet/-/chardet-0.7.0.tgz#90094849f0937f2eedc2425d0d28a9e5f0cbad9e"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
-chokidar@^3.5.1, chokidar@^3.5.3:
+"chokidar@>=3.0.0 <4.0.0", chokidar@^3.5.1, chokidar@^3.5.3:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/chokidar/-/chokidar-3.5.3.tgz#1cf37c8707b932bd1af1ae22c0432e2acd1903bd"
   integrity sha512-Dr3sfKRP6oTcjf2JmUmFJfeVMvXBdegxB0iVQ5eb2V10uFJUCAS8OByZdVAyVb8xXNz3GjjTgj9kLWsZTqE6kw==
@@ -2753,6 +2784,11 @@ ignore@^5.2.0, ignore@^5.2.4:
   version "5.2.4"
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.2.4.tgz#a291c0c6178ff1b960befe47fcdec301674a6324"
   integrity sha512-MAb38BcSbH0eHNBxn7ql2NH/kX33OkB3lZ1BNdh7ENeRChHTYsTvWrMubiIAMNS2llXEEgZ1MUOBtXChP3kaFQ==
+
+immutable@^4.0.0:
+  version "4.2.4"
+  resolved "https://registry.yarnpkg.com/immutable/-/immutable-4.2.4.tgz#83260d50889526b4b531a5e293709a77f7c55a2a"
+  integrity sha512-WDxL3Hheb1JkRN3sQkyujNlL/xRjAo3rJtaU5xeufUauG66JdMr32bLj4gF+vWl84DIA3Zxw7tiAjneYzRRw+w==
 
 inflight@^1.0.4:
   version "1.0.6"
@@ -4746,6 +4782,15 @@ safe-buffer@~5.1.0, safe-buffer@~5.1.1:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
+sass@^1.58.1:
+  version "1.58.1"
+  resolved "https://registry.yarnpkg.com/sass/-/sass-1.58.1.tgz#17ab0390076a50578ed0733f1cc45429e03405f6"
+  integrity sha512-bnINi6nPXbP1XNRaranMFEBZWUfdW/AF16Ql5+ypRxfTvCRTTKrLsMIakyDcayUt2t/RZotmL4kgJwNH5xO+bg==
+  dependencies:
+    chokidar ">=3.0.0 <4.0.0"
+    immutable "^4.0.0"
+    source-map-js ">=0.6.2 <2.0.0"
+
 scule@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/scule/-/scule-1.0.0.tgz#895e6f4ba887e78d8b9b4111e23ae84fef82376d"
@@ -4871,7 +4916,7 @@ socket.io-parser@~4.2.1:
     "@socket.io/component-emitter" "~3.1.0"
     debug "~4.3.1"
 
-source-map-js@^1.0.2:
+"source-map-js@>=0.6.2 <2.0.0", source-map-js@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/source-map-js/-/source-map-js-1.0.2.tgz#adbc361d9c62df380125e7f161f71c826f1e490c"
   integrity sha512-R0XvVJ9WusLiqTCEiGCmICCMplcCkIwwR11mOSD9CR5u+IXYdiseeEuXCVAjS54zqwkLcPNnmU4OeJ6tUrWhDw==

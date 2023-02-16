@@ -1,0 +1,136 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // padding-top: 6rem;
+  // padding-bottom: 7rem;
+  background-size: cover;
+  background-position: center;
+  @include breakpoint(sm) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  h1 {
+    color: $header-text-dark;
+    font-size: 4rem;
+    font-weight: 100;
+  }
+
+  h2 {
+    color: rgba($header-text-dark, 0.8);
+    font-size: 2.5rem;
+  }
+
+  &.hero-fullscreen {
+    min-height: 100vh;
+  }
+
+  &.hero-large {
+    min-height: 500px;
+  }
+
+  &.hero-medium {
+    min-height: 400px;
+  }
+
+  &.hero-small {
+    min-height: 110px;
+  }
+
+  &.hero-tiny {
+    min-height: 8rem;
+  }
+
+  .header-fixed & {
+    background-position: 50% 0;
+  }
+
+  //&.parallax {
+  //  background-attachment: fixed;
+  //}
+
+  @include breakpoint(md) {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+
+  @include breakpoint(sm) {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
+
+  &.text-light {
+    h1 {
+      color: $header-text-light;
+    }
+    h2 {
+      color: rgba($header-text-light, 0.8);
+    }
+  }
+
+  &.small-headings {
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 0.3em;
+    }
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+    @include breakpoint(md) {
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 1.75rem;
+      }
+    }
+
+    @include breakpoint(sm) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  p {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+  .social-links {
+    width: 75%;
+    max-width: 976px;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 5px;
+    a {
+      color: $light-color;
+    }
+  }
+
+  #to-start {
+    display: inline-block;
+    position: absolute;
+    // bottom: 3.5rem;
+    bottom: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    @include breakpoint(sm) {
+      bottom: 1rem;
+    }
+  }
+}

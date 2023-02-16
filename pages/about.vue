@@ -1,4 +1,4 @@
-<template><h1>about</h1></template>
+<template><About /><Resume /></template>
 
 <script setup>
 defineI18nRoute(false);

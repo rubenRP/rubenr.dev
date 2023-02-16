@@ -31,6 +31,13 @@
   "devDependencies": {
     "@nuxt/content": "^2.4.3",
     "@nuxtjs/i18n": "^8.0.0-beta.9",
-    "nuxt": "^3.2.0"
+    "nuxt": "^3.2.0",
+    "sass": "^1.58.1"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.3.0",
+    "@fortawesome/free-brands-svg-icons": "^6.3.0",
+    "@fortawesome/free-solid-svg-icons": "^6.3.0",
+    "@fortawesome/vue-fontawesome": "^3.0.3"
   }
 }

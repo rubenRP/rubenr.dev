@@ -5,4 +5,8 @@ export default defineNuxtConfig({
     locales: ["en", "es"],
     defaultLocale: "en",
   },
+  css: [
+    "~/assets/styles/theme.scss",
+    "@fortawesome/fontawesome-svg-core/styles.css",
+  ],
 });

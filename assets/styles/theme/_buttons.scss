@@ -1,0 +1,19 @@
+// Buttons
+.btn {
+  &:hover {
+    color: $light-color;
+  }
+  &.btn-detailed {
+    margin-right: 1rem;
+    height: auto;
+    text-align: left;
+    width: 250px;
+    white-space: initial;
+    @include breakpoint(md) {
+      margin-bottom: 15px;
+    }
+    &--left {
+      text-align: right;
+    }
+  }
+}
