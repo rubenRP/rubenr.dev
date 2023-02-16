@@ -1,0 +1,35 @@
+.sharer-buttons-toolbar {
+  margin: 1.2rem 0;
+  position: fixed;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  box-sizing: border-box;
+  transform: translateY(-50%);
+  vertical-align: middle;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  left: 10px;
+}
+
+@include breakpoint(md) {
+  .sharer-buttons-toolbar {
+    width: auto;
+    top: initial;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    background-color: $light-color;
+    border-top: 1px solid $border-color;
+    margin: 0;
+    z-index: 1;
+    flex-direction: row;
+    button {
+        margin: 5px 5px 0;
+    }
+  }
+}
