@@ -35,22 +35,22 @@ export default defineAppConfig({
     {
       label: "Twitter",
       url: "http://twitter.com/@_rubenr",
-      iconClass: "fa-brands fa-twitter",
+      iconClass: "twitter",
     },
     {
       label: "Mastodon",
       url: "https://mastodon.social/@rubenr",
-      iconClass: "fa-brands fa-mastodon",
+      iconClass: "mastodon",
     },
     {
       label: "LinkedIn",
       url: "http://linkedin.com/in/rubenrodriguezpaz",
-      iconClass: "fa-brands fa-linkedin",
+      iconClass: "linkedin",
     },
     {
       label: "GitHub",
       url: "http://github.com/rubenRP",
-      iconClass: "fa-brands fa-github",
+      iconClass: "github",
     },
   ],
   about: {
@@ -59,7 +59,7 @@ export default defineAppConfig({
     contactName: "Rubén Rodríguez",
     contactEmail: "hola [at] rubenr [dot] dev",
     contactLink:
-      '<a href="https://www.linkedin.com/in/rubenrodriguezpaz/" class="btn btn-lg" target="_blank" rel="noopener"><i class="fa-solid fa-magnifying-glass"></i>View full resume</a>',
+      '<a href="https://www.linkedin.com/in/rubenrodriguezpaz/" class="btn btn-lg" target="_blank" rel="noopener">View full resume</a>',
     text: "Rubén Rodríguez, 1989, Madrid. Tech lover and restless by nature. Passionate about Javascript development and everything related to web technologies and Open Source projects. Trying to find the perfect fusion between computing, usability, beauty and business.<br/><br/>Without stopping to learn...",
     shortInfo:
       "Rubén Rodríguez, 1989, Madrid based. Tech lover and restless by nature. Front-End Tech Lead @ Scalefast. Javascript enthusiast",

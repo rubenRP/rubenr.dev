@@ -9,4 +9,12 @@ export default defineNuxtConfig({
     "~/assets/styles/theme.scss",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
+  content: {
+    documentDriven: true,
+    markdown: {
+      anchorLinks: false,
+    },
+    locales: ["en", "es"],
+    defaultLocale: "en",
+  },
 });
