@@ -3,7 +3,7 @@
   <section id="body-wrapper" class="section blog-listing">
     <div class="container grid-md">
       <div class="columns">
-        <div id="item" class="column col-12">
+        <div id="item" class="column col-12" v-if="post">
           <div class="content-item h-entry">
             <div class="content-title">
               <div v-if="post?.hero_subtitle">
@@ -33,14 +33,14 @@
 
             <div class="e-content">
               <div class="mb-2" v-if="post?.hero_image">
-                <img
+                <nuxt-img
                   v-if="post?.hero_image"
                   :src="post?.hero_image"
                   :alt="post?.hero_title"
                   class="mb-2"
                 />
               </div>
-              <ContentRenderer v-if="data" :value="data" />
+              <ContentRenderer v-if="post" :value="post" />
             </div>
           </div>
         </div>
@@ -50,10 +50,42 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useAsyncData("post", () =>
-  queryContent(useRoute().path).findOne()
-);
-const post = data || {};
+const route = useRoute();
+let post: any = null;
+
+// TODO - this is a mess, clean it up
+if (route.params.slug.length > 1) {
+  // Spanish post
+  const { data } = await useAsyncData("post", () =>
+    queryContent("/blog/" + route.params.slug[1] + "/" + route.params.slug[0])
+      .where({ _locale: route.params.slug[0] })
+      .findOne()
+  );
+  post = data;
+  if (!data.value) {
+    const { data } = await useAsyncData("post", () =>
+      queryContent("blog")
+        .where({ slug: route.params.slug[2], _locale: route.params.slug[0] })
+        .findOne()
+    );
+    post = data;
+  }
+} else {
+  // English post
+  const { data } = await useAsyncData("post", () =>
+    queryContent("/blog/" + route.params.slug[0] + "/en").findOne()
+  );
+  post = data;
+  if (!data.value) {
+    const { data } = await useAsyncData("post", () =>
+      queryContent("blog")
+        .where({ slug: route.params.slug[0], _locale: "en" })
+        .findOne()
+    );
+    post = data;
+  }
+}
+
 const bodyClasses = "header-fixed header-animated";
 
 // Clear body classes first

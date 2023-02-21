@@ -4,13 +4,14 @@ date: 2015-12-27T15:17:00.000Z
 published: true
 hero_title: 2 horas con Magento 2
 hero_subtitle: Primeras impresiones (Front-end edition)
-hero_image: 1*OddzhRy0jxiADpTDXecWVg.jpeg
-thumbnail: 1*OddzhRy0jxiADpTDXecWVg.jpeg
+hero_image: /img/content/2-horas-con-magento-2-1OddzhRy0jxiADpTDXecWVg.jpeg
+thumbnail: /img/content/2-horas-con-magento-2-1OddzhRy0jxiADpTDXecWVg.jpeg
 taxonomy:
   category:
     - Articles
   tag:
     - Magento
+_locale: es
 ---
 
 Tras varios años de desarrollo por fin ha visto la luz la nueva versión de **Magento 2**, en la que aspiran a revolucionar de nuevo el panorama e-commerce con nuevas mejoras tanto para merchants como para desarrolladores.
@@ -23,11 +24,11 @@ Para la [instalación](http://www.damianculotta.com.ar/2015/11/19/como-instalar-
 
 ### Vistazo general
 
-![](1*sECwVqpJhY7cJnrrq-_x9g.png)
+![](/img/content/2-horas-con-magento-2-1sECwVqpJhY7cJnrrq.png)
 
 La primera impresión tras navegar unos minutos por la tienda es: “ya era hora”. El tema **Luma** se ve moderno, y mejora bastante respecto a M1, aunque esperaba algo un poquito más elaborado. Hay 2 mejoras muy importantes que han añadido para la versión Community que casi todos los proyectos llevan y para las cuales se tenía que recurrir a extensiones de terceros: Ajax cart y un color swatches integrado en Magento, lo cual espero va a facilitar mucho el desarrollo, ya que tiene casi todo lo que se suele utilizar en la actualidad. Me ha gustado bastante el zoom sobre la imagen en la página de producto. Una extensión menos.
 
-![](1*eQinGNk-wJYHhWHoZFBPjA.png)
+![](/img/content/2-horas-con-magento-2-1eQinGNk-wJYHhWHoZFBPjA.png)
 
 Vayamos a la trastienda. El panel de administración se ve muy fresco. Necesitaba un lavado de cara con mucha urgencia, aunque me parece un ejercicio de UX un poco equivocado. El admin panel de Magento tiene muchísimo contenido y muchísimas configuraciones. Esa es su gran baza respecto a los competidores, por lo que un sistema de navegación en el que hay que realizar un mínimo de 3–4 clicks para modificar una configuración me parece mucho. Aquí Prestashop o Shopify gana de calle. Tampoco es responsive, esperaba una vista móvil con la información básica en el dashboard, pero nada…Entiendo la complicación de mostrar tablas o tanto contenido en móvil, pero después de tantos años creo que podían haber probado algo…
 
@@ -35,7 +36,7 @@ Vayamos a la trastienda. El panel de administración se ve muy fresco. Necesitab
 
 Para terminar un pequeño vistazo al código. Aquí es donde se han realizado la mayoría de cambios, ya que la organización del código cambia mucho respecto a la versión anterior, sobre todo en lo que a un front-end atañe.
 
-![](1*kgBR041uNSE-Qeku-JEWCg.png)
+![](/img/content/2-horas-con-magento-2-1kgBR041uNSE-Qeku-JEWCg.png)
 
 Primero: Ahora todo el contenido de un tema se encuentra en app/design/frontend, tanto el layout, los phtml como los css. Una decisión bastante acertada de cara a tener una mejor visión global del contenido del template.
 
@@ -43,7 +44,7 @@ Segundo: Por fin se han deshecho de Prototype en favor de jQuery. Era de esperar
 
 Tercero: El uso de XML para las modificaciones de layout toma bastante protagonismo con un lenguaje en el que no hay que hay que escribir un poquito menos para hacer más y con menos indentación.
 
-![](1*6nniD_o5vYXi7n3jUvgfsw.png)
+![](/img/content/2-horas-con-magento-2-16nniD_o5vYXi7n3jUvgfsw.png)
 
 También se han añadido etiquetas nuevas entre la que destaca container en sustitución de text_list para la creación de contenedores. El nuevo Magento va a obligar a los desarrolladores front usar XML para el desarrollo de un template. Como debe ser.
 

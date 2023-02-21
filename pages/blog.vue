@@ -40,7 +40,7 @@
                 <div class="column col-12">
                   <NuxtLink
                     v-if="post.hero_subtitle"
-                    :to="post._path"
+                    :to="formatUrl(post._locale, post._dir, post.slug)"
                     class="u-url text-dark"
                   >
                     <h4 class="p-name mb-1">
@@ -53,7 +53,10 @@
                     </div>
                   </NuxtLink>
                   <h4 v-else class="p-name mb-1">
-                    <NuxtLink :to="post._path" class="u-url text-dark">
+                    <NuxtLink
+                      :to="formatUrl(post._locale, post._dir, post.slug)"
+                      class="u-url text-dark"
+                    >
                       {{ post.title }}
                     </NuxtLink>
                   </h4>
@@ -87,17 +90,15 @@
 </template>
 
 <script setup lang="ts">
-defineI18nRoute(false);
 const heroTitle = "Dev Blog";
 const heroText =
   "Articles and opinions of a frontend developer. Also in spanish.";
 
-// Get all posts where locale is en or es
-const esPosts: any = await useAsyncData("esBlog", () =>
-  queryContent("/blog").where({ _locale: "es" }).sort({ date: -1 }).find()
-);
-const enPosts: any = await useAsyncData("enblog", () =>
+const enPosts = await useAsyncData("enblog", () =>
   queryContent("/blog").where({ _locale: "en" }).sort({ date: -1 }).find()
+);
+const esPosts = await useAsyncData("esblog", () =>
+  queryContent("/blog").where({ _locale: "es" }).sort({ date: -1 }).find()
 );
 
 let filteredPosts = enPosts.data || [];
@@ -106,10 +107,6 @@ let date = 2000;
 
 const setFilteredLanguage = (language: string) => {
   filteredLanguage.value = language;
-  if (language == "es") {
-    filteredPosts = esPosts.data || [];
-  } else {
-    filteredPosts = enPosts.data || [];
-  }
+  filteredPosts = language == "en" ? enPosts.data : esPosts.data;
 };
 </script>

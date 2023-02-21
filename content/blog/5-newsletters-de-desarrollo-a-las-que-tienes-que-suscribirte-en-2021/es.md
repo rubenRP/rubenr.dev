@@ -5,7 +5,7 @@ published: true
 hero_title: 5 newsletters de desarrollo a las que debes suscribirte en 2021
 hero_subtitle: Desarrollo, Front-end, JavaScript, organización y herramientas.
 description: Bajo este título de clickbait (culpable) listo las 5 mejores newsletters que sigo de desarrollo, frontend, JavaScript, y un bonus.
-thumbnail: newsletter-thumb.jpg
+thumbnail: /img/content/5-newsletters-newsletter-thumb.jpg
 taxonomy:
   category:
     - Articles
@@ -13,9 +13,10 @@ taxonomy:
     - JavaScript
     - eCommerce
     - News
+_locale: es
 ---
 
-![5 newsletters de desarrollo a las que debes suscribirte en 2021](newsletter-hero.jpg)
+![5 newsletters de desarrollo a las que debes suscribirte en 2021](/img/content/5-newsletters-newsletter-hero.jpg)
 
 Vivimos en la era de internet y existen multiples modos de mantenerse informados sobre tecnologías web: portales específicos, redes sociales, blogs...pero las newsletters informativas han vuelto desde las sombras con un nuevo objetivo completamente diferente al de principios de los 2000 y en muchos casos se han convertido en el mejor modo para mantenerse informado.
 
