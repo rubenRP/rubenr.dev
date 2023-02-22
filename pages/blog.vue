@@ -93,6 +93,31 @@
 const heroTitle = "Dev Blog";
 const heroText =
   "Articles and opinions of a frontend developer. Also in spanish.";
+useHead({
+  title: "Blog",
+  meta: [
+    {
+      name: "description",
+      content: heroText,
+    },
+    {
+      property: "og:title",
+      content: "Blog",
+    },
+    {
+      property: "og:description",
+      content: heroText,
+    },
+    {
+      name: "twitter:title",
+      content: "Blog",
+    },
+    {
+      name: "twitter:description",
+      content: heroText,
+    },
+  ],
+});
 
 const enPosts = await useAsyncData("enblog", () =>
   queryContent("/blog").where({ _locale: "en" }).sort({ date: -1 }).find()

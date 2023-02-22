@@ -6,7 +6,7 @@ hero_title: Pinia
 hero_subtitle: The friendlier alternative to Vuex in Vue 3
 description: Small overview on this new library and the implications this has on the development of applications in Vue 3.
 hero_image: /img/content/pinia-vuex-hero.jpg
-thumbnail: pinia-vuex-thumb.jpg
+thumbnail: /img/content/pinia-vuex-thumb.jpg
 language: en
 taxonomy:
   category:

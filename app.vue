@@ -3,3 +3,60 @@
     <NuxtPage />
   </NuxtLayout>
 </template>
+<script setup lang="ts">
+const bodyClasses =
+  "header-dark header-transparent header-fixed header-animated";
+
+useHead({
+  htmlAttrs: {
+    lang: "en",
+    "data-theme": "light",
+  },
+  titleTemplate: "%s | " + useAppConfig().siteConfig.siteTitle,
+  bodyAttrs: {
+    class: bodyClasses,
+  },
+  meta: [
+    {
+      name: "description",
+      content: useAppConfig().siteConfig.siteDescription,
+    },
+    {
+      property: "og:title",
+      content: useAppConfig().siteConfig.siteTitle,
+    },
+    {
+      property: "og:description",
+      content: useAppConfig().siteConfig.siteDescription,
+    },
+    {
+      property: "og:type",
+      content: "website",
+    },
+    {
+      property: "og:image",
+      content: useAppConfig().siteConfig.siteLogo,
+    },
+    {
+      name: "twitter:card",
+      content: "summary",
+    },
+    {
+      name: "twitter:creator",
+      content: useAppConfig().siteConfig.userTwitter,
+    },
+    {
+      name: "twitter:title",
+      content: useAppConfig().siteConfig.siteTitle,
+    },
+    {
+      name: "twitter:description",
+      content: useAppConfig().siteConfig.siteDescription,
+    },
+    {
+      name: "twitter:image",
+      content: useAppConfig().siteConfig.siteLogo,
+    },
+  ],
+});
+</script>
