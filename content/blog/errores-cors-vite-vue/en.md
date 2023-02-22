@@ -76,7 +76,7 @@ To be a bit more specific, all API invocations that use _XMLHttpRequest_ or _Fet
 
 <div style="margin: 0 auto; max-width: 600px;">
 
-![Source: [https://developer.mozilla.org/es/docs/Web/HTTP/CORS](https://developer.mozilla.org/es/docs/Web/HTTP/CORS)](CORS_principle.png)
+![Source: [https://developer.mozilla.org/es/docs/Web/HTTP/CORS](https://developer.mozilla.org/es/docs/Web/HTTP/CORS)](/img/content/errores-cors-CORS_principle.png)
 
 </div>
 

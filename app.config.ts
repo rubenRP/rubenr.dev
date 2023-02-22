@@ -53,6 +53,13 @@ export default defineAppConfig({
       iconClass: "github",
     },
   ],
+  home: {
+    hero: {
+      title: ["Hello world!", "¡Hola mundo!"],
+      subtitle: "Soy Rubén Rodríguez.",
+      text: "I'm a Madrid based developer. <strong>Front-End developer</strong> @ Scalefast.<br/><strong>Javascript enthusiast</strong>.<br/>Specialized in tailored development for eCommerce and new UX patterns.",
+    },
+  },
   about: {
     title: "About me",
     imageAlign: "left",

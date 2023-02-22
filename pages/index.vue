@@ -1,11 +1,16 @@
 <template>
-  <Hero :title="heroTitle" :text="heroText" />
+  <HeroTyped
+    :title="hero.title"
+    :subtitle="hero.subtitle"
+    :text="hero.text"
+    social
+  />
   <div id="start" />
-  <Resume />
+  <Recent />
+  <Popular />
   <Bio />
 </template>
 
 <script setup lang="ts">
-const heroTitle = "Home";
-const heroText = "Who I am? What I did? What I know?";
+const hero = useAppConfig().home.hero;
 </script>

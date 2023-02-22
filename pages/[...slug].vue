@@ -47,11 +47,41 @@
       </div>
     </div>
   </section>
+  <section class="container grid-md">
+    <div class="prev-next text-center">
+      <div class="btn-group">
+        <NuxtLink
+          v-if="prev"
+          :to="formatUrl(prev._locale, prev._dir, prev.slug)"
+          rel="prev"
+          class="btn btn-lg btn-detailed btn-detailed--left text-dark"
+        >
+          <div class="text-grey light">Previous</div>
+          {{
+            prev.hero_title ? prev.hero_title : `${prev.title.slice(0, 30)}...`
+          }}
+        </NuxtLink>
+
+        <NuxtLink
+          v-if="next"
+          :to="formatUrl(next._locale, next._dir, next.slug)"
+          rel="next"
+          class="btn btn-lg btn-detailed btn-detailed--right text-dark"
+        >
+          <div class="text-grey light">Next</div>
+          {{
+            next.hero_title ? next.hero_title : `${next.title.slice(0, 30)}...`
+          }}
+        </NuxtLink>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup lang="ts">
 const route = useRoute();
 let post: any = null;
+let [prev, next]: any = [];
 
 // TODO - this is a mess, clean it up
 if (route.params.slug.length > 1) {
@@ -70,6 +100,11 @@ if (route.params.slug.length > 1) {
     );
     post = data;
   }
+  [prev, next] = await queryContent("blog")
+    .only(["_path", "_dir", "_locale", "title", "hero_title", "slug"])
+    .sort({ date: 1 })
+    .where({ _locale: post.value._locale })
+    .findSurround(post.value._path);
 } else {
   // English post
   const { data } = await useAsyncData("post", () =>
@@ -84,6 +119,11 @@ if (route.params.slug.length > 1) {
     );
     post = data;
   }
+  [prev, next] = await queryContent("blog")
+    .only(["_path", "_dir", "_locale", "title", "hero_title", "slug"])
+    .sort({ date: 1 })
+    .where({ _locale: post.value._locale })
+    .findSurround(post.value._path);
 }
 
 const bodyClasses = "header-fixed header-animated";

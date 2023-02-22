@@ -14,7 +14,7 @@
   >
     <div class="image-overlay" />
     <div class="container grid-md" :class="textAlign">
-      <h1 v-if="props.title">{{ props.title }}</h1>
+      <h1><span id="typed"></span></h1>
       <h2 v-if="props.subtitle">{{ props.subtitle }}</h2>
       <p v-if="props.text">
         <span v-html="props.text" />
@@ -37,10 +37,11 @@
 </template>
 
 <script setup lang="ts">
+import Typed from "typed.js";
 const position = ref(0);
 
 const props = defineProps<{
-  title?: string;
+  title?: string[];
   subtitle?: string;
   image?: string;
   text?: string;
@@ -53,6 +54,7 @@ const props = defineProps<{
 }>();
 
 // Default props
+const title = ref(props.title || [""]);
 const image = ref(props.image || "_nuxt/assets/img/hero-default.jpg");
 const social = ref(props.social || false);
 const isParallax = ref(props.isParallax || true);
@@ -62,6 +64,7 @@ const heroClasses = ref(
 );
 const textAlign = ref(props.textAlign || "text-center");
 const smallHeadings = ref(props.smallHeadings || true);
+let typed: any;
 
 const parallax = () => {
   position.value = window.scrollY * 0.3;
@@ -82,9 +85,19 @@ const handleKeyDown = (ev: any) => {
 
 onMounted(() => {
   window.addEventListener("scroll", parallax);
+  typed = new Typed("#typed", {
+    strings: props.title,
+    typeSpeed: 50,
+    backSpeed: 10,
+    backDelay: 7000,
+    cursorChar: "_",
+    loop: true,
+  });
+  typed.start();
 });
 
 onUnmounted(() => {
   window.removeEventListener("scroll", parallax);
+  typed.destroy();
 });
 </script>
