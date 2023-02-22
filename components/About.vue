@@ -15,14 +15,7 @@
         </div>
         <div class="column col-3 col-md-12">
           <div class="image">
-            <StaticImage
-              src="../images/profile-pic.jpg"
-              alt="Rubén Rodríguez"
-              placeholder="blurred"
-              layout="fixed"
-              width="{170}"
-              height="{170}"
-            />
+            <img src="~/assets/img/profile-pic.jpg" alt="Rubén Rodríguez" />
           </div>
         </div>
       </div>

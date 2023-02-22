@@ -38,7 +38,6 @@ const navigation = useAppConfig().navigation;
 const scrolled = ref(false);
 
 const navOnScroll = () => {
-  console.log(window.scrollY);
   if (window.scrollY > 20) {
     scrolled.value = true;
   } else {

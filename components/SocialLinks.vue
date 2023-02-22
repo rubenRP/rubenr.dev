@@ -6,13 +6,12 @@
         class="external"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="{link.label}"
+        aria-label="{{link.label}}"
       >
-        <font-awesome-icon :icon="item.iconClass" />
+        <ClientOnly>
+          <font-awesome-icon :icon="['fab', item.iconClass]" />
+        </ClientOnly>
       </a>
-    </li>
-    <li>
-      <font-awesome-icon icon="fa-solid fa-magnifying-glass" />
     </li>
   </ul>
 </template>

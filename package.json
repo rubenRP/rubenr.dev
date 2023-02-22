@@ -30,6 +30,7 @@
   },
   "devDependencies": {
     "@nuxt/content": "^2.4.3",
+    "@nuxt/image-edge": "^1.0.0-27919678.2f5b64b",
     "@nuxtjs/i18n": "^8.0.0-beta.9",
     "nuxt": "^3.2.0",
     "sass": "^1.58.1"
@@ -38,6 +39,7 @@
     "@fortawesome/fontawesome-svg-core": "^6.3.0",
     "@fortawesome/free-brands-svg-icons": "^6.3.0",
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
-    "@fortawesome/vue-fontawesome": "^3.0.3"
+    "@fortawesome/vue-fontawesome": "^3.0.3",
+    "typed.js": "^2.0.12"
   }
 }

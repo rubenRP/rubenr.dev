@@ -1,10 +1,16 @@
 <template>
-  <h1>home</h1>
+  <HeroTyped
+    :title="hero.title"
+    :subtitle="hero.subtitle"
+    :text="hero.text"
+    social
+  />
   <div id="start" />
-  <Resume />
+  <Recent />
+  <Popular />
   <Bio />
 </template>
 
-<script setup>
-defineI18nRoute(false);
+<script setup lang="ts">
+const hero = useAppConfig().home.hero;
 </script>
