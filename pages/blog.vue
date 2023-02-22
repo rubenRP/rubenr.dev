@@ -119,11 +119,11 @@ useHead({
   ],
 });
 
-const enPosts = await useAsyncData("enblog", () =>
-  queryContent("/blog").where({ _locale: "en" }).sort({ date: -1 }).find()
+const enPosts = await useAsyncData(() =>
+  queryContent("blog").where({ _locale: "en" }).sort({ date: -1 }).find()
 );
 const esPosts = await useAsyncData("esblog", () =>
-  queryContent("/blog").where({ _locale: "es" }).sort({ date: -1 }).find()
+  queryContent("blog").where({ _locale: "es" }).sort({ date: -1 }).find()
 );
 
 let filteredPosts = enPosts.data || [];

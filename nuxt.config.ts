@@ -1,3 +1,4 @@
+import { resolve } from "node:path";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   modules: ["@nuxt/content", "@nuxt/image-edge"],
@@ -72,7 +73,16 @@ export default defineNuxtConfig({
     },
   },
   content: {
-    documentDriven: true,
+    sources: {
+      blog: {
+        driver: "fs",
+        base: resolve(__dirname, "content/blog"),
+      },
+      pages: {
+        driver: "fs",
+        base: resolve(__dirname, "content/pages"), // Path for source directory
+      },
+    },
     markdown: {
       anchorLinks: false,
     },
