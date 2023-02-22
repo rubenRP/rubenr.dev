@@ -136,8 +136,58 @@ useHead({
 });
 
 useHead({
+  htmlAttrs: {
+    lang: post.value?._locale,
+  },
   bodyAttrs: {
     class: bodyClasses,
   },
+  title: post.value?.title,
+  link: [
+    {
+      rel: "alternate",
+      hreflang: "en",
+      href: formatUrl("en", post.value?._dir, post.value?.slug),
+    },
+    {
+      rel: "alternate",
+      hreflang: "es",
+      href: formatUrl("es", post.value?._dir, post.value?.slug),
+    },
+  ],
+  meta: [
+    {
+      name: "description",
+      content: post.value?.description,
+    },
+    {
+      property: "og:title",
+      content: post.value?.title,
+    },
+    {
+      property: "og:description",
+      content: post.value?.description,
+    },
+    {
+      property: "og:image",
+      content: post.value?.thumbnail,
+    },
+    {
+      property: "og:url",
+      content: route.fullPath,
+    },
+    {
+      name: "twitter:title",
+      content: post.value?.title,
+    },
+    {
+      name: "twitter:description",
+      content: post.value?.description,
+    },
+    {
+      name: "twitter:image",
+      content: post.value?.thumbnail,
+    },
+  ],
 });
 </script>

@@ -1,4 +1,18 @@
 export default defineAppConfig({
+  siteConfig: {
+    siteTitle: "Rubén Rodríguez",
+    siteTitleAlt: "Front-End Developer",
+    siteLogo: "https://rubenr.dev/icons/icon-256x256.png",
+    siteUrl: "https://rubenr.dev",
+    siteDescription:
+      "Front-End developer. Javascript & Open Source enthusiast. This is my personal website & blog. I write about tech, programming, and web technologies.",
+    userName: "Rubén Rodríguez",
+    userEmail: "hola@rubenr.dev",
+    userTwitter: "@_rubenr",
+    userLocation: "Madrid, Spain",
+    seoKeywords:
+      "blog, front-end, developer, javascript, react, gatsby, angular, ecommerce, magento, vuejs, vite",
+  },
   navigation: [
     {
       title: "Home",
