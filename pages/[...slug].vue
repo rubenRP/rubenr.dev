@@ -82,6 +82,9 @@
 const route = useRoute();
 let post: any = null;
 let [prev, next]: any = [];
+const siteConfig = useAppConfig().siteConfig;
+
+// get server url from nuxt data
 
 // TODO - this is a mess, clean it up
 if (route.params.slug.length > 1) {
@@ -147,12 +150,18 @@ useHead({
     {
       rel: "alternate",
       hreflang: "en",
-      href: formatUrl("en", post.value?._dir, post.value?.slug),
+      href:
+        siteConfig.siteUrl +
+        "/" +
+        formatUrl("en", post.value?._dir, post.value?.slug),
     },
     {
       rel: "alternate",
       hreflang: "es",
-      href: formatUrl("es", post.value?._dir, post.value?.slug),
+      href:
+        siteConfig.siteUrl +
+        "/" +
+        formatUrl("es", post.value?._dir, post.value?.slug),
     },
   ],
   meta: [
@@ -170,11 +179,11 @@ useHead({
     },
     {
       property: "og:image",
-      content: post.value?.thumbnail,
+      content: siteConfig.siteUrl + post.value?.thumbnail,
     },
     {
       property: "og:url",
-      content: route.fullPath,
+      content: siteConfig.siteUrl + route.fullPath,
     },
     {
       name: "twitter:title",
@@ -186,7 +195,7 @@ useHead({
     },
     {
       name: "twitter:image",
-      content: post.value?.thumbnail,
+      content: siteConfig.siteUrl + post.value?.thumbnail,
     },
   ],
 });
