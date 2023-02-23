@@ -55,7 +55,7 @@ const props = defineProps<{
 
 // Default props
 const title = ref(props.title || [""]);
-const image = ref(props.image || "_nuxt/assets/img/hero-default.jpg");
+const image = ref(props.image || "/img/hero-default.jpg");
 const social = ref(props.social || false);
 const isParallax = ref(props.isParallax || true);
 const arrow = ref(props.arrow || true);
