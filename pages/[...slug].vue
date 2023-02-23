@@ -58,7 +58,7 @@ else {
         .findOne()
     );
   }
-  if (res.data && res.data.value?._source === "blog") {
+  if (res.data.value && res.data.value?._source === "blog") {
     post = res.data;
   } else {
     page = res.data;

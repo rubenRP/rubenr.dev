@@ -2,7 +2,7 @@
   <span class="tags">
     <NuxtLink
       v-for="tag in items"
-      to="`/blog/tag:${tag.toLowerCase()}`"
+      :to="`/blog/tag/${tag.toLowerCase()}`"
       :key="tag"
       class="label label-rounded"
     >

@@ -99,17 +99,13 @@ useHead({
       rel: "alternate",
       hreflang: "en",
       href:
-        siteConfig.siteUrl +
-        "/" +
-        formatUrl("en", props.post._dir, props.post.slug),
+        siteConfig.siteUrl + formatUrl("en", props.post._dir, props.post.slug),
     },
     {
       rel: "alternate",
       hreflang: "es",
       href:
-        siteConfig.siteUrl +
-        "/" +
-        formatUrl("es", props.post._dir, props.post.slug),
+        siteConfig.siteUrl + formatUrl("es", props.post._dir, props.post.slug),
     },
   ],
   meta: [
