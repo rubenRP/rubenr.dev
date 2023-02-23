@@ -122,7 +122,7 @@ useHead({
 const enPosts = await useAsyncData(() =>
   queryContent("blog").where({ _locale: "en" }).sort({ date: -1 }).find()
 );
-const esPosts = await useAsyncData("esblog", () =>
+const esPosts = await useAsyncData(() =>
   queryContent("blog").where({ _locale: "es" }).sort({ date: -1 }).find()
 );
 
