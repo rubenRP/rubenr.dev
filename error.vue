@@ -16,7 +16,7 @@
                   <p className="mb-5">
                     You just hit a route that doesn&#39;t exist... the sadness.
                   </p>
-                  <img src="~/assets/img/404.gif" alt="404" />
+                  <nuxt-img src="/img/404.gif" alt="404" />
                 </div>
               </div>
             </div>
