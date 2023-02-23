@@ -13,12 +13,16 @@ let res;
 // Spanish Post
 if (route.params.slug.length > 1) {
   res = await useAsyncData(() =>
-    queryContent(route.params.slug[1])
-      .where({ _locale: route.params.slug[0], _source: "blog" })
+    queryContent()
+      .where({
+        _locale: route.params.slug[0],
+        _source: "blog",
+        _dir: { $contains: [route.params.slug[1]] },
+      })
       .findOne()
   );
-  if (!res.data) {
-    res = await useAsyncData("post", () =>
+  if (!res.data.value) {
+    res = await useAsyncData(() =>
       queryContent()
         .where({
           slug: route.params.slug[2],
@@ -33,10 +37,18 @@ if (route.params.slug.length > 1) {
 // English post or page
 else {
   res = await useAsyncData(() =>
-    queryContent(route.params.slug[0]).where({ _locale: "en" }).findOne()
+    queryContent()
+      .where({
+        _locale: "en",
+        _dir: {
+          $contains: [route.params.slug[0]],
+        },
+        _source: { $in: ["blog", "pages"] },
+      })
+      .findOne()
   );
-  if (!res.data) {
-    res = await useAsyncData("post", () =>
+  if (!res.data.value) {
+    res = await useAsyncData(() =>
       queryContent()
         .where({
           slug: route.params.slug[0],
