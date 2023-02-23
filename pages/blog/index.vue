@@ -1,5 +1,5 @@
 <template>
-  <Hero :title="heroTitle" :text="heroText" />
+  <Hero :title="heroTitle" :text="heroText" :image="heroImage" />
   <section id="start" />
   <section id="body-wrapper" class="section blog-listing modular-postlist">
     <div class="container grid-md">
@@ -93,6 +93,7 @@
 const heroTitle = "Dev Blog";
 const heroText =
   "Articles and opinions of a frontend developer. Also in spanish.";
+const heroImage = "/img/hero-category.jpg";
 useHead({
   title: "Blog",
   meta: [

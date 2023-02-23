@@ -8,7 +8,7 @@
       (isParallax ? ' parallax' : '')
     "
     :style="{
-      background: `url(${image})`,
+      backgroundImage: bagroundImageUrl,
       backgroundPositionY: position + 'px',
     }"
   >
@@ -63,8 +63,14 @@ const heroClasses = ref(
   props.heroClasses || "text-light hero-tiny overlay-dark-gradient"
 );
 const textAlign = ref(props.textAlign || "text-center");
-const smallHeadings = ref(props.smallHeadings || true);
+const smallHeadings = ref(props.smallHeadings || false);
 let typed: any;
+
+const $img = useImage();
+const bagroundImageUrl = computed(() => {
+  const imgUrl = $img(image.value, { width: 1600 });
+  return `url('${imgUrl}')`;
+});
 
 const parallax = () => {
   position.value = window.scrollY * 0.3;

@@ -4,6 +4,7 @@
     :subtitle="hero.subtitle"
     :text="hero.text"
     social
+    :small-headings="false"
   />
   <div id="start" />
   <Recent />
