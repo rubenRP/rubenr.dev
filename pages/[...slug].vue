@@ -15,7 +15,7 @@ if (route.params.slug.length > 1) {
   res = await useAsyncData(() =>
     queryContent()
       .where({
-        _locale: route.params.slug[0],
+        _locale: route.params.slug[0] || "en",
         _source: "blog",
         _dir: { $contains: [route.params.slug[1]] },
       })
@@ -26,7 +26,7 @@ if (route.params.slug.length > 1) {
       queryContent()
         .where({
           slug: route.params.slug[2],
-          _locale: route.params.slug[0],
+          _locale: route.params.slug[0] || "en",
           _source: "blog",
         })
         .findOne()
@@ -69,7 +69,7 @@ if (post) {
   [prev, next] = await queryContent()
     .only(["_path", "_dir", "_locale", "title", "hero_title", "slug"])
     .sort({ date: 1 })
-    .where({ _locale: post.value._locale, _source: "blog" })
+    .where({ _locale: post.value._locale || "en", _source: "blog" })
     .findSurround(post.value._path);
 }
 

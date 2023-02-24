@@ -18,7 +18,7 @@ taxonomy:
 _locale: es
 ---
 
-> You can read this article also in [English](/github-copilot/).
+> You can read this article also in [English](/github-copilot).
 
 A principios de julio, [GitHub presentó](https://www.fastcompany.com/90653878/github-copilot-microsoft-openai-coding-tool-backlash) en beta privada la que a mi parecer es una de las tecnologías más interesantes del año: GitHub Copilot, una herramienta de autocompletado asistido por IA que ha generado titulares y opiniones en todos los ámbitos.
 

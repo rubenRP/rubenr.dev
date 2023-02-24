@@ -16,7 +16,7 @@ taxonomy:
 _locale: es
 ---
 
-> You can read this article also in [English](/library-generation-webpack/).
+> You can read this article also in [English](/library-generation-webpack).
 
 Vivimos en un tiempo en el que Javascript domina la web y la arquitectura basada en microservicios se tiene como un estándar. React, Vue y Angular tienen una posición dominante y creciente en la escena, sin embargo hay un gran porcentaje del desarrollo front que se realiza a la "antigua usanza" y es necesario encapsular funcionalidades un una librería para que puedan importarse en un HTML.
 
