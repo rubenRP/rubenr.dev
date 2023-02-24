@@ -3,17 +3,17 @@
     <Header />
     <main>
       <section id="start" />
-      <section id="body-wrapper" className="section blog-listing">
-        <div className="container grid-md">
-          <div className="columns">
-            <div id="item" className="column col-12">
-              <div className="content-item h-entry">
-                <div className="content-title text-center">
-                  <h2 className="p-name mt-1">Not Found</h2>
+      <section id="body-wrapper" class="section blog-listing">
+        <div class="container grid-md">
+          <div class="columns">
+            <div id="item" class="column col-12">
+              <div class="content-item h-entry">
+                <div class="content-title text-center">
+                  <h2 class="p-name mt-1">Not Found</h2>
                 </div>
 
-                <div className="e-content text-center">
-                  <p className="mb-5">
+                <div class="e-content text-center">
+                  <p class="mb-5">
                     You just hit a route that doesn&#39;t exist... the sadness.
                   </p>
                   <nuxt-img src="/img/404.gif" alt="404" />

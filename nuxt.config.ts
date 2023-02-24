@@ -1,13 +1,14 @@
 import { resolve } from "node:path";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/content", "@nuxt/image-edge"],
+  modules: ["@nuxt/content", "@nuxt/image-edge", "nuxt-simple-sitemap"],
   css: [
     "~/assets/scss/theme.scss",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
   runtimeConfig: {
     public: {
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://rubenr.dev",
       ackee: {
         server: process.env.ackeeDomain,
         domainId: process.env.ackeeId,
@@ -18,6 +19,21 @@ export default defineNuxtConfig({
         },
       },
     },
+  },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ["/"],
+    },
+  },
+  routeRules: {
+    "/**": {
+      sitemap: {
+        changefreq: "daily",
+        priority: 0.7,
+      },
+    },
+    "/sitemap.xml": { index: false },
   },
   app: {
     head: {

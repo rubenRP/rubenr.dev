@@ -73,6 +73,11 @@ if (post) {
     .findSurround(post.value._path);
 }
 
+// Redirect to 404 if no post or page found
+if (!post && !page) {
+  navigateTo("/404");
+}
+
 const bodyClasses = "header-fixed header-animated";
 
 // Clear body classes first
