@@ -3,11 +3,14 @@
   padding-bottom: 1rem;
   border-bottom: 1px solid $gray-color-light;
   .chip {
+    border: none;
+    color: map-get($royal-blue, 600);
     cursor: pointer;
     background: map-get($royal-blue, 200);
     margin-right: 1rem;
     margin-left: 0;
     &.active {
+      color: map-get($royal-blue, 50);
       background: map-get($royal-blue, 400);
       text-decoration: none;
     }

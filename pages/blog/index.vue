@@ -6,22 +6,22 @@
       <div class="columns">
         <div id="item" class="column col-12">
           <div class="language-filter">
-            <a
+            <button
               class="chip"
               :class="filteredLanguage == 'en' && 'active'"
               @click="setFilteredLanguage('en')"
             >
               <figure class="avatar avatar-sm" data-initial="EN"></figure>
               English
-            </a>
-            <a
+            </button>
+            <button
               class="chip"
               :class="filteredLanguage == 'es' && 'active'"
               @click="setFilteredLanguage('es')"
             >
               <figure class="avatar avatar-sm" data-initial="ES"></figure>
               Spanish
-            </a>
+            </button>
           </div>
           <div class="columns" v-for="post in filteredPosts">
             <div class="column col-3 col-md-12 header-col">

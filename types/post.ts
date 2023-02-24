@@ -10,6 +10,7 @@ export interface Post {
   hero_image: string;
   date: string;
   slug: string;
+  readingTime?: any;
   taxonomy: {
     tag: string[];
     category: string[];

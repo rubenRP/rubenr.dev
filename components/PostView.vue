@@ -23,7 +23,10 @@
               <span class="blog-date">
                 <i class="fa fa-calendar" />
                 {{ formatDate(post.date) }}
-                <!-- <ReadingTime minutes={post.timeToRead} /> -->
+                <ReadingTime
+                  v-if="post.readingTime"
+                  :readingTime="post.readingTime"
+                />
               </span>
 
               <span class="blog-tags">

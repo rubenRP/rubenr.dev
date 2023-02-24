@@ -114,6 +114,7 @@ export default defineNuxtConfig({
     },
     markdown: {
       anchorLinks: false,
+      remarkPlugins: ["remark-reading-time"],
     },
     locales: ["en", "es"],
     defaultLocale: "en",

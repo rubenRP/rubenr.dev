@@ -44,6 +44,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "ackee-tracker": "^5.1.0",
+    "remark-reading-time": "^2.0.1",
     "typed.js": "^2.0.12"
   }
 }
