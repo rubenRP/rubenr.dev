@@ -42,7 +42,7 @@ export default defineAppConfig({
     },
     {
       title: "RSS",
-      url: "/sitemap/sitemap-index.xml",
+      url: "/sitemap.xml",
     },
   ],
   socialLinks: [
