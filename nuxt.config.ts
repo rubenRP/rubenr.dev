@@ -6,6 +6,19 @@ export default defineNuxtConfig({
     "~/assets/scss/theme.scss",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
+  runtimeConfig: {
+    public: {
+      ackee: {
+        server: process.env.ackeeDomain,
+        domainId: process.env.ackeeId,
+        options: {
+          ignoreLocalhost: true,
+          ignoreOwnVisits: true,
+          detailed: true,
+        },
+      },
+    },
+  },
   app: {
     head: {
       title: "Rubén Rodríguez - Front-End Developer",

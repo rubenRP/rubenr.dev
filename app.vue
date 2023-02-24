@@ -1,5 +1,8 @@
 <template>
   <NuxtLayout>
+    <ClientOnly>
+      <Ackee />
+    </ClientOnly>
     <NuxtPage />
   </NuxtLayout>
 </template>
