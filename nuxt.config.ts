@@ -10,8 +10,8 @@ export default defineNuxtConfig({
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://rubenr.dev",
       ackee: {
-        server: process.env.ackeeDomain,
-        domainId: process.env.ackeeId,
+        id: process.env.ackeeId,
+        domain: process.env.ackeeDomain,
         options: {
           ignoreLocalhost: true,
           ignoreOwnVisits: true,

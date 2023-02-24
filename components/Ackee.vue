@@ -5,6 +5,6 @@ import * as ackeeTracker from "ackee-tracker";
 const rConfig = useRuntimeConfig();
 
 ackeeTracker
-  .create(rConfig.ackee.server, rConfig.ackee.options)
-  .record(rConfig.ackee.domainId);
+  .create(rConfig.ackee.domain, rConfig.ackee.options)
+  .record(rConfig.ackee.id);
 </script>
