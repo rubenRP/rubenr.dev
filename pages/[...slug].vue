@@ -10,14 +10,17 @@ let page: any = null;
 let [prev, next]: any = [];
 let res;
 
+// Clean up slug
+const slug = route.params.slug.filter((s: string) => s !== "");
+
 // Spanish Post
-if (route.params.slug.length > 1) {
+if (slug > 1) {
   res = await useAsyncData(() =>
     queryContent()
       .where({
-        _locale: route.params.slug[0] || "en",
+        _locale: slug[0] || "en",
         _source: "blog",
-        _dir: { $contains: [route.params.slug[1]] },
+        _dir: { $contains: [slug[1]] },
       })
       .findOne()
   );
@@ -25,8 +28,8 @@ if (route.params.slug.length > 1) {
     res = await useAsyncData(() =>
       queryContent()
         .where({
-          slug: route.params.slug[2],
-          _locale: route.params.slug[0] || "en",
+          slug: slug[1],
+          _locale: slug[0] || "en",
           _source: "blog",
         })
         .findOne()
@@ -41,7 +44,7 @@ else {
       .where({
         _locale: "en",
         _dir: {
-          $contains: [route.params.slug[0]],
+          $contains: [slug[0]],
         },
         _source: { $in: ["blog", "pages"] },
       })
@@ -51,7 +54,7 @@ else {
     res = await useAsyncData(() =>
       queryContent()
         .where({
-          slug: route.params.slug[0],
+          slug: slug[0],
           _locale: "en",
           _source: { $in: ["blog", "pages"] },
         })
