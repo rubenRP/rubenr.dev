@@ -1,7 +1,12 @@
 import { resolve } from "node:path";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  modules: ["@nuxt/content", "@nuxt/image-edge", "nuxt-simple-sitemap"],
+  modules: [
+    "@nuxt/content",
+    "@nuxt/image-edge",
+    "nuxt-simple-sitemap",
+    "@kevinmarrec/nuxt-pwa",
+  ],
   css: [
     "~/assets/scss/theme.scss",
     "@fortawesome/fontawesome-svg-core/styles.css",
