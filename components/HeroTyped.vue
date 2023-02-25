@@ -68,7 +68,7 @@ let typed: any;
 
 const $img = useImage();
 const bagroundImageUrl = computed(() => {
-  const imgUrl = $img(image.value, { width: 1600 });
+  const imgUrl = $img(image.value, { width: 1600, format: "webp" });
   return `url('${imgUrl}')`;
 });
 

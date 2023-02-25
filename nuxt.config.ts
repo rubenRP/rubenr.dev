@@ -26,12 +26,16 @@ export default defineNuxtConfig({
     },
   },
   nitro: {
+    compressPublicAssets: true,
     prerender: {
       crawlLinks: true,
       routes: ["/"],
     },
   },
   routeRules: {
+    "/_nuxt/**": {
+      headers: { "Cache-Control": "max-age=31536000, immutable" },
+    },
     "/**": {
       sitemap: {
         changefreq: "daily",
