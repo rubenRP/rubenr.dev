@@ -61,8 +61,11 @@ yarn dev
 
 With this we already have the Vue.js application running with Vite as we can see in <http://localhost:3000/>
 
+<div class="text-center">
+
 ![Vite + Vue.js Hello World page](/img/content/pwa-vite-vite-vue-startup.png)
 
+</div>
 <div class="text-center" style="margin: -15px 0 20px;">
   <small>Vite + Vue.js Hello World page</small>
 </div>

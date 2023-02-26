@@ -62,8 +62,11 @@ yarn dev
 
 Con esto ya tenemos la aplicación Vue.js en marcha con Vite como podremos ver en <http://localhost:3000/>
 
+<div class="text-center">
+
 ![Página de Hello World de Vite + Vue.js](/img/content/pwa-vite-vite-vue-startup.png)
 
+</div>
 <div class="text-center" style="margin: -15px 0 20px;">
   <small>Página de Hello World de Vite + Vue.js</small>
 </div>

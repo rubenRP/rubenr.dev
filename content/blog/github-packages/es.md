@@ -64,8 +64,11 @@ ng generate library system-design-library
 
 Este último comando generará una estructura de ficheros similar a la de una aplicación estandar de Angular con la diferencia de que el contenido colgará de la carpeta projects y que la librería en sí cuenta con sus ficheros propios de configuración y su _package.json_
 
+<div class="text-center">
+
 ![Estructura de ficheros de la librería creada.](/img/content/github-packages-angular-library-structure.png)
 
+</div>
 <div class="text-center" style="margin: -15px 0 20px;">
   <small>Estructura de ficheros de la librería creada.</small>
 </div>
@@ -74,8 +77,11 @@ Este último comando generará una estructura de ficheros similar a la de una ap
 
 Dado que queremos que nuestra librería tenga múltiples componentes vamos a renombrar el componente, módulo y servicio creado y vamos a crear otro más resultando la siguiente estructura de ficheros:
 
+<div class="text-center">
+
 ![Estructura de ficheros tras la creación y renombrado de componentes](/img/content/github-packages-angular-library-structure-after.png)
 
+</div>
 <div class="text-center" style="margin: -15px 0 20px;">
   <small>Estructura de ficheros tras la creación y renombrado de componentes.</small>
 </div>

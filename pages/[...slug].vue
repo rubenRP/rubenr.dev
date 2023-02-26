@@ -14,7 +14,7 @@ let res;
 const slug = route.params.slug.filter((s: string) => s !== "");
 
 // Spanish Post
-if (slug > 1) {
+if (slug.length > 1) {
   res = await useAsyncData(() =>
     queryContent()
       .where({
