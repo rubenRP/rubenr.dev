@@ -77,7 +77,7 @@ if (post) {
 }
 
 // Redirect to 404 if no post or page found
-if (!post.value && !page.value) {
+if (!post && !page) {
   navigateTo("/404");
 }
 

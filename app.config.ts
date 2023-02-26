@@ -47,6 +47,16 @@ export default defineAppConfig({
   ],
   socialLinks: [
     {
+      label: "GitHub",
+      url: "http://github.com/rubenRP",
+      iconClass: "github",
+    },
+    {
+      label: "LinkedIn",
+      url: "http://linkedin.com/in/rubenrodriguezpaz",
+      iconClass: "linkedin",
+    },
+    {
       label: "Twitter",
       url: "http://twitter.com/@_rubenr",
       iconClass: "twitter",
@@ -55,16 +65,6 @@ export default defineAppConfig({
       label: "Mastodon",
       url: "https://mastodon.social/@rubenr",
       iconClass: "mastodon",
-    },
-    {
-      label: "LinkedIn",
-      url: "http://linkedin.com/in/rubenrodriguezpaz",
-      iconClass: "linkedin",
-    },
-    {
-      label: "GitHub",
-      url: "http://github.com/rubenRP",
-      iconClass: "github",
     },
   ],
   home: {
