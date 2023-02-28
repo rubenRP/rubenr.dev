@@ -64,8 +64,11 @@ ng generate library system-design-library
 
 This last command will generate a file structure similar to that of a standard Angular application with the difference that the content will hang in the projects folder and that the library itself has its own configuration files and its _package.json_
 
+<div class="text-center">
+
 ![File structure of the library created.](/img/content/github-packages-angular-library-structure.png)
 
+</div>
 <div class = "text-center" style = "margin: -15px 0 20px;">
   <small> File structure of the library created. </small>
 </div>
@@ -74,8 +77,11 @@ This last command will generate a file structure similar to that of a standard A
 
 Since we want our library to have multiple components, we are going to rename the component, module and service created and we are going to create another one, resulting in the following file structure:
 
+<div class="text-center">
+
 ![File structure after component creation and renaming](/img/content/github-packages-angular-library-structure-after.png)
 
+</div>
 <div class = "text-center" style = "margin: -15px 0 20px;">
   <small> File structure after component creation and renaming. </small>
 </div>
