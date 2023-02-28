@@ -25,6 +25,19 @@ export default defineNuxtConfig({
       },
     },
   },
+  pwa: {
+    manifest: {
+      name: "Rubén Rodríguez",
+      short_name: "rubenr.dev",
+      description: "Front-End developer. Javascript & Open Source enthusiast.",
+      lang: "en",
+      theme_color: "#f7f8f9",
+      background_color: "#f7f8f9",
+      display: "standalone",
+      scope: "/",
+      start_url: "/",
+    },
+  },
   nitro: {
     compressPublicAssets: true,
     prerender: {
