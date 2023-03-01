@@ -12,7 +12,6 @@ export default defineNuxtConfig({
     "~/assets/scss/theme.scss",
     "@fortawesome/fontawesome-svg-core/styles.css",
   ],
-  ssr: false,
   runtimeConfig: {
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || "https://rubenr.dev",
