@@ -13,7 +13,7 @@ taxonomy:
     - Articles
   tag:
     - JavaScript
-    - Vue.js
+    - Vuejs
     - Pinia
     - Vuex
     - Libraries

@@ -11,7 +11,7 @@ taxonomy:
   category:
     - Articles
   tag:
-    - Vue.js
+    - Vuejs
     - JavaScript
     - Netlify
     - Vite
