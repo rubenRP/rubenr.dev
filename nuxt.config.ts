@@ -6,7 +6,6 @@ export default defineNuxtConfig({
     "@nuxt/image-edge",
     "nuxt-simple-sitemap",
     "@kevinmarrec/nuxt-pwa",
-    "@nuxtjs/plausible",
   ],
   css: [
     "~/assets/scss/theme.scss",
