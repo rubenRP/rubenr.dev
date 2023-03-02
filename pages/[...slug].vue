@@ -15,7 +15,7 @@ const slug = route.params.slug.filter((s: string) => s !== "");
 
 // Spanish Post
 if (slug.length > 1) {
-  res = await useAsyncData(() =>
+  res = await useAsyncData(`es-post-dir-${route.path}`, () =>
     queryContent()
       .where({
         _locale: slug[0] || "en",
@@ -25,7 +25,7 @@ if (slug.length > 1) {
       .findOne()
   );
   if (!res.data.value) {
-    res = await useAsyncData(() =>
+    res = await useAsyncData(`es-post-slug-${route.path}`, () =>
       queryContent()
         .where({
           slug: slug[1],
@@ -39,7 +39,7 @@ if (slug.length > 1) {
 }
 // English post or page
 else {
-  res = await useAsyncData(() =>
+  res = await useAsyncData(`en-post-dir-${route.path}`, () =>
     queryContent()
       .where({
         _locale: "en",
@@ -51,7 +51,7 @@ else {
       .findOne()
   );
   if (!res.data.value) {
-    res = await useAsyncData(() =>
+    res = await useAsyncData(`en-post-slug-${route.path}`, () =>
       queryContent()
         .where({
           slug: slug[0],
