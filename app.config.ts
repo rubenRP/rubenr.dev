@@ -43,6 +43,7 @@ export default defineAppConfig({
     {
       title: "RSS",
       url: "/sitemap.xml",
+      external: true,
     },
   ],
   socialLinks: [

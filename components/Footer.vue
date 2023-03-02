@@ -9,7 +9,15 @@
         <li>
           <ul class="d-inline-flex list-unstyled">
             <li v-for="item in footerLinks" :key="item.url">
-              <NuxtLink :to="item.url" class="external">
+              <a
+                v-if="item.external"
+                :href="item.url"
+                class="external"
+                target="_blank"
+              >
+                {{ item.title }}
+              </a>
+              <NuxtLink v-else :to="item.url" class="external">
                 {{ item.title }}
               </NuxtLink>
             </li>
