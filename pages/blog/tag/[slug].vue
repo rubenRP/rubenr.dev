@@ -91,7 +91,8 @@
 
 <script setup lang="ts">
 const route = useRoute();
-const tag = route.params.slug;
+let tag = route.params.slug;
+tag = tag.toString().replace(/-/g, " ");
 const heroTitle = "Tag: " + tag;
 
 const enPosts = await useAsyncData(() =>
