@@ -51,7 +51,7 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useAsyncData("popular", () =>
+const { data } = await useAsyncData("latest", () =>
   queryContent("blog")
     .where({ _locale: "en" })
     .sort({ date: -1 })
