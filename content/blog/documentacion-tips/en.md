@@ -1,5 +1,5 @@
 ---
-title: "Writing things down is not enough: On the importance of organized and high-quality documentation.."
+title: "Writing things down is not enough: On the importance of organized and high-quality documentation."
 date: 2023-03-06T00:00:00+00:00
 published: true
 hero_title: Writing things down is not enough
@@ -81,7 +81,7 @@ It may sound exaggerated, but in very large companies, it is interesting to cons
 
 At this point, there may be a question about which specific tool to use or which one is better to maintain documentation using the previously described tips. The answer is simple: any can serve. It is more important to organize and manage the documentation itself than the tool. There are specific tools such as Confluence, Read the Docs, Scribe, or Gitlab and Github wikis, and generic applications such as Notion. Any can serve if managed correctly. You can even create an internal and specific documentation tool with Gatsby or Nuxt.
 
-## Referencias
+## References
 
 [How 5 Companies Use Internal Documentation To Scale More Efficiently - Tettra](https://tettra.com/article/internal-documentation/)
 
