@@ -91,6 +91,8 @@ const props = defineProps<{
   next?: Post;
 }>();
 
+const $img = useImage();
+
 useHead({
   htmlAttrs: {
     lang: props.post._locale,
@@ -126,7 +128,9 @@ useHead({
     },
     {
       property: "og:image",
-      content: siteConfig.siteUrl + props.post.thumbnail,
+      content: props.post.hero_image
+        ? siteConfig.siteUrl + $img(props.post.hero_image)
+        : siteConfig.siteLogo,
     },
     {
       property: "og:url",
@@ -142,7 +146,9 @@ useHead({
     },
     {
       name: "twitter:image",
-      content: siteConfig.siteUrl + props.post.thumbnail,
+      content: props.post.hero_image
+        ? siteConfig.siteUrl + $img(props.post.hero_image)
+        : siteConfig.siteLogo,
     },
   ],
 });
