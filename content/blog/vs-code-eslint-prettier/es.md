@@ -18,6 +18,8 @@ description: "Con la explosión de JavaScript como lenguaje han surgido nuevas h
 _locale: es
 ---
 
+> You can read this article also in [English](/vs-code-eslint-prettier).
+
 Con la explosión de JavaScript como lenguaje de desarrollo web han surgido nuevas herramientas para mejorar la calidad del código de nuestros proyectos utilizando los principios de los primeros linters de C y tomando el relevo de los _mess detectors_ y los _code sniffers_. Estoy hablando de los _linters_ de JS, herramientas de programación para detectar código sospechoso en tiempo real.
 
 Estas herramientas son una gran ayuda para crear un código más sólido y reusable. Un código con más calidad se traduce en menos tiempo depurando código y eso siempre es un plus.

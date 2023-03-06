@@ -41,6 +41,10 @@ useHead({
       content: useAppConfig().siteConfig.siteLogo,
     },
     {
+      property: "og:site_name",
+      content: useAppConfig().siteConfig.shortSiteUrl,
+    },
+    {
       name: "twitter:card",
       content: "summary",
     },

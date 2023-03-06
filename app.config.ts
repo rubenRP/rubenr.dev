@@ -4,6 +4,7 @@ export default defineAppConfig({
     siteTitleAlt: "Front-End Developer",
     siteLogo: "https://rubenr.dev/icons/icon-256x256.png",
     siteUrl: "https://rubenr.dev",
+    shortSiteUrl: "rubenr.dev",
     siteDescription:
       "Front-End developer. Javascript & Open Source enthusiast. This is my personal website & blog. I write about tech, programming, and web technologies.",
     userName: "Rubén Rodríguez",
