@@ -1,6 +1,6 @@
 <template>
   <section
-    class="section modular-hero hero"
+    class="section modular-hero hero hero-typed"
     :class="
       heroClasses +
       (subtitle ? ' title-h1h2' : '') +

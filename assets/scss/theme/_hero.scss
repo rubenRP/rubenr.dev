@@ -51,6 +51,22 @@
   //  background-attachment: fixed;
   //}
 
+  &.hero-typed {
+    h1 {
+      min-height: 88px;
+    }
+    @include breakpoint(md) {
+      h1 {
+        min-height: 60px;
+      }
+    }
+    @include breakpoint(sm) {
+      h1 {
+        min-height: 40px;
+      }
+    }
+  }
+
   @include breakpoint(md) {
     h1 {
       font-size: 3rem;
