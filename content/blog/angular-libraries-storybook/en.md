@@ -3,7 +3,7 @@ title: "Angular libraries & Storybook: Generate a component library ready to pub
 date: 2022-02-08T10:30:00.000Z
 published: true
 hero_title: Angular libraries & Storybook
-hero_subtitle: Generate a component library ready to publish in packages.
+hero_subtitle: Generate a component library ready to publish in packages
 description: In this post we are going to create an Angular app with Angular Libraries and Storybook, ready to publish a components library as a package.
 hero_image: /img/content/angular-libraries-storybook-hero.jpg
 thumbnail: /img/content/angular-libraries-storybook-thumb.jpg

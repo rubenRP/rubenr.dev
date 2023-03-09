@@ -3,7 +3,7 @@ title: "GitHub Copilot: Análisis y reflexiones tras 1 mes de uso"
 date: 2021-09-20T00:00:00+00:00
 published: true
 hero_title: GitHub Copilot
-hero_subtitle: Análisis y reflexiones tras 1 mes de uso.
+hero_subtitle: Análisis y reflexiones tras 1 mes de uso
 description: Reflexiones acerca de esta nueva herramienta y las conclusiones que he sacado.
 hero_image: /img/content/github-copilot-hero.jpg
 thumbnail: /img/content/github-copilot-thumb.jpg

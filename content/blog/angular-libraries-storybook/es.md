@@ -3,7 +3,7 @@ title: "Angular libraries y Storybook: Generación una librería de componentes 
 date: 2022-02-08T10:30:00.000Z
 published: true
 hero_title: Angular libraries y Storybook
-hero_subtitle: Generación una librería de componentes lista para publicar en paquetes.
+hero_subtitle: Generación una librería de componentes lista para publicar en paquetes
 description: En este post vamos a crear una aplicación de Angular con Angular Libraries y Storybook, lista para publicar un sistema de diseño como paquete.
 hero_image: /img/content/angular-libraries-storybook-hero.jpg
 thumbnail: /img/content/angular-libraries-storybook-thumb.jpg

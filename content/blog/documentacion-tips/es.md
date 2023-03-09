@@ -3,7 +3,7 @@ title: "Escribir cosas no es suficiente: Sobre la importancia de una documentaci
 date: 2023-03-06T00:00:00+00:00
 published: true
 hero_title: Escribir cosas no es suficiente
-hero_subtitle: Sobre la importancia de una documentación organizada y de calidad.
+hero_subtitle: Sobre la importancia de una documentación organizada y de calidad
 description: En este post hablaremos sobre la importancia de tener una buena documentación y por qué mantener la documentación técnica de un modo estructurado es crucial.
 hero_image: /img/content/documentation-tips-hero.jpg
 thumbnail: /img/content/documentation-tips-thumb.jpg

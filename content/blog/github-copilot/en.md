@@ -3,7 +3,7 @@ title: "GitHub Copilot: Analysis and reflections after 1 month of use"
 date: 2021-09-20T00:00:00+00:00
 published: true
 hero_title: GitHub Copilot
-hero_subtitle: Analysis and reflections after 1 month of use.
+hero_subtitle: Analysis and reflections after 1 month of use
 description: Analysis and reflections after 1 month of use.
 hero_image: /img/content/github-copilot-hero.jpg
 thumbnail: /img/content/github-copilot-thumb.jpg

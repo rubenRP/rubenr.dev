@@ -3,7 +3,7 @@ title: "Writing things down is not enough: On the importance of organized and hi
 date: 2023-03-06T00:00:00+00:00
 published: true
 hero_title: Writing things down is not enough
-hero_subtitle: On the importance of organized and high-quality documentation..
+hero_subtitle: On the importance of organized and high-quality documentation
 description: In this post, we will talk about the importance of having good documentation and why maintaining technical documentation in a structured way is crucial.
 hero_image: /img/content/documentation-tips-hero.jpg
 thumbnail: /img/content/documentation-tips-thumb.jpg

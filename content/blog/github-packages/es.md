@@ -3,7 +3,7 @@ title: "GitHub packages: Creación y publicación de paquetes de Angular en tu r
 date: 2021-03-03T08:30:00.000Z
 published: true
 hero_title: GitHub packages
-hero_subtitle: Creación y publicación de paquetes de Angular en tu repositorio.
+hero_subtitle: Creación y publicación de paquetes de Angular en tu repositorio
 description: En este artículo profundizaremos en la publicación de paquetes de Angular usando GitHub Packages.
 thumbnail: /img/content/github-packages-github-thumb.jpg
 taxonomy:

@@ -3,7 +3,7 @@ title: "PWA y Vite: Desarrollo de una Progressive Web App con Vue 3"
 date: 2021-08-10T08:30:00.000Z
 published: true
 hero_title: PWA y Vite
-hero_subtitle: Desarrollo de una Progressive Web App con Vue 3.
+hero_subtitle: Desarrollo de una Progressive Web App con Vue 3
 description: En este post vamos a desarrollar un boilerplate para desarrollar
   PWA utilizando Vite como herramienta de building y Vue.js 3 como framework
   JavaScript.
