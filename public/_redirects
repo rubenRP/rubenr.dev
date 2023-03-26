@@ -98,3 +98,5 @@
 /blog/tag:reacticon /blog/tag/reacticon/ 301
 /es/cors-vite-vue /es/errores-cors-vite-vue/ 301
 /es/gatsby-netlify-cms /es/gatsby-y-netlify-cms/ 301
+/gatsby-y-netlify-cms /es/gatsby-y-netlify-cms/ 301
+/es/library-generation-webpack /es/generacion-de-librerias-js-con-webpack/ 301
