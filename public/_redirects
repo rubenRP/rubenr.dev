@@ -100,3 +100,4 @@
 /es/gatsby-netlify-cms /es/gatsby-y-netlify-cms/ 301
 /gatsby-y-netlify-cms /es/gatsby-y-netlify-cms/ 301
 /es/library-generation-webpack /es/generacion-de-librerias-js-con-webpack/ 301
+/blog/tag /blog 301
