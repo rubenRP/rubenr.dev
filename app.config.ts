@@ -117,11 +117,17 @@ export default defineAppConfig({
         {
           id: 1,
           title: "Universitat Oberta de Catalunya",
+          info: "Doctoral Programme in Network and Information Technologies",
+          date: "2023 - Current",
+        },
+        {
+          id: 2,
+          title: "Universitat Oberta de Catalunya",
           info: "Master of Technology - MTech, Computer Engineering",
           date: "2019",
         },
         {
-          id: 2,
+          id: 3,
           title: "Universidad Autónoma de Madrid",
           info: "Bachelor of Engineering, Computer Engineering",
           date: "2015",
