@@ -13,7 +13,7 @@ Personal website made with Nuxt 3
 
 ## Contributing
 
-If you see any typos or formatting errors in a post, or any other issue that needs to be addressed, please dot't hesitate to open a pull request and fix it!
+If you see any typos or formatting errors in a post, or any other issue that needs to be addressed, please don't hesitate to open a pull request and fix it!
 
 ## Author
 
