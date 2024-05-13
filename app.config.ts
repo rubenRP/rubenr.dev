@@ -59,14 +59,14 @@ export default defineAppConfig({
       iconClass: "linkedin",
     },
     {
-      label: "Twitter",
-      url: "http://twitter.com/@_rubenr",
-      iconClass: "twitter",
+      label: "Threads",
+      url: "https://www.threads.net/@_rubenr",
+      iconClass: "threads",
     },
     {
-      label: "Mastodon",
-      url: "https://mastodon.social/@rubenr",
-      iconClass: "mastodon",
+      label: "Bluesky",
+      url: "https://bsky.app/profile/rubenr.bsky.social",
+      iconClass: "bluesky",
     },
   ],
   home: {
