@@ -41,6 +41,8 @@
 
   &.hero-tiny {
     min-height: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 2rem;
   }
 
   .header-fixed & {
@@ -63,6 +65,11 @@
     @include breakpoint(sm) {
       h1 {
         min-height: 40px;
+      }
+    }
+    &.small-headings {
+      h1 {
+        margin-bottom: 0;
       }
     }
   }
@@ -91,6 +98,11 @@
     }
     h2 {
       color: rgba($header-text-light, 0.8);
+    }
+    .social-links {
+      a {
+        color: $light-color;
+      }
     }
   }
 
@@ -123,8 +135,9 @@
   }
 
   p {
-    font-size: 0.9rem;
+    // font-size: 0.9rem;
     font-weight: 300;
+    line-height: 1.5rem;
   }
 
   .social-links {
@@ -133,9 +146,6 @@
     justify-content: center;
     border-top: 1px solid rgba(255, 255, 255, 0.3);
     margin-top: 5px;
-    a {
-      color: $light-color;
-    }
   }
 
   #to-start {

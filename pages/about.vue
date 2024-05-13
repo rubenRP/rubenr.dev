@@ -1,5 +1,5 @@
 <template>
-  <Hero :title="heroTitle" :text="heroText" :image="heroImage" />
+  <Hero :title="heroTitle" :text="heroText" :text-align="textAlign" />
   <div id="start" />
   <About />
   <Resume />
@@ -8,9 +8,9 @@
 <script setup lang="ts">
 const heroTitle = "About";
 const heroText = "Who I am? What I did? What I know?";
-const heroImage = "/img/hero-category.jpg";
 const bodyClasses =
   "header-dark header-transparent header-fixed header-animated";
+const textAlign = "text-left";
 
 useHead({
   title: "About",

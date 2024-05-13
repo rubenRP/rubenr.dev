@@ -73,7 +73,7 @@ export default defineAppConfig({
     hero: {
       title: ["Hello world!", "¡Hola mundo!"],
       subtitle: "Soy Rubén Rodríguez.",
-      text: "I'm a Madrid based developer. <strong>Front-End developer</strong> @ Scalefast.<br/><strong>Javascript enthusiast</strong>.<br/>Specialized in tailored development for eCommerce and new UX patterns.",
+      text: "I'm a Madrid based developer. <strong>Front-End developer</strong> @ Scalefast.<br/>Javascript enthusiast, Open Source lover.<br/>PhD Student.",
     },
   },
   about: {
@@ -83,9 +83,9 @@ export default defineAppConfig({
     contactEmail: "hola [at] rubenr [dot] dev",
     contactLink:
       '<a href="https://www.linkedin.com/in/rubenrodriguezpaz/" class="btn btn-lg" target="_blank" rel="noopener">View full resume</a>',
-    text: "Rubén Rodríguez, 1989, Madrid. Tech lover and restless by nature. Passionate about Javascript development and everything related to web technologies and Open Source projects. Trying to find the perfect fusion between computing, usability, beauty and business.<br/><br/>Without stopping to learn...",
+    text: "Rubén Rodríguez, 1989, Madrid. Tech lover and restless by nature. Passionate about Javascript development and everything related to web technologies and Open Source projects.",
     shortInfo:
-      "Rubén Rodríguez, 1989, Madrid based. Tech lover and restless by nature. Front-End Tech Lead @ Scalefast. Javascript enthusiast",
+      "Rubén Rodríguez, 1989, Madrid based. Tech lover and restless by nature. Front-End Tech Lead @ Scalefast.",
   },
   resume: [
     {

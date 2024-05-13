@@ -1,9 +1,9 @@
 <template>
   <section id="footer" class="section">
-    <section class="container grid-lg">
+    <section class="container grid-md">
       <SocialLinks />
     </section>
-    <section class="container grid-lg">
+    <section class="container grid-md">
       <ul class="copyright d-inline-flex list-unstyled">
         <li>© {{ new Date().getFullYear() }} Rubén Rodríguez</li>
         <li>
