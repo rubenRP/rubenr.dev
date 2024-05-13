@@ -31,7 +31,8 @@
 </template>
 
 <script setup lang="ts">
-import { Post } from "~~/types/post";
+import type { Post } from "~/types/post";
+
 defineProps<{
   post: any;
   prev?: Post;

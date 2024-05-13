@@ -4,11 +4,11 @@
 </template>
 
 <script setup lang="ts">
-const route = useRoute();
+const route: any = useRoute();
 let post: any = null;
 let page: any = null;
 let [prev, next]: any = [];
-let res;
+let res: any;
 
 // Clean up slug
 const slug = route.params.slug.filter((s: string) => s !== "");
@@ -48,9 +48,9 @@ else {
         },
         _source: { $in: ["blog", "pages"] },
       })
-      .findOne()
+      .find()
   );
-  if (!res.data.value) {
+  if (!res.data.value?.length) {
     res = await useAsyncData(`en-post-slug-${slug[0]}`, () =>
       queryContent()
         .where({
