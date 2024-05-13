@@ -1,6 +1,6 @@
 <template>
   <header id="header" :class="scrolled ? 'section scrolled' : 'section'">
-    <section class="container grid-lg">
+    <section class="container grid-md">
       <nav class="navbar">
         <section class="navbar-section logo">
           <NuxtLink to="/" class="navbar-brand mr-10">

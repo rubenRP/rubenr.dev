@@ -3,18 +3,20 @@
     :title="hero.title"
     :subtitle="hero.subtitle"
     :text="hero.text"
-    social
-    :small-headings="false"
+    :social="false"
+    :small-headings="true"
+    :text-align="textAlign"
   />
   <div id="start" />
   <Recent />
   <Popular />
-  <Bio />
 </template>
 
 <script setup lang="ts">
 const bodyClasses =
   "header-dark header-transparent header-fixed header-animated";
+
+const textAlign = "text-left";
 
 useHead({
   title: "Home",
