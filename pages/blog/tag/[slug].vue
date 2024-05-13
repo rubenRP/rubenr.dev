@@ -94,6 +94,14 @@ const route = useRoute();
 let tag = route.params.slug;
 tag = tag.toString().replace(/-/g, " ");
 const heroTitle = "Tag: " + tag;
+const bodyClasses =
+  "header-dark header-transparent header-fixed header-animated";
+
+useHead({
+  bodyAttrs: {
+    class: bodyClasses,
+  },
+});
 
 const enPosts = await useAsyncData(() =>
   queryContent()

@@ -39,7 +39,7 @@ if (slug.length > 1) {
 }
 // English post or page
 else {
-  res = await useAsyncData(`en-post-dir-${slug[0]}`, () =>
+  const count = await useAsyncData(`en-post-count-${slug[0]}-count`, () =>
     queryContent()
       .where({
         _locale: "en",
@@ -48,9 +48,22 @@ else {
         },
         _source: { $in: ["blog", "pages"] },
       })
-      .find()
+      .count()
   );
-  if (!res.data.value?.length) {
+
+  if (count.data.value && count.data.value > 0) {
+    res = await useAsyncData(`en-post-dir-${slug[0]}`, () =>
+      queryContent()
+        .where({
+          _locale: "en",
+          _dir: {
+            $contains: [slug[0]],
+          },
+          _source: { $in: ["blog", "pages"] },
+        })
+        .findOne()
+    );
+  } else {
     res = await useAsyncData(`en-post-slug-${slug[0]}`, () =>
       queryContent()
         .where({
@@ -82,14 +95,6 @@ if (!post?.value && !page?.value) {
 }
 
 const bodyClasses = "header-fixed header-animated";
-
-// Clear body classes first
-useHead({
-  bodyAttrs: {
-    class: "",
-  },
-});
-
 useHead({
   bodyAttrs: {
     class: bodyClasses,

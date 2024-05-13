@@ -94,6 +94,9 @@ const heroTitle = "Dev Blog";
 const heroText =
   "Articles and opinions of a frontend developer. Also in spanish.";
 const heroImage = "/img/hero-category.jpg";
+const bodyClasses =
+  "header-dark header-transparent header-fixed header-animated";
+
 useHead({
   title: "Blog",
   meta: [
@@ -118,6 +121,9 @@ useHead({
       content: heroText,
     },
   ],
+  bodyAttrs: {
+    class: bodyClasses,
+  },
 });
 
 const enPosts = await useAsyncData(() =>

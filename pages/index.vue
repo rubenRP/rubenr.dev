@@ -13,6 +13,9 @@
 </template>
 
 <script setup lang="ts">
+const bodyClasses =
+  "header-dark header-transparent header-fixed header-animated";
+
 useHead({
   title: "Home",
   meta: [
@@ -21,6 +24,9 @@ useHead({
       content: useAppConfig().siteConfig.seoKeywords,
     },
   ],
+  bodyAttrs: {
+    class: bodyClasses,
+  },
 });
 const hero = useAppConfig().home.hero;
 </script>

@@ -9,6 +9,9 @@
 const heroTitle = "About";
 const heroText = "Who I am? What I did? What I know?";
 const heroImage = "/img/hero-category.jpg";
+const bodyClasses =
+  "header-dark header-transparent header-fixed header-animated";
+
 useHead({
   title: "About",
   meta: [
@@ -33,5 +36,8 @@ useHead({
       content: heroText,
     },
   ],
+  bodyAttrs: {
+    class: bodyClasses,
+  },
 });
 </script>
