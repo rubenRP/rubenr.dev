@@ -7,10 +7,11 @@
       (smallHeadings ? ' small-headings' : '') +
       (isParallax ? ' parallax' : '')
     "
-    :style="{
-      backgroundImage: bagroundImageUrl,
-      backgroundPositionY: position + 'px',
-    }"
+    :style="
+      backgroundImageUrl
+        ? `background-image: ${backgroundImageUrl}; background-position-y: ${position}px;`
+        : ''
+    "
   >
     <div class="image-overlay" />
     <div class="container grid-md" :class="textAlign">
@@ -53,18 +54,19 @@ const props = defineProps<{
 }>();
 
 // Default props
-const image = ref(props.image || "/img/hero-colorful.jpg");
+const image = ref(props.image || "");
 const social = ref(props.social || false);
 const isParallax = ref(props.isParallax || true);
 const arrow = ref(props.arrow || true);
 const heroClasses = ref(
-  props.heroClasses || "text-light hero-tiny overlay-dark-gradient"
+  props.heroClasses || "text-light hero-tiny overlay-dark-gradient "
 );
 const textAlign = ref(props.textAlign || "text-center");
 const smallHeadings = ref(props.smallHeadings || true);
 
 const $img = useImage();
-const bagroundImageUrl = computed(() => {
+const backgroundImageUrl = computed(() => {
+  if (!image.value) return "";
   const imgUrl = $img(image.value, { width: 1600, format: "webp" });
   return `url('${imgUrl}')`;
 });

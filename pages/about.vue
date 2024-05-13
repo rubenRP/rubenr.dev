@@ -1,5 +1,10 @@
 <template>
-  <Hero :title="heroTitle" :text="heroText" :text-align="textAlign" />
+  <Hero
+    :title="heroTitle"
+    :text="heroText"
+    :text-align="textAlign"
+    :hero-classes="heroClasses"
+  />
   <div id="start" />
   <About />
   <Resume />
@@ -10,6 +15,7 @@ const heroTitle = "About";
 const heroText = "Who I am? What I did? What I know?";
 const bodyClasses =
   "header-dark header-transparent header-fixed header-animated";
+const heroClasses = "text-light hero-tiny gradient-animation";
 const textAlign = "text-left";
 
 useHead({

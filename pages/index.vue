@@ -6,6 +6,7 @@
     :social="false"
     :small-headings="true"
     :text-align="textAlign"
+    :hero-classes="heroClasses"
   />
   <div id="start" />
   <Recent />
@@ -15,6 +16,8 @@
 <script setup lang="ts">
 const bodyClasses =
   "header-dark header-transparent header-fixed header-animated";
+
+const heroClasses = "text-light hero-tiny gradient-animation";
 
 const textAlign = "text-left";
 

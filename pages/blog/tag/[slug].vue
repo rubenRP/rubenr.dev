@@ -1,5 +1,5 @@
 <template>
-  <Hero :title="heroTitle" />
+  <Hero :title="heroTitle" :hero-classes="heroClasses" />
   <section id="start" />
   <section id="body-wrapper" class="section blog-listing modular-postlist">
     <div class="container grid-md">
@@ -96,6 +96,7 @@ tag = tag.toString().replace(/-/g, " ");
 const heroTitle = "Tag: " + tag;
 const bodyClasses =
   "header-dark header-transparent header-fixed header-animated";
+const heroClasses = "text-light hero-tiny gradient-animation";
 
 useHead({
   bodyAttrs: {

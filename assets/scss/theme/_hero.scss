@@ -44,6 +44,25 @@
     padding-top: 3rem;
     padding-bottom: 2rem;
   }
+  &.gradient-animation {
+    background: linear-gradient(
+      300deg,
+      #ea0055,
+      #ca0062,
+      #a40069,
+      #7a006a,
+      #4e0865,
+      #420a6d,
+      #2f0e75,
+      #00137d,
+      #00149c,
+      #0013bc,
+      #000edd,
+      #0000fe
+    );
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
 
   .header-fixed & {
     background-position: 50% 0;
@@ -157,6 +176,18 @@
     cursor: pointer;
     @include breakpoint(sm) {
       bottom: 1rem;
+    }
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
     }
   }
 }
