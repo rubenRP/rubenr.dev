@@ -7,18 +7,13 @@
   </NuxtLayout>
 </template>
 <script setup lang="ts">
-const bodyClasses =
-  "header-dark header-transparent header-fixed header-animated";
-
 useHead({
   htmlAttrs: {
     lang: "en",
     "data-theme": "light",
   },
   titleTemplate: "%s | " + useAppConfig().siteConfig.siteTitle,
-  bodyAttrs: {
-    class: bodyClasses,
-  },
+
   meta: [
     {
       name: "description",

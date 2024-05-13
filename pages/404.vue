@@ -27,13 +27,6 @@
 <script setup lang="ts">
 const bodyClasses = "header-fixed header-animated";
 
-// Clear body classes first
-useHead({
-  bodyAttrs: {
-    class: "",
-  },
-});
-
 useHead({
   bodyAttrs: {
     class: bodyClasses,

@@ -30,13 +30,13 @@
   },
   "devDependencies": {
     "@kevinmarrec/nuxt-pwa": "^0.16.2",
-    "@nuxt/content": "^2.4.3",
-    "@nuxt/image-edge": "^1.0.0-27919678.2f5b64b",
+    "@nuxt/content": "^2.12.1",
+    "@nuxt/image": "^1.7.0",
     "@nuxtjs/i18n": "^8.0.0-beta.9",
+    "@nuxtjs/sitemap": "^5.1.5",
     "@types/ackee-tracker": "^5.0.2",
     "@types/node": "^18.14.0",
-    "nuxt": "^3.2.0",
-    "nuxt-simple-sitemap": "^1.0.7",
+    "nuxt": "^3.11.2",
     "sass": "^1.58.1"
   },
   "dependencies": {
@@ -47,5 +47,8 @@
     "ackee-tracker": "^5.1.0",
     "remark-reading-time": "^2.0.1",
     "typed.js": "^2.0.12"
+  },
+  "resolutions": {
+    "string-width": "4.2.3"
   }
 }

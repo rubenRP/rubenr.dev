@@ -3,9 +3,9 @@ import { resolve } from "node:path";
 export default defineNuxtConfig({
   modules: [
     "@nuxt/content",
-    "@nuxt/image-edge",
-    "nuxt-simple-sitemap",
+    "@nuxt/image",
     "@kevinmarrec/nuxt-pwa",
+    "@nuxtjs/sitemap",
   ],
   css: [
     "~/assets/scss/theme.scss",
