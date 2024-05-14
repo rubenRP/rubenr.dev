@@ -6,6 +6,7 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@kevinmarrec/nuxt-pwa",
     "@nuxtjs/sitemap",
+    "@nuxt/test-utils/module",
   ],
   css: [
     "~/assets/scss/theme.scss",

@@ -6,13 +6,13 @@ export default defineAppConfig({
     siteUrl: "https://rubenr.dev",
     shortSiteUrl: "rubenr.dev",
     siteDescription:
-      "Front-End developer. Javascript & Open Source enthusiast. This is my personal website & blog. I write about tech, programming, and web technologies.",
+      "Front-End developer & PhD student. Javascript & Open Source enthusiast. This is my personal website & blog. I write about tech, programming, and web technologies.",
     userName: "Rubén Rodríguez",
     userEmail: "hola@rubenr.dev",
     userTwitter: "@_rubenr",
     userLocation: "Madrid, Spain",
     seoKeywords:
-      "blog, front-end, developer, javascript, react, gatsby, angular, ecommerce, magento, vuejs, vite",
+      "blog, front-end, developer, javascript, react, gatsby, angular, ecommerce, magento, vuejs, vite, research, phd",
   },
   navigation: [
     {
