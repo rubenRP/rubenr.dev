@@ -1,7 +1,7 @@
 // Test for Tags component
 import { mountSuspended } from "@nuxt/test-utils/runtime";
-import Tags from "@/components/Tags.vue";
 import { describe, expect, it } from "vitest";
+import Tags from "../../components/Tags.vue";
 
 const tags = ["Vue.js", "Nuxt.js", "Tailwind CSS"];
 
@@ -21,5 +21,18 @@ describe("Tags component", () => {
       },
     });
     expect(component.text()).toContain(tags.join(""));
+  });
+  it("Shows tags with links", async () => {
+    const component = await mountSuspended(Tags, {
+      props: {
+        items: tags,
+      },
+    });
+    tags.forEach((tag) => {
+      expect(component.text()).toContain(tag);
+      expect(component.html()).toContain(
+        `href="/blog/tag/${tag.replace(/\s/g, "-").toLowerCase()}"`
+      );
+    });
   });
 });
