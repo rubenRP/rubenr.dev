@@ -9,7 +9,6 @@ export default defineAppConfig({
       "Front-End developer & PhD student. Javascript & Open Source enthusiast. This is my personal website & blog. I write about tech, programming, and web technologies.",
     userName: "Rubén Rodríguez",
     userEmail: "hola@rubenr.dev",
-    userTwitter: "@_rubenr",
     userLocation: "Madrid, Spain",
     seoKeywords:
       "blog, front-end, developer, javascript, react, gatsby, angular, ecommerce, magento, vuejs, vite, research, phd",
@@ -73,7 +72,7 @@ export default defineAppConfig({
     hero: {
       title: ["Hello world!", "¡Hola mundo!"],
       subtitle: "Soy Rubén Rodríguez.",
-      text: "I'm a Madrid based developer. <strong>Front-End developer</strong> @ Scalefast.<br/>Javascript enthusiast, Open Source lover.<br/>PhD Student.",
+      text: "I'm a Madrid based developer. <strong>Front-End engineer</strong> @ ESW.<br/>Javascript enthusiast, Open Source lover.<br/><strong>PhD Student</strong>.",
     },
   },
   about: {
@@ -85,9 +84,56 @@ export default defineAppConfig({
       '<a href="https://www.linkedin.com/in/rubenrodriguezpaz/" class="btn btn-lg" target="_blank" rel="noopener">View full resume</a>',
     text: "Rubén Rodríguez, 1989, Madrid. Tech lover and restless by nature. Passionate about Javascript development and everything related to web technologies and Open Source projects.",
     shortInfo:
-      "Rubén Rodríguez, 1989, Madrid based. Tech lover and restless by nature. Front-End Tech Lead @ Scalefast.",
+      "Rubén Rodríguez, 1989, Madrid based. Tech lover and restless by nature. Front-End engineer @ ESW.",
   },
   resume: [
+    {
+      id: 0,
+      title: "Skills",
+      cssClass: "skills",
+      items: [
+        {
+          id: 0,
+          skillList: [
+            {
+              id: 4,
+              name: "Javascript",
+              icon: "javascript",
+            },
+            {
+              id: 5,
+              name: "Typescript",
+              icon: "typescript",
+            },
+            {
+              id: 1,
+              name: "Angular",
+              icon: "angular",
+            },
+            {
+              id: 3,
+              name: "Vue",
+              icon: "vue",
+            },
+            {
+              id: 2,
+              name: "React",
+              icon: "react",
+            },
+            {
+              id: 6,
+              name: "Jest",
+              icon: "jest",
+            },
+            {
+              id: 7,
+              name: "Cypress",
+              icon: "cypress",
+            },
+          ],
+        },
+      ],
+    },
     {
       id: 1,
       title: "Work",
@@ -95,7 +141,7 @@ export default defineAppConfig({
       items: [
         {
           id: 1,
-          title: "Scalefast",
+          title: "ESW (Formerly Scalefast)",
           info: "Frontend Tech Lead",
           date: "2022 - Current",
         },

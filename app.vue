@@ -39,26 +39,6 @@ useHead({
       property: "og:site_name",
       content: useAppConfig().siteConfig.shortSiteUrl,
     },
-    {
-      name: "twitter:card",
-      content: "summary",
-    },
-    {
-      name: "twitter:creator",
-      content: useAppConfig().siteConfig.userTwitter,
-    },
-    {
-      name: "twitter:title",
-      content: useAppConfig().siteConfig.siteTitle,
-    },
-    {
-      name: "twitter:description",
-      content: useAppConfig().siteConfig.siteDescription,
-    },
-    {
-      name: "twitter:image",
-      content: useAppConfig().siteConfig.siteLogo,
-    },
   ],
 });
 </script>

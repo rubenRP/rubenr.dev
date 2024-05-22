@@ -19,12 +19,23 @@
             :key="item.id"
           >
             <div class="column col-12">
-              <h4>{{ item.title }}</h4>
-              <p class="info">
+              <h4 v-if="item.title">{{ item.title }}</h4>
+              <p class="info" v-if="item.info">
                 {{ item.info }} <span>•</span>{{ " " }}
                 <em class="date">{{ item.date }}</em>
               </p>
               <p v-if="item.description" v-html="item.description" />
+              <ul class="skill-list" v-if="item.skillList">
+                <li v-for="skill in item.skillList" :key="skill">
+                  <span class="skill">
+                    <img
+                      :src="`/img/logos/${skill.icon}.svg`"
+                      :alt="skill.name"
+                    />
+                    <span>{{ skill.name }}</span>
+                  </span>
+                </li>
+              </ul>
             </div>
           </div>
         </div>

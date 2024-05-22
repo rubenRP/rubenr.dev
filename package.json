@@ -27,8 +27,9 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
-    "test": "vitest run",
-    "test:watch": "vitest",
+    "test": "vitest",
+    "test:e2e": "npx playwright test",
+    "test:e2e:report": "npx playwright show-report",
     "coverage": "vitest run --coverage"
   },
   "devDependencies": {
@@ -55,6 +56,7 @@
     "@fortawesome/free-solid-svg-icons": "^6.3.0",
     "@fortawesome/vue-fontawesome": "^3.0.3",
     "ackee-tracker": "^5.1.0",
+    "devicon": "^2.16.0",
     "remark-reading-time": "^2.0.1",
     "typed.js": "^2.0.12"
   },
