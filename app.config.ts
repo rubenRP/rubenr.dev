@@ -58,11 +58,6 @@ export default defineAppConfig({
       iconClass: "linkedin",
     },
     {
-      label: "Threads",
-      url: "https://www.threads.net/@_rubenr",
-      iconClass: "threads",
-    },
-    {
       label: "Bluesky",
       url: "https://bsky.app/profile/rubenr.bsky.social",
       iconClass: "bluesky",
