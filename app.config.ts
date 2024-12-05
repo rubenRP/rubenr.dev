@@ -59,7 +59,7 @@ export default defineAppConfig({
     },
     {
       label: "Bluesky",
-      url: "https://bsky.app/profile/rubenr.bsky.social",
+      url: "https://bsky.app/profile/rubenr.dev",
       iconClass: "bluesky",
     },
   ],
