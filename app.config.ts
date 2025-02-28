@@ -67,7 +67,7 @@ export default defineAppConfig({
     hero: {
       title: ["Hello world!", "¡Hola mundo!"],
       subtitle: "Soy Rubén Rodríguez.",
-      text: "I'm a Madrid based developer. <strong>Front-End engineer</strong> @ ESW.<br/>Javascript enthusiast, Open Source lover.<br/><strong>PhD Student</strong>.",
+      text: "I'm a Madrid based developer. <strong>Front-End engineer</strong> @ Fever.<br/>Javascript enthusiast, Open Source lover.<br/><strong>PhD Student</strong>.",
     },
   },
   about: {
@@ -79,7 +79,7 @@ export default defineAppConfig({
       '<a href="https://www.linkedin.com/in/rubenrodriguezpaz/" class="btn btn-lg" target="_blank" rel="noopener">View full resume</a>',
     text: "Rubén Rodríguez, 1989, Madrid. Tech lover and restless by nature. Passionate about Javascript development and everything related to web technologies and Open Source projects.",
     shortInfo:
-      "Rubén Rodríguez, 1989, Madrid based. Tech lover and restless by nature. Front-End engineer @ ESW.",
+      "Rubén Rodríguez, 1989, Madrid based. Tech lover and restless by nature. Front-End engineer @ Fever.",
   },
   resume: [
     {
@@ -136,9 +136,9 @@ export default defineAppConfig({
       items: [
         {
           id: 1,
-          title: "ESW (Formerly Scalefast)",
-          info: "Frontend Tech Lead",
-          date: "2022 - Current",
+          title: "Fever",
+          info: "Software Engineer",
+          date: "2025 - Current",
         },
         {
           id: 2,

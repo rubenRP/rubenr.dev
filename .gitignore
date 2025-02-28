@@ -5,6 +5,7 @@ node_modules
 .cache
 .output
 .env
+.idea
 dist
 coverage
 test-results
