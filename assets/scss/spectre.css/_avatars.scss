@@ -3,7 +3,7 @@
   @include avatar-base();
   background: $primary-color;
   border-radius: 50%;
-  color: rgba($light-color, .85);
+  color: rgba($light-color, 0.85);
   display: inline-block;
   font-weight: 300;
   line-height: 1.25;
@@ -49,8 +49,8 @@
     background: $gray-color;
     box-shadow: 0 0 0 $border-width-lg $light-color;
     border-radius: 50%;
-    height: .5em;
-    width: .5em;
+    height: 0.5em;
+    width: 0.5em;
 
     &.online {
       background: $success-color;

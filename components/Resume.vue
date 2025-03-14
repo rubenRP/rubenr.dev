@@ -28,10 +28,7 @@
               <ul class="skill-list" v-if="item.skillList">
                 <li v-for="skill in item.skillList" :key="skill">
                   <span class="skill">
-                    <img
-                      :src="`/img/logos/${skill.icon}.svg`"
-                      :alt="skill.name"
-                    />
+                    <Icon :name="skill.icon" size="20px" />
                     <span>{{ skill.name }}</span>
                   </span>
                 </li>

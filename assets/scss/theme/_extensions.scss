@@ -1,4 +1,6 @@
-.search-input, [data-grav-field="array"] input, [data-grav-field="array"] textarea {
+.search-input,
+[data-grav-field="array"] input,
+[data-grav-field="array"] textarea {
   @extend .form-input;
 }
 

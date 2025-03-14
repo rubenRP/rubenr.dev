@@ -60,7 +60,7 @@ const social = ref(props.social || false);
 const isParallax = ref(props.isParallax || true);
 const arrow = ref(props.arrow || true);
 const heroClasses = ref(
-  props.heroClasses || "text-light hero-tiny overlay-dark-gradient"
+  props.heroClasses || "text-light hero-tiny overlay-dark-gradient",
 );
 const textAlign = ref(props.textAlign || "text-center");
 const smallHeadings = ref(props.smallHeadings || false);

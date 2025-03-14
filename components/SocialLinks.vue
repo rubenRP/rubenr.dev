@@ -8,9 +8,7 @@
         rel="noopener noreferrer"
         aria-label="{{link.label}}"
       >
-        <ClientOnly>
-          <font-awesome-icon :icon="['fab', item.iconClass]" />
-        </ClientOnly>
+        <Icon :name="item.icon" />
       </a>
     </li>
   </ul>

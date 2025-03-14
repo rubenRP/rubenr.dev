@@ -59,7 +59,11 @@
       position: relative;
       text-align: center;
       text-decoration: none;
-      transition: background .2s, border .2s, box-shadow .2s, color .2s;
+      transition:
+        background 0.2s,
+        border 0.2s,
+        box-shadow 0.2s,
+        color 0.2s;
       vertical-align: middle;
       white-space: nowrap;
       width: $unit-7;
@@ -103,7 +107,7 @@
       &:disabled,
       &.disabled {
         cursor: default;
-        opacity: .25;
+        opacity: 0.25;
         pointer-events: none;
       }
     }
@@ -112,7 +116,7 @@
     &.next-month {
       .date-item,
       .calendar-event {
-        opacity: .25;
+        opacity: 0.25;
       }
     }
   }
@@ -171,7 +175,7 @@
         &:nth-child(7n) {
           border-right: 0;
         }
-        &:nth-last-child(-n+7) {
+        &:nth-last-child(-n + 7) {
           border-bottom: 0;
         }
       }

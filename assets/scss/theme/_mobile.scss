@@ -46,7 +46,9 @@
     width: $mobile-button-width;
     cursor: pointer;
     z-index: 100;
-    transition: opacity 0.25s ease, top 0.5s ease;
+    transition:
+      opacity 0.25s ease,
+      top 0.5s ease;
 
     $bar-offset: math.div($mobile-button-height, 3);
 

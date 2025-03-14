@@ -125,7 +125,7 @@ define([
 
     isVisible: function () {
       return this.isHidden(
-        !_.isEmpty(this.messages().messages) || !_.isEmpty(this.cookieMessages)
+        !_.isEmpty(this.messages().messages) || !_.isEmpty(this.cookieMessages),
       );
     },
 

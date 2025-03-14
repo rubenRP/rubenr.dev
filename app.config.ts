@@ -50,17 +50,17 @@ export default defineAppConfig({
     {
       label: "GitHub",
       url: "http://github.com/rubenRP",
-      iconClass: "github",
+      icon: "simple-icons:github",
     },
     {
       label: "LinkedIn",
       url: "http://linkedin.com/in/rubenrodriguezpaz",
-      iconClass: "linkedin",
+      icon: "simple-icons:linkedin",
     },
     {
       label: "Bluesky",
       url: "https://bsky.app/profile/rubenr.dev",
-      iconClass: "bluesky",
+      icon: "simple-icons:bluesky",
     },
   ],
   home: {
@@ -93,37 +93,37 @@ export default defineAppConfig({
             {
               id: 4,
               name: "Javascript",
-              icon: "javascript",
+              icon: "vscode-icons:file-type-js-official",
             },
             {
               id: 5,
               name: "Typescript",
-              icon: "typescript",
+              icon: "vscode-icons:file-type-typescript-official",
             },
             {
               id: 1,
               name: "Angular",
-              icon: "angular",
+              icon: "vscode-icons:file-type-angular",
             },
             {
               id: 3,
               name: "Vue",
-              icon: "vue",
+              icon: "vscode-icons:file-type-vue",
             },
             {
               id: 2,
               name: "React",
-              icon: "react",
+              icon: "vscode-icons:file-type-reactjs",
             },
             {
               id: 6,
               name: "Jest",
-              icon: "jest",
+              icon: "vscode-icons:file-type-jest",
             },
             {
               id: 7,
               name: "Cypress",
-              icon: "cypress",
+              icon: "vscode-icons:file-type-cypress",
             },
           ],
         },

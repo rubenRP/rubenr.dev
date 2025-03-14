@@ -19,7 +19,7 @@
     z-index: $zindex-4;
 
     .modal-overlay {
-      background: rgba($bg-color, .75);
+      background: rgba($bg-color, 0.75);
       bottom: 0;
       cursor: default;
       display: block;
@@ -30,7 +30,7 @@
     }
 
     .modal-container {
-      animation: slide-down .2s ease 1;
+      animation: slide-down 0.2s ease 1;
       z-index: $zindex-0;
     }
   }
@@ -55,7 +55,7 @@
 }
 
 .modal-container {
-  @include shadow-variant(.2rem);
+  @include shadow-variant(0.2rem);
   background: $bg-color-light;
   border-radius: $border-radius;
   display: flex;

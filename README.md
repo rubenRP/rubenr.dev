@@ -1,43 +1,41 @@
-# rubenr.dev
+# Nuxt Minimal Starter
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/56309fe3-64cf-4031-b180-4a8b0b16b44e/deploy-status)](https://app.netlify.com/sites/rubenr-test/deploys)
-
-Personal website made with Nuxt 3
-
-## Features
-
-- Posts and pages in Markdown
-- Tags and categories
-- Sass Integration
-- Ackee Stats integration
-
-## Contributing
-
-If you see any typos or formatting errors in a post, or any other issue that needs to be addressed, please don't hesitate to open a pull request and fix it!
-
-## Author
-
-[Rubén Rodríguez](https://www.rubenr.dev)
-
-## License
-
-This project is open source and available under the [MIT License](LICENSE).
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Setup
 
-Make sure to install the dependencies:
+Make sure to install dependencies:
 
 ```bash
+# npm
+npm install
+
+# pnpm
+pnpm install
+
 # yarn
 yarn install
+
+# bun
+bun install
 ```
 
 ## Development Server
 
-Start the development server on http://localhost:3000
+Start the development server on `http://localhost:3000`:
 
 ```bash
+# npm
+npm run dev
+
+# pnpm
+pnpm dev
+
+# yarn
 yarn dev
+
+# bun
+bun run dev
 ```
 
 ## Production
@@ -45,13 +43,33 @@ yarn dev
 Build the application for production:
 
 ```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
 yarn build
+
+# bun
+bun run build
 ```
 
 Locally preview production build:
 
 ```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
 yarn preview
+
+# bun
+bun run preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

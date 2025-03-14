@@ -27,7 +27,9 @@
 
   &:indeterminate {
     animation: progress-indeterminate 1.5s linear infinite;
-    background: $bg-color-dark linear-gradient(to right, $primary-color 30%, $bg-color-dark 30%) top left / 150% 150% no-repeat;
+    background: $bg-color-dark
+      linear-gradient(to right, $primary-color 30%, $bg-color-dark 30%) top
+      left / 150% 150% no-repeat;
 
     &::-moz-progress-bar {
       background: transparent;

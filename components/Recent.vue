@@ -35,10 +35,7 @@
               </h4>
               <div class="text-gray">
                 <small class="blog-date">
-                  <ClientOnly>
-                    <font-awesome-icon
-                      :icon="['fas', 'calendar-days']" /></ClientOnly
-                  >{{ " " }}
+                  <Icon name="ic:outline-calendar-month" size="16" />{{ " " }}
                   {{ formatDate(post.date) }}
                 </small>
               </div>
@@ -56,6 +53,6 @@ const { data } = await useAsyncData("latest", () =>
     .where({ _locale: "en" })
     .sort({ date: -1 })
     .limit(4)
-    .find()
+    .find(),
 );
 </script>

@@ -35,10 +35,7 @@
               </h4>
               <div class="text-gray">
                 <small class="blog-date">
-                  <ClientOnly>
-                    <font-awesome-icon
-                      :icon="['fas', 'calendar-days']" /></ClientOnly
-                  >{{ " " }}
+                  <Icon name="ic:outline-calendar-month" size="16" />{{ " " }}
                   {{ formatDate(post.date) }}
                 </small>
               </div>
@@ -51,11 +48,17 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useAsyncData("popular", () =>
-  queryContent("blog")
+const { data } = await useAsyncData('popular', () =>
+  queryCollection('blog').where('published', '=', true).all(),
+);
+
+/*const { data } = await useAsyncData("popular", () =>
+  queryCollection("blog")
     .where({ _locale: "en", popular: true })
     .sort({ date: -1 })
     .limit(4)
-    .find()
-);
+    .find(),
+);*/
+
+console.log(data);
 </script>

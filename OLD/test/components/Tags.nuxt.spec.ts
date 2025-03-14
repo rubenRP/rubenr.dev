@@ -31,7 +31,7 @@ describe("Tags component", () => {
     tags.forEach((tag) => {
       expect(component.text()).toContain(tag);
       expect(component.html()).toContain(
-        `href="/blog/tag/${tag.replace(/\s/g, "-").toLowerCase()}"`
+        `href="/blog/tag/${tag.replace(/\s/g, "-").toLowerCase()}"`,
       );
     });
   });

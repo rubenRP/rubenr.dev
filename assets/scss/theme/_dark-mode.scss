@@ -1,5 +1,8 @@
 html {
-  transition: color 300ms, background-color 300ms, filter 300ms;
+  transition:
+    color 300ms,
+    background-color 300ms,
+    filter 300ms;
 }
 
 html[data-theme="dark"] {
@@ -78,7 +81,8 @@ html[data-theme="dark"] {
           border-radius: 50%;
           box-shadow: inset 0 0 0 var(--s) var(--b);
           transform: translateX(var(--x));
-          transition: box-shadow var(--duration) ease,
+          transition:
+            box-shadow var(--duration) ease,
             transform var(--duration) ease;
         }
         &:not(:empty) {

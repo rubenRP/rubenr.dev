@@ -3,8 +3,8 @@ $parallax-deg: 3deg !default;
 $parallax-offset: 4.5px !default;
 $parallax-offset-z: 50px !default;
 $parallax-perspective: 1000px !default;
-$parallax-scale: .95 !default;
-$parallax-fade-color: rgba(255, 255, 255, .35) !default;
+$parallax-scale: 0.95 !default;
+$parallax-fade-color: rgba(255, 255, 255, 0.35) !default;
 
 // Mixin: Parallax direction
 @mixin parallax-dir() {
@@ -26,7 +26,7 @@ $parallax-fade-color: rgba(255, 255, 255, .35) !default;
     height: auto;
     transform: perspective($parallax-perspective);
     transform-style: preserve-3d;
-    transition: all .4s ease;
+    transition: all 0.4s ease;
     width: 100%;
 
     &::before {
@@ -49,10 +49,10 @@ $parallax-fade-color: rgba(255, 255, 255, .35) !default;
     left: 0;
     position: absolute;
     text-align: center;
-    text-shadow: 0 0 20px rgba($dark-color, .75);
+    text-shadow: 0 0 20px rgba($dark-color, 0.75);
     top: 0;
     transform: translateZ($parallax-offset-z) scale($parallax-scale);
-    transition: transform .4s;
+    transition: transform 0.4s;
     width: 100%;
     z-index: $zindex-0;
   }
@@ -64,14 +64,24 @@ $parallax-fade-color: rgba(255, 255, 255, .35) !default;
 
     &:focus ~ .parallax-content,
     &:hover ~ .parallax-content {
-      transform: perspective($parallax-perspective) rotateX($parallax-deg) rotateY(-$parallax-deg);
+      transform: perspective($parallax-perspective) rotateX($parallax-deg)
+        rotateY(-$parallax-deg);
 
       &::before {
-        background: linear-gradient(135deg, $parallax-fade-color 0%, transparent 50%);
+        background: linear-gradient(
+          135deg,
+          $parallax-fade-color 0%,
+          transparent 50%
+        );
       }
 
       .parallax-front {
-        transform: translate3d($parallax-offset, $parallax-offset, $parallax-offset-z) scale($parallax-scale);
+        transform: translate3d(
+            $parallax-offset,
+            $parallax-offset,
+            $parallax-offset-z
+          )
+          scale($parallax-scale);
       }
     }
   }
@@ -83,14 +93,24 @@ $parallax-fade-color: rgba(255, 255, 255, .35) !default;
 
     &:focus ~ .parallax-content,
     &:hover ~ .parallax-content {
-      transform: perspective($parallax-perspective) rotateX($parallax-deg) rotateY($parallax-deg);
+      transform: perspective($parallax-perspective) rotateX($parallax-deg)
+        rotateY($parallax-deg);
 
       &::before {
-        background: linear-gradient(-135deg, $parallax-fade-color 0%, transparent 50%);
+        background: linear-gradient(
+          -135deg,
+          $parallax-fade-color 0%,
+          transparent 50%
+        );
       }
 
       .parallax-front {
-        transform: translate3d(-$parallax-offset, $parallax-offset, $parallax-offset-z) scale($parallax-scale);
+        transform: translate3d(
+            -$parallax-offset,
+            $parallax-offset,
+            $parallax-offset-z
+          )
+          scale($parallax-scale);
       }
     }
   }
@@ -102,14 +122,24 @@ $parallax-fade-color: rgba(255, 255, 255, .35) !default;
 
     &:focus ~ .parallax-content,
     &:hover ~ .parallax-content {
-      transform: perspective($parallax-perspective) rotateX(-$parallax-deg) rotateY(-$parallax-deg);
+      transform: perspective($parallax-perspective) rotateX(-$parallax-deg)
+        rotateY(-$parallax-deg);
 
       &::before {
-        background: linear-gradient(45deg, $parallax-fade-color 0%, transparent 50%);
+        background: linear-gradient(
+          45deg,
+          $parallax-fade-color 0%,
+          transparent 50%
+        );
       }
 
       .parallax-front {
-        transform: translate3d($parallax-offset, -$parallax-offset, $parallax-offset-z) scale($parallax-scale);
+        transform: translate3d(
+            $parallax-offset,
+            -$parallax-offset,
+            $parallax-offset-z
+          )
+          scale($parallax-scale);
       }
     }
   }
@@ -121,14 +151,24 @@ $parallax-fade-color: rgba(255, 255, 255, .35) !default;
 
     &:focus ~ .parallax-content,
     &:hover ~ .parallax-content {
-      transform: perspective($parallax-perspective) rotateX(-$parallax-deg) rotateY($parallax-deg);
+      transform: perspective($parallax-perspective) rotateX(-$parallax-deg)
+        rotateY($parallax-deg);
 
       &::before {
-        background: linear-gradient(-45deg, $parallax-fade-color 0%, transparent 50%);
+        background: linear-gradient(
+          -45deg,
+          $parallax-fade-color 0%,
+          transparent 50%
+        );
       }
 
       .parallax-front {
-        transform: translate3d(-$parallax-offset, -$parallax-offset, $parallax-offset-z) scale($parallax-scale);
+        transform: translate3d(
+            -$parallax-offset,
+            -$parallax-offset,
+            $parallax-offset-z
+          )
+          scale($parallax-scale);
       }
     }
   }

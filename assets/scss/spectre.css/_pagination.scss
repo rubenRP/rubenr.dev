@@ -27,7 +27,7 @@
     &.disabled {
       a {
         cursor: default;
-        opacity: .5;
+        opacity: 0.5;
         pointer-events: none;
       }
     }
@@ -54,7 +54,7 @@
 
     .page-item-subtitle {
       margin: 0;
-      opacity: .5;
+      opacity: 0.5;
     }
   }
 }

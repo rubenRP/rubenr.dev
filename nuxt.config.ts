@@ -1,16 +1,21 @@
-import { resolve } from "node:path";
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
+  compatibilityDate: "2024-11-01",
+  devtools: { enabled: true },
+
   modules: [
     "@nuxt/content",
+    "@nuxt/eslint",
+    "@nuxt/fonts",
+    "@nuxt/icon",
     "@nuxt/image",
-    "@kevinmarrec/nuxt-pwa",
-    "@nuxtjs/sitemap",
-    "@nuxt/test-utils/module",
+    "@nuxt/scripts",
+    "@nuxt/test-utils",
+    "@nuxt/ui",
   ],
   css: [
     "~/assets/scss/theme.scss",
-    "@fortawesome/fontawesome-svg-core/styles.css",
+    //"@fortawesome/fontawesome-svg-core/styles.css",
   ],
   runtimeConfig: {
     public: {
@@ -25,38 +30,6 @@ export default defineNuxtConfig({
         },
       },
     },
-  },
-  pwa: {
-    manifest: {
-      name: "Rubén Rodríguez",
-      short_name: "rubenr.dev",
-      description: "Front-End developer. Javascript & Open Source enthusiast.",
-      lang: "en",
-      theme_color: "#f7f8f9",
-      background_color: "#f7f8f9",
-      display: "standalone",
-      scope: "/",
-      start_url: "/",
-    },
-  },
-  nitro: {
-    compressPublicAssets: true,
-    prerender: {
-      crawlLinks: true,
-      routes: ["/"],
-    },
-  },
-  routeRules: {
-    "/_nuxt/**": {
-      headers: { "Cache-Control": "max-age=31536000, immutable" },
-    },
-    "/**": {
-      sitemap: {
-        changefreq: "daily",
-        priority: 0.7,
-      },
-    },
-    "/sitemap.xml": { index: false },
   },
   app: {
     head: {
@@ -121,42 +94,6 @@ export default defineNuxtConfig({
           href: "/icons/icon-512x512.png",
           sizes: "512x512",
         },
-      ],
-    },
-  },
-  content: {
-    sources: {
-      blog: {
-        driver: "fs",
-        base: resolve(__dirname, "content/blog"),
-      },
-      pages: {
-        driver: "fs",
-        base: resolve(__dirname, "content/pages"), // Path for source directory
-      },
-    },
-    markdown: {
-      anchorLinks: false,
-      remarkPlugins: ["remark-reading-time"],
-    },
-    locales: ["en", "es"],
-    defaultLocale: "en",
-    highlight: {
-      theme: {
-        default: "dark-plus",
-      },
-      preload: [
-        "json",
-        "js",
-        "ts",
-        "jsx",
-        "html",
-        "css",
-        "vue",
-        "shell",
-        "markdown",
-        "yaml",
-        "bash",
       ],
     },
   },

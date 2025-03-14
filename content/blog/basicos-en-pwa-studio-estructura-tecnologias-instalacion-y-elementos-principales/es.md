@@ -227,7 +227,7 @@ const Gallery = (props) => {
         }
         return <GalleryItem key={index} item={mapGalleryItem(item)} />;
       }),
-    [items]
+    [items],
   );
 
   return (
