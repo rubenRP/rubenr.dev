@@ -15,7 +15,7 @@
   >
     <div class="image-overlay" />
     <div class="container grid-md" :class="textAlign">
-      <h1><span id="typed"></span></h1>
+      <h1><span id="typed"/></h1>
       <h2 v-if="props.subtitle">{{ props.subtitle }}</h2>
       <p v-if="props.text">
         <span v-html="props.text" />

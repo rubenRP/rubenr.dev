@@ -11,7 +11,7 @@
               :class="filteredLanguage == 'en' && 'active'"
               @click="setFilteredLanguage('en')"
             >
-              <figure class="avatar avatar-sm" data-initial="EN"></figure>
+              <figure class="avatar avatar-sm" data-initial="EN"/>
               English
             </a>
             <a
@@ -19,11 +19,11 @@
               :class="filteredLanguage == 'es' && 'active'"
               @click="setFilteredLanguage('es')"
             >
-              <figure class="avatar avatar-sm" data-initial="ES"></figure>
+              <figure class="avatar avatar-sm" data-initial="ES"/>
               Spanish
             </a>
           </div>
-          <div class="columns" v-for="post in filteredPosts">
+          <div v-for="post in filteredPosts" class="columns">
             <div class="column col-3 col-md-12 header-col">
               <h4
                 v-if="
@@ -134,7 +134,7 @@ const esPostFiltered = esPosts.data.value!.filter((post: any) => {
 
 let filteredPosts = enPostFiltered || [];
 const filteredLanguage = ref("en");
-let date = 2000;
+const date = 2000;
 
 const setFilteredLanguage = (language: string) => {
   filteredLanguage.value = language;

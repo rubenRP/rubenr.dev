@@ -15,7 +15,7 @@
         </div>
         <div class="column col-3 col-md-12">
           <div class="image">
-            <img src="~/assets/img/profile-pic.jpeg" alt="Rubén Rodríguez" />
+            <img src="~/assets/img/profile-pic.jpeg" alt="Rubén Rodríguez" >
           </div>
         </div>
       </div>

@@ -10,7 +10,17 @@ export default defineContentConfig({
       // Set the route for the generated pages
       // route: '/blog/:slug'
       schema: z.object({
+        title: z.string().nonempty(),
+        date: z.string().nonempty(),
         published: z.boolean(),
+        hero_title: z.string(),
+        hero_subtitle: z.string(),
+        description: z.string(),
+        hero_image: z.string(),
+        taxonomy: z.array(z.string()),
+        slug: z.string(),
+        popular: z.boolean(),
+        _locale: z.string(),
       })
     }),
     pages: defineCollection({
@@ -22,4 +32,6 @@ export default defineContentConfig({
       // route: '/:slug'
     }),
   },
+  locales: ["en", "es"],
+  defaultLocale: "en",
 });

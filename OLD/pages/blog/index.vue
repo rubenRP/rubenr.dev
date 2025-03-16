@@ -16,7 +16,7 @@
               :class="filteredLanguage == 'en' && 'active'"
               @click="setFilteredLanguage('en')"
             >
-              <figure class="avatar avatar-sm" data-initial="EN"></figure>
+              <figure class="avatar avatar-sm" data-initial="EN"/>
               English
             </button>
             <button
@@ -24,11 +24,11 @@
               :class="filteredLanguage == 'es' && 'active'"
               @click="setFilteredLanguage('es')"
             >
-              <figure class="avatar avatar-sm" data-initial="ES"></figure>
+              <figure class="avatar avatar-sm" data-initial="ES"/>
               Spanish
             </button>
           </div>
-          <div class="columns" v-for="post in filteredPosts">
+          <div v-for="post in filteredPosts" class="columns">
             <div class="column col-3 col-md-12 header-col">
               <h4
                 v-if="
@@ -141,7 +141,7 @@ const esPosts = await useAsyncData(() =>
 
 let filteredPosts = enPosts.data || [];
 const filteredLanguage = ref("en");
-let date = 2000;
+const date = 2000;
 
 const setFilteredLanguage = (language: string) => {
   filteredLanguage.value = language;

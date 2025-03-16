@@ -4,9 +4,9 @@
       <div class="btn-group">
         <NuxtLink
           v-if="prev"
-          @click="goTo(formatUrl(prev!._locale, prev!._dir, prev!.slug))"
           rel="prev"
           class="btn btn-lg btn-detailed btn-detailed--left text-dark"
+          @click="goTo(formatUrl(prev!._locale, prev!._dir, prev!.slug))"
         >
           <div class="text-grey light">Previous</div>
           {{
@@ -16,9 +16,9 @@
 
         <NuxtLink
           v-if="next"
-          @click="goTo(formatUrl(next!._locale, next!._dir, next!.slug))"
           rel="next"
           class="btn btn-lg btn-detailed btn-detailed--right text-dark"
+          @click="goTo(formatUrl(next!._locale, next!._dir, next!.slug))"
         >
           <div class="text-grey light">Next</div>
           {{

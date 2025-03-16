@@ -1,0 +1,12 @@
+node_modules
+*.log*
+.nuxt
+.nitro
+.cache
+.output
+.env
+.idea
+dist
+coverage
+test-results
+*__snapshots__*

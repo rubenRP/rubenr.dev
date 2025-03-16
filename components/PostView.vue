@@ -3,7 +3,7 @@
   <section id="body-wrapper" class="section blog-listing">
     <div class="container grid-md">
       <div class="columns">
-        <div id="item" class="column col-12" v-if="post">
+        <div v-if="post" id="item" class="column col-12">
           <div class="content-item h-entry">
             <div class="content-title">
               <div v-if="post.hero_subtitle">
@@ -25,7 +25,7 @@
                 {{ formatDate(post.date) }}
                 <ReadingTime
                   v-if="post.readingTime"
-                  :readingTime="post.readingTime"
+                  :reading-time="post.readingTime"
                 />
               </span>
 
@@ -35,7 +35,7 @@
             </div>
 
             <div class="e-content">
-              <div class="mb-2" v-if="post?.hero_image">
+              <div v-if="post?.hero_image" class="mb-2">
                 <nuxt-img
                   v-if="post.hero_image"
                   :src="post.hero_image"

@@ -9,7 +9,7 @@
           </h4>
         </div>
         <div class="column col-9 col-md-12 main-col">
-          <div class="columns item" v-for="post in data">
+          <div v-for="post in data" class="columns item">
             <div class="column col-12">
               <NuxtLink
                 v-if="post.hero_subtitle"
@@ -49,7 +49,7 @@
 
 <script setup lang="ts">
 const { data } = await useAsyncData("latest", () =>
-  queryContent("blog")
+  queryCollection("blog")
     .where({ _locale: "en" })
     .sort({ date: -1 })
     .limit(4)

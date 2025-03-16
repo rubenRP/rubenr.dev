@@ -9,7 +9,7 @@
           </h4>
         </div>
         <div class="column col-9 col-md-12 main-col">
-          <div class="columns item" v-for="post in data">
+          <div v-for="post in data" class="columns item">
             <div class="column col-12">
               <NuxtLink
                 v-if="post.hero_subtitle"
@@ -48,17 +48,13 @@
 </template>
 
 <script setup lang="ts">
-const { data } = await useAsyncData('popular', () =>
-  queryCollection('blog').where('published', '=', true).all(),
-);
-
-/*const { data } = await useAsyncData("popular", () =>
+const { data } = await useAsyncData("popular", () =>
   queryCollection("blog")
-    .where({ _locale: "en", popular: true })
-    .sort({ date: -1 })
+    .where('_locale', '=', 'en')
+    .where('published', '=', true)
+    .where('popular', '=', true)
     .limit(4)
-    .find(),
-);*/
-
+    .all(),
+);
 console.log(data);
 </script>
