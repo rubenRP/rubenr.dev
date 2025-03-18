@@ -1,5 +1,6 @@
 <template>
   <section id="start" />
+  {{ post }}
   <section id="body-wrapper" class="section blog-listing">
     <div class="container grid-md">
       <div class="columns">
@@ -22,7 +23,8 @@
             <div class="content-tags">
               <span class="blog-date">
                 <Icon icon="fa6-solid:calendar-days" />
-                {{ " " }}
+                {{ formatDate(post.data.date) }}
+
                 <!--<ReadingTime
                   v-if="post.readingTime"
                   :readingTime="post.readingTime"
@@ -38,17 +40,14 @@
             </div>
 
             <div class="e-content">
-              <!--<div class="mb-2" v-if="post?.hero_image">
-                <nuxt-img
-                  v-if="post.hero_image"
-                  :src="post.hero_image"
-                  :alt="post.hero_title"
+              <div class="mb-2" v-if="post.data.image">
+                <img
+                  :src="post.data.image"
+                  :alt="post.data.title"
                   class="mb-2"
                 />
-              </div>-->
-              <!--<ContentRenderer v-if="post" :value="post" />-->
-
-              <slot name="content" />
+              </div>
+              <div v-html="post.rendered.html" />
             </div>
           </div>
         </div>
@@ -60,17 +59,11 @@
 
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+import { formatDate } from "../composables/date.ts";
 import type { Post } from "../types/post.ts";
 import Tags from "./Tags.vue";
 
-//const siteConfig = useAppConfig().siteConfig;
-
-const props = defineProps<{
+defineProps<{
   post: Post;
-  prev?: Post;
-  next?: Post;
-  Content?: any;
 }>();
-
-console.log(props.post);
 </script>

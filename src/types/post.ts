@@ -6,6 +6,7 @@ export interface Post extends DataEntry {
     subtitle?: string;
     date: string;
     published?: boolean;
+    popular?: boolean;
     description?: string;
     image?: string;
     taxonomy?: {
@@ -17,6 +18,6 @@ export interface Post extends DataEntry {
       url: string;
     }[];
   };
-  slug?: string;
+  slug: string;
   lang?: string;
 }

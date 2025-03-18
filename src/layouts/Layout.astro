@@ -4,6 +4,14 @@ import Footer from "../components/Footer.vue";
 import "../styles/theme.scss";
 // import "../styles/global.css";
 import Head from "../components/Head.astro";
+
+interface Props {
+  bodyClass?: string;
+}
+
+const {
+  bodyClass = "header-dark header-transparent header-fixed header-animated",
+} = Astro.props;
 ---
 
 <!doctype html>
@@ -13,9 +21,9 @@ import Head from "../components/Head.astro";
     <Head />
     <meta name="generator" content={Astro.generator} />
   </head>
-  <body>
+  <body class={bodyClass}>
     <div id="page-wrapper">
-      <Header />
+      <Header client:visible />
       <main><slot /></main>
     </div>
     <Footer client:visible />

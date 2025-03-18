@@ -4,7 +4,7 @@ import Hero from "../components/Hero.vue";
 import AboutSection from "../components/AboutSection.vue";
 import Resume from "../components/Resume.vue";
 
-const heroTitle = "AboutSection";
+const heroTitle = "About";
 const heroText = "Who I am? What I did? What I know?";
 const bodyClasses =
   "header-dark header-transparent header-fixed header-animated";
@@ -12,7 +12,7 @@ const heroClasses = "text-light hero-tiny gradient-animation";
 const textAlign = "text-left";
 ---
 
-<Layout>
+<Layout bodyClass={bodyClasses}>
   <Hero
     title={heroTitle}
     text={heroText}

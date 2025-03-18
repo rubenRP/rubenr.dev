@@ -1,31 +1,49 @@
 ---
-import { type CollectionEntry, getCollection } from "astro:content";
-
+import { getCollection } from "astro:content";
 import Layout from "../layouts/Layout.astro";
 import PostView from "../components/PostView.vue";
+import PageView from "../components/PageView.vue";
+import type { Post } from "../types/post";
+
+const bodyClasses = "header-fixed header-animated";
 
 export async function getStaticPaths() {
   const posts = (await getCollection("blog")).sort(
     (a: Post, b: Post) => b.data.date.valueOf() - a.data.date.valueOf(),
   );
-  return posts.map((post: Post) => ({
+  const postFixed = posts.map((post: Post) => ({
     params: {
-      lang: post.slug.startsWith("en/") ? "en" : "es",
       slug: post.slug.startsWith("en/") ? post.slug.slice(3) : post.slug,
     },
-    props: post,
+    props: {
+      ...post,
+      lang: post.slug.startsWith("en") ? "en" : "es",
+    },
   }));
-}
-type Props = CollectionEntry<"blog">;
 
-const post = Astro.props;
-const { Content } = await post.render();
+  const pages = await getCollection("pages");
+  const pagesFixed = pages.map((page: Post) => ({
+    params: {
+      slug: page.slug.startsWith("en/") ? page.slug.slice(3) : page.slug,
+    },
+    props: {
+      ...page,
+      lang: page.slug.startsWith("en") ? "en" : "es",
+    },
+  }));
+
+  return [...postFixed, ...pagesFixed];
+}
+
+const page = Astro.props;
 ---
 
-<Layout>
-  <PostView post={post} client:visible>
-    <template #content>
-      <Content />
-    </template>
-  </PostView>
+<Layout bodyClass={bodyClasses}>
+  {
+    page.collection === "blog" ? (
+      <PostView post={page} client:visible />
+    ) : (
+      <PageView page={page} client:visible />
+    )
+  }
 </Layout>

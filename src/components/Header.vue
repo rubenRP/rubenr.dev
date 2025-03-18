@@ -34,8 +34,8 @@
 </template>
 
 <script setup lang="ts">
+import { onMounted, onUnmounted, ref } from "vue";
 import { NAVIGATION } from "../const.ts";
-import { ref, onMounted, onUnmounted } from "vue";
 
 const navigation = NAVIGATION;
 const scrolled = ref(false);
