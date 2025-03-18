@@ -1,22 +1,23 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+import "../styles/theme.scss";
+// import "../styles/global.css";
+import Head from "../components/Head.astro";
+---
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <Head />
+    <meta name="generator" content={Astro.generator} />
+  </head>
+  <body>
+    <div id="page-wrapper">
+      <Header />
+      <main><slot /></main>
+    </div>
+    <Footer client:visible />
+  </body>
+</html>

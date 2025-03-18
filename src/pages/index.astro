@@ -1,11 +1,40 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import Layout from "../layouts/Layout.astro";
+import HeroTyped from "../components/HeroTyped.vue";
+import PostCollection from "../components/PostCollection.vue";
+import { HOME_HERO } from "../const";
+import { getCollection } from "astro:content";
+import type { Post } from "../types/post";
+import { getRelativeLocaleUrl, getRelativeLocaleUrlList } from "astro:i18n";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const bodyClasses =
+  "header-dark header-transparent header-fixed header-animated";
+const heroClasses = "text-light hero-tiny gradient-animation";
+const textAlign = "text-left";
+
+const hero = HOME_HERO;
+
+const recentPosts = (await getCollection("blog"))
+  .filter((post: Post) => post.data.published && post.slug?.startsWith("en/"))
+  .slice(0, 4)
+  .map((post: Post) => {
+    post.slug = getRelativeLocaleUrl("en", post.slug?.slice(3));
+    post.lang = "en";
+    return post;
+  });
 ---
 
 <Layout>
-	<Welcome />
+  <HeroTyped
+    title={hero.title}
+    subtitle={hero.subtitle}
+    text={hero.text}
+    social={false}
+    small-headings={true}
+    text-align={textAlign}
+    hero-classes={heroClasses}
+    client:visible
+  />
+  <div id="start"></div>
+  <PostCollection posts={recentPosts} client:visible />
 </Layout>

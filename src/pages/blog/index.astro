@@ -1,1 +1,45 @@
-<h1>BLOG</h1>
+---
+import { getRelativeLocaleUrl } from "astro:i18n";
+import BlogList from "../../components/BlogList.vue";
+import Layout from "../../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import Hero from "../../components/Hero.vue";
+import type { Post } from "../../types/post";
+
+const heroTitle = "Dev Blog";
+const heroText =
+  "Articles and opinions of a frontend developer. Also in spanish.";
+const bodyClasses =
+  "header-dark header-transparent header-fixed header-animated";
+const heroClasses = "text-light hero-tiny gradient-animation";
+const textAlign = "text-left";
+
+const enPosts = (await getCollection("blog", { lang: "en" }))
+  .filter((post: Post) => post.data.published && post.slug?.startsWith("en/"))
+  .sort((a: Post, b: Post) => b.data.date.valueOf() - a.data.date.valueOf())
+  .map((post: Post) => {
+    post.slug = getRelativeLocaleUrl("en", post.slug?.slice(3));
+    post.lang = "en";
+    return post;
+  });
+
+const esPosts = (await getCollection("blog", { lang: "es" }))
+  .filter((post: Post) => post.data.published && post.slug.startsWith("es/"))
+  .sort((a: Post, b: Post) => b.data.date.valueOf() - a.data.date.valueOf())
+  .map((post: Post) => {
+    post.slug = getRelativeLocaleUrl("es", post.slug?.slice(3));
+    post.lang = "es";
+    return post;
+  });
+---
+
+<Layout>
+  <Hero
+    title={heroTitle}
+    text={heroText}
+    text-align={textAlign}
+    hero-classes={heroClasses}
+  />
+  <section id="start"></section>
+  <BlogList enPosts={enPosts} esPosts={esPosts} client:visible />
+</Layout>

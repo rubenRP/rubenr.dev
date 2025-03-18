@@ -1,7 +1,27 @@
 {
   "name": "rubenr.dev",
   "type": "module",
-  "version": "0.0.1",
+  "description": "Personal website and blog made with Astro",
+  "version": "4.0.0",
+  "author": "Rubén Rodríguez <hola@rubenr.dev>",
+  "bugs": {
+    "url": "https://github.com/rubenRP/rubenr.dev/issues"
+  },
+  "homepage": "https://github.com/rubenRP/rubenr.dev#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rubenRP/rubenr.dev.git"
+  },
+  "keywords": [
+    "nuxt",
+    "nuxt3",
+    "nuxtjs",
+    "blog",
+    "personal",
+    "website"
+  ],
+  "license": "MIT",
+  "private": true,
   "scripts": {
     "dev": "astro dev",
     "build": "astro build",
@@ -10,8 +30,19 @@
   },
   "dependencies": {
     "@astrojs/mdx": "^4.2.0",
+    "@astrojs/sitemap": "^3.2.1",
     "@astrojs/vue": "^5.0.7",
+    "@iconify-icons/mdi": "^1.2.48",
+    "@iconify/vue": "^4.3.0",
+    "@tailwindcss/vite": "^4.0.14",
     "astro": "^5.5.2",
+    "sass": "^1.85.1",
+    "tailwindcss": "^4.0.14",
+    "typed.js": "^2.1.0",
     "vue": "^3.5.13"
+  },
+  "devDependencies": {
+    "prettier": "3.5.3",
+    "prettier-plugin-astro": "0.14.1"
   }
 }
