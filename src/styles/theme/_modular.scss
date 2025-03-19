@@ -167,6 +167,7 @@
     h4 {
       text-transform: uppercase;
       font-weight: 300;
+      font-size: 1rem;
       span {
         border-bottom: 3px solid $detail-color;
         padding-bottom: 6px;
@@ -246,12 +247,12 @@
 .modular-recent,
 .modular-resume {
   // background-color: $bg-color-dark;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }
 
 .modular-popular {
   // background-color: $bg-color-dark;
   // background: $light-color;
   background: $light-color;
-  padding-top: 2rem;
+  padding-top: 1.5rem;
 }

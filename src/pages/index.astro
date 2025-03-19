@@ -16,6 +16,10 @@ const hero = HOME_HERO;
 
 const recentPosts = (await getCollection("blog"))
   .filter((post: Post) => post.data.published && post.slug?.startsWith("en/"))
+  .sort(
+    (a: Post, b: Post) =>
+      new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  )
   .slice(0, 4)
   .map((post: Post) => {
     post.slug = getRelativeLocaleUrl("en", post.slug?.slice(3));
@@ -24,7 +28,7 @@ const recentPosts = (await getCollection("blog"))
   });
 ---
 
-<Layout>
+<Layout title="Home">
   <HeroTyped
     title={hero.title}
     subtitle={hero.subtitle}

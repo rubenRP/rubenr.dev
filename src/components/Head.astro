@@ -1,14 +1,72 @@
 ---
-import { SITE_METADATA } from "../const";
-const { title = "My Astro Website", ...props } = Astro.props;
+//const { title = "My Astro Website", ...props } = Astro.props;
+
+//const canonicalURL = new URL(Astro.url.pathname, Astro.site);
+
+const {
+  title,
+  description,
+  image = "/icons/favicon-32x32.png",
+  hreflang,
+} = Astro.props;
+
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  hreflang?: [
+    {
+      lang: string;
+      href: string;
+    },
+  ];
+}
 ---
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1, shrink-to-fit=no"
-/>
-<title>{title}</title>
+<!-- Global Metadata -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<link rel="icon" type="image/png" href="/icons/favicon-32x32.png" />
+<meta name="generator" content={Astro.generator} />
 
-<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<!-- Icons -->
+<link rel="apple-touch-icon" href="/icons/icon-48x48.png" sizes="48x48" />
+<link rel="apple-touch-icon" href="/icons/icon-72x72.png" sizes="72x72" />
+<link rel="apple-touch-icon" href="/icons/icon-96x96.png" sizes="96x96" />
+<link rel="apple-touch-icon" href="/icons/icon-144x144.png" sizes="144x144" />
+<link rel="apple-touch-icon" href="/icons/icon-192x192.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="/icons/icon-256x256.png" sizes="256x256" />
+<link rel="apple-touch-icon" href="/icons/icon-384x384.png" sizes="384x384" />
+<link rel="apple-touch-icon" href="/icons/icon-512x512.png" sizes="512x512" />
+
+<!-- Canonical URL -->
+<!-- link rel="canonical" href={canonicalURL} />-->
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content={Astro.url} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.url)} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={Astro.url} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={new URL(image, Astro.url)} />
+
+<!-- hreflang -->
+{
+  hreflang &&
+    hreflang.map(({ lang, href }) => (
+      <link rel="alternate" hreflang={lang} href={new URL(href, Astro.url)} />
+    ))
+}
 
 <link rel="sitemap" href="/sitemap-index.xml" />

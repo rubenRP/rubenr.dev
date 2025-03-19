@@ -9,6 +9,7 @@
 
   background: $background-color;
   color: $dark-color;
+  backdrop-filter: blur(4px);
 
   a {
     color: $dark-color;
@@ -56,7 +57,6 @@
 
   .navbar-section.desktop-menu {
     justify-content: flex-end;
-    padding-right: 10px;
     @include breakpoint(md) {
       //display: none;
       padding-right: 0;
@@ -74,7 +74,7 @@
   .logo {
     svg,
     img {
-      height: 42px;
+      height: 35px;
       display: inherit;
       @extend .default-animation;
       @include breakpoint(md) {
@@ -93,7 +93,7 @@
 }
 
 // Animate Fixed Header
-body.header-fixed.header-animated {
+/* body.header-fixed.header-animated {
   #header.scrolled {
     height: $header-height-small;
 
@@ -113,3 +113,4 @@ body.header-fixed.header-animated {
     }
   }
 }
+*/

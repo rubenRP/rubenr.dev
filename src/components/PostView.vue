@@ -1,8 +1,7 @@
 <template>
   <section id="start" />
-  {{ post }}
   <section id="body-wrapper" class="section blog-listing">
-    <div class="container grid-md">
+    <div class="container grid-sm">
       <div class="columns">
         <div id="item" class="column col-12" v-if="post">
           <div class="content-item h-entry">
@@ -40,13 +39,13 @@
             </div>
 
             <div class="e-content">
-              <div class="mb-2" v-if="post.data.image">
+              <!--<div class="mb-2" v-if="post.data.image">
                 <img
                   :src="post.data.image"
                   :alt="post.data.title"
                   class="mb-2"
                 />
-              </div>
+              </div>-->
               <div v-html="post.rendered.html" />
             </div>
           </div>

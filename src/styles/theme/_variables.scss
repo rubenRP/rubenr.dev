@@ -7,7 +7,7 @@ $secondary-color-dark: darken($secondary-color, 3%) !default;
 $secondary-color-light: lighten($secondary-color, 3%) !default;
 
 $detail-color: #6166dc;
-$background-color: #f7f8f9;
+$background-color: #f7f8f9b0;
 
 $royal-blue: (
   50: #f7f7fd,
@@ -58,9 +58,10 @@ $top-padding: 2rem;
 
 // Fonts
 $min-responsive-font-size: 16px;
+$html-font-size: 18px;
 
 // Header
-$header-height-large: 4rem;
+$header-height-large: 3.5rem;
 $header-height-small: 2.3rem;
 $header-color-dark: #222;
 $header-text-light: $light-color;
@@ -82,3 +83,4 @@ $mobile-button-height: 24px;
 $mobile-button-width: 28px;
 
 $size-xl: 1184px;
+$size-sm: 640px;

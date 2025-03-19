@@ -42,7 +42,7 @@
   &.hero-tiny {
     min-height: 8rem;
     padding-top: 3rem;
-    padding-bottom: 2rem;
+    padding-bottom: 1.5rem;
   }
   &.gradient-animation {
     background: linear-gradient(
@@ -74,7 +74,7 @@
 
   &.hero-typed {
     h1 {
-      min-height: 88px;
+      min-height: 75px;
     }
     @include breakpoint(md) {
       h1 {
@@ -127,11 +127,11 @@
 
   &.small-headings {
     h1 {
-      font-size: 3.5rem;
+      font-size: 3rem;
       margin-bottom: 0.3em;
     }
     h2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       margin-bottom: 20px;
     }
     @include breakpoint(md) {

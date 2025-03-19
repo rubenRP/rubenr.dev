@@ -9,7 +9,7 @@
     "
   >
     <div class="image-overlay" />
-    <div class="container grid-md" :class="textAlign">
+    <div class="container grid-sm" :class="textAlign">
       <h1 v-if="props.title">{{ props.title }}</h1>
       <h2 v-if="props.subtitle">{{ props.subtitle }}</h2>
       <p v-if="props.text">

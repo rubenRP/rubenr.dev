@@ -4,22 +4,35 @@ import Footer from "../components/Footer.vue";
 import "../styles/theme.scss";
 // import "../styles/global.css";
 import Head from "../components/Head.astro";
+import { SITE_METADATA } from "../const";
 
 interface Props {
   bodyClass?: string;
+  title?: string;
+  description?: string;
+  hreflang?: [
+    {
+      lang: string;
+      url: string;
+    },
+  ];
 }
 
 const {
   bodyClass = "header-dark header-transparent header-fixed header-animated",
 } = Astro.props;
+
+const { title, description, hreflang } = Astro.props;
 ---
 
 <!doctype html>
 <html lang="en" data-theme="light">
   <head>
-    <meta charset="UTF-8" />
-    <Head />
-    <meta name="generator" content={Astro.generator} />
+    <Head
+      title={`${title} | ${SITE_METADATA.siteTitle}`}
+      description={description ? description : SITE_METADATA.siteDescription}
+      hreflang={hreflang}
+    />
   </head>
   <body class={bodyClass}>
     <div id="page-wrapper">

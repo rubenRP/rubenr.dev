@@ -1,7 +1,7 @@
 <template>
   <div id="resume" />
   <section class="section modular-resume bg-gray">
-    <section class="container grid-md">
+    <section class="container grid-sm">
       <div
         :class="`columns ${section.cssClass}`"
         v-for="section in resume"

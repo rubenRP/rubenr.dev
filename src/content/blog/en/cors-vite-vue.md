@@ -1,8 +1,8 @@
 ---
 title: "CORS & Vite"
-subtitle: Fixing CORS problems in local and deploying with Netlify
 date: 2021-11-30T00:00:00+00:00
 published: true
+subtitle: Fixing CORS problems in local and deploying with Netlify
 description: In today's article we will talk about CORS, configuring proxies with Vite and redirects with Netlify.
 image: /img/content/errores-cors-hero.jpg
 popular: true
@@ -14,7 +14,7 @@ taxonomy:
     - JavaScript
     - Netlify
     - Vite
-hreflangs:
+hreflang:
   es: /es/errores-cors-vite-vue
 ---
 

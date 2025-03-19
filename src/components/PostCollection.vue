@@ -1,7 +1,7 @@
 <template>
   <div id="recent" />
   <section class="section modular-recent">
-    <div class="container grid-md">
+    <div class="container grid-sm">
       <div class="columns">
         <div class="column col-3 col-md-12 header-col">
           <h4>

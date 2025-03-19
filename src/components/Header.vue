@@ -1,6 +1,6 @@
 <template>
   <header id="header" :class="scrolled ? 'section scrolled' : 'section'">
-    <section class="container grid-md">
+    <section class="container grid-sm">
       <nav class="navbar">
         <section class="navbar-section logo">
           <a href="/" class="navbar-brand mr-10">

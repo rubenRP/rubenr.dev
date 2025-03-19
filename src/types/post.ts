@@ -20,4 +20,5 @@ export interface Post extends DataEntry {
   };
   slug: string;
   lang?: string;
+  collection?: string;
 }

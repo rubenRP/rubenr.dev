@@ -16,7 +16,10 @@ const textAlign = "text-left";
 
 const enPosts = (await getCollection("blog", { lang: "en" }))
   .filter((post: Post) => post.data.published && post.slug?.startsWith("en/"))
-  .sort((a: Post, b: Post) => b.data.date.valueOf() - a.data.date.valueOf())
+  .sort(
+    (a: Post, b: Post) =>
+      new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  )
   .map((post: Post) => {
     post.slug = getRelativeLocaleUrl("en", post.slug?.slice(3));
     post.lang = "en";
@@ -25,7 +28,10 @@ const enPosts = (await getCollection("blog", { lang: "en" }))
 
 const esPosts = (await getCollection("blog", { lang: "es" }))
   .filter((post: Post) => post.data.published && post.slug.startsWith("es/"))
-  .sort((a: Post, b: Post) => b.data.date.valueOf() - a.data.date.valueOf())
+  .sort(
+    (a: Post, b: Post) =>
+      new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  )
   .map((post: Post) => {
     post.slug = getRelativeLocaleUrl("es", post.slug?.slice(3));
     post.lang = "es";
@@ -33,7 +39,7 @@ const esPosts = (await getCollection("blog", { lang: "es" }))
   });
 ---
 
-<Layout>
+<Layout title="Blog">
   <Hero
     title={heroTitle}
     text={heroText}

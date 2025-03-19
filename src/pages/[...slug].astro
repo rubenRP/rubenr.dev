@@ -9,7 +9,8 @@ const bodyClasses = "header-fixed header-animated";
 
 export async function getStaticPaths() {
   const posts = (await getCollection("blog")).sort(
-    (a: Post, b: Post) => b.data.date.valueOf() - a.data.date.valueOf(),
+    (a: Post, b: Post) =>
+      new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   );
   const postFixed = posts.map((post: Post) => ({
     params: {
@@ -35,10 +36,29 @@ export async function getStaticPaths() {
   return [...postFixed, ...pagesFixed];
 }
 
-const page = Astro.props;
+const page = Astro.props as Post;
+const title = page.data.subtitle
+  ? `${page.data.title}: ${page.data.subtitle}`
+  : page.data.title;
+
+const hreflang = page.data.hreflang && [
+  {
+    lang: page.lang,
+    url: page.slug,
+  },
+  {
+    lang: page.lang === "en" ? "es" : "en",
+    url: page.lang === "en" ? page.data.hreflang.es : page.data.hreflang.en,
+  },
+];
 ---
 
-<Layout bodyClass={bodyClasses}>
+<Layout
+  title={title}
+  description={page.data.description}
+  bodyClass={bodyClasses}
+  hreflang={hreflang}
+>
   {
     page.collection === "blog" ? (
       <PostView post={page} client:visible />

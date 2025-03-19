@@ -1,6 +1,6 @@
 <template>
   <section id="body-wrapper" class="section blog-listing modular-postlist">
-    <div class="container grid-md">
+    <div class="container grid-sm">
       <div class="columns">
         <div id="item" class="column col-12">
           <div class="language-filter">
@@ -45,7 +45,7 @@
                       {{ post.data.title }}
                     </h4>
                     <div class="text-grey">
-                      <h5 class="p-name mt-1 light">
+                      <h5 class="p-name mt-1 light text-justify">
                         {{ post.data.subtitle }}
                       </h5>
                     </div>
@@ -56,7 +56,10 @@
                     </a>
                   </h4>
                   <div class="body">
-                    <p class="text-small" v-html="post.data.description" />
+                    <p
+                      class="text-small text-justify"
+                      v-html="post.data.description"
+                    />
                   </div>
                   <div class="footer">
                     <div class="text-gray mb-2">
