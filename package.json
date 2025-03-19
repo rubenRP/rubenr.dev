@@ -13,9 +13,8 @@
     "url": "git+https://github.com/rubenRP/rubenr.dev.git"
   },
   "keywords": [
-    "nuxt",
-    "nuxt3",
-    "nuxtjs",
+    "astro",
+    "vue",
     "blog",
     "personal",
     "website"
@@ -34,14 +33,14 @@
     "@astrojs/vue": "^5.0.7",
     "@iconify-icons/mdi": "^1.2.48",
     "@iconify/vue": "^4.3.0",
-    "@tailwindcss/vite": "^4.0.14",
+    "ackee-tracker": "^5.1.0",
     "astro": "^5.5.2",
     "sass": "^1.85.1",
-    "tailwindcss": "^4.0.14",
     "typed.js": "^2.1.0",
     "vue": "^3.5.13"
   },
   "devDependencies": {
+    "@types/ackee-tracker": "^5.0.4",
     "prettier": "3.5.3",
     "prettier-plugin-astro": "0.14.1"
   }

@@ -129,15 +129,15 @@
 }
 
 .modular-about {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  padding-top: 3rem;
+  padding-bottom: 2rem;
   // background: $light-color;
   background-color: $bg-color-dark;
   .columns.left {
     flex-direction: row-reverse;
   }
   img {
-    border-radius: 50%;
+    border-radius: 4px;
     max-width: 170px;
   }
   @media (max-width: 840px) {
@@ -240,6 +240,13 @@
     }
     span {
       margin-left: 10px;
+    }
+  }
+  .columns {
+    .item + .item {
+      h4 {
+        margin-top: 1rem;
+      }
     }
   }
 }

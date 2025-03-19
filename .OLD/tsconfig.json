@@ -1,8 +1,0 @@
-{
-  "extends": "./.nuxt/tsconfig.json",
-  "compilerOptions": {
-    "paths": {
-      "#pwa": ["./.nuxt/types/pwa"]
-    }
-  }
-}

@@ -5,6 +5,7 @@ import "../styles/theme.scss";
 // import "../styles/global.css";
 import Head from "../components/Head.astro";
 import { SITE_METADATA } from "../const";
+import Ackee from "../components/Ackee.vue";
 
 interface Props {
   bodyClass?: string;
@@ -23,6 +24,16 @@ const {
 } = Astro.props;
 
 const { title, description, hreflang } = Astro.props;
+
+const ackeeData = {
+  domain: import.meta.env.PUBLIC_ACKEE_DOMAIN,
+  id: import.meta.env.PUBLIC_ACKEE_ID,
+  options: {
+    ignoreLocalhost: true,
+    ignoreOwnVisits: true,
+    detailed: true,
+  },
+};
 ---
 
 <!doctype html>
@@ -35,6 +46,7 @@ const { title, description, hreflang } = Astro.props;
     />
   </head>
   <body class={bodyClass}>
+    <Ackee config={ackeeData} client:only />
     <div id="page-wrapper">
       <Header client:visible />
       <main><slot /></main>

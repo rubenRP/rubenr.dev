@@ -1,5 +1,5 @@
 <template>
-  <section id="body-wrapper" class="section blog-listing modular-postlist">
+  <section class="section blog-listing modular-postlist">
     <div class="container grid-sm">
       <div class="columns">
         <div id="item" class="column col-12">

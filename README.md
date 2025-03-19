@@ -1,36 +1,37 @@
-# Astro Starter Kit: Basics
+# rubenr.dev
 
-```sh
-npm create astro@latest -- --template basics
-```
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+Personal website made with Astro and Vue 3
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Features
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+- Posts and pages in Markdown
+- Tags and categories
+- Sass Integration
+- Ackee Stats integration
 
-## 🚀 Project Structure
+## Contributing
 
-Inside of your Astro project, you'll see the following folders and files:
+This is a personal blog, but if you want to contribute or make some fix, raise an issue or let me know.
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+## Forking policy
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+Feel free to fork this repository and use it as a base for your own blog. If you do so, please consider the following:
 
-## 🧞 Commands
+- Remove all the posts and images
+- Change the content of the `about.md` file
+- Change the content of the CONSTS file
+
+## Author
+
+[Rubén Rodríguez](https://www.rubenr.dev)
+
+## License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+## Commands
 
 All commands are run from the root of the project, from a terminal:
 
@@ -42,7 +43,3 @@ All commands are run from the root of the project, from a terminal:
 | `npm run preview`         | Preview your build locally, before deploying     |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).

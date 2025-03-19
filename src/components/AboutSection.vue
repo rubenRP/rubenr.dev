@@ -4,7 +4,7 @@
     <div class="container grid-sm">
       <div class="columns">
         <div class="column col-12">
-          <p v-html="about.text" />
+          <p class="text-justify" v-html="about.text" />
           <h4>Contact</h4>
           <div class="columns">
             <div class="column col-8 col-md-12">
