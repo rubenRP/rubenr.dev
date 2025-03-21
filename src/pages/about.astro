@@ -1,0 +1,25 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.vue";
+import AboutSection from "../components/AboutSection.vue";
+import Resume from "../components/Resume.vue";
+
+const heroTitle = "About";
+const heroText = "Who I am? What I did? What I know?";
+const bodyClasses =
+  "header-dark header-transparent header-fixed header-animated";
+const heroClasses = "text-light hero-tiny gradient-animation";
+const textAlign = "text-left";
+---
+
+<Layout title="About" bodyClass={bodyClasses}>
+  <Hero
+    title={heroTitle}
+    text={heroText}
+    text-align={textAlign}
+    hero-classes={heroClasses}
+  />
+  <div id="start"></div>
+  <AboutSection client:visible />
+  <Resume client:visible />
+</Layout>

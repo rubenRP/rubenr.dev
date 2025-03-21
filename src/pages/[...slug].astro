@@ -1,0 +1,69 @@
+---
+import { getCollection } from "astro:content";
+import Layout from "../layouts/Layout.astro";
+import PostView from "../components/PostView.vue";
+import PageView from "../components/PageView.vue";
+import type { Post } from "../types/post";
+
+const bodyClasses = "header-fixed header-animated";
+
+export async function getStaticPaths() {
+  const posts = (await getCollection("blog")).sort(
+    (a: Post, b: Post) =>
+      new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  );
+  const postFixed = posts.map((post: Post) => ({
+    params: {
+      slug: post.slug.startsWith("en/") ? post.slug.slice(3) : post.slug,
+    },
+    props: {
+      ...post,
+      lang: post.slug.startsWith("en") ? "en" : "es",
+    },
+  }));
+
+  const pages = await getCollection("pages");
+  const pagesFixed = pages.map((page: Post) => ({
+    params: {
+      slug: page.slug.startsWith("en/") ? page.slug.slice(3) : page.slug,
+    },
+    props: {
+      ...page,
+      lang: page.slug.startsWith("en") ? "en" : "es",
+    },
+  }));
+
+  return [...postFixed, ...pagesFixed];
+}
+
+const page = Astro.props as Post;
+const title = page.data.subtitle
+  ? `${page.data.title}: ${page.data.subtitle}`
+  : page.data.title;
+
+const hreflang = page.data.hreflang && [
+  {
+    lang: page.lang,
+    url: page.slug,
+  },
+  {
+    lang: page.lang === "en" ? "es" : "en",
+    url: page.lang === "en" ? page.data.hreflang.es : page.data.hreflang.en,
+  },
+];
+---
+
+<Layout
+  title={title}
+  description={page.data.description}
+  bodyClass={bodyClasses}
+  hreflang={hreflang}
+>
+  {
+    page.collection === "blog" ? (
+      <PostView post={page} client:visible />
+    ) : (
+      <PageView page={page} client:visible />
+    )
+  }
+</Layout>

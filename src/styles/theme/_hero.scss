@@ -1,0 +1,193 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  // padding-top: 6rem;
+  // padding-bottom: 7rem;
+  background-size: cover;
+  background-position: center;
+  @include breakpoint(sm) {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+  }
+
+  h1 {
+    color: $header-text-dark;
+    font-size: 4rem;
+    font-weight: 100;
+  }
+
+  h2 {
+    color: rgba($header-text-dark, 0.8);
+    font-size: 2.5rem;
+  }
+
+  &.hero-fullscreen {
+    min-height: 100vh;
+  }
+
+  &.hero-large {
+    min-height: 500px;
+  }
+
+  &.hero-medium {
+    min-height: 400px;
+  }
+
+  &.hero-small {
+    min-height: 110px;
+  }
+
+  &.hero-tiny {
+    min-height: 8rem;
+    padding-top: 3rem;
+    padding-bottom: 1.5rem;
+  }
+  &.gradient-animation {
+    background: linear-gradient(
+      300deg,
+      #ea0055,
+      #ca0062,
+      #a40069,
+      #7a006a,
+      #4e0865,
+      #420a6d,
+      #2f0e75,
+      #00137d,
+      #00149c,
+      #0013bc,
+      #000edd,
+      #0000fe
+    );
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+  }
+
+  .header-fixed & {
+    background-position: 50% 0;
+  }
+
+  //&.parallax {
+  //  background-attachment: fixed;
+  //}
+
+  &.hero-typed {
+    h1 {
+      min-height: 75px;
+    }
+    @include breakpoint(md) {
+      h1 {
+        min-height: 60px;
+      }
+    }
+    @include breakpoint(sm) {
+      h1 {
+        min-height: 40px;
+      }
+    }
+    &.small-headings {
+      h1 {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  @include breakpoint(md) {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 1.75rem;
+    }
+  }
+
+  @include breakpoint(sm) {
+    h1 {
+      font-size: 2rem;
+    }
+    h2 {
+      font-size: 1.25rem;
+    }
+  }
+
+  &.text-light {
+    h1 {
+      color: $header-text-light;
+    }
+    h2 {
+      color: rgba($header-text-light, 0.8);
+    }
+    .social-links {
+      a {
+        color: $light-color;
+      }
+    }
+  }
+
+  &.small-headings {
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 0.3em;
+    }
+    h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    @include breakpoint(md) {
+      h1 {
+        font-size: 3rem;
+      }
+      h2 {
+        font-size: 1.75rem;
+      }
+    }
+
+    @include breakpoint(sm) {
+      h1 {
+        font-size: 2rem;
+      }
+      h2 {
+        font-size: 1.25rem;
+      }
+    }
+  }
+
+  p {
+    // font-size: 0.9rem;
+    font-weight: 300;
+    line-height: 1.5rem;
+  }
+
+  .social-links {
+    width: 75%;
+    max-width: 976px;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: 5px;
+  }
+
+  #to-start {
+    display: inline-block;
+    position: absolute;
+    // bottom: 3.5rem;
+    bottom: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    @include breakpoint(sm) {
+      bottom: 1rem;
+    }
+  }
+
+  @keyframes gradient-animation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}

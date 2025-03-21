@@ -1,0 +1,16 @@
+#footer {
+  padding: 1rem $horiz-padding 0;
+  text-align: center;
+  // background: linear-gradient(180deg, rgba(247, 248, 249, 0) 0%, #d2d3d6 100%);
+  .copyright {
+    ul {
+      margin: 0;
+      li {
+        margin: 0;
+        &:before {
+          content: "";
+        }
+      }
+    }
+  }
+}

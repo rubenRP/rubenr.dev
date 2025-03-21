@@ -1,0 +1,56 @@
+---
+import Header from "../components/Header.vue";
+import Footer from "../components/Footer.vue";
+import "../styles/theme.scss";
+// import "../styles/global.css";
+import Head from "../components/Head.astro";
+import { SITE_METADATA } from "../const";
+import Ackee from "../components/Ackee.vue";
+
+interface Props {
+  bodyClass?: string;
+  title?: string;
+  description?: string;
+  hreflang?: [
+    {
+      lang: string;
+      url: string;
+    },
+  ];
+}
+
+const {
+  bodyClass = "header-dark header-transparent header-fixed header-animated",
+} = Astro.props;
+
+const { title, description, hreflang } = Astro.props;
+
+const ackeeData = {
+  domain: import.meta.env.PUBLIC_ACKEE_DOMAIN,
+  id: import.meta.env.PUBLIC_ACKEE_ID,
+  options: {
+    ignoreLocalhost: true,
+    ignoreOwnVisits: true,
+    detailed: true,
+  },
+};
+---
+
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <Head
+      title={`${title} | ${SITE_METADATA.siteTitle}`}
+      description={description ? description : SITE_METADATA.siteDescription}
+      hreflang={hreflang}
+    />
+  </head>
+  <body class={bodyClass}>
+    <Ackee config={ackeeData} client:only />
+    <div id="page-wrapper">
+      <Header client:visible />
+      <main><slot /></main>
+    </div>
+    <Footer client:visible />
+  </body>
+</html>

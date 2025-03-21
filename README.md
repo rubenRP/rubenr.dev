@@ -1,8 +1,8 @@
 # rubenr.dev
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT) [![Netlify Status](https://api.netlify.com/api/v1/badges/56309fe3-64cf-4031-b180-4a8b0b16b44e/deploy-status)](https://app.netlify.com/sites/rubenr-test/deploys)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-Personal website made with Nuxt 3
+Personal website made with Astro and Vue 3
 
 ## Features
 
@@ -13,7 +13,15 @@ Personal website made with Nuxt 3
 
 ## Contributing
 
-If you see any typos or formatting errors in a post, or any other issue that needs to be addressed, please don't hesitate to open a pull request and fix it!
+This is a personal blog, but if you want to contribute or make some fix, raise an issue or let me know.
+
+## Forking policy
+
+Feel free to fork this repository and use it as a base for your own blog. If you do so, please consider the following:
+
+- Remove all the posts and images
+- Change the content of the `about.md` file
+- Change the content of the CONSTS file
 
 ## Author
 
@@ -23,35 +31,15 @@ If you see any typos or formatting errors in a post, or any other issue that nee
 
 This project is open source and available under the [MIT License](LICENSE).
 
-## Setup
+## Commands
 
-Make sure to install the dependencies:
+All commands are run from the root of the project, from a terminal:
 
-```bash
-# yarn
-yarn install
-```
-
-## Development Server
-
-Start the development server on http://localhost:3000
-
-```bash
-yarn dev
-```
-
-## Production
-
-Build the application for production:
-
-```bash
-yarn build
-```
-
-Locally preview production build:
-
-```bash
-yarn preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+| Command                   | Action                                           |
+| :------------------------ | :----------------------------------------------- |
+| `npm install`             | Installs dependencies                            |
+| `npm run dev`             | Starts local dev server at `localhost:4321`      |
+| `npm run build`           | Build your production site to `./dist/`          |
+| `npm run preview`         | Preview your build locally, before deploying     |
+| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `npm run astro -- --help` | Get help using the Astro CLI                     |

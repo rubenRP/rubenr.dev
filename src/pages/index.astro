@@ -1,0 +1,44 @@
+---
+import Layout from "../layouts/Layout.astro";
+import HeroTyped from "../components/HeroTyped.vue";
+import PostCollection from "../components/PostCollection.vue";
+import { HOME_HERO } from "../const";
+import { getCollection } from "astro:content";
+import type { Post } from "../types/post";
+import { getRelativeLocaleUrl, getRelativeLocaleUrlList } from "astro:i18n";
+
+const bodyClasses =
+  "header-dark header-transparent header-fixed header-animated";
+const heroClasses = "text-light hero-tiny gradient-animation";
+const textAlign = "text-left";
+
+const hero = HOME_HERO;
+
+const recentPosts = (await getCollection("blog"))
+  .filter((post: Post) => post.data.published && post.slug?.startsWith("en/"))
+  .sort(
+    (a: Post, b: Post) =>
+      new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+  )
+  .slice(0, 4)
+  .map((post: Post) => {
+    post.slug = getRelativeLocaleUrl("en", post.slug?.slice(3));
+    post.lang = "en";
+    return post;
+  });
+---
+
+<Layout title="Home">
+  <HeroTyped
+    title={hero.title}
+    subtitle={hero.subtitle}
+    text={hero.text}
+    social={false}
+    small-headings={true}
+    text-align={textAlign}
+    hero-classes={heroClasses}
+    client:visible
+  />
+  <div id="start"></div>
+  <PostCollection posts={recentPosts} client:visible />
+</Layout>

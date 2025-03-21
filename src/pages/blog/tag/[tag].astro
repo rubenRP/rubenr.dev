@@ -1,0 +1,46 @@
+---
+import { getCollection } from "astro:content";
+import Hero from "../../../components/Hero.vue";
+import Layout from "../../../layouts/Layout.astro";
+import BlogList from "../../../components/BlogList.vue";
+
+const heroClasses = "text-light hero-tiny gradient-animation";
+const textAlign = "text-left";
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection("blog");
+
+  const tags = allPosts
+    .map((post: any) => post.data.taxonomy?.tag || [])
+    .flat();
+
+  const uniqueTags = [...new Set(tags.map((tag: string) => tag.toLowerCase()))];
+
+  return uniqueTags.map((tag: string) => ({
+    params: { tag },
+    props: {
+      posts: allPosts.filter((post: any) =>
+        post.data.taxonomy?.tag
+          ?.map((tag: string) => tag.toLowerCase())
+          .includes(tag),
+      ),
+    },
+  }));
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+
+const enPosts = posts.filter((post: any) => post.slug.startsWith("en/"));
+const esPosts = posts.filter((post: any) => post.slug.startsWith("es/"));
+---
+
+<Layout title={`Posts tagged with "${tag}"`}>
+  <Hero
+    title={`Tag: "${tag}"`}
+    text-align={textAlign}
+    hero-classes={heroClasses}
+  />
+  <section id="start"></section>
+  <BlogList enPosts={enPosts} esPosts={esPosts} client:visible />
+</Layout>
