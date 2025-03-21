@@ -34,7 +34,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, defineProps, computed } from "vue";
-import { SocialLinks } from "./SocialLinks.vue";
+import SocialLinks from "./SocialLinks.vue";
 
 const position = ref(0);
 

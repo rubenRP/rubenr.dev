@@ -16,7 +16,6 @@
 
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
-import emailIcon from "@iconify-icons/mdi/email";
 import { SOCIAL_LINKS } from "../const.ts";
 
 const socialLinks = SOCIAL_LINKS;
