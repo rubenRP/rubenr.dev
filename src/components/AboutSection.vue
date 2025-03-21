@@ -10,7 +10,11 @@
             <div class="column col-8 col-md-12">
               <div>{{ about.contactEmail }}</div>
             </div>
-            <div class="column col-4 col-md-12" v-html="about.contactLink" />
+            <div
+              class="column col-4 col-md-12"
+              v-if="about.contactLink"
+              v-html="about.contactLink"
+            />
           </div>
         </div>
       </div>

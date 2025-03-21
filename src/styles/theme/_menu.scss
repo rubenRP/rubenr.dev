@@ -22,10 +22,6 @@
         }
         &:only-child {
           padding-right: $dropmenu-horiz-padding;
-
-          &:before {
-            content: "";
-          }
         }
       }
 
@@ -35,25 +31,19 @@
           visibility: visible;
         }
       }
+
+      &:last-child {
+        a {
+          padding-right: 0;
+        }
+        &::after {
+          content: "";
+        }
+      }
     }
 
     ul li a:before {
       content: "\f105";
-    }
-
-    ul {
-      position: absolute;
-      top: 100%;
-      list-style: none;
-      background: $dropmenu-bg;
-      box-shadow: $dropmenu-shadow;
-      visibility: hidden;
-
-      ul {
-        position: absolute;
-        left: 100%;
-        top: 0;
-      }
     }
   }
 

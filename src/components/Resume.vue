@@ -24,7 +24,11 @@
                 {{ item.info }} <span>•</span>{{ " " }}
                 <em class="date">{{ item.date }}</em>
               </p>
-              <p v-if="item.description" v-html="item.description" />
+              <p
+                v-if="item.description"
+                v-html="item.description"
+                class="text-justify"
+              />
               <ul class="skill-list" v-if="item.skillList">
                 <li v-for="skill in item.skillList" :key="skill">
                   <span class="skill">

@@ -9,6 +9,7 @@ body {
   color: $body-font-color;
   font-family: $body-font-family;
   font-size: $font-size;
+  min-height: 100vh;
 }
 
 #body-wrapper {

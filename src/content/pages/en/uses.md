@@ -7,7 +7,7 @@ description: "Here a small list of software and hardware that I use."
 
 ## 💻 Hardware
 
-- **Computer **: 2021 13-inch MacBook Pro M3 Max
+- **Computer **: 2023 MacBook Pro M3 Max
 - **External Display**: Dell U2414H
 - **Keyboard**: Keychron K6 Pro
 - **Mouse**: Logitech MX Master 3
@@ -15,7 +15,7 @@ description: "Here a small list of software and hardware that I use."
 
 ## 📀 Software
 
-- **Editor**: [Webstorm](https://www.jetbrains.com/webstorm/) with One Dark Theme
+- **Editor**: [VS Code](https://code.visualstudio.com) with One Dark Theme
 - **Terminal**: [iTerm](http://iterm2.com/) with [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh)
 - **Font**: [Fira Code Retina](https://www.google.com/search?client=safari&rls=en&q=Fira+Code+Retina&ie=UTF-8&oe=UTF-8)
 - **Browser**: [Brave](https://brave.com/)

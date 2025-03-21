@@ -28,7 +28,7 @@ export const FOOTER_LINKS = [
   },
   {
     title: "RSS",
-    url: "/sitemap.xml",
+    url: "/sitemap-index.xml",
     external: true,
   },
 ];
@@ -62,8 +62,6 @@ export const ABOUT = {
   imageAlign: "left",
   contactName: "Rubén Rodríguez",
   contactEmail: "hola [at] rubenr [dot] dev",
-  contactLink:
-    '<a href="https://www.linkedin.com/in/rubenrodriguezpaz/" class="btn btn-lg" target="_blank" rel="noopener">View full resume</a>',
   text: "Rubén Rodríguez, 1989, Madrid. Tech lover and restless by nature. Passionate about Javascript development and everything related to web technologies and Open Source projects.",
   shortInfo:
     "Rubén Rodríguez, 1989, Madrid based. Tech lover and restless by nature. Front-End engineer @ Fever.",
@@ -146,7 +144,7 @@ export const RESUME = [
       {
         id: 1,
         title: "Universitat Oberta de Catalunya",
-        info: "Doctoral Programme in Network and Information Technologies",
+        info: "PhD in Network and Information Technologies",
         date: "2023 - Current",
       },
       {

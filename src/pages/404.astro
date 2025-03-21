@@ -1,0 +1,29 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const bodyClasses = "header-fixed header-animated";
+---
+
+<Layout bodyClass={bodyClasses}>
+  <section id="start"></section>
+  <section id="body-wrapper" class="section blog-listing">
+    <div class="container grid-sm">
+      <div class="columns">
+        <div id="item" class="column col-12">
+          <div class="content-item h-entry">
+            <div class="content-title text-center">
+              <h2 class="p-name mt-1">Not Found</h2>
+            </div>
+
+            <div class="e-content text-center">
+              <div class="mb-2 text-center">
+                You just hit a route that doesn&#39;t exist... the sadness.
+              </div>
+              <img src="/404.gif" alt="404" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</Layout>
