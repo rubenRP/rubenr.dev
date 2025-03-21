@@ -35,15 +35,11 @@
       &:last-child {
         a {
           padding-right: 0;
-        }
-        &::after {
-          content: "";
+          @include breakpoint(md) {
+            padding-right: $dropmenu-horiz-padding;
+          }
         }
       }
-    }
-
-    ul li a:before {
-      content: "\f105";
     }
   }
 
