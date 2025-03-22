@@ -45,7 +45,7 @@ const ackeeData = {
       hreflang={hreflang}
     />
   </head>
-  <body class={bodyClass}>
+  <body class={bodyClass} transition:animate="initial">
     <Ackee config={ackeeData} client:only />
     <div id="page-wrapper">
       <Header client:visible />

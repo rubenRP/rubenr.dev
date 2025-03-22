@@ -4,9 +4,9 @@
     <div class="container grid-sm">
       <div class="columns">
         <div class="column col-3 col-md-12 header-col">
-          <h4>
+          <h3 class="h4">
             <span>{{ title }}</span>
-          </h4>
+          </h3>
         </div>
         <div class="column col-9 col-md-12 main-col">
           <div class="columns item" v-for="post in posts">
@@ -30,7 +30,7 @@
                   {{ post.data.title }}
                 </a>
               </h4>
-              <div class="text-gray">
+              <div class="text-grey">
                 <small class="blog-date">
                   <Icon icon="fa6-solid:calendar-days" />
                   {{ " " }}

@@ -62,7 +62,7 @@
                     />
                   </div>
                   <div class="footer">
-                    <div class="text-gray mb-2">
+                    <div class="text-grey mb-2">
                       <small class="blog-date">
                         <Icon icon="fa6-solid:calendar-days" />{{ " " }}
                         {{ formatDate(post.data.date) }}
