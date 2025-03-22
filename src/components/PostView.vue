@@ -6,17 +6,16 @@
         <div id="item" class="column col-12" v-if="post">
           <div class="content-item h-entry">
             <div class="content-title">
-              <div v-if="post.data.subtitle">
-                <h1 class="p-name h2 mt-1">
+              <div>
+                <h1 class="p-name h3 mt-1 mb-1">
                   {{ post.data.title }}
                 </h1>
-                <div class="text-grey">
-                  <h2 class="p-name h3 mt-1 light">
+                <div v-if="post.data.subtitle" class="text-grey">
+                  <h2 class="p-name h5 mt-1 light">
                     {{ post.data.subtitle }}
                   </h2>
                 </div>
               </div>
-              <h2 v-else class="p-name mt-1">{{ post.data.title }}</h2>
             </div>
 
             <div class="content-tags">

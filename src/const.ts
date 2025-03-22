@@ -27,7 +27,7 @@ export const FOOTER_LINKS = [
     url: "/uses",
   },
   {
-    title: "RSS",
+    title: "Sitemap",
     url: "/sitemap-index.xml",
     external: true,
   },
