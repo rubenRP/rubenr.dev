@@ -36,7 +36,7 @@ export const FOOTER_LINKS = [
 export const HOME_HERO = {
   title: ["Hello world!", "¡Hola mundo!"],
   subtitle: "Soy Rubén Rodríguez.",
-  text: "I'm a Madrid based developer. <strong>Front-End engineer</strong> @ Fever.<br/>Javascript enthusiast, Open Source lover.<br/><strong>PhD Student</strong>.",
+  text: "I'm a Madrid based developer. <strong>Frontend Engineer</strong> @ Fever.<br/>Javascript enthusiast, Open Source lover.<br/><strong>PhD Student</strong>.",
 };
 
 export const SOCIAL_LINKS = [
@@ -62,9 +62,9 @@ export const ABOUT = {
   imageAlign: "left",
   contactName: "Rubén Rodríguez",
   contactEmail: "hola [at] rubenr [dot] dev",
-  text: "Rubén Rodríguez, 1989, Madrid. Tech lover and restless by nature. Passionate about Javascript development and everything related to web technologies and Open Source projects.",
+  text: "Rubén Rodríguez, 1989, Madrid. Tech lover and restless by nature. Passionate about Javascript development and everything related to web technologies and Open Source projects. <br/><br/>I work as a Frontend Engineer at Fever. I also collaborate with the Universitat Oberta de Catalunya as a course instructor, mainly teaching about web fameworks, but focusing on Vue. I am currently studying a PhD in Network and Information Technologies. The area of research is focused on the development of a new famwork to understand the behavior of communities in Open Source projects.",
   shortInfo:
-    "Rubén Rodríguez, 1989, Madrid based. Tech lover and restless by nature. Front-End engineer @ Fever.",
+    "Rubén Rodríguez, 1989, Madrid based. Tech lover and restless by nature. Frontend Engineer @ Fever.",
 };
 
 export const RESUME = [
@@ -132,7 +132,7 @@ export const RESUME = [
         info: "Course Instructor",
         date: "2020 - Current",
         description:
-          'More details in my <a href="https://www.linkedin.com/in/rubenrodriguezpaz/" target="_blank" rel="noopener">LinkedIn</a> profile.',
+          'Complete resume on <a href="https://www.linkedin.com/in/rubenrodriguezpaz/" target="_blank" rel="noopener">LinkedIn</a>.',
       },
     ],
   },
@@ -216,7 +216,7 @@ export const RESUME = [
 export const SITE_METADATA = {
   siteTitle: "Rubén Rodríguez",
   siteDescription:
-    "Front-End developer & PhD student. Javascript & Open Source enthusiast. This is my personal website & blog. I write about tech, programming, and web technologies.",
+    "Frontend developer & PhD student. Javascript & Open Source enthusiast. This is my personal website & blog. I write about tech, programming, and web technologies.",
   siteLogo: "https://rubenr.dev/icons/icon-256x256.png",
   shortSiteUrl: "rubenr.dev",
 };

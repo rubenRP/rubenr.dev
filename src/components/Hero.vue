@@ -10,9 +10,9 @@
   >
     <div class="image-overlay" />
     <div class="container grid-sm" :class="textAlign">
-      <h1 v-if="props.title">{{ props.title }}</h1>
+      <h1 v-if="props.title" class="mb-0">{{ props.title }}</h1>
       <h2 v-if="props.subtitle">{{ props.subtitle }}</h2>
-      <p v-if="props.text">
+      <p v-if="props.text" class="mb-0">
         <span v-html="props.text" />
       </p>
     </div>
