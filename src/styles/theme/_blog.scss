@@ -34,8 +34,10 @@
   }
   .blog-tags {
     @include breakpoint(md) {
-      text-align: center;
-      margin-top: 10px;
+      width: 100%;
+      padding-left: 10px;
+      display: flex;
+      justify-content: right;
     }
   }
 }
@@ -43,7 +45,9 @@
 /** Blog Item **/
 .content-title {
   margin-bottom: 2rem;
-
+  @include breakpoint(md) {
+    margin-bottom: 1rem;
+  }
   h2 {
     margin-bottom: 0.5rem;
   }
@@ -65,10 +69,8 @@
     }
   }
   @include breakpoint(md) {
-    justify-content: center;
-    flex-direction: column;
     .blog-date {
-      margin-bottom: 10px;
+      width: 100%;
     }
   }
 }

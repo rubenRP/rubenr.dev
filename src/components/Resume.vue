@@ -42,8 +42,8 @@
 </template>
 
 <script setup lang="ts">
-import { RESUME } from "../const/about";
 import { Icon } from "@iconify/vue";
+import { RESUME } from "../const/about";
 
 const resume = RESUME;
 </script>

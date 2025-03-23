@@ -10,8 +10,8 @@ export interface Post extends DataEntry {
     description?: string;
     image?: string;
     taxonomy?: {
-      category: string;
-      tags: string[];
+      category?: string;
+      tag?: string[];
     }[];
     hreflang?: {
       lang: string;

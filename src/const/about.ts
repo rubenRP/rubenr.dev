@@ -3,8 +3,10 @@ export const ABOUT = {
   imageAlign: "left",
   contactName: "Rubén Rodríguez",
   contactEmail: "hola [at] rubenr [dot] dev",
-  text: `Rubén Rodríguez, 1989, Madrid. Tech lover and restless by nature. Passionate about Javascript development and everything related to web technologies and Open Source projects. <br/><br/>
-    I work as a Frontend Engineer at <a href="https://feverup.com" target="blank">Fever</a>. I also collaborate with the <a href="https://uoc.edu" target="blank">Universitat Oberta de Catalunya</a> as a course instructor, mainly teaching about web fameworks, but focusing on Vue.</br></br>
+  text: `Rubén Rodríguez, 1989, Madrid. Tech lover and restless by nature. 
+    Passionate about Javascript development and everything related to web technologies and Open Source. <br/><br/>
+    I work as a Frontend Engineer at <a href="https://feverup.com" target="blank">Fever</a>. 
+    I also collaborate with the <a href="https://uoc.edu" target="blank">Universitat Oberta de Catalunya</a> as a course instructor, mainly teaching about web fameworks, but focusing on Vue.</br></br>
     I am currently studying a PhD in Network and Information Technologies. My research is focused on the development of a new framework to understand the behavior of communities in Open Source projects.`,
   shortInfo:
     "Rubén Rodríguez, 1989, Madrid based. Tech lover and restless by nature. Frontend Engineer @ Fever.",

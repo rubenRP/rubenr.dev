@@ -61,6 +61,18 @@ import { formatDate } from "../composables/date.ts";
 import type { Post } from "../types/post.ts";
 import Tags from "./Tags.vue";
 
+// Adjust the Post type to include the correct structure for taxonomy
+type Taxonomy = {
+  category: string;
+  tags: string[];
+};
+
+declare module "../types/post.ts" {
+  interface PostData {
+    taxonomy?: Taxonomy;
+  }
+}
+
 defineProps<{
   post: Post;
 }>();
