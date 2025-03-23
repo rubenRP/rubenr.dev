@@ -13,11 +13,7 @@
           </h4>
         </div>
         <div class="column col-9 col-md-12 main-col">
-          <div
-            class="columns item"
-            v-for="item in section.items"
-            :key="item.id"
-          >
+          <div class="columns item" v-for="item in section.items">
             <div class="column col-12">
               <h4 v-if="item.title">{{ item.title }}</h4>
               <p class="info" v-if="item.info">
@@ -46,7 +42,7 @@
 </template>
 
 <script setup lang="ts">
-import { RESUME } from "../const.ts";
+import { RESUME } from "../const/about";
 import { Icon } from "@iconify/vue";
 
 const resume = RESUME;

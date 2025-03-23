@@ -26,7 +26,7 @@
 </template>
 
 <script setup lang="ts">
-import { ABOUT } from "../const.ts";
+import { ABOUT } from "../const/about";
 import SocialLinks from "./SocialLinks.vue";
 const about = ABOUT;
 </script>

@@ -30,6 +30,6 @@
 
 <script setup lang="ts">
 import SocialLinks from "./SocialLinks.vue";
-import { FOOTER_LINKS } from "../const.ts";
+import { FOOTER_LINKS } from "../const/site";
 const footerLinks = FOOTER_LINKS;
 </script>

@@ -16,7 +16,7 @@
 
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
-import { SOCIAL_LINKS } from "../const.ts";
+import { SOCIAL_LINKS } from "../const/site";
 
 const socialLinks = SOCIAL_LINKS;
 </script>
