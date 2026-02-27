@@ -75,6 +75,3 @@ GitHub Copilot es una herramienta estupenda de ayuda al desarrollo, es rápida, 
 <https://www.fastcompany.com/90653878/github-copilot-microsoft-openai-coding-tool-backlash>
 
 <https://www.theregister.com/2021/09/02/github_copilot_banned_words_cracked/>
-
-<span>Photo by <a href="https://unsplash.com/@synkevych?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Roman Synkevych</a> on <a href="https://unsplash.com/s/photos/github?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-</span>

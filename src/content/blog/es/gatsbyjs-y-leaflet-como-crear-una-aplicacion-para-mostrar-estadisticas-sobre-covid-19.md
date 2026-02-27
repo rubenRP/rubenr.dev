@@ -314,5 +314,3 @@ Todo el código generado para esta aplicación se puede consultar en [https://gi
 [https://www.netlify.com/jamstack/](https://www.netlify.com/jamstack/)
 
 [https://leafletjs.com](https://leafletjs.com)
-
-Photo by [Brian McGowan](https://unsplash.com/@sushioutlaw?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/covid-19?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

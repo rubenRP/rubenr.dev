@@ -60,6 +60,3 @@ Larga vida a Magento 🙂
 
 </div>
 </div>
-
-<span>Photo by <a href="https://unsplash.com/@thebrownspy?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Spencer Watson</a> on <a href="https://unsplash.com/s/photos/sunset?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
-</span>

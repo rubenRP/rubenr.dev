@@ -264,5 +264,3 @@ Si bien queda mucho trabajo por delante e ir sumando integraciones a la platafor
 [https://www.bigcommerce.com](https://www.bigcommerce.com/)
 
 [https://github.com/bigcommerce/storefront-data-hooks](https://github.com/bigcommerce/storefront-data-hooks)
-
-<span>Photo by <a href="https://unsplash.com/@dipapami?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Dimosthenis Papamichail</a> on <a href="https://unsplash.com/s/photos/terminal?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>

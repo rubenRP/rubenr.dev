@@ -95,5 +95,3 @@ Llegados a este punto puede que exista la pregunta sobre qu√© herramienta espec√
 [Agility and system documentation in large-scale enterprise system projects: a knowledge management perspective](https://www.sciencedirect.com/science/article/pii/S1877050921002234?via=ihub)
 
 [How to facilitate inter-organizational knowledge sharing: The impact of trust](https://www.sciencedirect.com/science/article/pii/S0378720614000408)
-
-Photo by [Annie Spratt](https://unsplash.com/@anniespratt?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/photos/5cFwQ-WMcJU?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

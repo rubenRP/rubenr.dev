@@ -59,5 +59,3 @@ En los últimos meses he conseguido migrar de Evernote, donde almacenaba todas l
 [https://aprendenotion.substack.com/](https://aprendenotion.substack.com/)
 
 ---
-
-<span>Photo by <a href="https://unsplash.com/@mattpopovich?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Matt Popovich</a> on <a href="https://unsplash.com/s/photos/news?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>

@@ -260,5 +260,3 @@ Como podéis ver, Netlify CMS ofrece toda la potencia de los CMS Headless pero 
 [https://www.gatsbyjs.org](https://www.gatsbyjs.org)
 
 [https://www.gatsbyjs.org/packages/gatsby-plugin-netlify-cms/](https://www.gatsbyjs.org/packages/gatsby-plugin-netlify-cms/)
-
-Photo by [Jan Kahánek](https://unsplash.com/@honza_kahanek?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/writting?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

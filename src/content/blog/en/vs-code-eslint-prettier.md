@@ -74,5 +74,3 @@ Finally, it will be necessary to modify the VS Code configuration so that it wor
 Finally, all that's left is to try it out by saving the file (⌘ + s) and enjoy better quality and more readable code :)
 
 ---
-
-Photo by Paul Esch-Laurent on [Unsplash](https://unsplash.com/)

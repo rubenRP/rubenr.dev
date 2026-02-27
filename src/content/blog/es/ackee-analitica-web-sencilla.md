@@ -200,5 +200,3 @@ En este artículo hemos visto como en unos minutos es posible crear un entorno d
 [https://www.gatsbyjs.org/packages/gatsby-plugin-ackee/](https://www.gatsbyjs.org/packages/gatsby-plugin-ackee/)
 
 [https://docs.ackee.electerious.com/](https://docs.ackee.electerious.com/)
-
-Photo by [Nick Fewings](https://unsplash.com/@jannerboy62?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

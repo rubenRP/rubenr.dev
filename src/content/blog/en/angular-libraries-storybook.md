@@ -210,5 +210,3 @@ Although the installation of Storybook with Angular is a bit rough for this type
 [https://github.com/storybookjs/storybook/issues/17039](https://github.com/storybookjs/storybook/issues/17039)
 
 [https://storybook.js.org/tutorials/design-systems-for-developers/react/en/introduction/](https://storybook.js.org/tutorials/design-systems-for-developers/react/en/introduction/)
-
-Photo by <a href="https://unsplash.com/@byfortytwo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">FORTYTWO</a> on <a href="https://unsplash.com/s/photos/lego-bricks?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>

@@ -196,5 +196,3 @@ Es cierto que otra opción sería haciendo uso de Netlify functions, pero compli
 [https://vitejs.dev/config/#server-proxy](https://vitejs.dev/config/#server-proxy)
 
 [https://cli.vuejs.org/config/#devserver-proxy](https://cli.vuejs.org/config/#devserver-proxy)
-
-Photo by [Anders Jildén](https://unsplash.com/@andersjilden?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/bridge?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

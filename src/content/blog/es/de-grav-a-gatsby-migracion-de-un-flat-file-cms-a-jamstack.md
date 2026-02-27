@@ -373,5 +373,3 @@ Este no es el último post sobre Gatsby y Netlify. Próximamente escribiré otro
 [https://www.gatsbyjs.org/docs/deploying-to-netlify/](https://www.gatsbyjs.org/docs/deploying-to-netlify/)
 
 [https://dev.to/bogdanned/the-graph-in-graphql-1l99](https://dev.to/bogdanned/the-graph-in-graphql-1l99)
-
-Photo by [Ferdinand Stöhr](https://unsplash.com/@fellowferdi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/@fellowferdi?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

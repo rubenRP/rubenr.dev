@@ -234,5 +234,3 @@ npm install @rubenrp/rubenr-system-design
 [https://github.com/features/packages](https://github.com/features/packages)
 
 [https://docs.github.com/en/packages/guides/configuring-npm-for-use-with-github-packages](https://docs.github.com/en/packages/guides/configuring-npm-for-use-with-github-packages)
-
-<span>Photo by <a href="https://unsplash.com/@isagalvezphoto?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Isabel Galvez</a> on <a href="https://unsplash.com/s/photos/octopus?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>

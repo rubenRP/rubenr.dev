@@ -267,5 +267,3 @@ That's all. You can see the final result of this little _boilerplate_ in [this G
 [https://v4.webpack.js.org](https://v4.webpack.js.org/)
 
 [https://v4.webpack.js.org/concepts/loaders/](https://v4.webpack.js.org/concepts/loaders/)
-
-Photo by [CHUTTERSNAP](https://unsplash.com/@chuttersnap?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/shipping?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)

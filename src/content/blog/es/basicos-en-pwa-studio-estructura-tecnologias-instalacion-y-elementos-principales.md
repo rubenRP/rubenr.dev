@@ -281,5 +281,3 @@ query getProductFiltersByCategory($categoryIdFilter: FilterEqualTypeInput!) {
 [https://graphql.org](https://graphql.org)
 
 [https://github.com/css-modules/css-modules](https://github.com/css-modules/css-modules)
-
-Photo by [Émile Perron](https://unsplash.com/@emilep?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText) on [Unsplash](https://unsplash.com/s/photos/coding?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText)
