@@ -56,7 +56,7 @@
     "@types/ackee-tracker": "^5.0.4",
     "@typescript-eslint/parser": "^8.58.2",
     "astro-eslint-parser": "^1.0.3",
-    "eslint": "^8.57.1",
+    "eslint": "^10.2.1",
     "prettier": "^3.8.3",
     "prettier-plugin-astro": "0.14.1",
     "typescript": "^5.9.3",
