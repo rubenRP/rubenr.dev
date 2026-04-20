@@ -1,36 +1,37 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import { getCollection } from "astro:content";
+import { getRelativeLocaleUrl } from "astro:i18n";
 import HeroTyped from "../components/HeroTyped.vue";
 import PostCollection from "../components/PostCollection.vue";
 import { HOME_HERO } from "../const/home";
-import { getCollection } from "astro:content";
-import type { Post } from "../types/post";
-import { getRelativeLocaleUrl, getRelativeLocaleUrlList } from "astro:i18n";
+import Layout from "../layouts/Layout.astro";
 
-const bodyClasses =
-  "header-dark header-transparent header-fixed header-animated";
 const heroClasses = "text-light hero-tiny gradient-animation";
 const textAlign = "text-left";
+const normalizeIdToSlug = (id: string) => id.replace(/\.mdx?$/, "");
 
 const hero = HOME_HERO;
 
 const recentPosts = (await getCollection("blog"))
-  .filter((post: Post) => post.data.published && post.slug?.startsWith("en/"))
+  .filter((post) => post.data.published && post.id?.startsWith("en/"))
   .sort(
-    (a: Post, b: Post) =>
-      new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   )
   .slice(0, 4)
-  .map((post: Post) => {
-    post.slug = getRelativeLocaleUrl("en", post.slug?.slice(3));
-    post.lang = "en";
-    return post;
+  .map((post) => {
+    const normalizedId = normalizeIdToSlug(post.id);
+
+    return {
+      ...post,
+      slug: getRelativeLocaleUrl("en", normalizedId.slice(3)),
+      lang: "en",
+    };
   });
 ---
 
 <Layout title="Home">
   <HeroTyped
-    title={hero.title}
+    typed-title={hero.title}
     subtitle={hero.subtitle}
     text={hero.text}
     social={false}
@@ -40,5 +41,5 @@ const recentPosts = (await getCollection("blog"))
     client:visible
   />
   <div id="start"></div>
-  <PostCollection posts={recentPosts} client:visible />
+  <PostCollection title="Latest posts" posts={recentPosts} client:visible />
 </Layout>

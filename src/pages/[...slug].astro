@@ -3,54 +3,129 @@ import { getCollection } from "astro:content";
 import PageView from "../components/PageView.vue";
 import PostView from "../components/PostView.vue";
 import Layout from "../layouts/Layout.astro";
-import type { Post } from "../types/post";
 
 const bodyClasses = "header-fixed header-animated";
 
 export async function getStaticPaths() {
+  const normalizeIdToSlug = (id: string) => id.replace(/\.mdx?$/, "");
+
   const posts = (await getCollection("blog")).sort(
-    (a: Post, b: Post) =>
-      new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
+    (a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime(),
   );
-  const postFixed = posts.map((post: Post) => ({
-    params: {
-      slug: post.slug.startsWith("en/") ? post.slug.slice(3) : post.slug,
-    },
-    props: {
-      ...post,
-      lang: post.slug.startsWith("en") ? "en" : "es",
-    },
-  }));
+  const postFixed = posts.map((post) => {
+    const normalizedId = normalizeIdToSlug(post.id);
+
+    return {
+      params: {
+        slug: normalizedId.startsWith("en/")
+          ? normalizedId.slice(3)
+          : normalizedId,
+      },
+      props: {
+        ...post,
+        slug: normalizedId.startsWith("en/")
+          ? normalizedId.slice(3)
+          : normalizedId,
+        lang: normalizedId.startsWith("en/") ? "en" : "es",
+      },
+    };
+  });
 
   const pages = await getCollection("pages");
-  const pagesFixed = pages.map((page: Post) => ({
-    params: {
-      slug: page.slug.startsWith("en/") ? page.slug.slice(3) : page.slug,
-    },
-    props: {
-      ...page,
-      lang: page.slug.startsWith("en") ? "en" : "es",
-    },
-  }));
+  const pagesFixed = pages.map((page) => {
+    const normalizedId = normalizeIdToSlug(page.id);
+
+    return {
+      params: {
+        slug: normalizedId.startsWith("en/")
+          ? normalizedId.slice(3)
+          : normalizedId,
+      },
+      props: {
+        ...page,
+        slug: normalizedId.startsWith("en/")
+          ? normalizedId.slice(3)
+          : normalizedId,
+        lang: normalizedId.startsWith("en/") ? "en" : "es",
+      },
+    };
+  });
 
   return [...postFixed, ...pagesFixed];
 }
 
-const page = Astro.props as Post;
+const page = Astro.props as {
+  id: string;
+  slug: string;
+  lang: string;
+  collection: string;
+  data: {
+    title: string;
+    subtitle?: string;
+    description?: string;
+    date?: string;
+    image?: string;
+    hreflang?: Array<{ lang: string; url: string }> | Record<string, string>;
+  };
+};
 const title = page.data.subtitle
   ? `${page.data.title}: ${page.data.subtitle}`
   : page.data.title;
 
-const hreflang = page.data.hreflang && [
+const normalizedHreflang = Array.isArray(page.data.hreflang)
+  ? page.data.hreflang
+  : page.data.hreflang && typeof page.data.hreflang === "object"
+    ? Object.entries(page.data.hreflang).map(([lang, url]) => ({
+        lang,
+        url: String(url),
+      }))
+    : [];
+
+const alternateLanguage = normalizedHreflang.find(
+  (item) => item.lang !== page.lang,
+);
+
+const hreflang = [
   {
     lang: page.lang,
     url: page.slug,
   },
-  {
-    lang: page.lang === "en" ? "es" : "en",
-    url: page.lang === "en" ? page.data.hreflang.es : page.data.hreflang.en,
-  },
+  ...(alternateLanguage
+    ? [
+        {
+          lang: alternateLanguage.lang,
+          url: alternateLanguage.url,
+        },
+      ]
+    : []),
 ];
+
+const structuredData =
+  page.collection === "blog"
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        headline: page.data.title,
+        description: page.data.description,
+        datePublished: page.data.date,
+        dateModified: page.data.date,
+        inLanguage: page.lang,
+        mainEntityOfPage: new URL(
+          Astro.url.pathname,
+          Astro.site ?? Astro.url,
+        ).toString(),
+        ...(page.data.image && {
+          image: new URL(page.data.image, Astro.site ?? Astro.url).toString(),
+        }),
+        author: {
+          "@type": "Person",
+          name: "Rubén Rodríguez",
+          url: "https://rubenr.dev/about",
+        },
+      }
+    : undefined;
+
+const isBlogPost = page.collection === "blog";
 ---
 
 <Layout
@@ -58,10 +133,11 @@ const hreflang = page.data.hreflang && [
   description={page.data.description}
   bodyClass={bodyClasses}
   hreflang={hreflang}
+  structuredData={structuredData}
 >
   {
-    page.collection === "blog" ? (
-      <PostView post={page} client:visible />
+    isBlogPost ? (
+      <PostView post={page as any} client:visible />
     ) : (
       <PageView page={page} client:visible />
     )

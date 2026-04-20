@@ -21,10 +21,11 @@
       v-if="arrow"
       id="to-start"
       class="pulse fa fa-angle-down"
-      :on-click="toStart"
-      :on-keydown="handleKeyDown"
+      @click="toStart"
+      @keydown.enter.prevent="toStart"
+      @keydown.space.prevent="toStart"
       role="button"
-      tabIndex="{0}"
+      tabindex="0"
       aria-label="Go to content"
     >
       <span class="d-none">Go to content</span>
@@ -33,13 +34,10 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted, defineProps, computed } from "vue";
-import Typed from "typed.js";
-
-const position = ref(0);
+import { onMounted, onUnmounted, ref } from "vue";
 
 const props = defineProps<{
-  title?: string[];
+  typedTitle?: string[];
   subtitle?: string;
   image?: string;
   text?: string;
@@ -61,11 +59,7 @@ const heroClasses = ref(
 );
 const textAlign = ref(props.textAlign || "text-center");
 const smallHeadings = ref(props.smallHeadings || false);
-let typed: any;
-
-const parallax = () => {
-  position.value = window.scrollY * 0.3;
-};
+let typedInstance: { start: () => void; destroy: () => void } | null = null;
 
 const toStart = () => {
   const start = document.getElementById("start")!.offsetTop;
@@ -73,28 +67,24 @@ const toStart = () => {
   window.scroll({ top: start - offset, left: 0, behavior: "smooth" });
 };
 
-const handleKeyDown = (ev: any) => {
-  // M key
-  if (ev.keyCode === 67) {
-    toStart();
+onMounted(async () => {
+  if (!props.typedTitle?.length) {
+    return;
   }
-};
 
-onMounted(() => {
-  window.addEventListener("scroll", parallax);
-  typed = new Typed("#typed", {
-    strings: props.title,
+  const { default: Typed } = await import("typed.js");
+  typedInstance = new Typed("#typed", {
+    strings: props.typedTitle,
     typeSpeed: 50,
     backSpeed: 10,
     backDelay: 7000,
     cursorChar: "_",
     loop: true,
   });
-  typed.start();
+  typedInstance.start();
 });
 
 onUnmounted(() => {
-  window.removeEventListener("scroll", parallax);
-  typed.destroy();
+  typedInstance?.destroy();
 });
 </script>

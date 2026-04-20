@@ -6,7 +6,8 @@
         class="external"
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="{{link.label}}"
+        :aria-label="item.label"
+        :title="item.label"
       >
         <Icon :icon="item.iconClass" />
       </a>
