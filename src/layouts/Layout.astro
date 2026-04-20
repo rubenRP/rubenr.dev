@@ -1,28 +1,27 @@
 ---
-import Header from "../components/Header.vue";
-import Footer from "../components/Footer.vue";
-import "../styles/theme.scss";
-import Head from "../components/Head.astro";
-import { SITE_METADATA } from "../const/site";
 import Ackee from "../components/Ackee.vue";
+import Footer from "../components/Footer.vue";
+import Head from "../components/Head.astro";
+import Header from "../components/Header.vue";
+import { SITE_METADATA } from "../const/site";
+import "../styles/theme.scss";
 
 interface Props {
   bodyClass?: string;
   title?: string;
   description?: string;
-  hreflang?: [
-    {
-      lang: string;
-      url: string;
-    },
-  ];
+  structuredData?: Record<string, unknown> | Array<Record<string, unknown>>;
+  hreflang?: Array<{
+    lang: string;
+    url: string;
+  }>;
 }
 
 const {
   bodyClass = "header-dark header-transparent header-fixed header-animated",
 } = Astro.props;
 
-const { title, description, hreflang } = Astro.props;
+const { title, description, hreflang, structuredData } = Astro.props;
 
 const ackeeData = {
   domain: import.meta.env.PUBLIC_ACKEE_DOMAIN,
@@ -42,6 +41,7 @@ const ackeeData = {
       title={`${title} | ${SITE_METADATA.siteTitle}`}
       description={description ? description : SITE_METADATA.siteDescription}
       hreflang={hreflang}
+      structuredData={structuredData}
     />
   </head>
   <body class={bodyClass}>
@@ -50,6 +50,6 @@ const ackeeData = {
       <Header client:visible />
       <main><slot /></main>
     </div>
-    <Footer client:visible />
+    <Footer client:idle />
   </body>
 </html>

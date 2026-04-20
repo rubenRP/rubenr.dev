@@ -1,11 +1,12 @@
 ---
 import { getCollection } from "astro:content";
+import BlogList from "../../../components/BlogList.vue";
 import Hero from "../../../components/Hero.vue";
 import Layout from "../../../layouts/Layout.astro";
-import BlogList from "../../../components/BlogList.vue";
 
 const heroClasses = "text-light hero-tiny gradient-animation";
 const textAlign = "text-left";
+const normalizeIdToSlug = (id: string) => id.replace(/\.mdx?$/, "");
 
 export async function getStaticPaths() {
   const allPosts = await getCollection("blog");
@@ -31,8 +32,18 @@ export async function getStaticPaths() {
 const { tag } = Astro.params;
 const { posts } = Astro.props;
 
-const enPosts = posts.filter((post: any) => post.slug.startsWith("en/"));
-const esPosts = posts.filter((post: any) => post.slug.startsWith("es/"));
+const enPosts = posts
+  .filter((post: any) => post.id.startsWith("en/"))
+  .map((post: any) => {
+    const normalizedId = normalizeIdToSlug(post.id);
+    return { ...post, slug: `/${normalizedId.slice(3)}` };
+  });
+const esPosts = posts
+  .filter((post: any) => post.id.startsWith("es/"))
+  .map((post: any) => {
+    const normalizedId = normalizeIdToSlug(post.id);
+    return { ...post, slug: `/es/${normalizedId.slice(3)}` };
+  });
 ---
 
 <Layout title={`Posts tagged with "${tag}"`}>
