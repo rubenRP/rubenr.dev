@@ -73,7 +73,10 @@ interface Props {
 {absoluteImage && <meta property="og:image" content={absoluteImage} />}
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary" />
+<meta
+  property="twitter:card"
+  content={absoluteImage ? "summary_large_image" : "summary"}
+/>
 <meta property="twitter:url" content={canonicalURL} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />

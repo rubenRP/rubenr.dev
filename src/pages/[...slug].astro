@@ -85,6 +85,9 @@ const alternateLanguage = normalizedHreflang.find(
   (item) => item.lang !== page.lang,
 );
 
+const isBlogPost = page.collection === "blog";
+const socialImage = page.data.image ?? (isBlogPost ? `/og/${page.slug}.png` : undefined);
+
 const hreflang = [
   {
     lang: page.lang,
@@ -114,8 +117,8 @@ const structuredData =
           Astro.url.pathname,
           Astro.site ?? Astro.url,
         ).toString(),
-        ...(page.data.image && {
-          image: new URL(page.data.image, Astro.site ?? Astro.url).toString(),
+        ...(socialImage && {
+          image: new URL(socialImage, Astro.site ?? Astro.url).toString(),
         }),
         author: {
           "@type": "Person",
@@ -125,12 +128,12 @@ const structuredData =
       }
     : undefined;
 
-const isBlogPost = page.collection === "blog";
 ---
 
 <Layout
   title={title}
   description={page.data.description}
+  image={socialImage}
   bodyClass={bodyClasses}
   hreflang={hreflang}
   structuredData={structuredData}
