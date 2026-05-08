@@ -4,13 +4,13 @@ import { SITE_METADATA } from "../const/site";
 const {
   title,
   description,
-  image = "/icons/favicon-32x32.png",
+  image,
   hreflang,
   structuredData,
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
-const absoluteImage = new URL(image, Astro.site ?? Astro.url);
+const absoluteImage = image ? new URL(image, Astro.site ?? Astro.url).toString() : undefined;
 const defaultStructuredData = {
   "@context": "https://schema.org",
   "@type": "WebSite",
@@ -70,14 +70,14 @@ interface Props {
 <meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={absoluteImage} />
+{absoluteImage && <meta property="og:image" content={absoluteImage} />}
 
 <!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:card" content="summary" />
 <meta property="twitter:url" content={canonicalURL} />
 <meta property="twitter:title" content={title} />
 <meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={absoluteImage} />
+{absoluteImage && <meta property="twitter:image" content={absoluteImage} />}
 
 <!-- hreflang -->
 {
