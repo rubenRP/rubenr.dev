@@ -18,8 +18,6 @@ hreflang:
   es: /es/pinia-vuex
 ---
 
-> You can read this article also in [Spanish](/es/pinia-vuex).
-
 On February 8, 2022 [Vue 3](https://vuejs.org/) became the [default version](https://blog.vuejs.org/posts/vue-3-as-the-new-default.html) of Vue. This is an important step, as it not only considers Vue 3 _totally_ stable for production applications; it also assumes that the proposed application ecosystem around Vue 3 is stable. One of the suggested changes revolves around state management in Vue 3, as Evan You mentioned in his [talk at VueConf Toronto](https://www.youtube.com/watch?v=2KBHvaAWJOA&t=1183s) held last November.
 
 <div style="margin: 50px auto 0; max-width: 600px;">

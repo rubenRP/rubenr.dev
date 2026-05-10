@@ -16,8 +16,6 @@ hreflang:
   es: /es/el-contexto-no-se-recuerda-solo
 ---
 
-> You can read this article also in [Spanish](/es/el-contexto-no-se-recuerda-solo).
-
 Losing project context is more common than it seems. Sometimes it happens because the project grows and too many people are involved. Other times because you are working on something alone, you leave it behind, and when you come back weeks later you no longer remember where you left off or what was still pending. There is one particular case I am living firsthand.
 
 I am a part-time PhD student. Most of my time goes to my main job as an engineer, and the rest to my thesis. Even though the topics are related, the context switch is total: when I finally get some time to sit down and do research, the first few minutes are spent remembering where I left things, what state the code was in, or whether I actually reviewed all the points from the last meeting with my supervisor. I used to take notes in Obsidian to soften that, but it requires a level of commitment I did not always maintain. If I left a feature half done or thought I would continue the next day, I would not document it. And of course, the next day sometimes came three weeks later.

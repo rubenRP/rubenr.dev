@@ -18,8 +18,6 @@ hreflang:
   es: /es/angular-libraries-storybook
 ---
 
-> You can read this article also in [Spanish](/es/angular-libraries-storybook).
-
 Style guides have been around for years, but not so long ago, designers and developers have agreed to work together on an idea that is streamlining and making easier the use of UIs throughout the products of big companies. I am talking about **design systems** and their consequence in software development: **component libraries**.
 
 In this post we are going to create an Angular app with **Angular Libraries and Storybook**, ready to publish a components library as a package. You can see the result in the [following repository](https://github.com/rubenRP/angular-lib-storybook-demo).

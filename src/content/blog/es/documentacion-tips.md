@@ -15,8 +15,6 @@ hreflang:
   en: /documentation-tips
 ---
 
-> You can read this article also in [English](/documentation-tips).
-
 En la actualidad, las grandes (y no tan grandes) empresas de tecnología representan la punta de lanza de la innovación y los avances tecnológicos. Sin embargo, este rápido ritmo de desarrollo tiene un reto no fácil de resolver y del que muchas empresas no se percatan a tiempo: la documentación. En este post hablaremos sobre la importancia de tener una buena documentación y por qué mantener la documentación técnica de un modo estructurado es crucial.
 
 Quien más y quien menos está acostumbrado tanto a leer como a escribir documentación. Las ventajas de que un proyecto esté documentado son bien conocidas:

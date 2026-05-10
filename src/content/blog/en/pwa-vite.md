@@ -20,8 +20,6 @@ hreflang:
 
 ![PWA & Vite: Development of a Progressive Web App with Vue 3](/img/content/pwa-vite-hero.jpg)
 
-> You can read this article also in [Spanish](/es/pwa-vite).
-
 Since the arrival of the PWA concept in 2015 until its implementation in most browsers in 2019, the concept has appeared and disappeared among the technologies to consider or technologies to learn that year. To this day the implementation and use is still not massive. However, the idea and the advantages it offers to a web application are very important to take into account. With an implementation of PWA in a web application, "native" execution and integration in mobile OS are allowed, it allows the sending of updates to the devices that have it installed and the implementation of the same for a simple application is not a big problem.
 
 <div class="columns" style="justify-content: center">

@@ -20,8 +20,47 @@
 
             <div class="content-tags">
               <span class="blog-date">
-                <Icon icon="fa6-solid:calendar-days" />
-                {{ formatDate(post.data.date) }}
+                <span class="blog-date-primary">
+                  <Icon icon="fa6-solid:calendar-days" />
+                  {{ formatDate(post.data.date) }}
+                </span>
+                <div
+                  v-if="languagePills"
+                  class="blog-lang-pills"
+                  role="group"
+                  aria-label="Article available languages"
+                >
+                  <a
+                    v-if="languagePills.enHref"
+                    :href="languagePills.enHref"
+                    class="label label-rounded blog-lang-pills__link"
+                    aria-label="Read this article in English"
+                  >
+                    EN
+                  </a>
+                  <span
+                    v-else
+                    class="label label-rounded blog-lang-pills__current"
+                    aria-current="true"
+                  >
+                    EN
+                  </span>
+                  <a
+                    v-if="languagePills.esHref"
+                    :href="languagePills.esHref"
+                    class="label label-rounded blog-lang-pills__link"
+                    aria-label="Leer este artículo en español"
+                  >
+                    ES
+                  </a>
+                  <span
+                    v-else
+                    class="label label-rounded blog-lang-pills__current"
+                    aria-current="true"
+                  >
+                    ES
+                  </span>
+                </div>
 
                 <!--<ReadingTime
                   v-if="post.readingTime"
@@ -59,6 +98,7 @@
 
 <script setup lang="ts">
 import { Icon } from "@iconify/vue";
+import { computed } from "vue";
 import { formatDate } from "../composables/date.ts";
 import type { Post } from "../types/post.ts";
 import Tags from "./Tags.vue";
@@ -75,7 +115,19 @@ declare module "../types/post.ts" {
   }
 }
 
-defineProps<{
+const props = defineProps<{
   post: Post;
+  alternateTranslation?: { lang: string; url: string };
 }>();
+
+/** EN/ES pill switcher; only when frontmatter defines an alternate via hreflang. */
+const languagePills = computed(() => {
+  const alt = props.alternateTranslation;
+  const lang = props.post.lang;
+  if (!alt || (lang !== "en" && lang !== "es")) return null;
+  return {
+    enHref: alt.lang === "en" ? alt.url : null,
+    esHref: alt.lang === "es" ? alt.url : null,
+  };
+});
 </script>

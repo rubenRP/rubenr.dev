@@ -16,8 +16,6 @@ hreflang:
   en: /library-generation-webpack
 ---
 
-> You can read this article also in [English](/library-generation-webpack).
-
 Vivimos en un tiempo en el que Javascript domina la web y la arquitectura basada en microservicios se tiene como un estándar. React, Vue y Angular tienen una posición dominante y creciente en la escena, sin embargo hay un gran porcentaje del desarrollo front que se realiza a la "antigua usanza" y es necesario encapsular funcionalidades un una librería para que puedan importarse en un HTML.
 
 Un ejemplo típico es la importación de un widget, librería o un servicio de terceros en una web existente. La opción más sencilla y básica es crear un fichero .js y desarrollar ahí, exponiendo el contenido haciendo uso de [UMD](https://github.com/umdjs/umd) si fuera necesario. Esta sería una aproximación un poco limitada para librerías con funcionalidades complejas. En la actualidad existen herramientas que permiten la generación de librerías mientras se desarrolla en un _stack_ js moderno. Es el caso de [Webpack](https://webpack.js.org), una herramienta usada por casi todos, y sobre todo en React pero muy desconocida ya que trabaja "tras la cortina".

@@ -16,8 +16,6 @@ hreflang:
   es: /es/vs-code-eslint-prettier
 ---
 
-> You can read this article also in [Spanish](/es/vs-code-eslint-prettier).
-
 With the explosion of JavaScript as a web development language, new tools have emerged to improve the code quality of our projects using the principles of the first C linters and taking over from mess detectors and code sniffers. I'm talking about JS linters, programming tools to detect suspicious code in real-time.
 
 These tools are a great help in creating more solid and reusable code. Higher quality code translates into less time debugging code, which is always a plus.

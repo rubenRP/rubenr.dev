@@ -23,8 +23,6 @@ hreflang:
 </div>
 </div>
 
-> You can read this article also in [Spanish](/es/magento-adobe-commerce).
-
 > **Disclaimer**: This is an opinion piece
 
 It all started with this tweet from Adobe in which he reported the rebranding of Magento Commerce as Adobe Commerce and with that I realized that the handle [@magento](https://twitter.com/magento) had been blocked and abandoned by Adobe in favor of [@AdobeCommerce](https://twitter.com/AdobeCommerce). There has already been a long written and thought on the subject, but I would also like to offer my point of view on the matter.

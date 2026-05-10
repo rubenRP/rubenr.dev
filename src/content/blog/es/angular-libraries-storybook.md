@@ -17,8 +17,6 @@ hreflang:
   en: /angular-libraries-storybook
 ---
 
-> You can read this article also in [English](/src/content/blog/en/angular-libraries-storybook.md).
-
 Las guías de estilos han existido desde hace años, pero desde hace no tanto, diseñadores y desarrolladores se han puesto de acuerdo para trabajar en conjunto en una idea que está dinamizando y facilitando el uso de UIs a lo largo de los productos de grandes compañías. Estoy hablando de los **sistemas de diseño** y su consecuencia en el desarrollo de sofware: las **librerías de componentes**.
 
 En este post vamos a crear una aplicación de Angular con **Angular Libraries y Storybook**, lista para publicar un sistema de diseño como paquete. El resultado lo puedes ver en el [siguiente repositorio](https://github.com/rubenRP/angular-lib-storybook-demo).

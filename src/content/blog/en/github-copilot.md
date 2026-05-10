@@ -17,8 +17,6 @@ hreflang:
   es: /es/github-copilot
 ---
 
-> You can read this article also in [Spanish](/es/github-copilot).
-
 At the beginning of July, [GitHub presented](https://www.fastcompany.com/90653878/github-copilot-microsoft-openai-coding-tool-backlash) in private beta what in my opinion is one of the most interesting technologies of the year: GitHub Copilot, an AI-assisted autocompletion tool that has generated headlines and opinions across the board.
 
 While it is still in Public Beta and neither AI development nor training is complete, I have had access to both the tool and the repository and have been using it for over a month with Angular, Vue.js, and GatsbyJS (React). These are my reflections about this new tool and the conclusions that I have drawn. But before I state my opinion, here is a brief summary of what GitHub Copilot is.

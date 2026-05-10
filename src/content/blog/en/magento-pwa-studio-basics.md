@@ -17,8 +17,6 @@ hreflang:
   es: /es/basicos-en-pwa-studio-estructura-tecnologias-instalacion-y-elementos-principales
 ---
 
-> You can read this article also in [Spanish](/es/basicos-en-pwa-studio-estructura-tecnologias-instalacion-y-elementos-principales).
-
 It has been 533 days since Magento launched Magento 2.3 [PWA Studio](https://magento.com/products/magento-commerce/pwa), although this new development platform for Magento 2 had been making noise long before its development began.
 
 Apart from my opinion on the development of events and the decisions made in PWA Studio, I would like to write a series of articles on the procedures and basic things that one should know to develop in PWA Studio from the front-end point of view. I may write a post giving my opinion on it and analyzing the state of the platform, but today we will start with the basics: installation, structure, technologies, and main elements.

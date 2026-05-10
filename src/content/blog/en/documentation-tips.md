@@ -15,8 +15,6 @@ hreflang:
   es: /es/documentacion-tips
 ---
 
-> You can read this article also in [Spanish](/es/documentacion-tips).
-
 Currently, large (and not so large) technology companies represent the forefront of innovation and technological advances. However, this fast pace of development has a challenge that is not easy to solve and that many companies do not realize in time: documentation. In this post, we will talk about the importance of having good documentation and why maintaining technical documentation in a structured way is crucial.
 
 Everyone is used to both reading and writing documentation. The advantages of having a project documented are well known:

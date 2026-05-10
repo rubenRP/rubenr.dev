@@ -19,8 +19,6 @@ hreflang:
 
 ![GitHub packages: Create and publish Angular packages in your repository](/img/content/github-packages-github-hero.jpg)
 
-> You can read this article also in [Spanish](/es/github-packages).
-
 The use of packaging is common in Open Source projects through [NPM](https://www.npmjs.com/), but there is also the possibility of publishing your own private packages so that they can be consumed by your applications without exposing them to all the world. We are used to working in closed and monorepo projects (or at least learning languages ​​and frameworks under this operating mode), but it is increasingly common to divide the functionalities of a project by scope into packages, especially in relation to systems development design and components.
 
 In this article we will delve into publishing packages from [Angular](https://angular.io/) using [GitHub Packages.](Https://github.com/features/packages)

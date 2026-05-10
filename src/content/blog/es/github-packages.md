@@ -18,8 +18,6 @@ hreflang:
 
 ![GitHub packages: Creación y publicación de paquetes de Angular en tu repositorio](/img/content/github-packages-github-hero.jpg)
 
-> You can read this article also in [English](/github-packages).
-
 El uso la paquetización es habitual en proyectos Open Source a través de [NPM](https://www.npmjs.com/), pero también existe la posibilidad de publicar tus propios paquetes privados para que puedan ser consumidos por tus aplicaciones sin exponerlos a todo el mundo. Estamos acostumbrados a trabajar en proyectos cerrados y monorepo (o como mínimo aprender lenguajes y frameworks bajo este modo de funcionamiento), pero cada vez es más habitual dividir las funcionalidades de un proyecto por ámbito en paquetes, sobre todo en lo relacionado al desarrollo de sistemas de diseño y componentes.
 
 En este artículo profundizaremos en la publicación de paquetes de [Angular](https://angular.io/) usando [GitHub Packages.](https://github.com/features/packages)

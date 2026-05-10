@@ -16,8 +16,6 @@ hreflang:
   en: /the-context-doesnt-remember-itself
 ---
 
-> Puedes leer este artículo también en [English](/the-context-doesnt-remember-itself).
-
 Perder el contexto de un proyecto es más común de lo que parece. A veces porque el proyecto crece y hay demasiadas personas involucradas. Otras porque trabajas en algo solo, lo dejas, y cuando lo retomas semanas después ya no recuerdas dónde lo dejaste ni qué tenías pendiente. Hay un caso particular que estoy viviendo en primera persona.
 
 Soy estudiante de doctorado a tiempo parcial. La mayor parte de mi tiempo lo empleo en mi trabajo principal como ingeniero, y el resto lo dedico a la tesis. Aunque los temas están relacionados, el cambio de contexto es total: cuando por fin consigo hueco para sentarme a investigar, los primeros minutos los paso recordando dónde lo dejé, en qué estado quedó el código, o si realmente revisé todos los puntos de la última reunión con el director. Tomaba notas en Obsidian para mitigarlo, pero exige un compromiso que no siempre cumplía. Si dejaba una funcionalidad a medias o pensaba que iba a seguir al día siguiente, no documentaba. Y claro, el día siguiente a veces llegaba tres semanas después.

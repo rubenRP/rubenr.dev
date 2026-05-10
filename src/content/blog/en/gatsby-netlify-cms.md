@@ -19,8 +19,6 @@ hreflang:
   es: /es/gatsby-y-netlify-cms
 ---
 
-> You can read this article also in [Spanish](/es/gatsby-y-netlify-cms).
-
 For a large community of developers Gatsby JS and Netlify are the perfect match when it comes to web application development with a _static site generator_ and its combination with a headless CMS. This allows a fast, efficient and very useful development for developers with little experience, since the creation of the CMS leaves the equation, simplifying the problem a lot.
 
 In this article we will talk about Netlify CMS, its advantages and disadvantages, its configuration and the process of integration with Gatsby. Before delving into the subject it is necessary to make a brief summary about what is Gatsby and what is Netlify CMS.

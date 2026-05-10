@@ -144,7 +144,11 @@ const structuredData =
 >
   {
     isBlogPost ? (
-      <PostView post={page as any} client:visible />
+      <PostView
+        post={page as any}
+        alternateTranslation={alternateLanguage}
+        client:visible
+      />
     ) : (
       <PageView page={page} client:visible />
     )

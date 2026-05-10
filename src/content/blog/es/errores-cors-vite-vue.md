@@ -18,8 +18,6 @@ hreflang:
   en: /cors-vite-vue
 ---
 
-> You can read this article also in [English](/cors-vite-vue).
-
 Últimamente he estado trabajando en un proyecto personal que entre otras cosas utiliza un servicio de SERP mediante una API. En principio creé este proyecto con Vite y Vue 3 para probar las novedades que trae respecto a la versión anterior. Sin embargo, por el camino me estoy encontrando con una serie de diferencias que me parece interesante comentar. En el artículo de hoy hablaremos de CORS, Proxies con Vite y redirecciones con Netlify.
 
 ## Introducción

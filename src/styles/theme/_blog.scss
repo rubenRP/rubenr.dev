@@ -27,6 +27,68 @@
 .blog-listing {
   .blog-date {
     font-size: 13px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.25rem 0;
+  }
+
+  .blog-date-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+  }
+
+  .blog-lang-pills {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid $gray-color-light;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+
+    // Spectre `label label-rounded` + post-specific language switcher
+    .label {
+      margin: 0;
+      min-width: 2.1rem;
+      text-align: center;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      padding: 0.15rem 0.45rem;
+      line-height: 1.2;
+      border: 1px solid transparent;
+      transition:
+        background 0.15s ease,
+        color 0.15s ease,
+        border-color 0.15s ease;
+    }
+
+    a.label.blog-lang-pills__link {
+      background: transparent;
+      color: $detail-color;
+      border-color: $detail-color;
+
+      &:hover {
+        background: rgba($detail-color, 0.1);
+        color: map-get($royal-blue, 800);
+        border-color: map-get($royal-blue, 600);
+        text-decoration: none;
+      }
+
+      &:focus-visible {
+        outline: 2px solid $detail-color;
+        outline-offset: 2px;
+      }
+    }
+
+    .label.blog-lang-pills__current {
+      background: $detail-color;
+      color: $light-color;
+      border-color: $detail-color;
+      cursor: default;
+      pointer-events: none;
+    }
   }
 
   .label {
