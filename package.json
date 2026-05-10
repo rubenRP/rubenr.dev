@@ -49,7 +49,7 @@
     "astro": "^6.1.8",
     "astro-og-canvas": "^0.11.1",
     "sass": "^1.99.0",
-    "typed.js": "^2.1.0",
+    "typed.js": "^3.0.0",
     "vue": "^3.5.32"
   },
   "devDependencies": {
