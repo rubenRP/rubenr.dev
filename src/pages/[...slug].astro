@@ -64,6 +64,7 @@ const page = Astro.props as {
     subtitle?: string;
     description?: string;
     date?: string;
+    ogImage?: string;
     image?: string;
     hreflang?: Array<{ lang: string; url: string }> | Record<string, string>;
   };
@@ -86,7 +87,10 @@ const alternateLanguage = normalizedHreflang.find(
 );
 
 const isBlogPost = page.collection === "blog";
-const socialImage = page.data.image ?? (isBlogPost ? `/og/${page.slug}.png` : undefined);
+const socialImage =
+  page.data.ogImage ??
+  page.data.image ??
+  (isBlogPost ? `/og/${page.slug}.png` : undefined);
 
 const hreflang = [
   {
@@ -127,7 +131,6 @@ const structuredData =
         },
       }
     : undefined;
-
 ---
 
 <Layout
