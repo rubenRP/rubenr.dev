@@ -8,6 +8,7 @@ export interface Post extends DataEntry {
     published?: boolean;
     popular?: boolean;
     description?: string;
+    ogImage?: string;
     image?: string;
     taxonomy?: {
       category?: string;

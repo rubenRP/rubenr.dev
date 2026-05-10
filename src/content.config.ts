@@ -24,6 +24,8 @@ const blog = defineCollection({
     date: z.union([z.string(), z.date()]),
     published: z.boolean().optional(),
     description: z.string().optional(),
+    /** Social preview only; overrides `image` and generated /og/... PNG */
+    ogImage: z.string().optional(),
     image: z.string().optional(),
     taxonomy: taxonomySchema.optional(),
     hreflang: z
