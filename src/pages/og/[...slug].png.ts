@@ -111,7 +111,7 @@ function renderTextBlock(
   className: string,
 ) {
   return `
-    <text x="${x}" y="${y}" class="${className}">
+    <text x="${x}" y="${y}" class="title-text">
       ${lines
         .map(
           (line, index) =>
