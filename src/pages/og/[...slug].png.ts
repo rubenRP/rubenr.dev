@@ -5,11 +5,13 @@ const WIDTH = 1200;
 const HEIGHT = 630;
 const PADDING_X = 90;
 const TEXT_WIDTH = 1020;
-const TITLE_START_Y = 235;
+const TITLE_START_Y = 215;
 /** ~1020px column at ~56px effective cap width */
 const TITLE_CHARS_PER_LINE = 50;
-const TITLE_LINE_HEIGHT = 68;
-const MAX_TITLE_LINES = 5;
+/** Keeps date within canvas with up to MAX_TITLE_LINES */
+const TITLE_LINE_HEIGHT = 66;
+const MAX_TITLE_LINES = 6;
+const DATE_GAP_BELOW_TITLE = 42;
 
 const FONT = {
   title: "ui-serif, Georgia, Times New Roman, Liberation Serif, serif",
@@ -115,10 +117,6 @@ export async function GET({ props }: { props: { post: any } }) {
     day: "numeric",
     year: "numeric",
   });
-  const tags: string[] = Array.isArray(post.data.taxonomy?.tag)
-    ? post.data.taxonomy.tag.slice(0, 3)
-    : [];
-
   const wrapped = wrapText(title, TITLE_CHARS_PER_LINE);
   const truncated = wrapped.length > MAX_TITLE_LINES;
   let lines = wrapped.slice(0, MAX_TITLE_LINES);
@@ -130,8 +128,7 @@ export async function GET({ props }: { props: { post: any } }) {
   const titleLineCount = Math.max(1, lines.length);
   const lastTitleBaseline =
     TITLE_START_Y + (titleLineCount - 1) * TITLE_LINE_HEIGHT;
-  const dateY = lastTitleBaseline + 46;
-  const tagGroupY = dateY + (tags.length ? 32 : 0);
+  const dateY = lastTitleBaseline + DATE_GAP_BELOW_TITLE;
 
   const svg = `
     <svg width="${WIDTH}" height="${HEIGHT}" viewBox="0 0 ${WIDTH} ${HEIGHT}" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -154,29 +151,11 @@ export async function GET({ props }: { props: { post: any } }) {
       <text x="${PADDING_X}" y="200" fill="#0f172a" font-size="26" font-family="${FONT.mono}" letter-spacing="0.04em">rubenr.dev</text>
       ${renderTitleLines(lines, PADDING_X, TITLE_START_Y, TITLE_LINE_HEIGHT)}
       <text x="${PADDING_X}" y="${dateY}" fill="#0f172a" font-size="22" font-family="${FONT.sans}" opacity="0.78">${escapeXml(date)}</text>
-      ${
-        tags.length
-          ? `
-            <g transform="translate(${PADDING_X}, ${tagGroupY})">
-              ${tags
-                .map(
-                  (tag: string, index: number) => `
-                    <g transform="translate(${index * 132}, 0)">
-                      <rect x="0" y="0" width="120" height="34" rx="17" fill="#fff" fill-opacity="0.72" stroke="#0f172a" stroke-opacity="0.08" />
-                      <text x="60" y="23" text-anchor="middle" fill="#0f172a" font-size="18" font-family="${FONT.mono}">${escapeXml(tag)}</text>
-                    </g>
-                  `,
-                )
-                .join("")}
-            </g>
-          `
-          : ""
-      }
       <style>
         .title-text {
           fill: #0f172a;
           font-family: ${FONT.title};
-          font-size: 56px;
+          font-size: 58px;
           font-weight: 700;
           letter-spacing: -0.02em;
         }
