@@ -40,7 +40,7 @@
     "ci": "npm run lint && npm run check && npm run build"
   },
   "dependencies": {
-    "@astrojs/mdx": "^5.0.3",
+    "@astrojs/mdx": "^5.0.4",
     "@astrojs/sitemap": "^3.7.2",
     "@astrojs/vue": "^6.0.1",
     "@iconify-icons/mdi": "^1.2.48",
