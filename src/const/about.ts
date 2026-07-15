@@ -36,16 +36,20 @@ export const RESUME = [
             icon: "vscode-icons:file-type-vue",
           },
           {
-            name: "React",
-            icon: "vscode-icons:file-type-reactjs",
+            name: "Astro",
+            icon: "vscode-icons:file-type-astro",
+          },
+          {
+            name: "Svelte",
+            icon: "vscode-icons:file-type-svelte",
           },
           {
             name: "Jest",
             icon: "vscode-icons:file-type-jest",
           },
           {
-            name: "Cypress",
-            icon: "vscode-icons:file-type-cypress",
+            name: "Playwright",
+            icon: "vscode-icons:file-type-playwright",
           },
         ],
       },
