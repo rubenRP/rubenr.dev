@@ -40,28 +40,28 @@
     "ci": "npm run lint && npm run check && npm run build"
   },
   "dependencies": {
-    "@astrojs/mdx": "^5.0.3",
-    "@astrojs/sitemap": "^3.7.2",
+    "@astrojs/mdx": "^5.0.6",
+    "@astrojs/sitemap": "^3.7.3",
     "@astrojs/vue": "^6.0.1",
     "@iconify-icons/mdi": "^1.2.48",
     "@iconify/vue": "^5.0.1",
     "ackee-tracker": "^5.1.3",
-    "astro": "^6.1.8",
+    "astro": "^6.4.8",
     "astro-og-canvas": "^0.11.1",
-    "sass": "^1.99.0",
+    "sass": "^1.101.0",
     "typed.js": "^3.0.0",
-    "vue": "^3.5.32"
+    "vue": "^3.5.39"
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.8",
     "@types/ackee-tracker": "^5.0.4",
-    "@typescript-eslint/parser": "^8.58.2",
+    "@typescript-eslint/parser": "^8.64.0",
     "astro-eslint-parser": "^1.0.3",
     "eslint": "^8.57.1",
-    "prettier": "^3.8.3",
+    "prettier": "^3.9.5",
     "prettier-plugin-astro": "0.14.1",
     "typescript": "^5.9.3",
-    "vue-eslint-parser": "^10.4.0"
+    "vue-eslint-parser": "^10.4.1"
   },
   "overrides": {
     "yaml-language-server": "1.23.0"
