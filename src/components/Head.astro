@@ -10,6 +10,10 @@ const {
 } = Astro.props;
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site ?? Astro.url);
+const umamiWebsiteId =
+  import.meta.env.PUBLIC_UMAMI_WEBSITE_ID ??
+  "65adf242-e9c3-4c2b-802c-64d0341b089c";
+const umamiSrc = import.meta.env.PUBLIC_UMAMI_SRC ?? "/stats/script.js";
 const absoluteImage = image ? new URL(image, Astro.site ?? Astro.url).toString() : undefined;
 const defaultStructuredData = {
   "@context": "https://schema.org",
@@ -113,3 +117,16 @@ interface Props {
 }
 
 <link rel="sitemap" href="/sitemap-index.xml" />
+
+{
+  umamiWebsiteId && (
+    <script
+      is:inline
+      defer
+      src={umamiSrc}
+      data-website-id={umamiWebsiteId}
+      data-domains={`${SITE_METADATA.shortSiteUrl},www.${SITE_METADATA.shortSiteUrl}`}
+      data-do-not-track="true"
+    ></script>
+  )
+}

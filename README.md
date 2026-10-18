@@ -15,7 +15,7 @@ Personal website made with Astro and Vue 3
 - Posts and pages in Markdown
 - Tags and categories
 - Sass Integration
-- Ackee Stats integration
+- Umami analytics (self-hosted, proxied at `/stats`)
 
 ## Contributing
 

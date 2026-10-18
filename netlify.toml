@@ -2,6 +2,19 @@
   command = "npm run build"
   publish = "dist"
 
+# First-party proxy for Umami so ad blockers that match "umami" do not drop the tracker.
+[[redirects]]
+  from = "/stats/script.js"
+  to = "https://umami.rubenr.dev/script.js"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/stats/api/*"
+  to = "https://umami.rubenr.dev/api/:splat"
+  status = 200
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]

@@ -1,5 +1,4 @@
 ---
-import Ackee from "../components/Ackee.vue";
 import Footer from "../components/Footer.vue";
 import Head from "../components/Head.astro";
 import Header from "../components/Header.vue";
@@ -23,16 +22,6 @@ const {
 } = Astro.props;
 
 const { title, description, image, hreflang, structuredData } = Astro.props;
-
-const ackeeData = {
-  domain: import.meta.env.PUBLIC_ACKEE_DOMAIN,
-  id: import.meta.env.PUBLIC_ACKEE_ID,
-  options: {
-    ignoreLocalhost: true,
-    ignoreOwnVisits: true,
-    detailed: true,
-  },
-};
 ---
 
 <!doctype html>
@@ -47,7 +36,6 @@ const ackeeData = {
     />
   </head>
   <body class={bodyClass}>
-    <Ackee config={ackeeData} client:only />
     <div id="page-wrapper">
       <Header client:visible />
       <main><slot /></main>
